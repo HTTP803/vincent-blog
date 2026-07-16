@@ -8,8 +8,7 @@ const SITE_CONFIG = {
 
   // --- 社交链接（不用的留空） ---
   social: {
-    email:       { url: "mailto:wangwenbiao@example.com", label: "Email" },
-    twitter:     { url: "https://twitter.com/your-id",    label: "X / Twitter" },
+    email:       { url: "mailto:529338895@qq.com", label: "Email" },
     github:      { url: "https://github.com/your-id",     label: "GitHub" },
     zhihu:       { url: "https://zhihu.com/people/your",  label: "知乎" },
     wechat:      { url: "",                                label: "微信" },
