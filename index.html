@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="page-title">王文彪 · 公开第二大脑</title>
+<meta name="description" content="一个产品经理创业路上的公开思考集">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/15.0.4/marked.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500&family=Noto+Serif+SC:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--p:#7F77DD;--a:#1D9E75;--bg:#FAFAF8;--fg:#2C2C2A;--m:#888780;--b:#D3D1C7;--w:#fff;--sans:'Noto Sans SC',-apple-system,sans-serif;--serif:'Noto Serif SC',Georgia,serif;--mono:ui-monospace,monospace}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--fg);background:var(--bg);line-height:1.7;min-height:100vh}
+a{color:var(--p);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;height:auto;border-radius:8px}
+hr{border:none;border-top:1px solid var(--b);margin:2rem 0}
+
+/* Layout */
+.container{max-width:860px;margin:0 auto;padding:0 24px}
+
+/* Nav */
+nav{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;max-width:900px;margin:0 auto}
+.nav-logo{font-weight:500;font-size:1.05rem;color:var(--p)}
+.nav-links{display:flex;gap:20px;font-size:0.9rem}
+.nav-links a{color:var(--m);transition:color .15s}
+.nav-links a:hover,.nav-links a.active{color:var(--fg);text-decoration:none}
+
+/* Hero */
+.hero{text-align:center;padding:64px 24px 48px}
+.hero h1{font-size:1.6rem;font-weight:500;margin-bottom:8px;color:var(--fg)}
+.hero .sub{color:var(--m);font-size:0.95rem;max-width:540px;margin:0 auto;line-height:1.6}
+.hero .bio{color:var(--m);font-size:0.9rem;margin-top:12px;max-width:480px;margin-left:auto;margin-right:auto}
+
+/* Notes List */
+.notes-list{list-style:none}
+.note-item{padding:20px 0;border-bottom:1px solid var(--b);cursor:pointer;transition:background .1s;border-radius:8px;padding-left:12px;padding-right:12px;margin:0 -12px}
+.note-item:hover{background:rgba(127,119,221,0.05)}
+.note-item:last-child{border-bottom:none}
+.note-item .title{font-size:1.1rem;font-weight:500;color:var(--fg);margin-bottom:4px}
+.note-item .meta{font-size:0.82rem;color:var(--m);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.note-item .tags{display:flex;gap:4px;flex-wrap:wrap}
+.tag{display:inline-block;padding:1px 8px;border-radius:4px;font-size:0.78rem;background:rgba(127,119,221,0.1);color:var(--p)}
+.note-item .summary{font-size:0.9rem;color:#5F5E5A;margin-top:6px;line-height:1.5}
+
+/* Note Detail */
+.note-detail{padding:40px 0 80px;max-width:720px;margin:0 auto}
+.note-detail .back{display:inline-flex;align-items:center;gap:4px;color:var(--m);font-size:0.85rem;margin-bottom:24px;cursor:pointer}
+.note-detail .back:hover{color:var(--p);text-decoration:none}
+.note-detail h1{font-size:1.5rem;font-weight:500;margin-bottom:12px}
+.note-detail .meta{font-size:0.82rem;color:var(--m);margin-bottom:32px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.note-detail .content{font-family:var(--serif);font-size:1rem;line-height:1.8;color:var(--fg)}
+.note-detail .content p{margin-bottom:1.2em}
+.note-detail .content h2{font-size:1.2rem;font-weight:500;margin:2em 0 .8em}
+.note-detail .content h3{font-size:1.05rem;font-weight:500;margin:1.6em 0 .6em}
+.note-detail .content ul,.note-detail .content ol{padding-left:1.5em;margin-bottom:1.2em}
+.note-detail .content li{margin-bottom:.3em}
+.note-detail .content blockquote{border-left:3px solid var(--p);padding-left:16px;margin:1.2em 0;color:var(--m);font-style:italic}
+.note-detail .content code{font-family:var(--mono);font-size:0.88em;background:#F1EFE8;padding:2px 6px;border-radius:4px}
+.note-detail .content pre{background:#F1EFE8;padding:16px;border-radius:8px;overflow-x:auto;margin:1.2em 0}
+.note-detail .content pre code{background:none;padding:0}
+.note-detail .content a{color:var(--p);text-decoration:underline;text-underline-offset:2px}
+
+/* Search */
+.search-wrap{position:relative;margin-bottom:24px}
+.search-wrap input{width:100%;padding:10px 16px;border:1px solid var(--b);border-radius:8px;font-family:var(--sans);font-size:0.9rem;background:var(--w);outline:none;transition:border .15s}
+.search-wrap input:focus{border-color:var(--p)}
+
+/* Filter bar */
+.filter-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.filter-bar .filter-btn{padding:4px 12px;border-radius:16px;font-size:0.82rem;border:1px solid var(--b);background:var(--w);color:var(--m);cursor:pointer;transition:all .15s;font-family:var(--sans)}
+.filter-bar .filter-btn:hover{border-color:var(--p);color:var(--p)}
+.filter-bar .filter-btn.active{background:var(--p);color:var(--w);border-color:var(--p)}
+
+/* Footer */
+footer{text-align:center;padding:40px 24px;color:var(--m);font-size:0.82rem;border-top:1px solid var(--b);margin-top:40px}
+
+/* About */
+.about-page{padding:40px 0 80px;max-width:640px;margin:0 auto}
+.about-page .content{font-family:var(--serif);line-height:1.8}
+
+/* Loading & Empty */
+.loading,.empty{text-align:center;padding:60px 24px;color:var(--m);font-size:0.9rem}
+
+/* Responsive */
+@media(max-width:640px){
+  nav{padding:16px}
+  .hero{padding:40px 16px 32px}
+  .hero h1{font-size:1.3rem}
+  .note-detail{padding:24px 0 40px}
+}
+
+/* Utility */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo" onclick="return showView('home')">王文彪 · 第二大脑</a>
+  <div class="nav-links">
+    <a href="#" onclick="return showView('home')" id="nav-home" class="active">笔记</a>
+    <a href="#" onclick="return showView('about')" id="nav-about">关于</a>
+  </div>
+</nav>
+
+<div id="app">
+  <div class="loading">加载中...</div>
+</div>
+
+<footer>
+  <p>© <span id="footer-year"></span> 王文彪 · 用 Obsidian 书写，用思考连接</p>
+</footer>
+
+<script>
+// --- Site Context ---
+const C = {
+  notes: [],
+  allTags: [],
+  currentView: 'home',
+  currentTag: null,
+  searchQuery: '',
+};
+const CDN_MARKED = typeof marked !== 'undefined';
+
+// --- Navigation ---
+function showView(view, data) {
+  C.currentView = view;
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+  const navMap = { home: 'nav-home', about: 'nav-about' };
+  const navEl = document.getElementById(navMap[view]);
+  if (navEl) navEl.classList.add('active');
+
+  if (view === 'home') renderHome();
+  else if (view === 'note') renderNote(data);
+  else if (view === 'about') renderAbout();
+  return false;
+}
+
+// --- Markdown Parsing ---
+function parseMD(text) {
+  const meta = {};
+  const body = text.replace(/^---\n([\s\S]*?)\n---\n?/, (_, fm) => {
+    fm.split('\n').forEach(line => {
+      const m = line.match(/^(\w+):\s*(.+)/);
+      if (m) meta[m[1].trim()] = m[2].trim();
+    });
+    return '';
+  });
+  if (meta.tags) meta.tags = meta.tags.split(/[,\s]+/).filter(Boolean);
+  else meta.tags = [];
+  meta.title = meta.title || '无标题';
+  const html = CDN_MARKED ? marked.parse(body) : `<p>${body.replace(/\n/g, '<br>')}</p>`;
+  return { meta, html, body };
+}
+
+// --- Load Notes ---
+async function loadNotes() {
+  try {
+    const resp = await fetch('/content/index.json');
+    if (!resp.ok) throw new Error('no index');
+    const files = await resp.json();
+    C.notes = [];
+    for (const f of files) {
+      const r = await fetch('/content/' + f.file);
+      if (!r.ok) continue;
+      const raw = await r.text();
+      const { meta, html, body } = parseMD(raw);
+      if (meta.draft === 'true') continue;
+      const summary = body.replace(/[#*`\[\]]/g, '').trim().slice(0, 150);
+      C.notes.push({ file: f.file, meta, html, summary });
+    }
+    C.notes.sort((a, b) => {
+      if (a.meta.date && b.meta.date) return b.meta.date.localeCompare(a.meta.date);
+      return 0;
+    });
+    const tagSet = new Set();
+    C.notes.forEach(n => n.meta.tags.forEach(t => tagSet.add(t)));
+    C.allTags = [...tagSet].sort();
+    renderHome();
+    setupHashRouting();
+  } catch(e) {
+    document.getElementById('app').innerHTML = '<div class="empty">还没有笔记。把 .md 文件放进 content/ 目录，然后在终端运行：<br><code style="font-size:0.85rem">python3 build-index.py</code></div>';
+  }
+}
+
+// --- Hash Routing ---
+function setupHashRouting() {
+  const h = location.hash.slice(1);
+  if (h.startsWith('note=')) {
+    const file = decodeURIComponent(h.slice(5));
+    const note = C.notes.find(n => n.file === file);
+    if (note) showView('note', note);
+  } else if (h === 'about') {
+    showView('about');
+  }
+}
+
+function setHash(h) {
+  history.pushState(null, '', '#' + h);
+}
+
+// --- Home View ---
+function renderHome() {
+  const app = document.getElementById('app');
+  let filtered = [...C.notes];
+  if (C.currentTag) filtered = filtered.filter(n => n.meta.tags.includes(C.currentTag));
+  if (C.searchQuery) {
+    const q = C.searchQuery.toLowerCase();
+    filtered = filtered.filter(n => 
+      n.meta.title.toLowerCase().includes(q) || n.summary.toLowerCase().includes(q) || n.html.toLowerCase().includes(q) ||
+      n.meta.tags.some(t => t.toLowerCase().includes(q))
+    );
+  }
+
+  const tagBtns = C.allTags.map(t => 
+    `<button class="filter-btn${C.currentTag === t ? ' active' : ''}" onclick="toggleTag('${t}')">${t}</button>`
+  ).join('');
+  const clearBtn = C.currentTag ? `<button class="filter-btn" onclick="toggleTag(null)" style="color:var(--p)">× 清除筛选</button>` : '';
+
+  const items = filtered.length ? filtered.map(n => {
+    const tags = n.meta.tags.map(t => `<span class="tag">${t}</span>`).join(' ');
+    const date = n.meta.date || '';
+    return `<li class="note-item" onclick="return showView('note', notes.find(x=>x.file==='${n.file}'))">
+      <div class="title">${n.meta.title}</div>
+      <div class="meta"><span>${date}</span>${tags ? `<span class="tags">${tags}</span>` : ''}</div>
+      <div class="summary">${escHtml(n.summary)}${n.summary.length >= 150 ? '...' : ''}</div>
+    </li>`;
+  }).join('') : '<div class="empty">没有匹配的笔记</div>';
+
+  app.innerHTML = `<div class="container">
+    <div class="hero">
+      <h1>第二大脑</h1>
+      <div class="sub">一个产品经理创业路上的公开思考集</div>
+      <div class="bio">输出倒逼输入。让知识流动起来。</div>
+    </div>
+    <div class="search-wrap">
+      <input type="text" id="search-input" placeholder="搜索笔记..." value="${escHtml(C.searchQuery)}" oninput="onSearch(this.value)">
+    </div>
+    ${tagBtns || clearBtn ? `<div class="filter-bar">${tagBtns} ${clearBtn}</div>` : ''}
+    <ul class="notes-list" id="notes-list">${items}</ul>
+  </div>`;
+
+  document.getElementById('search-input')?.focus();
+  setHash('');
+}
+
+function toggleTag(tag) {
+  C.currentTag = (C.currentTag === tag) ? null : tag;
+  renderHome();
+}
+
+function onSearch(q) {
+  C.searchQuery = q;
+  renderHome();
+}
+
+// --- Note View ---
+function renderNote(note) {
+  if (!note) return showView('home');
+  const app = document.getElementById('app');
+  const tags = note.meta.tags.map(t => `<span class="tag">${t}</span>`).join(' ');
+  const date = note.meta.date || '';
+  app.innerHTML = `<div class="container">
+    <div class="note-detail">
+      <a class="back" href="#" onclick="return showView('home')">← 返回</a>
+      <h1>${escHtml(note.meta.title)}</h1>
+      <div class="meta"><span>${date}</span> ${tags ? `<span class="tags">${tags}</span>` : ''}</div>
+      <div class="content">${note.html}</div>
+    </div>
+  </div>`;
+  setHash('note=' + encodeURIComponent(note.file));
+  window.scrollTo(0, 0);
+}
+
+// --- About View ---
+function renderAbout() {
+  const app = document.getElementById('app');
+  app.innerHTML = `<div class="container">
+    <div class="about-page">
+      <h1 style="font-size:1.4rem;font-weight:500;margin-bottom:24px">关于我</h1>
+      <div class="content" id="about-content">
+        <p style="color:var(--m)">加载中...</p>
+      </div>
+    </div>
+  </div>`;
+  setHash('about');
+
+  fetch('/content/about.md').then(r=>r.text()).then(raw => {
+    const { html } = parseMD(raw);
+    document.getElementById('about-content').innerHTML = html;
+  }).catch(() => {
+    document.getElementById('about-content').innerHTML = `<p>王文彪，产品经理，正在创业。</p>
+    <p>这个站是我的公开第二大脑，记录产品思考、创业心得和读书笔记。</p>
+    <p>联系我：<a href="#">wangwenbiao@example.com</a></p>`;
+  });
+}
+
+// --- Util ---
+function escHtml(s) {
+  if (!s) return '';
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// --- Init ---
+document.getElementById('footer-year').textContent = new Date().getFullYear();
+loadNotes();
+</script>
+</body>
+</html>
