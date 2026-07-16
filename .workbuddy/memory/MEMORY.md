@@ -20,10 +20,14 @@
 4. git add → commit → push
 5. GitHub Pages 自动更新
 
-## 当前视觉主题（v5，2026-07-17，用户最终选定）
-- 风格：极简黑白 — 纯黑底 #0A0A0A + 灰阶白字，**无主色**
+## 当前视觉主题（v6，2026-07-17，模块化版本）
+- 风格：极简黑白 + 模块化边界 — 纯黑底 #0A0A0A，每个 section 是 1px 边的"模块块"
 - 字体：Inter 400/500（西文）/ Noto Sans SC 400/500（中文）/ JetBrains Mono（标签代码）/ Noto Serif SC（笔记正文）
-- 关键设计语言：1px 极弱白边分割、JetBrains Mono 标签化、Inter OpenType cv 特性、table 化项目卡片（1px gap）、hover 改 padding 微移而非 transform
-- **原则**：专业感 = 克制 = 颜色少/装饰少/内容突出。装饰性元素（光晕/渐变/脉动/glow）一律去除
-- 教训：v4 紫蓝+光晕被判"不够专业"，装饰性盖过内容。要"科技感"先想到"少"而非"加"
+- 关键设计语言：
+  - nav：满宽 sticky + 1px 强底边（--b-2）+ logo 前 6x14 白色竖条作品牌标识 + nav links hover scaleX 下划线
+  - section：1px 边 + 10px 圆角 + 内部 padding + 微妙 surface gradient（rgba .012）
+  - section-title：0.76rem/600/letter-spacing 2px + 6x13 白色竖条锚点
+  - 所有 section 统一 max-width 680 与 hero 对齐
+- 原则：专业感 = 克制 + 模块化。极简黑白的陷阱是"松散"，要靠 1px 边形成"边界感"
+- 教训链：v4 装饰过多 → v5 极简但松散 → v6 极简+模块化
 - 风格转换：换 <style> 整块 + 替换 Google Fonts link 即可整体换皮（Python re.sub）
