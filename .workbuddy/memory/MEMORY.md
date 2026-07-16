@@ -19,3 +19,10 @@
 3. 运行 python3 build-index.py
 4. git add → commit → push
 5. GitHub Pages 自动更新
+
+## 当前视觉主题（v4，2026-07-17 起）
+- 风格：Linear 极简深色（用户选定）— 深色底 #08090C + 紫蓝主色 #5E5CE6
+- 字体：Inter（西文）/ Noto Sans SC（中文）/ JetBrains Mono（标签代码）/ Noto Serif SC（笔记正文）
+- 关键设计语言：紫蓝径向氛围光、导航脉动点、mac 代码圆点、卡片 hover 光晕
+- 用户偏好风格 = 极简克制 + 科技感 + 强排版，避开花哨/卡通/过饱和
+- 风格转换：换 <style> 整块 + 替换 Google Fonts link 即可整体换皮（Python re.sub）
