@@ -20,9 +20,10 @@
 4. git add → commit → push
 5. GitHub Pages 自动更新
 
-## 当前视觉主题（v4，2026-07-17 起）
-- 风格：Linear 极简深色（用户选定）— 深色底 #08090C + 紫蓝主色 #5E5CE6
-- 字体：Inter（西文）/ Noto Sans SC（中文）/ JetBrains Mono（标签代码）/ Noto Serif SC（笔记正文）
-- 关键设计语言：紫蓝径向氛围光、导航脉动点、mac 代码圆点、卡片 hover 光晕
-- 用户偏好风格 = 极简克制 + 科技感 + 强排版，避开花哨/卡通/过饱和
+## 当前视觉主题（v5，2026-07-17，用户最终选定）
+- 风格：极简黑白 — 纯黑底 #0A0A0A + 灰阶白字，**无主色**
+- 字体：Inter 400/500（西文）/ Noto Sans SC 400/500（中文）/ JetBrains Mono（标签代码）/ Noto Serif SC（笔记正文）
+- 关键设计语言：1px 极弱白边分割、JetBrains Mono 标签化、Inter OpenType cv 特性、table 化项目卡片（1px gap）、hover 改 padding 微移而非 transform
+- **原则**：专业感 = 克制 = 颜色少/装饰少/内容突出。装饰性元素（光晕/渐变/脉动/glow）一律去除
+- 教训：v4 紫蓝+光晕被判"不够专业"，装饰性盖过内容。要"科技感"先想到"少"而非"加"
 - 风格转换：换 <style> 整块 + 替换 Google Fonts link 即可整体换皮（Python re.sub）
