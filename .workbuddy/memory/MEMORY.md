@@ -20,18 +20,18 @@
 4. git add → commit → push
 5. GitHub Pages 自动更新
 
-## 当前视觉主题（v7，2026-07-17，参考 daheiai.com 重做）
-- 风格：暖白底 + 橙强调 + 衬线标题 — #FAF9F6 底 + #FF6B00 强调 + Noto Serif SC 大标题
-- 字体：Inter 400/500/600（西文 UI）+ Noto Sans SC 400/500（中文 UI）+ Noto Serif SC 400/500/600/700（标题/笔记正文）
+## 当前视觉主题（v8，2026-07-17，Shopify Polaris 风格）
+- 风格：白底 + 绿品牌 + 微妙阴影 + 8px 圆角 + 现代 SaaS 卡片（Shopify 经典绿 #008060）
+- 字体：Inter 400/500/600/700（西文 UI）+ Noto Sans SC 400/500/600（中文 UI），无衬线（去掉 Noto Serif SC）
 - 关键设计语言：
-  - 配色：底 #FAF9F6 / 卡 #fff / 边 #eee / 字 #1a1a1a / 次字 #999 / 强调 #FF6B00
-  - 容器：单列 680 宽居中 + 大留白（hero padding-top 88px）
-  - 卡片：白底 #fff + 1px #eee 边 + 8px 圆角，hover border 变橙 + translateX(4px)
-  - section 分隔：border-top 1px #eee + uppercase 0.75rem 标签（letter-spacing 2px），不再是模块块
-  - 标题：h1 2rem / font-weight 400 / Noto Serif SC（衬线！与正文 sans 对比形成文化感）
-  - 笔记详情：nd-title 1.9rem 衬线 + 正文用衬线（与参考站一致）
-  - 强调色用法：accent 用于 hover border / 文字 / 按钮边框 / 选中背景 / blockquote 左边
-- 原则：参考站气质 = 温暖 + 克制 + 文化感。"科技感"不一定深色，衬线 + 暖白 + 单一暖色强调也能体现"专业"
-- 教训链：v3 浅紫 → v4 紫蓝深色（装饰多）→ v5 极简黑白（松散）→ v6 极简+模块化（块状感）→ v7 暖白+橙+衬线（参考 daheiai）
-- 重要转折：用户给了 daheiai.com 参考后，整个调性从"冷/深色"翻转到"暖/浅色+衬线"
+  - 配色：底 #f6f6f7 / 卡 #fff / 边 #e1e3e5 / 字 #1a1a1a / 次字 #6d7175 / 强调 #008060（hover #006e52）
+  - 容器：宽布局 1180px（与之前 680 单列相反），项目/笔记用 grid auto-fit minmax(280px, 1fr) 卡片网格
+  - 卡片：白底 + 1px #e1e3e5 边 + 8px 圆角 + 微妙 shadow-sm，hover 升级 shadow-md + translateY(-1~2px)
+  - nav：满宽白底 + 1px 底边 + logo 前 22x22 绿色圆角方块作品牌
+  - section 标题：1.5rem/600/letter-spacing -.3px（清晰大字标题，无 uppercase）
+  - tag：圆角 999px 胶囊（pill 风格）+ accent 浅色背景
+  - 按钮：主色实心（hover 加深 #006e52）+ 次要描边
+  - 代码块：黑底（#1a1a1a）配浅色字
+- 原则：现代 SaaS 调性 = 宽布局 + 卡片网格 + 微妙阴影 + 圆角统一 + 单一品牌色
+- 教训链：v3 浅紫 → v4 紫蓝深色（装饰多）→ v5 极简黑白（松散）→ v6 极简+模块化（块状）→ v7 暖白+橙+衬线 → v8 白+绿+阴影（Shopify）
 - 风格转换：换 <style> 整块 + 替换 Google Fonts link 即可整体换皮（Python re.sub）
