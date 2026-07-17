@@ -13,12 +13,13 @@
 - config.js 支持配置：site info / social links / now / projects / skills / theme
 - 导航：首页 / 笔记 / 关于
 
-## 发布流程
-1. 在 Obsidian 写笔记（Frontmatter: title + date + tags）
-2. 复制 .md 到 content/ 目录
-3. 运行 python3 build-index.py
-4. git add → commit → push
-5. GitHub Pages 自动更新
+## 发布流程（content/ 已软链到 Obsidian 仓库）
+- 源：Obsidian 仓库 `/Users/vincent/Documents/Obsidian Vault/公开第二大脑`（专门发布文件夹，只放要公开的笔记）
+- `content/` 是软链 → 该文件夹（`ln -s "…/公开第二大脑" content`）。Obsidian 里直接写即上站，**不再需要手动复制**。
+- 加新笔记后仍需跑 `python3 build-index.py`（写入该文件夹的 index.json，build-index.py 透过软链写）。
+- **GitHub Pages 不跟随指向仓库外的软链**：部署必须用 `bash deploy.sh` 而非直接 `git push`。deploy.sh 会临时把软链换成真实文件 → commit/push → 再恢复软链。
+- `content` 已加入 .gitignore（避免提交软链本身）。
+- 注意：站点只读取该文件夹；Obsidian 仓库其他私密笔记（娱乐/生活/工作等）不受影响。
 
 ## 当前视觉主题（v11，2026-07-17，参考 blog.aistar.cool）
 - 风格：浅蓝白底 + 纯白卡片 + 大圆角 16px + 青蓝渐变强调 + 大写间距标签
