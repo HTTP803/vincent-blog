@@ -17,7 +17,14 @@ cp -R "$VAULT" "$PROJ/content"
 git add -f content
 git add -A
 git commit -m "deploy: $(date +%Y-%m-%d_%H:%M)" || echo "（无变更可提交）"
-git push
+# 检查 remote 是否已配置
+if ! git remote get-url origin >/dev/null 2>&1; then
+  echo "✗ 未配置 remote，请先执行: git remote add origin git@github.com:用户名/仓库名.git"
+  # 恢复软链，避免卡在真实文件状态
+  rm -rf "$PROJ/content"; ln -s "$VAULT" "$PROJ/content"
+  exit 1
+fi
+git push -u origin "$(git rev-parse --abbrev-ref HEAD)"
 
 # 4. 恢复本地软链，Obsidian 继续就地编辑
 rm -rf "$PROJ/content"
