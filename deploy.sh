@@ -33,3 +33,5 @@ rm -rf "$PROJ/content"
 ln -s "$VAULT" "$PROJ/content"
 git rm -r --cached content >/dev/null 2>&1 || true
 echo "✅ 已部署并恢复本地软链（content/ → $VAULT）"
+  # 确保关闭 Jekyll（保留原始 .md 访问）
+  touch "$PROJ/.nojekyll" 2>/dev/null
