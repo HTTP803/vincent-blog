@@ -16,11 +16,18 @@ for f in "$VAULT"/*; do
   [ -f "$f" ] && cp "$f" "$PROJ/content/"
 done
 
-# 3. 提交并推送
-git add -f content
+# 3. 关闭 Jekyll（保留 content/*.md 可被站点 fetch）
+touch "$PROJ/.nojekyll"
+
+# 4. 暂存：根目录常规文件 + content 每个公开文件（逐文件强制加，绕过 .gitignore 的 content 规则）
 git add -A
+for f in "$PROJ/content"/*; do
+  git add -f "$f"
+done
+git add -f .nojekyll
 git commit -m "deploy: $(date +%Y-%m-%d_%H:%M)" || echo "（无变更可提交）"
-# 检查 remote 是否已配置
+
+# 5. 检查 remote 并推送
 if ! git remote get-url origin >/dev/null 2>&1; then
   echo "✗ 未配置 remote，请先执行: git remote add origin git@github.com:用户名/仓库名.git"
   rm -rf "$PROJ/content"; ln -s "$VAULT" "$PROJ/content"
@@ -28,10 +35,8 @@ if ! git remote get-url origin >/dev/null 2>&1; then
 fi
 git push -u origin "$(git rev-parse --abbrev-ref HEAD)"
 
-# 4. 恢复本地软链，Obsidian 继续就地编辑；并从索引移除 content（保持本地 git status 干净）
+# 6. 恢复本地软链，Obsidian 继续就地编辑（content 已被 .gitignore 忽略，本地 status 干净）
 rm -rf "$PROJ/content"
 ln -s "$VAULT" "$PROJ/content"
 git rm -r --cached content >/dev/null 2>&1 || true
 echo "✅ 已部署并恢复本地软链（content/ → $VAULT）"
-  # 确保关闭 Jekyll（保留原始 .md 访问）
-  touch "$PROJ/.nojekyll" 2>/dev/null

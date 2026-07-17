@@ -13,13 +13,16 @@
 - config.js 支持配置：site info / social links / now / projects / skills / theme
 - 导航：首页 / 笔记 / 关于
 
-## 发布流程（content/ 已软链到 Obsidian 仓库）
-- 源：Obsidian 仓库 `/Users/vincent/Documents/Obsidian Vault/公开第二大脑`（专门发布文件夹，只放要公开的笔记）
-- `content/` 是软链 → 该文件夹（`ln -s "…/公开第二大脑" content`）。Obsidian 里直接写即上站，**不再需要手动复制**。
-- 加新笔记后仍需跑 `python3 build-index.py`（写入该文件夹的 index.json，build-index.py 透过软链写）。
-- **GitHub Pages 不跟随指向仓库外的软链**：部署必须用 `bash deploy.sh` 而非直接 `git push`。deploy.sh 会临时把软链换成真实文件 → commit/push → 再恢复软链。
-- `content` 已加入 .gitignore（避免提交软链本身）。
-- 注意：站点只读取该文件夹；Obsidian 仓库其他私密笔记（娱乐/生活/工作等）不受影响。
+## 发布流程（content/ 软链到 Obsidian 仓库『公开第二大脑』）
+- 源：Obsidian 仓库 `/Users/vincent/Documents/Obsidian Vault/公开第二大脑`
+- ⚠️ **该文件夹里实际混有私有子库** `opc-market-kb`、`产品经理知识库 1`（用户私人知识库，不应上站）。它们不是"只放公开笔记"的干净文件夹。
+- `content/` 是软链 → 该文件夹（`ln -s "…/公开第二大脑" content`）。Obsidian 里直接写公开笔记即上站。
+- 加新笔记后仍需跑 `python3 build-index.py`（只列顶层 .md，非递归，**不会**索引私库子文件夹的笔记）。
+- **GitHub Pages 不跟随指向仓库外的软链**：部署必须用 `bash deploy.sh`，**绝不能手动 `git add -A && git push`**。
+- deploy.sh 已修复（commit cfe01ce 同批）：第2步用 `for f in "$VAULT"/*; do [ -f "$f" ] && cp` **只复制顶层公开文件，跳过所有子文件夹**，从根上杜绝私库外泄。
+- **首次/修正性部署必须强制推送**：`git push --force origin main`（因历史里曾有泄露提交，普通 push 会被拒或非快进）。
+- `content` 已加入 .gitignore；恢复软链后 `git status` 会显示 5 个 `D content/...` 属正常噪声（commit 含 content、工作树是软链），无视即可。
+- 注意：站点只读取顶层笔记；私库子文件夹既不会被站点渲染、也不会被部署推送（deploy.sh 已排除）。
 
 ## 当前视觉主题（v11，2026-07-17，参考 blog.aistar.cool）
 - 风格：浅蓝白底 + 纯白卡片 + 大圆角 16px + 青蓝渐变强调 + 大写间距标签
