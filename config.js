@@ -1,6 +1,6 @@
 // 站点配置 —— 改这里就行
 const SITE_CONFIG = {
-  title: "王文彪 · 公开第二大脑",
+  title: "大王AI · 公开第二大脑",
   subtitle: "一个产品经理创业路上的公开思考集",
   author: "王文彪",
   bio: "产品经理，正在创业。相信输出倒逼输入，记录从零到一的思考和折腾。",
@@ -9,12 +9,12 @@ const SITE_CONFIG = {
   // --- 社交链接（不用的留空） ---
   social: {
     email:       { url: "mailto:529338895@qq.com", label: "Email" },
-    github:      { url: "https://github.com/your-id",     label: "GitHub" },
-    zhihu:       { url: "https://zhihu.com/people/your",  label: "知乎" },
+    github:      { url: "https://github.com/HTTP803",     label: "GitHub" },
+    QQ:       { url: "https://wpa.qq.com/msgrd?v=3&uin=529338895&site=qq&menu=1&from=HTTP803",  label: "QQ" },
     wechat:      { url: "",                                label: "微信" },
     rss:         { url: "/feed.xml",                       label: "RSS" },
-    jike:        { url: "https://okjk.co/your-id",         label: "即刻" },
-    xiaoyuzhou:  { url: "https://xyz.fm/@your-id",         label: "小宇宙" },
+    xiaohongshu:        { url: "https://xiaohongshu.com/@云忆夕影",         label: "小红书" },
+    douyin:  { url: "https://douyin.com/user/116796468",         label: "抖音" },
   },
 
   // --- 正在做的事（首页 Now 区） ---

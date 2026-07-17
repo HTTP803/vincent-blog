@@ -37,3 +37,10 @@
 - 参考来源：blog.aistar.cool（Next.js + Tailwind + shadcn/ui 构建的 AI 博客）
 - 风格教训链：v3 浅紫 → v4 紫蓝深色 → v5 极简黑白 → v6 极简+模块化 → v7 暖白+橙+衬线 → v8 白+绿+阴影 → v9 v8+装饰 → v10 深色玻璃 → v11 浅蓝白+粗体+大圆角 ✅
 - 风格转换：换 <style> 整块即可整体换皮（Python re.sub）
+
+## 关键 bug 教训（2026-07-17）
+- **症状**：v11/v12 改完后用户反馈"图标图片显示不出来/白色方块"
+- **真因**：第 13 行 CSS 写成了 `{` 而不是 `:root{` —— 某个早期版本替换 `<style>` 块时把 `:root` 选择器删掉了
+- **后果**：整个 `:root` 块被浏览器跳过 → 所有 CSS 变量 (`--bg`, `--a`, `--a-2` 等) 为空 → 所有 `var(--a-2)` 渐变变成 `background-image: none` → 所有彩色渐变方块显示成纯白
+- **检查方法**：用 playwright + getComputedStyle 看 `backgroundImage` 是不是 "none"
+- **教训**：每次大改 CSS 块后，必须 (1) 用 headless 浏览器渲染一次 (2) 抽查关键元素的 backgroundImage/border 等是否真的生效 (3) 不只看截图，因为白方块在浅底上也会"看起来"正常
