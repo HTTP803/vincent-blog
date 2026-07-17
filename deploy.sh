@@ -19,12 +19,11 @@ done
 # 3. 关闭 Jekyll（保留 content/*.md 可被站点 fetch）
 touch "$PROJ/.nojekyll"
 
-# 4. 暂存：根目录常规文件 + content 每个公开文件（逐文件强制加，绕过 .gitignore 的 content 规则）
-git add -A
+# 4. 暂存：只加 content 公开文件 + .nojekyll + deploy.sh（不碰其他文件，避免误带 memory/.workbuddy 或破坏 content 跟踪）
 for f in "$PROJ/content"/*; do
   git add -f "$f"
 done
-git add -f .nojekyll
+git add -f .nojekyll deploy.sh
 git commit -m "deploy: $(date +%Y-%m-%d_%H:%M)" || echo "（无变更可提交）"
 
 # 5. 检查 remote 并推送
@@ -38,5 +37,4 @@ git push -u origin "$(git rev-parse --abbrev-ref HEAD)"
 # 6. 恢复本地软链，Obsidian 继续就地编辑（content 已被 .gitignore 忽略，本地 status 干净）
 rm -rf "$PROJ/content"
 ln -s "$VAULT" "$PROJ/content"
-git rm -r --cached content >/dev/null 2>&1 || true
 echo "✅ 已部署并恢复本地软链（content/ → $VAULT）"
