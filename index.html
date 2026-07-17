@@ -233,6 +233,29 @@ footer a:hover{color:var(--fg)}
 .cta-btn svg{width:16px;height:16px;transition:transform .3s ease}
 .cta-btn:hover svg{transform:translateX(3px)}
 
+/* === 社交弹窗（QR 码） === */
+.social-modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:1000;display:flex;align-items:center;justify-content:center;padding:20px;animation:fadeIn .2s ease;opacity:0;pointer-events:none;transition:opacity .2s ease}
+.social-modal-bg.show{opacity:1;pointer-events:auto}
+.social-modal{background:#fff;border-radius:20px;padding:32px;max-width:380px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.2);text-align:center;position:relative;animation:modalIn .3s cubic-bezier(.34,1.56,.64,1);transform:scale(.9);transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
+.social-modal-bg.show .social-modal{transform:scale(1)}
+@keyframes modalIn{from{transform:scale(.85) translateY(20px);opacity:0}}
+.social-modal-close{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;background:rgba(0,0,0,.06);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#666;transition:all .2s ease}
+.social-modal-close:hover{background:rgba(0,0,0,.1);color:#000;transform:rotate(90deg)}
+.social-modal-close svg{width:16px;height:16px}
+.social-modal-icon{width:56px;height:56px;margin:0 auto 12px;color:var(--a);display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(0,122,204,.1),rgba(34,211,238,.1));border-radius:16px}
+.social-modal-icon svg{width:32px;height:32px}
+.social-modal-title{font-size:1.15rem;font-weight:600;color:var(--fg);margin:0 0 4px}
+.social-modal-sub{font-size:.82rem;color:var(--m);margin:0 0 20px}
+.social-modal-qr{width:200px;height:200px;margin:0 auto 20px;border-radius:12px;background:#f7fbfe;padding:12px;border:1px solid var(--b)}
+.social-modal-qr img{width:100%;height:100%;display:block;border-radius:6px}
+.social-modal-actions{display:flex;gap:10px;justify-content:center}
+.social-modal-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:10px;font-size:.85rem;font-weight:500;text-decoration:none;cursor:pointer;transition:all .2s ease;border:1px solid var(--b);background:var(--surface);color:var(--fg)}
+.social-modal-btn.primary{background:linear-gradient(135deg,var(--a),var(--a-2));color:#fff;border:none;box-shadow:0 4px 12px rgba(0,122,204,.25)}
+.social-modal-btn:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,.08);text-decoration:none}
+.social-modal-btn.primary:hover{box-shadow:0 6px 18px rgba(0,122,204,.35)}
+.social-modal-btn svg{width:14px;height:14px}
+.social-modal-hint{font-size:.72rem;color:var(--m2);margin-top:14px;line-height:1.5}
+
 </style>
 </head>
 <body>
@@ -264,6 +287,8 @@ const C = {
   searchQuery: '',
   cfg: typeof SITE_CONFIG !== 'undefined' ? SITE_CONFIG : {},
 };
+// Sync title from config
+if (C.cfg.title) document.title = C.cfg.title;
 const CDN_MARKED = typeof marked !== 'undefined';
 
 // --- Navigation ---
@@ -380,7 +405,7 @@ function renderHome() {
 
   // Social buttons
   const socialBtns = Object.entries(cfg.social).filter(([,v]) => v.url).map(([k,v]) =>
-    `<a class="social-btn" href="${v.url}" target="_blank" rel="noopener">${SOCIAL_ICONS[k]||''} ${v.label}</a>`
+    `<a class="social-btn" href="${v.url}" onclick="return openSocial(event,'${v.url}','${v.label}','${k}')">${SOCIAL_ICONS[k]||''} ${v.label}</a>`
   ).join('');
 
   // Skills
@@ -416,7 +441,7 @@ function renderHome() {
   }).join('');
 
   const contactBtn = cfg.social.email?.url
-    ? `<a class="social-btn" href="${cfg.social.email.url}">📧 发邮件</a>`
+    ? `<a class="social-btn" href="${cfg.social.email.url}" onclick="return openSocial(event,'${cfg.social.email.url}','${cfg.social.email.label}','email')">📧 发邮件</a>`
     : '';
 
   app.innerHTML = `
@@ -545,6 +570,65 @@ function escHtml(s) {
 document.getElementById('footer-year').textContent = new Date().getFullYear();
 const notes = []; // for inline onclick references
 Object.defineProperty(window, 'notes', { get: () => C.notes });
+
+// --- Social Modal (QR 码弹窗) ---
+function ensureSocialModal() {
+  if (document.getElementById('social-modal-bg')) return;
+  const div = document.createElement('div');
+  div.innerHTML = `
+    <div class="social-modal-bg" id="social-modal-bg" onclick="if(event.target===this)closeSocialModal()">
+      <div class="social-modal">
+        <button class="social-modal-close" onclick="closeSocialModal()" aria-label="关闭">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <div class="social-modal-icon" id="sm-icon"></div>
+        <div class="social-modal-title" id="sm-title">—</div>
+        <div class="social-modal-sub" id="sm-sub">扫描二维码或点击下方按钮访问</div>
+        <div class="social-modal-qr"><img id="sm-qr" alt="QR 码" /></div>
+        <div class="social-modal-actions">
+          <a class="social-modal-btn primary" id="sm-open" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            打开链接
+          </a>
+          <button class="social-modal-btn" onclick="closeSocialModal()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            关闭
+          </button>
+        </div>
+        <div class="social-modal-hint">提示：手机可直接扫码访问，电脑可点击"打开链接"</div>
+      </div>
+    </div>`;
+  document.body.appendChild(div.firstElementChild);
+}
+
+function openSocial(e, url, label, key) {
+  if (e) e.preventDefault();
+  if (!url) return false;
+  // mailto 直接打开
+  if (url.startsWith('mailto:')) { window.location.href = url; return false; }
+  ensureSocialModal();
+  const bg = document.getElementById('social-modal-bg');
+  const icon = SOCIAL_ICONS[key] || '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>';
+  document.getElementById('sm-icon').innerHTML = icon;
+  document.getElementById('sm-title').textContent = label;
+  document.getElementById('sm-open').href = url;
+  // QR 码：使用免费在线 API
+  const qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=300x300&margin=0&data=' + encodeURIComponent(url);
+  document.getElementById('sm-qr').src = qrUrl;
+  bg.classList.add('show');
+  document.body.style.overflow = 'hidden';
+  return false;
+}
+
+function closeSocialModal() {
+  const bg = document.getElementById('social-modal-bg');
+  if (bg) bg.classList.remove('show');
+  document.body.style.overflow = '';
+}
+
+// ESC 关闭
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSocialModal(); });
+
 loadNotes();
 </script>
 </body>
