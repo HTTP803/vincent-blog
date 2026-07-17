@@ -381,8 +381,10 @@ function renderHome() {
     : `<div class="hero-avatar">${cfg.author[0]}</div>`;
 
   // Social buttons —— 直接跳转到对应主页（参考 daheiai.com 的实现）
-  // mailto 直接唤起邮件；其余外链新标签页打开；微信等无网页地址的用 qr 字段指向本地二维码图片
-  const socialBtns = Object.entries(cfg.social).filter(([,v]) => v.url || v.qr).map(([k,v]) => {
+  // mailto 唤起邮件；有 id（如微信）点击复制账号；qr 指向本地二维码图片；其余外链新标签打开
+  const socialBtns = Object.entries(cfg.social).filter(([,v]) => v.url || v.qr || v.id).map(([k,v]) => {
+    if (v.id && !v.url && !v.qr)
+      return `<a class="social-btn" href="#" onclick="return copyId('${v.id}','${v.label}')">${SOCIAL_ICONS[k]||''}<span>${v.label}</span></a>`;
     const href = v.url || v.qr;
     const blank = href.startsWith('mailto:') ? '' : ' target="_blank" rel="noopener"';
     return `<a class="social-btn" href="${href}"${blank}>${SOCIAL_ICONS[k]||''}<span>${v.label}</span></a>`;
@@ -550,6 +552,13 @@ function escHtml(s) {
 document.getElementById('footer-year').textContent = new Date().getFullYear();
 const notes = []; // for inline onclick references
 Object.defineProperty(window, 'notes', { get: () => C.notes });
+
+// 复制账号（微信等无网页地址的平台）
+function copyId(id, label){
+  navigator.clipboard?.writeText(id).catch(()=>{});
+  alert(`${label}号已复制：${id}\n打开${label}搜索添加即可`);
+  return false;
+}
 
 loadNotes();
 </script>

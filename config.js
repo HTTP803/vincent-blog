@@ -11,11 +11,11 @@ const SITE_CONFIG = {
     email:       { url: "mailto:529338895@qq.com", label: "Email" },
     github:      { url: "https://github.com/HTTP803",     label: "GitHub" },
     QQ:       { url: "https://wpa.qq.com/msgrd?v=3&uin=529338895&site=qq&menu=1&from=HTTP803",  label: "QQ" },
-    // 微信无网页地址：把二维码图片放到 assets/wechat-qr.png，填到 qr 字段即可（点击新标签页打开二维码）
-    wechat:      { url: "", qr: "",                        label: "微信" },
+    // 微信无网页地址：填 id（点击复制微信号）；若有二维码图，放 assets/wechat-qr.png 并填 qr 字段（点击新标签打开）
+    wechat:      { url: "", qr: "", id: "PM_Vincent",      label: "微信" },
     rss:         { url: "/feed.xml",                       label: "RSS" },
-    xiaohongshu:        { url: "https://xiaohongshu.com/@云忆夕影",         label: "小红书" },
-    douyin:  { url: "https://douyin.com/user/116796468",         label: "抖音" },
+    xiaohongshu: { url: "https://www.xiaohongshu.com/user/profile/995410287", label: "小红书" },
+    douyin:      { url: "https://www.douyin.com/user/116796468",             label: "抖音" },
   },
 
   // --- 正在做的事（首页 Now 区） ---
