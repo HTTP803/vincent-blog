@@ -1,6 +1,6 @@
 // 站点配置 —— 改这里就行
 const SITE_CONFIG = {
-  title: "大王AI · 公开第二大脑",
+  title: "Vincent · 公开第二大脑",
   subtitle: "一个产品经理创业路上的公开思考集",
   author: "王文彪",
   bio: "产品经理，正在创业。相信输出倒逼输入，记录从零到一的思考和折腾。",
