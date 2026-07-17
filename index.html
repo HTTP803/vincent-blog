@@ -445,7 +445,7 @@ function renderHome() {
   const recent = C.notes.slice(0, cfg.recentCount||5);
   const noteItems = recent.map(n => {
     const tags = n.meta.tags.map(t => `<span class="tag-mini">${t}</span>`).join(' ');
-    return `<li class="note-mini-item" onclick="return showView('note', notes.find(x=>x.file==='${n.file}'))">
+    return `<li class="note-mini-item" onclick="return showView('note', C.notes.find(x=>x.file==='${n.file}'))">
       <div class="nm-cover">${COVER_SVGS[n.meta.icon||'book']||COVER_SVGS.book}</div>
       <div class="nm-left">
         <span class="nm-title">${escHtml(n.meta.title)}</span>
@@ -508,7 +508,7 @@ function renderNotesList() {
 
   const items = filtered.length ? filtered.map(n => {
     const tags = n.meta.tags.map(t => `<span class="tag">${t}</span>`).join(' ');
-    return `<li class="note-item" onclick="return showView('note', notes.find(x=>x.file==='${n.file}'))">
+    return `<li class="note-item" onclick="return showView('note', C.notes.find(x=>x.file==='${n.file}'))">
       <div class="title">${escHtml(n.meta.title)}</div>
       <div class="meta"><span>${n.meta.date||''}</span>${tags ? '<span class="tags">'+tags+'</span>' : ''}</div>
       <div class="summary">${escHtml(n.summary)}${n.summary.length>=120?'...':''}</div>
@@ -599,8 +599,6 @@ function escHtml(s) {
 
 // --- Init ---
 document.getElementById('footer-year').textContent = new Date().getFullYear();
-const notes = []; // for inline onclick references
-Object.defineProperty(window, 'notes', { get: () => C.notes });
 
 // 复制账号（微信等无网页地址的平台）
 function copyId(id, label){
