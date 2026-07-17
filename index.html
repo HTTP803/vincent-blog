@@ -11,7 +11,7 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23007acc'/><stop offset='1' stop-color='%2322d3ee'/></linearGradient></defs><rect width='100' height='100' rx='22' fill='url(%23g)'/><text x='50' y='68' font-size='56' font-weight='800' font-family='Inter' fill='white' text-anchor='middle'>W</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-{
+:root{
   --bg:#f7fbfe; --surface:#fff;
   --b:rgba(0,0,0,.13); --b-h:rgba(0,0,0,.2);
   --fg:#000; --m:#43494d; --m2:#6b7280;
@@ -355,13 +355,13 @@ const SECTION_ICONS = {
 
 // --- 装饰 SVG 组件（项目封面/笔记封面） ---
 const COVER_SVGS = {
-  product: '<svg viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="20" y="25" width="60" height="50" rx="4"/><line x1="20" y1="40" x2="80" y2="40"/><circle cx="27" cy="32.5" r="1.5" fill="white"/><circle cx="33" cy="32.5" r="1.5" fill="white"/><rect x="28" y="48" width="44" height="4" rx="1" fill="white" opacity=".6"/><rect x="28" y="56" width="32" height="4" rx="1" fill="white" opacity=".4"/></svg>',
-  rocket: '<svg viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M50 15 L65 45 L50 40 L35 45 Z" fill="white"/><circle cx="50" cy="32" r="3" fill="#007acc"/><path d="M35 50 L25 70 L40 60 Z" fill="white" opacity=".8"/><path d="M65 50 L75 70 L60 60 Z" fill="white" opacity=".8"/><path d="M40 65 Q50 85 60 65" fill="white" opacity=".4"/></svg>',
-  book: '<svg viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 25 L20 80 L50 75 L80 80 L80 25 L50 30 Z" fill="white" opacity=".15"/><path d="M20 25 L50 30 L80 25" /><path d="M50 30 L50 75"/><line x1="30" y1="40" x2="45" y2="42" opacity=".6"/><line x1="30" y1="50" x2="45" y2="52" opacity=".6"/><line x1="30" y1="60" x2="45" y2="62" opacity=".6"/></svg>',
-  chart: '<svg viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,75 35,55 50,65 70,35 85,45" stroke-width="4"/><circle cx="20" cy="75" r="3" fill="white"/><circle cx="35" cy="55" r="3" fill="white"/><circle cx="50" cy="65" r="3" fill="white"/><circle cx="70" cy="35" r="3" fill="white"/><circle cx="85" cy="45" r="3" fill="white"/><line x1="15" y1="85" x2="85" y2="85" opacity=".4"/><line x1="15" y1="15" x2="15" y2="85" opacity=".4"/></svg>',
-  code: '<svg viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="30,30 15,50 30,70"/><polyline points="70,30 85,50 70,70"/><line x1="58" y1="20" x2="42" y2="80"/></svg>',
-  bulb: '<svg viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M50 20 C35 20 28 32 28 42 C28 52 35 58 40 62 L40 70 L60 70 L60 62 C65 58 72 52 72 42 C72 32 65 20 50 20 Z" fill="white" opacity=".15"/><line x1="42" y1="78" x2="58" y2="78"/><line x1="44" y1="84" x2="56" y2="84"/><line x1="46" y1="90" x2="54" y2="90"/></svg>',
-  default: '<svg viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="25" y="25" width="50" height="50" rx="6"/><line x1="25" y1="40" x2="75" y2="40"/><circle cx="50" cy="60" r="6"/></svg>',
+  product: '<svg viewBox="0 0 24 24" fill="white" fill-opacity=".95"><path d="M9 2v6L4 18a2 2 0 0 0 1.7 3h12.6A2 2 0 0 0 20 18L15 8V2H9zm2 2h2v5h-2V4zM7 14h10v2H7v-2z"/></svg>',
+  rocket: '<svg viewBox="0 0 24 24" fill="white" fill-opacity=".95"><path d="M12.5 2C9.85 2 4 6.36 4 11c0 2.4 1.2 4.5 3 6l-1 3 3-1.5c.8.3 1.7.5 2.5.5H12c5 0 8-4.36 8-9 0-4.64-5.85-9-7.5-9zM12 7a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zM7 14a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm10 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>',
+  book: '<svg viewBox="0 0 24 24" fill="white" fill-opacity=".95"><path d="M19 2H6a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h13a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zM7 18a1 1 0 0 1 0-2h11v2H7zm0-4a1 1 0 0 1 0-2h11v2H7zm0-4a1 1 0 0 1 0-2h11v2H7z"/></svg>',
+  chart: '<svg viewBox="0 0 24 24" fill="white" fill-opacity=".95"><path d="M3 3h2v18H3V3zm16 14h2v4h-2v-4zM7 12h2v10H7V12zm4-4h2v14h-2V8zm4 6h2v8h-2v-8zm4-10h2v18h-2V4z"/></svg>',
+  code: '<svg viewBox="0 0 24 24" fill="white" fill-opacity=".95"><path d="M8.7 16.3l-1.4-1.4L4.2 12l3.1-3.1 1.4 1.4L6.9 12l1.8 1.8 1.4 1.4-1.4 1.4zM15.3 16.3l-1.4-1.4 1.8-1.8-1.8-1.8 1.4-1.4 3.1 3.1-3.1 3.1zM14 7l-2 14-1.9-.3 2-14L14 7z"/></svg>',
+  bulb: '<svg viewBox="0 0 24 24" fill="white" fill-opacity=".95"><path d="M12 2a7 7 0 0 0-4 12.7V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.3A7 7 0 0 0 12 2zm-2 18a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-1h-4v1z"/></svg>',
+  default: '<svg viewBox="0 0 24 24" fill="white" fill-opacity=".95"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13z"/></svg>',
 };
 
 // --- Render: Home ---
