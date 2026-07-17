@@ -8,6 +8,7 @@
 <script src="config.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/15.0.4/marked.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23007acc'/><stop offset='1' stop-color='%2322d3ee'/></linearGradient></defs><rect width='100' height='100' rx='22' fill='url(%23g)'/><text x='50' y='68' font-size='56' font-weight='800' font-family='Inter' fill='white' text-anchor='middle'>W</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 {
@@ -183,6 +184,54 @@ footer a:hover{color:var(--fg)}
   .note-detail .nd-title{font-size:1.5rem}
   .note-detail{padding:28px 0 56px}
 }
+
+/* === 背景装饰 === */
+.bg-deco{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.bg-blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.5;animation:blobFloat 20s ease-in-out infinite}
+.bg-blob-1{width:520px;height:520px;top:-160px;left:-120px;background:radial-gradient(circle,rgba(34,211,238,.35),transparent 70%)}
+.bg-blob-2{width:480px;height:480px;top:30%;right:-160px;background:radial-gradient(circle,rgba(0,122,204,.3),transparent 70%);animation-delay:-7s}
+.bg-blob-3{width:420px;height:420px;bottom:-140px;left:30%;background:radial-gradient(circle,rgba(99,102,241,.22),transparent 70%);animation-delay:-13s}
+.bg-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,122,204,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,122,204,.04) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(ellipse 80% 60% at 50% 30%,#000 30%,transparent 80%)}
+@keyframes blobFloat{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(40px,-30px) scale(1.05)}66%{transform:translate(-30px,30px) scale(.95)}}
+
+/* === 装饰 SVG 组件 === */
+.deco-svg{width:1em;height:1em;display:inline-block;vertical-align:-.15em}
+
+/* === Section 标题加图标 === */
+.section-title{display:flex;align-items:center;gap:10px;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.24em;color:var(--a);margin-bottom:24px}
+.section-title svg{width:18px;height:18px;color:var(--a)}
+.section-title::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--b),transparent)}
+
+/* === 项目封面 === */
+.p-cover{height:140px;border-radius:12px 12px 0 0;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;margin:-20px -20px 16px}
+.p-cover svg{width:60%;height:60%;opacity:.85;transition:transform .5s ease}
+.project-card:hover .p-cover svg{transform:scale(1.1) rotate(-3deg)}
+.p-cover.c1{background:linear-gradient(135deg,#007acc,#22d3ee)}
+.p-cover.c2{background:linear-gradient(135deg,#6366f1,#a855f7)}
+.p-cover.c3{background:linear-gradient(135deg,#22d3ee,#10b981)}
+.p-cover.c4{background:linear-gradient(135deg,#f59e0b,#ef4444)}
+.p-cover.c5{background:linear-gradient(135deg,#ec4899,#8b5cf6)}
+
+/* === 笔记卡片封面 === */
+.nm-cover{width:88px;height:88px;border-radius:12px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--a-2),var(--a));box-shadow:0 2px 8px rgba(0,122,204,.15)}
+.nm-cover svg{width:48px;height:48px;color:#fff;opacity:.9}
+.note-mini-item:hover .nm-cover{transform:scale(1.05) rotate(-2deg);transition:transform .3s ease}
+
+/* === Hero 装饰 === */
+.hero-avatar{position:relative}
+.hero-avatar::before{content:'';position:absolute;inset:-8px;border-radius:50%;background:conic-gradient(from 0deg,var(--a),var(--a-2),var(--a));z-index:-1;opacity:.4;filter:blur(8px);animation:spin 8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* === 笔记详情装饰 === */
+.note-detail .content h2{display:flex;align-items:center;gap:10px;padding-bottom:8px;border-bottom:1px solid var(--b);margin-top:2.5em}
+.note-detail .content h2::before{content:'';width:6px;height:18px;background:linear-gradient(180deg,var(--a),var(--a-2));border-radius:3px}
+
+/* === 按钮加 SVG 箭头 === */
+.cta-btn{display:inline-flex;align-items:center;gap:8px;padding:11px 24px;border-radius:10px;background:linear-gradient(135deg,var(--a),var(--a-2));color:#fff;font-weight:600;font-size:.92rem;text-decoration:none;box-shadow:0 4px 14px rgba(0,122,204,.3);transition:all .3s ease}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,122,204,.45)}
+.cta-btn svg{width:16px;height:16px;transition:transform .3s ease}
+.cta-btn:hover svg{transform:translateX(3px)}
+
 </style>
 </head>
 <body>
@@ -296,6 +345,25 @@ const SOCIAL_ICONS = {
   xiaoyuzhou: '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>',
 };
 
+// --- Section SVG icons ---
+const SECTION_ICONS = {
+  now: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
+  projects: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/></svg>',
+  notes: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>',
+  contact: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>',
+};
+
+// --- 装饰 SVG 组件（项目封面/笔记封面） ---
+const COVER_SVGS = {
+  product: '<svg viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="20" y="25" width="60" height="50" rx="4"/><line x1="20" y1="40" x2="80" y2="40"/><circle cx="27" cy="32.5" r="1.5" fill="white"/><circle cx="33" cy="32.5" r="1.5" fill="white"/><rect x="28" y="48" width="44" height="4" rx="1" fill="white" opacity=".6"/><rect x="28" y="56" width="32" height="4" rx="1" fill="white" opacity=".4"/></svg>',
+  rocket: '<svg viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M50 15 L65 45 L50 40 L35 45 Z" fill="white"/><circle cx="50" cy="32" r="3" fill="#007acc"/><path d="M35 50 L25 70 L40 60 Z" fill="white" opacity=".8"/><path d="M65 50 L75 70 L60 60 Z" fill="white" opacity=".8"/><path d="M40 65 Q50 85 60 65" fill="white" opacity=".4"/></svg>',
+  book: '<svg viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 25 L20 80 L50 75 L80 80 L80 25 L50 30 Z" fill="white" opacity=".15"/><path d="M20 25 L50 30 L80 25" /><path d="M50 30 L50 75"/><line x1="30" y1="40" x2="45" y2="42" opacity=".6"/><line x1="30" y1="50" x2="45" y2="52" opacity=".6"/><line x1="30" y1="60" x2="45" y2="62" opacity=".6"/></svg>',
+  chart: '<svg viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,75 35,55 50,65 70,35 85,45" stroke-width="4"/><circle cx="20" cy="75" r="3" fill="white"/><circle cx="35" cy="55" r="3" fill="white"/><circle cx="50" cy="65" r="3" fill="white"/><circle cx="70" cy="35" r="3" fill="white"/><circle cx="85" cy="45" r="3" fill="white"/><line x1="15" y1="85" x2="85" y2="85" opacity=".4"/><line x1="15" y1="15" x2="15" y2="85" opacity=".4"/></svg>',
+  code: '<svg viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="30,30 15,50 30,70"/><polyline points="70,30 85,50 70,70"/><line x1="58" y1="20" x2="42" y2="80"/></svg>',
+  bulb: '<svg viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M50 20 C35 20 28 32 28 42 C28 52 35 58 40 62 L40 70 L60 70 L60 62 C65 58 72 52 72 42 C72 32 65 20 50 20 Z" fill="white" opacity=".15"/><line x1="42" y1="78" x2="58" y2="78"/><line x1="44" y1="84" x2="56" y2="84"/><line x1="46" y1="90" x2="54" y2="90"/></svg>',
+  default: '<svg viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="25" y="25" width="50" height="50" rx="6"/><line x1="25" y1="40" x2="75" y2="40"/><circle cx="50" cy="60" r="6"/></svg>',
+};
+
 // --- Render: Home ---
 function renderHome() {
   const cfg = C.cfg;
@@ -320,6 +388,7 @@ function renderHome() {
   // Projects
   const projCards = (cfg.projects||[]).map(p =>
     `<div class="project-card"${p.url ? ` onclick="window.open('${p.url}','_blank')" style="cursor:pointer"` : ''}>
+      <div class="p-cover c${(cfg.projects.indexOf(p)%5)+1}">${COVER_SVGS[p.icon||'default']||COVER_SVGS.default}</div>
       <div class="p-title">${p.title}</div>
       <div class="p-desc">${p.desc}</div>
       <div class="p-tags">${p.tags.map(t=>`<span>${t}</span>`).join('')}</div>
@@ -331,6 +400,7 @@ function renderHome() {
   const noteItems = recent.map(n => {
     const tags = n.meta.tags.map(t => `<span class="tag-mini">${t}</span>`).join(' ');
     return `<li class="note-mini-item" onclick="return showView('note', notes.find(x=>x.file==='${n.file}'))">
+      <div class="nm-cover">${COVER_SVGS[n.meta.icon||'book']||COVER_SVGS.book}</div>
       <div class="nm-left">
         <span class="nm-title">${escHtml(n.meta.title)}</span>
         <div class="nm-meta">${n.meta.date||''}${tags ? ' <span class="nm-tags">'+tags+'</span>' : ''}</div>
@@ -357,16 +427,16 @@ function renderHome() {
       <div class="skills-row">${skills}</div>
     </div>
 
-    ${nowItems ? `<div class="now-section container"><div class="section-title">正在做的事</div><ul class="now-list">${nowItems}</ul></div>` : ''}
+    ${nowItems ? `<div class="now-section container"><div class="section-title">${SECTION_ICONS.now} 正在做的事</div><ul class="now-list">${nowItems}</ul></div>` : ''}
 
-    ${projCards ? `<div class="projects-section container"><div class="section-title">项目作品</div><div class="project-grid">${projCards}</div></div>` : ''}
+    ${projCards ? `<div class="projects-section container"><div class="section-title">${SECTION_ICONS.projects} 项目作品</div><div class="project-grid">${projCards}</div></div>` : ''}
 
-    ${noteItems ? `<div class="notes-section container"><div class="section-title">最新笔记</div><ul class="notes-mini-list">${noteItems}</ul><a class="view-all" onclick="return showView('notes')">查看全部笔记 →</a></div>` : ''}
+    ${noteItems ? `<div class="notes-section container"><div class="section-title">${SECTION_ICONS.notes} 最新笔记</div><ul class="notes-mini-list">${noteItems}</ul><a class="view-all" onclick="return showView('notes')">查看全部笔记 →</a></div>` : ''}
 
     <div class="contact-section container">
       <h2>保持联系</h2>
       <p>想聊聊产品、创业或合作？欢迎来找我。</p>
-      ${contactBtn}
+      <a class="cta-btn" href="${cfg.social.email?.url||'#'}">发邮件给我 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>`;
 
   setHash('');

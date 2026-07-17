@@ -31,12 +31,14 @@ const SITE_CONFIG = {
       desc: "个人知识外显站点，用 Obsidian 驱动。输出倒逼输入。",
       url: "",
       tags: ["个人项目", "静态站"],
+      icon: "book", // 封面图标: book/rocket/product/chart/code/bulb/default
     },
     {
       title: "更多项目即将上线",
       desc: "创业筹备中的项目，待启动后更新。",
       url: "",
       tags: ["coming soon"],
+      icon: "rocket",
     },
   ],
 
