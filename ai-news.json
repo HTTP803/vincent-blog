@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T21:22:28+08:00",
+  "updated": "2026-07-19T23:55:14+08:00",
   "issues": [
     {
       "issue": 1,
@@ -37,6 +37,51 @@
           "url": "https://new.qq.com/rain/a/20260719A06COW00",
           "source": "腾讯新闻",
           "date": "2026-07-19"
+        }
+      ]
+    },
+    {
+      "issue": 2,
+      "date": "2026-07-19",
+      "title": "第 2 期 · AI 行业日报",
+      "digest": "海外头部集中更新旗舰模型（GPT-5.6/Muse Spark/Grok 4.5），字节生图升级、MiniMax 巨额融资，企业自研 Agent 成新主线。",
+      "report": "## 本期要点\n- **OpenAI 三箭齐发**：7/8 发布 GPT-5.6 系列（Sol/Terra/Luna），旗舰 Sol 引入 Max 深度推理与 Ultra 多 Agent 协同，终端基准 91.9%、上下文扩至 150 万 token；同时推出 GPT-Live 全双工语音，对话可随时打断、逼近真人。\n- **Meta 跟进付费模型**：Muse Spark 1.1 首发付费开发版，百万上下文、可担任多智能体主协调，定价显著低于 Claude 同类。\n- **Grok 4.5 开放**：xAI 发布 1.5 万亿参数编程智能体模型，主打航天工程代码与百万级代码库长上下文、跨文件自主调试。\n- **字节生图迈入设计级**：Seedream 5.0 Pro 升级为数据图表/UI/工业示意图一键生成，支持矢量分层导出，补齐专业 AIGC 工具链。\n- **MiniMax 完成 160 亿港元融资**：主权与长线基金 7 倍认购，国产大模型资本热度不减。\n- **Mira Murati 的 Thinking Machines 首秀 Inkling**：架构参考 DeepSeek-V3、后训练用 Kimi 数据，折射中国模型已成全球技术源头之一。\n- **Prime Intellect 融 1.3 亿美元做企业级 AI 代理平台**：让企业用自有数据自训代理，AI 主权（数据不出域、去 API 依赖）成新基础设施层。\n\n## 趋势研判\n本周（截至 7/19）信号高度一致：竞争从「拼参数」全面转向「拼交互 + 拼主权」。海外三家（OpenAI/Meta/xAI）在同一周密集更新旗舰，但卖点已从单纯基准转向全双工语音、多 Agent 协同、长上下文编码等「可用体验」；国内则在多模态生成（字节）与资本（MiniMax）两端持续加码。更具结构性意味的是两条暗线——中国开源权重模型（DeepSeek/Kimi）开始被欧美头部团队反向借鉴，以及 Prime Intellect 代表的「企业自训代理」范式兴起，预示 AI 能力正从少数闭源实验室向「可私有化、可定制」的平台层扩散。对产品人而言，语音自然人机交互与 Agent 私有化部署，是接下来最值得押注的两个落地方向。",
+      "sources": [
+        {
+          "title": "AI应用板块强势拉升,OpenAI与Meta发布新模型,MiniMax融资160亿港元",
+          "url": "https://gu.qq.com/resources/shy/news/detail-v2/index.html?t=1#/index?_tentrees_trans=0&id=SN202607101137039539fb3c",
+          "source": "腾讯证券",
+          "date": "2026-07-10"
+        },
+        {
+          "title": "全双工语音模型落地、超大参数编程大模型发布、算力终端与资本市场多重突破 前沿快讯",
+          "url": "https://new.qq.com/rain/a/20260709A0BQN900?refer=cp_1009",
+          "source": "腾讯新闻",
+          "date": "2026-07-09"
+        },
+        {
+          "title": "美AI新秀创业公司Inkling大模型架构参考中国技术引关注",
+          "url": "https://weibo.com/2560432091/5321249208407106",
+          "source": "微博/FT",
+          "date": "2026-07-16"
+        },
+        {
+          "title": "Prime Intellect获1.3亿美元融资,助企业打造专属AI代理",
+          "url": "https://www.yingzheng.com/article/prime-intellect-series-a-funding",
+          "source": "盈证/ TechCrunch",
+          "date": "2026-07-09"
+        },
+        {
+          "title": "全球AI产业动态:OpenAI发布GPT-5.6,国内政策加速行业应用发展",
+          "url": "https://gu.qq.com/resources/shy/news/detail-v2/index.html?t=1#/index?_tentrees_trans=0&id=SN20260708210858b657352a",
+          "source": "腾讯证券",
+          "date": "2026-07-08"
+        },
+        {
+          "title": "OSCHINA - 开源 AI · 开发者生态社区（GLM-5.2 / 通义千问接入 Apple Intelligence）",
+          "url": "https://www.oschina.net/",
+          "source": "OSCHINA",
+          "date": "2026-07-17"
         }
       ]
     }
