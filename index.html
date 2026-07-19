@@ -254,6 +254,21 @@ footer{text-align:center;padding:48px 24px;color:var(--m);font-size:.8rem;margin
 .cta-btn:hover{transform:translateY(-2px);box-shadow:var(--glow-2)}
 .cta-btn svg{width:16px;height:16px;transition:transform .3s ease}
 .cta-btn:hover svg{transform:translateX(3px)}
+
+/* === AI 速报 === */
+.ai-news-section{padding:48px 0;max-width:1060px;margin:0 auto}
+.ai-badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.72rem;color:var(--a-2);background:var(--a-soft-2);border:1px solid var(--b);border-radius:999px;padding:4px 12px;margin-bottom:18px}
+.ai-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--a-2);box-shadow:0 0 0 4px var(--a-soft-2);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.ai-news-list{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.ai-news-item{background:var(--surface);border:1px solid var(--b);border-radius:var(--r);padding:20px;transition:all var(--t);box-shadow:var(--sh-sm);backdrop-filter:blur(8px);display:flex;flex-direction:column;gap:8px}
+.ai-news-item:hover{box-shadow:var(--glow);transform:translateY(-2px);border-color:var(--a)}
+.ai-meta{display:flex;align-items:center;gap:10px;font-size:.72rem;font-family:var(--mono);color:var(--m2)}
+.ai-source{color:var(--a-2);font-weight:600}
+.ai-title{font-size:1rem;font-weight:600;color:var(--fg);letter-spacing:-.1px;line-height:1.4}
+.ai-summary{font-size:.84rem;color:var(--m2);line-height:1.55;flex:1}
+.ai-link{font-size:.78rem;color:var(--a-2);font-weight:600;font-family:var(--mono);margin-top:4px;align-self:flex-start}
+.ai-link:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -271,6 +286,7 @@ footer{text-align:center;padding:48px 24px;color:var(--m);font-size:.8rem;margin
     <a onclick="return showView('home')" id="nav-home" class="active">首页</a>
     <a onclick="return showView('notes')" id="nav-notes">笔记</a>
     <a onclick="return showView('about')" id="nav-about">关于</a>
+    <a onclick="return showView('ainews')" id="nav-ainews">AI速报</a>
   </div>
 </nav>
 
@@ -300,13 +316,14 @@ const CDN_MARKED = typeof marked !== 'undefined';
 function showView(view, data) {
   C.currentView = view;
   document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-  const m = { home:'nav-home', notes:'nav-notes', about:'nav-about', note:'nav-notes' };
+  const m = { home:'nav-home', notes:'nav-notes', about:'nav-about', note:'nav-notes', ainews:'nav-ainews' };
   const el = document.getElementById(m[view]);
   if (el) el.classList.add('active');
   if (view === 'home') renderHome();
   else if (view === 'notes') renderNotesList();
   else if (view === 'note') renderNote(data);
   else if (view === 'about') renderAbout();
+  else if (view === 'ainews') renderAiNews();
   return false;
 }
 
@@ -360,6 +377,7 @@ function setupHash() {
     if (note) showView('note', note);
   } else if (h === 'about') showView('about');
   else if (h === 'notes') showView('notes');
+  else if (h === 'ainews') showView('ainews');
 }
 
 function setHash(h) { history.pushState(null, '', '#' + h); }
@@ -455,6 +473,21 @@ function renderHome() {
     </li>`;
   }).join('');
 
+  // AI 速报（首页 top 4）
+  const aiCfg = cfg.aiNews || {};
+  const aiTop = (C.aiNews && C.aiNews.items || []).slice(0, 4);
+  const aiNewsHtml = (aiCfg.enabled !== false && aiTop.length) ? `<div class="ai-news-section container">
+    <div class="ai-badge"><span class="dot"></span> AI 速报 · 每 ${(aiCfg.intervalHours||4)} 小时更新</div>
+    <ul class="ai-news-list">${aiTop.map(it => `
+      <li class="ai-news-item">
+        <div class="ai-meta"><span class="ai-source">${escHtml(it.source||'AI')}</span><span>${escHtml(it.date||'')}</span></div>
+        <div class="ai-title">${escHtml(it.title)}</div>
+        <div class="ai-summary">${escHtml(it.summary||'')}</div>
+        ${it.url ? `<a class="ai-link" href="${escHtml(it.url)}" target="_blank" rel="noopener">阅读原文 →</a>` : ''}
+      </li>`).join('')}</ul>
+    <a class="view-all" onclick="return showView('ainews')">查看全部速报 →</a>
+  </div>` : '';
+
   const email = cfg.social.email || {};
 
   app.innerHTML = `
@@ -476,6 +509,8 @@ function renderHome() {
     ${projCards ? `<div class="projects-section container"><div class="section-title">${SECTION_ICONS.projects} 项目作品</div><div class="project-grid">${projCards}</div></div>` : ''}
 
     ${noteItems ? `<div class="notes-section container"><div class="section-title">${SECTION_ICONS.notes} 最新笔记</div><ul class="notes-mini-list">${noteItems}</ul><a class="view-all" onclick="return showView('notes')">查看全部笔记 →</a></div>` : ''}
+
+    ${aiNewsHtml}
 
     <div class="contact-section container">
       <h2>保持联系</h2>
@@ -589,6 +624,49 @@ function renderAbout() {
   });
 }
 
+// --- Render: AI 速报 ---
+function renderAiNews() {
+  const app = document.getElementById('app');
+  const data = C.aiNews || { items: [] };
+  const updated = data.updated ? fmtCn(data.updated) : '';
+  const items = data.items.length ? data.items.map(it => `
+    <li class="ai-news-item">
+      <div class="ai-meta"><span class="ai-source">${escHtml(it.source||'AI')}</span><span>${escHtml(it.date||'')}</span></div>
+      <div class="ai-title">${escHtml(it.title)}</div>
+      <div class="ai-summary">${escHtml(it.summary||'')}</div>
+      ${it.url ? `<a class="ai-link" href="${escHtml(it.url)}" target="_blank" rel="noopener">阅读原文 →</a>` : ''}
+    </li>`).join('') : '<div class="empty">暂时没有速报，稍后再来看看～</div>';
+  app.innerHTML = `<div class="container" style="padding-top:40px;padding-bottom:80px">
+    <div class="page-header">
+      <h1>AI 速报</h1>
+      <div class="sub">每 ${(C.cfg.aiNews?.intervalHours||4)} 小时自动更新的 AI 行业快讯${updated ? ' · 更新于 '+updated : ''}</div>
+    </div>
+    <ul class="ai-news-list">${items}</ul>
+  </div>`;
+  setHash('ainews');
+  window.scrollTo(0,0);
+}
+
+function fmtCn(iso){
+  try { return new Date(iso).toLocaleString('zh-CN',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}); } catch(e){ return ''; }
+}
+
+async function loadAiNews() {
+  const apply = () => { if (C.currentView==='home') renderHome(); else if (C.currentView==='ainews') renderAiNews(); };
+  try {
+    const r = await fetch('ai-news.json?t='+Date.now());
+    if (r.ok) { C.aiNews = await r.json(); apply(); }
+  } catch(e){}
+  // 尝试拉取 GitHub raw 上由后台任务每 4 小时刷新的最新版（CN 网络可达时生效）
+  try {
+    const r2 = await fetch('https://raw.githubusercontent.com/HTTP803/vincent-blog/main/ai-news.json?t='+Date.now());
+    if (r2.ok) {
+      const d2 = await r2.json();
+      if (!C.aiNews || (d2.updated||'') >= (C.aiNews.updated||'')) { C.aiNews = d2; apply(); }
+    }
+  } catch(e){}
+}
+
 // --- Util ---
 function escHtml(s) {
   if (!s) return '';
@@ -606,6 +684,7 @@ function copyId(id, msg){
 }
 
 loadNotes();
+loadAiNews();
 </script>
 </body>
 </html>

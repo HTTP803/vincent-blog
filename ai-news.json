@@ -1,0 +1,47 @@
+{
+  "updated": "2026-07-19T21:00:00+08:00",
+  "items": [
+    {
+      "title": "三大实验室同日发布前沿模型：GPT-5.6、Claude Sonnet 5、Gemini 齐发",
+      "summary": "7月9日，OpenAI、Anthropic、Google 在数小时内接连发布旗舰模型。GPT-5.6 含 Sol/Terra/Luna 三档与 GPT-Live 全双工语音；Claude Sonnet 5 主打 Agentic 执行；Gemini Omni Flash 主攻多模态快任务。模型竞赛从“对话”加速转向“自主执行”。",
+      "source": "AI Magazine",
+      "url": "https://ai-magazine.com/three-ai-giants-one-day-openai-anthropic-and-google-ship-frontier-models-simultaneously",
+      "date": "2026-07-09"
+    },
+    {
+      "title": "月之暗面发布 Kimi K3：2.8 万亿参数全球最大开源模型",
+      "summary": "7月16日，月之暗面发布 MoE 架构、2.8T 参数的开源基础模型 Kimi K3，支持 100 万 Token 上下文与原生视觉理解，并同步开放权重、API 与文档。业界认为其进一步缩小中美前沿模型差距，并挑战闭源路线的生态壁垒。",
+      "source": "腾讯财经 / 新华社",
+      "url": "http://gu.qq.com/resources/shy/news/detail-v2/index.html#/?id=nesSN2026071703185897a9203d&s=b",
+      "date": "2026-07-16"
+    },
+    {
+      "title": "商汤发布 SenseNova U1 Pro：从“内容生成”迈向“系统级交付”",
+      "summary": "7月18日 WAIC 上，商汤旗舰多模态智能体 U1 Pro 亮相，定位长程任务交付级基座，支持 8K 原生输出与数十轮 Agentic Generation Loop，主打告别“AI 味”、直接产出可交付的专业级图文。",
+      "source": "IT之家",
+      "url": "https://www.ithome.com/0/978/659.htm",
+      "date": "2026-07-18"
+    },
+    {
+      "title": "xAI 开源 Grok Build CLI 并重置全部用户用量限制",
+      "summary": "7月16日，xAI 将终端原生 AI 编程智能体 Grok Build 的完整源码在 GitHub 开源，同时重置所有用户用量限制，允许开发者检视、定制并扩展该工具。",
+      "source": "AI Native Foundation",
+      "url": "https://ainativefoundation.org/global-ai-native-industry-insights-20260716-anthropic-xai-openai-more",
+      "date": "2026-07-16"
+    },
+    {
+      "title": "Anthropic 与 OpenAI 监管路线分裂，双双瞄准 Q4 IPO",
+      "summary": "Anthropic 支持加州 SB53 等州级 AI 安全立法，OpenAI 则力推联邦统一标准以 preempt 各州规则。分析认为，两家正把监管策略变成 IPO 前的差异化叙事——前者“已合规即护城河”，后者“押注华盛顿”。",
+      "source": "AI Tools Recap",
+      "url": "https://aitoolsrecap.com/Blog/ai-news-july-16-2026",
+      "date": "2026-07-16"
+    },
+    {
+      "title": "端侧 AI 爆发元年：面壁 MiniCPM5-1B 以 1B 参数逼近 GPT-4o",
+      "summary": "7月19日 WAIC，面壁智能 CEO 李大海称 2026 是端侧 AI 规模化落地核心元年。其 MiniCPM5-1B 仅 1B 参数即在测评中逼近 200B 的 GPT-4o，“密度定律”显示模型能力约每 3.5 个月翻一番。",
+      "source": "新浪财经",
+      "url": "https://cj.sina.com.cn/article/norm_detail?url=https%3A%2F%2Ffinance.sina.com.cn%2Fjjxw%2F2026-07-19%2Fdoc-iniihzcp0408121.shtml&finpagefr=w_110",
+      "date": "2026-07-19"
+    }
+  ]
+}

@@ -23,7 +23,7 @@ touch "$PROJ/.nojekyll"
 for f in "$PROJ/content"/*; do
   git add -f "$f"
 done
-git add -f .nojekyll deploy.sh
+git add -f .nojekyll deploy.sh ai-news.json
 git commit -m "deploy: $(date +%Y-%m-%d_%H:%M)" || echo "（无变更可提交）"
 
 # 5. 检查 remote 并推送

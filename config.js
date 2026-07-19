@@ -57,6 +57,13 @@ const SITE_CONFIG = {
     bg: "#FAFAF8",
   },
 
+  // --- AI 速报（每 N 小时由后台任务自动刷新 ai-news.json） ---
+  aiNews: {
+    enabled: true,
+    intervalHours: 4,
+    navLabel: "AI速报",
+  },
+
   // --- 笔记来源目录（相对于站点根目录） ---
   contentDir: "content",
 
