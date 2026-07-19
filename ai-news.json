@@ -1,47 +1,44 @@
 {
-  "updated": "2026-07-19T21:00:00+08:00",
-  "items": [
+  "updated": "2026-07-19T21:22:28+08:00",
+  "issues": [
     {
-      "title": "三大实验室同日发布前沿模型：GPT-5.6、Claude Sonnet 5、Gemini 齐发",
-      "summary": "7月9日，OpenAI、Anthropic、Google 在数小时内接连发布旗舰模型。GPT-5.6 含 Sol/Terra/Luna 三档与 GPT-Live 全双工语音；Claude Sonnet 5 主打 Agentic 执行；Gemini Omni Flash 主攻多模态快任务。模型竞赛从“对话”加速转向“自主执行”。",
-      "source": "AI Magazine",
-      "url": "https://ai-magazine.com/three-ai-giants-one-day-openai-anthropic-and-google-ship-frontier-models-simultaneously",
-      "date": "2026-07-09"
-    },
-    {
-      "title": "月之暗面发布 Kimi K3：2.8 万亿参数全球最大开源模型",
-      "summary": "7月16日，月之暗面发布 MoE 架构、2.8T 参数的开源基础模型 Kimi K3，支持 100 万 Token 上下文与原生视觉理解，并同步开放权重、API 与文档。业界认为其进一步缩小中美前沿模型差距，并挑战闭源路线的生态壁垒。",
-      "source": "腾讯财经 / 新华社",
-      "url": "http://gu.qq.com/resources/shy/news/detail-v2/index.html#/?id=nesSN2026071703185897a9203d&s=b",
-      "date": "2026-07-16"
-    },
-    {
-      "title": "商汤发布 SenseNova U1 Pro：从“内容生成”迈向“系统级交付”",
-      "summary": "7月18日 WAIC 上，商汤旗舰多模态智能体 U1 Pro 亮相，定位长程任务交付级基座，支持 8K 原生输出与数十轮 Agentic Generation Loop，主打告别“AI 味”、直接产出可交付的专业级图文。",
-      "source": "IT之家",
-      "url": "https://www.ithome.com/0/978/659.htm",
-      "date": "2026-07-18"
-    },
-    {
-      "title": "xAI 开源 Grok Build CLI 并重置全部用户用量限制",
-      "summary": "7月16日，xAI 将终端原生 AI 编程智能体 Grok Build 的完整源码在 GitHub 开源，同时重置所有用户用量限制，允许开发者检视、定制并扩展该工具。",
-      "source": "AI Native Foundation",
-      "url": "https://ainativefoundation.org/global-ai-native-industry-insights-20260716-anthropic-xai-openai-more",
-      "date": "2026-07-16"
-    },
-    {
-      "title": "Anthropic 与 OpenAI 监管路线分裂，双双瞄准 Q4 IPO",
-      "summary": "Anthropic 支持加州 SB53 等州级 AI 安全立法，OpenAI 则力推联邦统一标准以 preempt 各州规则。分析认为，两家正把监管策略变成 IPO 前的差异化叙事——前者“已合规即护城河”，后者“押注华盛顿”。",
-      "source": "AI Tools Recap",
-      "url": "https://aitoolsrecap.com/Blog/ai-news-july-16-2026",
-      "date": "2026-07-16"
-    },
-    {
-      "title": "端侧 AI 爆发元年：面壁 MiniCPM5-1B 以 1B 参数逼近 GPT-4o",
-      "summary": "7月19日 WAIC，面壁智能 CEO 李大海称 2026 是端侧 AI 规模化落地核心元年。其 MiniCPM5-1B 仅 1B 参数即在测评中逼近 200B 的 GPT-4o，“密度定律”显示模型能力约每 3.5 个月翻一番。",
-      "source": "新浪财经",
-      "url": "https://cj.sina.com.cn/article/norm_detail?url=https%3A%2F%2Ffinance.sina.com.cn%2Fjjxw%2F2026-07-19%2Fdoc-iniihzcp0408121.shtml&finpagefr=w_110",
-      "date": "2026-07-19"
+      "issue": 1,
+      "date": "2026-07-19",
+      "title": "第 1 期 · AI 行业日报",
+      "digest": "国产开源阵营在 WAIC 全面突围：Kimi K3 登顶全球代码榜、DeepSeek V4 下周发布、阿里千问 3.8 开源在即；Databricks 天价融资背后，中国开源模型成成本控制关键。",
+      "report": "## 本期要点\n- **国产开源模型集体爆发**：月之暗面 Kimi K3（2.8T 参数 MoE）登顶全球代码榜，逼近 Claude / GPT 前沿；DeepSeek V4 实测曝光、有望下周发布；阿里千问 3.8 预览版已上线并宣布开源。\n- **WAIC 2026 成国产算力主场**：京东 JoyAI 矩阵、百度秒哒 3.5、发改委《AI 八大行动》与算电协同方案齐发，政策给国产算力\"长期通行证\"。\n- **Agent 自进化成为新范式**：上海 AI Lab 的 Self-Harness 仅改外层 Harness 就让 Qwen3.5 提升 104%，验证\"系统提示 / 工具规则可自我迭代\"。\n- **资本继续下注数据与平台**：Databricks 以 1880 亿美元估值敲定新一轮融资，CEO 直言采用中国开源模型是 AI 成本控制关键一环。\n\n## 趋势研判\n本周信号很清晰：竞争主轴正从\"拼参数\"转向\"拼落地 + 拼开放\"。开源权重模型集体逼近，让闭源溢价首次受到实质挑战；中国厂商借 WAIC 窗口集中亮剑，叠加政策与算力协同，正把\"国产替代\"从口号推向可运行栈。\n\n对产品人而言，两条线尤其值得盯：**Agent 自进化**（外层 Harness 自动迭代）与 **端侧 / 具身世界模型**（如大晓 Kairos 3.1 开源）——它们决定了下一代应用的自动化天花板。",
+      "sources": [
+        {
+          "title": "China's Moonshot unveils giant open model rivalling US leaders",
+          "url": "https://aimuseum.se/pages/daily/2026-07-19-ainews.html",
+          "source": "AI Museum",
+          "date": "2026-07-19"
+        },
+        {
+          "title": "Databricks估值飙升1880亿美元,CEO:采用中国开源模型是AI成本控制关键一环",
+          "url": "https://www.163.com/dy/article/L271GON305118O92.html",
+          "source": "网易科技",
+          "date": "2026-07-19"
+        },
+        {
+          "title": "阿里千问3.8即将发布并开源",
+          "url": "https://www.163.com/dy/article/L27CIHIT0512B07B.html",
+          "source": "每日经济新闻",
+          "date": "2026-07-19"
+        },
+        {
+          "title": "大晓机器人发布开悟世界模型 3.1(Kairos 3.1)并开源",
+          "url": "https://www.163.com/dy/article/L27MQJTR0530IP7Q.html",
+          "source": "财经网科技",
+          "date": "2026-07-19"
+        },
+        {
+          "title": "AI行业日报",
+          "url": "https://new.qq.com/rain/a/20260719A06COW00",
+          "source": "腾讯新闻",
+          "date": "2026-07-19"
+        }
+      ]
     }
   ]
 }

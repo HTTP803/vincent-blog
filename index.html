@@ -263,6 +263,25 @@ footer{text-align:center;padding:48px 24px;color:var(--m);font-size:.8rem;margin
 .ai-news-list{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
 .ai-news-item{background:var(--surface);border:1px solid var(--b);border-radius:var(--r);padding:20px;transition:all var(--t);box-shadow:var(--sh-sm);backdrop-filter:blur(8px);display:flex;flex-direction:column;gap:8px}
 .ai-news-item:hover{box-shadow:var(--glow);transform:translateY(-2px);border-color:var(--a)}
+.ai-issue-card{background:var(--surface);border:1px solid var(--b);border-radius:var(--r);padding:24px;box-shadow:var(--sh-sm);backdrop-filter:blur(8px)}
+.ai-issue-head{display:flex;gap:12px;align-items:center;margin-bottom:6px}
+.ai-issue-no{font-family:var(--mono);font-size:.8rem;color:var(--a);font-weight:600;letter-spacing:.04em}
+.ai-issue-date{font-size:.78rem;color:var(--m)}
+.ai-issue-title{font-size:1.25rem;margin:2px 0 10px}
+.ai-issue-digest{color:var(--m);line-height:1.75;font-size:.95rem}
+.ai-issue-list{display:flex;flex-direction:column;gap:16px}
+.ai-issue-item{background:var(--surface);border:1px solid var(--b);border-radius:var(--r);padding:20px;box-shadow:var(--sh-sm);backdrop-filter:blur(8px);cursor:pointer;transition:all var(--t)}
+.ai-issue-item:hover{box-shadow:var(--glow);transform:translateY(-2px);border-color:var(--a)}
+.ai-issue-report{margin-top:18px;line-height:1.85;color:var(--fg)}
+.ai-issue-report h2{font-size:1.05rem;margin:20px 0 8px;color:var(--fg)}
+.ai-issue-report h3{font-size:.98rem;margin:14px 0 6px;color:var(--fg)}
+.ai-issue-report ul{margin:8px 0;padding-left:20px}
+.ai-issue-report li{margin:5px 0}
+.ai-issue-report strong{color:var(--a-2)}
+.ai-sources{margin-top:26px;padding-top:16px;border-top:1px solid var(--b)}
+.ai-sources-title{font-family:var(--mono);font-size:.72rem;color:var(--m);margin-bottom:10px;letter-spacing:.12em;text-transform:uppercase}
+.ai-src{display:inline-block;margin:0 12px 8px 0;color:var(--a);font-size:.85rem;text-decoration:none}
+.ai-src:hover{text-decoration:underline}
 .ai-meta{display:flex;align-items:center;gap:10px;font-size:.72rem;font-family:var(--mono);color:var(--m2)}
 .ai-source{color:var(--a-2);font-weight:600}
 .ai-title{font-size:1rem;font-weight:600;color:var(--fg);letter-spacing:-.1px;line-height:1.4}
@@ -473,19 +492,17 @@ function renderHome() {
     </li>`;
   }).join('');
 
-  // AI 速报（首页 top 4）
+  // AI 速报（首页展示最新一期）
   const aiCfg = cfg.aiNews || {};
-  const aiTop = (C.aiNews && C.aiNews.items || []).slice(0, 4);
-  const aiNewsHtml = (aiCfg.enabled !== false && aiTop.length) ? `<div class="ai-news-section container">
-    <div class="ai-badge"><span class="dot"></span> AI 速报 · 每 ${(aiCfg.intervalHours||4)} 小时更新</div>
-    <ul class="ai-news-list">${aiTop.map(it => `
-      <li class="ai-news-item">
-        <div class="ai-meta"><span class="ai-source">${escHtml(it.source||'AI')}</span><span>${escHtml(it.date||'')}</span></div>
-        <div class="ai-title">${escHtml(it.title)}</div>
-        <div class="ai-summary">${escHtml(it.summary||'')}</div>
-        ${it.url ? `<a class="ai-link" href="${escHtml(it.url)}" target="_blank" rel="noopener">阅读原文 →</a>` : ''}
-      </li>`).join('')}</ul>
-    <a class="view-all" onclick="return showView('ainews')">查看全部速报 →</a>
+  const aiLatest = latestIssue();
+  const aiNewsHtml = (aiCfg.enabled !== false && aiLatest) ? `<div class="ai-news-section container">
+    <div class="ai-badge"><span class="dot"></span> AI 速报 · 每日更新 · 第 ${aiLatest.issue} 期</div>
+    <div class="ai-issue-card">
+      <div class="ai-issue-head"><span class="ai-issue-no">第 ${aiLatest.issue} 期</span><span class="ai-issue-date">${escHtml(aiLatest.date||'')}</span></div>
+      <h3 class="ai-issue-title">${escHtml(aiLatest.title||'AI 行业日报')}</h3>
+      <div class="ai-issue-digest">${escHtml(aiLatest.digest||'')}</div>
+      <a class="view-all" onclick="return showView('ainews')">阅读本期全文 / 查看全部期刊 →</a>
+    </div>
   </div>` : '';
 
   const email = cfg.social.email || {};
@@ -624,24 +641,44 @@ function renderAbout() {
   });
 }
 
-// --- Render: AI 速报 ---
+// --- Render: AI 速报（期刊列表） ---
 function renderAiNews() {
   const app = document.getElementById('app');
-  const data = C.aiNews || { items: [] };
+  const data = C.aiNews || { issues: [] };
   const updated = data.updated ? fmtCn(data.updated) : '';
-  const items = data.items.length ? data.items.map(it => `
-    <li class="ai-news-item">
-      <div class="ai-meta"><span class="ai-source">${escHtml(it.source||'AI')}</span><span>${escHtml(it.date||'')}</span></div>
-      <div class="ai-title">${escHtml(it.title)}</div>
-      <div class="ai-summary">${escHtml(it.summary||'')}</div>
-      ${it.url ? `<a class="ai-link" href="${escHtml(it.url)}" target="_blank" rel="noopener">阅读原文 →</a>` : ''}
-    </li>`).join('') : '<div class="empty">暂时没有速报，稍后再来看看～</div>';
+  const issues = aiIssues().slice().sort((a,b)=>b.issue-a.issue);
+  const list = issues.length ? issues.map(it => `
+    <div class="ai-issue-item" onclick="return showIssue(${it.issue})">
+      <div class="ai-issue-head"><span class="ai-issue-no">第 ${it.issue} 期</span><span class="ai-issue-date">${escHtml(it.date||'')}</span></div>
+      <h3 class="ai-issue-title">${escHtml(it.title||'AI 行业日报')}</h3>
+      <div class="ai-issue-digest">${escHtml(it.digest||'')}</div>
+      <span class="ai-link">阅读全文 →</span>
+    </div>`).join('') : '<div class="empty">暂时没有速报，稍后再来看看～</div>';
   app.innerHTML = `<div class="container" style="padding-top:40px;padding-bottom:80px">
     <div class="page-header">
       <h1>AI 速报</h1>
-      <div class="sub">每 ${(C.cfg.aiNews?.intervalHours||4)} 小时自动更新的 AI 行业快讯${updated ? ' · 更新于 '+updated : ''}</div>
+      <div class="sub">每日自动生成的 AI 行业报告${updated ? ' · 更新于 '+updated : ''}</div>
     </div>
-    <ul class="ai-news-list">${items}</ul>
+    <div class="ai-issue-list">${list}</div>
+  </div>`;
+  setHash('ainews');
+  window.scrollTo(0,0);
+}
+
+function showIssue(n) {
+  const app = document.getElementById('app');
+  const it = aiIssues().find(x => x.issue === n);
+  if (!it) return renderAiNews();
+  const sources = (it.sources||[]).length ? `<div class="ai-sources"><div class="ai-sources-title">本期来源</div>${it.sources.map(s=>`<a class="ai-src" href="${escHtml(s.url)}" target="_blank" rel="noopener">${escHtml(s.source||s.title||'来源')} ↗</a>`).join('')}</div>` : '';
+  app.innerHTML = `<div class="container" style="padding-top:40px;padding-bottom:80px">
+    <a class="view-all" onclick="return renderAiNews()">← 返回期刊列表</a>
+    <div class="page-header">
+      <div class="ai-issue-head"><span class="ai-issue-no">第 ${it.issue} 期</span><span class="ai-issue-date">${escHtml(it.date||'')}</span></div>
+      <h1>${escHtml(it.title||'AI 行业日报')}</h1>
+      <div class="ai-issue-digest">${escHtml(it.digest||'')}</div>
+    </div>
+    <div class="ai-issue-report markdown-body">${marked.parse(it.report||'')}</div>
+    ${sources}
   </div>`;
   setHash('ainews');
   window.scrollTo(0,0);
@@ -650,6 +687,10 @@ function renderAiNews() {
 function fmtCn(iso){
   try { return new Date(iso).toLocaleString('zh-CN',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}); } catch(e){ return ''; }
 }
+
+// --- AI 速报 helpers ---
+function aiIssues(){ return (C.aiNews && C.aiNews.issues) || []; }
+function latestIssue(){ const a = aiIssues(); return a.length ? a.reduce((m,x)=> x.issue>m.issue?x:m) : null; }
 
 async function loadAiNews() {
   const apply = () => { if (C.currentView==='home') renderHome(); else if (C.currentView==='ainews') renderAiNews(); };

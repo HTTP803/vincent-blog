@@ -57,10 +57,9 @@ const SITE_CONFIG = {
     bg: "#FAFAF8",
   },
 
-  // --- AI 速报（每 N 小时由后台任务自动刷新 ai-news.json） ---
+  // --- AI 速报（每日由后台任务自动生成 AI 行业报告，写入 ai-news.json 的 issues[]；期号自动顺延） ---
   aiNews: {
     enabled: true,
-    intervalHours: 4,
     navLabel: "AI速报",
   },
 
