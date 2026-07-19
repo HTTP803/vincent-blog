@@ -521,13 +521,13 @@ function renderHome() {
       <div class="skills-row">${skills}</div>
     </div>
 
+    ${aiNewsHtml}
+
     ${nowItems ? `<div class="now-section container"><div class="section-title">${SECTION_ICONS.now} 正在做的事</div><ul class="now-list">${nowItems}</ul></div>` : ''}
 
     ${projCards ? `<div class="projects-section container"><div class="section-title">${SECTION_ICONS.projects} 项目作品</div><div class="project-grid">${projCards}</div></div>` : ''}
 
     ${noteItems ? `<div class="notes-section container"><div class="section-title">${SECTION_ICONS.notes} 最新笔记</div><ul class="notes-mini-list">${noteItems}</ul><a class="view-all" onclick="return showView('notes')">查看全部笔记 →</a></div>` : ''}
-
-    ${aiNewsHtml}
 
     <div class="contact-section container">
       <h2>保持联系</h2>
