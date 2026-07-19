@@ -355,7 +355,7 @@ function parseMD(text) {
   });
   if (meta.tags) meta.tags = meta.tags.split(/[,，\s]+/).filter(Boolean);
   else meta.tags = [];
-  meta.title = meta.title || '无标题';
+  if (!meta.title) { const h1 = body.match(/^\s*#\s+(.+?)\s*$/m); meta.title = h1 ? h1[1].replace(/[#*`>]/g,'').trim() : '无标题'; }
   const html = CDN_MARKED ? marked.parse(body) : '<p>'+body.replace(/\n/g,'<br>')+'</p>';
   return { meta, html, body };
 }
