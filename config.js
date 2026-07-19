@@ -7,15 +7,16 @@ const SITE_CONFIG = {
   avatar: "", // 头像图片 URL（可选，留空则显示首字母）
 
   // --- 社交链接（不用的留空） ---
+  // 说明：email/QQ/微信/抖音 用"点击复制账号"模式（跨 PC/手机 100% 可靠，不受各平台 App 唤起/中转页限制）
+  //       github/小红书 网页版体验好，保留一键跳转；不用的留空
   social: {
-    email:       { url: "mailto:529338895@qq.com", label: "Email" },
+    email:       { id: "529338895@qq.com", label: "Email", hint: "邮箱已复制：529338895@qq.com，粘贴到邮件里给我发信" },
     github:      { url: "https://github.com/HTTP803",     label: "GitHub" },
-    QQ:          { url: "https://qm.qq.com/q/CpiIgRaURc",   label: "QQ" },
-    // 微信无网页地址：填 id（点击复制微信号）；若有二维码图，放 assets/wechat-qr.png 并填 qr 字段（点击新标签打开）
-    wechat:      { url: "", qr: "", id: "PM_Vincent",      label: "微信" },
-    rss:         { url: "/feed.xml",                       label: "RSS" },
+    QQ:          { id: "529338895",  label: "QQ",   hint: "QQ号已复制：529338895，打开 QQ 搜索添加我" },
+    wechat:      { id: "PM_Vincent", label: "微信", hint: "微信号已复制：PM_Vincent，打开微信搜索添加我" },
+    douyin:      { id: "116796468",  label: "抖音", hint: "抖音号已复制：116796468，打开抖音搜索关注我" },
     xiaohongshu: { url: "https://xhslink.com/m/7HupBVyOig2",   label: "小红书" },
-    douyin:      { url: "https://v.douyin.com/NHh-PnPmuYc/",    label: "抖音" },
+    rss:         { url: "/feed.xml",                       label: "RSS" },
   },
 
   // --- 正在做的事（首页 Now 区） ---
