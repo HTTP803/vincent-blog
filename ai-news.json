@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T23:55:14+08:00",
+  "updated": "2026-07-20T11:13:32+08:00",
   "issues": [
     {
       "issue": 1,
@@ -82,6 +82,51 @@
           "url": "https://www.oschina.net/",
           "source": "OSCHINA",
           "date": "2026-07-17"
+        }
+      ]
+    },
+    {
+      "issue": 3,
+      "date": "2026-07-20",
+      "title": "第 3 期 · AI 行业日报",
+      "digest": "欧盟重拳拆 Google AI 分发壁垒，Kimi K3 引爆国产开源叙事并拟赴港上市，Token 价格 30 个月跌 90%+，成本曲线加速 Agent 普及。",
+      "report": "## 本期要点\n- **欧盟对 Google 开出最强 AI 监管令**：欧盟委员会依《数字市场法》要求 Google 开放 Android 给竞品 AI 助手，并向 AI 开发商共享搜索数据（2027 年起落地）。这直接拆掉 Google 在数十亿台设备上的默认入口与二十年搜索行为数据壁垒。\n- **Gemini 3.5 Pro 第三次跳票**：Google 旗舰模型再度错过 7/17 节点，据称正考虑推 Gemini 3.6 Flash 救场。Alphabet 股价单日跌约 4%，模型与分发双重承压。\n- **Kimi K3 引爆国产开源叙事**：月之暗面 2.8 万亿参数开源模型登顶 Frontend Code Arena，彭博社称其打破\"中国 AI 落后美国\"的固有认知；公司更被曝最快 6 个月内赴港上市，ARR 三个月翻 3 倍。\n- **阿里千问 Qwen3.8-Max 预览版上线**：2.4T 参数的 Qwen3.8-Max-Preview 首发 PC/Web 端，正式版将开源，延续\"开源引流、云变现\"打法。\n- **高盛：Token 价格 30 个月跌超 90%**：主流 LLM 每百万 Token 价格指数较 2022 年初降逾 90%；预计 2026 年全球超大规模云 AI 资本开支达 7570 亿美元。\n- **美国 125+ 地反对 AI 数据中心**：全美首次全国性协调抗议，批数据中心推高电价、耗水污染；超 1300 亿美元项目被延期或取消。\n- **Sand.ai 获超亿美元融资**：坚持自回归视频路线，计划 7 月发开源 MoE 视频模型；其 MagiAttention 算子库已获英伟达推荐。\n\n## 趋势研判\n本期信号指向三条主线：**监管正成为 AI 竞争的新变量**（欧盟拆 Google 分发壁垒、美国社区反数据中心），硬件与能源约束从隐性走向显性；**国产开源阵营完成\"技术—资本\"双验证**（Kimi K3 + 赴港上市、Qwen3.8 开源），开源权重模型首次系统性挑战闭源溢价；**成本曲线断崖式下探**（Token 价跌 90%+）让 Agent 规模化从经济账上变得可行。对产品人而言，监管套利窗口、开源基座选型、以及\"按结果计费\"的 Agent 商业模式，是接下来最值得押注的三件事。",
+      "sources": [
+        {
+          "title": "AI News Today July 20 2026: 16 Biggest Stories（欧盟令 Google 开放 Android、Gemini 3.5 Pro 跳票）",
+          "url": "https://www.buildfastwithai.com/blogs/ai-news-today-july-20-2026-16-biggest-stories",
+          "source": "BuildFastWithAI",
+          "date": "2026-07-20"
+        },
+        {
+          "title": "月之暗面有望最快6个月内赴港上市；Kimi K3 发布后引发估值重估",
+          "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_4336a5d587c11652",
+          "source": "每日经济新闻",
+          "date": "2026-07-20"
+        },
+        {
+          "title": "AI科技日报：阿里千问 PC 端接入 Qwen3.8-Max-Preview",
+          "url": "https://new.qq.com/rain/a/20260720A02J6U00?refer=cp_1009",
+          "source": "腾讯新闻",
+          "date": "2026-07-20"
+        },
+        {
+          "title": "高盛：AI 模型每百万 Token 价格过去 30 个月跌超 90%；美国多地爆发反对 AI 数据中心建设抗议",
+          "url": "https://new.qq.com/rain/a/20260720A02G4M00?refer=cp_1009",
+          "source": "每日经济新闻",
+          "date": "2026-07-20"
+        },
+        {
+          "title": "Sand.ai 获超亿美元融资：坚持自回归视频路线，计划 7 月发布开源 MoE 大模型",
+          "url": "https://www.web3the.com/fast/779247.html",
+          "source": "雷电财经",
+          "date": "2026-07-20"
+        },
+        {
+          "title": "AI 大脑上新！国产人工智能开启实用能办事时代（磐石 2.0、曙光 8000、昇腾 950）",
+          "url": "https://ysxw.cctv.cn/article.html?toc_style_id=feeds_default&item_id=13876479454974315069&channelId=1119",
+          "source": "央视网",
+          "date": "2026-07-20"
         }
       ]
     }
