@@ -336,6 +336,19 @@ footer{text-align:center;padding:48px 24px;color:var(--m);font-size:.8rem;margin
 @keyframes quoteShine{0%{transform:translateX(-100%)}55%,100%{transform:translateX(100%)}}
 @keyframes quoteBar{0%{background-position:0% 0}100%{background-position:200% 0}}
 @media(max-width:600px){.quote-banner{padding:18px 18px 16px}.quote-text{font-size:1.04rem}.quote-refresh{top:10px;right:10px}}
+
+/* Tech cursor */
+@media (hover:hover) and (pointer:fine){
+  *{cursor:none!important}
+  input,textarea{cursor:text!important}
+}
+.cursor-dot,.cursor-ring{position:fixed;top:0;left:0;z-index:9999;pointer-events:none;border-radius:50%;opacity:0;will-change:left,top;transition:opacity .3s ease}
+.cursor-dot{width:7px;height:7px;background:var(--grad-2);box-shadow:0 0 10px var(--a-2),0 0 4px #fff;transform:translate(-50%,-50%)}
+.cursor-ring{width:36px;height:36px;border:1.5px solid var(--a-2);box-shadow:0 0 14px rgba(79,243,200,.4);transform:translate(-50%,-50%);transition:opacity .3s ease,width .22s ease,height .22s ease,border-color .22s ease,box-shadow .22s ease}
+.cursor-ring.hover{width:52px;height:52px;border-color:var(--a);box-shadow:0 0 22px rgba(188,82,238,.55),0 0 8px rgba(79,243,200,.4)}
+.cursor-ring.down{width:28px;height:28px;border-color:var(--a-2)}
+.cursor-dot.hover{width:4px;height:4px}
+
 </style>
 </head>
 <body>
@@ -828,6 +841,24 @@ function copyId(id, msg){
 
 loadNotes();
 loadAiNews();
+</script>
+
+<script>
+(function(){
+  if(!window.matchMedia||!matchMedia('(hover:hover) and (pointer:fine)').matches) return;
+  var dot=document.createElement('div');dot.className='cursor-dot';
+  var ring=document.createElement('div');ring.className='cursor-ring';
+  document.body.appendChild(dot);document.body.appendChild(ring);
+  var mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my,on=false;
+  var sel='a,button,[onclick],.note-mini-item,.project-card,.skill-pill,.social-btn,.view-all,.quote-refresh';
+  addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';if(!on){on=true;dot.style.opacity=1;ring.style.opacity=.9}});
+  addEventListener('mousedown',function(){ring.classList.add('down')});
+  addEventListener('mouseup',function(){ring.classList.remove('down')});
+  document.addEventListener('mouseover',function(e){if(e.target.closest&&e.target.closest(sel)){ring.classList.add('hover');dot.classList.add('hover')}});
+  document.addEventListener('mouseout',function(e){var t=e.relatedTarget;if(!t||!t.closest||!t.closest(sel)){ring.classList.remove('hover');dot.classList.remove('hover')}});
+  addEventListener('mouseout',function(e){if(!e.relatedTarget){dot.style.opacity=0;ring.style.opacity=0;on=false}});
+  (function loop(){rx+=(mx-rx)*.18;ry+=(my-ry)*.18;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(loop)})();
+})();
 </script>
 </body>
 </html>
