@@ -285,6 +285,16 @@ footer{text-align:center;padding:48px 24px;color:var(--m);font-size:.8rem;margin
 .ai-src:hover{text-decoration:underline}
 .ai-meta{display:flex;align-items:center;gap:10px;font-size:.72rem;font-family:var(--mono);color:var(--m2)}
 .ai-source{color:var(--a-2);font-weight:600}
+/* 分类速报卡片 */
+.ai-cat{margin-top:28px}
+.ai-cat-head{font-size:1.02rem;font-weight:700;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid var(--b);color:var(--fg);display:flex;align-items:center;gap:8px}
+.ai-cat-summary{color:var(--m);line-height:1.75;font-size:.92rem;margin:0 0 14px}
+.ai-cat-item{background:var(--surface);border:1px solid var(--b);border-radius:var(--r);padding:16px 18px;margin-bottom:12px;box-shadow:var(--sh-sm);backdrop-filter:blur(8px);transition:all var(--t)}
+.ai-cat-item:hover{box-shadow:var(--glow);border-color:var(--a);transform:translateY(-2px)}
+.ai-cat-item-title{font-size:1rem;font-weight:600;color:var(--fg);margin-bottom:6px;line-height:1.5}
+.ai-cat-item-desc{color:var(--m);line-height:1.7;font-size:.9rem;margin-bottom:8px}
+.ai-cat-item-src{font-family:var(--mono);font-size:.78rem;color:var(--a);text-decoration:none}
+.ai-cat-item-src:hover{text-decoration:underline}
 .ai-title{font-size:1rem;font-weight:600;color:var(--fg);letter-spacing:-.1px;line-height:1.4}
 .ai-summary{font-size:.84rem;color:var(--m2);line-height:1.55;flex:1}
 .ai-link{font-size:.78rem;color:var(--a-2);font-weight:600;font-family:var(--mono);margin-top:4px;align-self:flex-start}
@@ -307,7 +317,6 @@ footer{text-align:center;padding:48px 24px;color:var(--m);font-size:.8rem;margin
     <a onclick="return showView('notes')" id="nav-notes">笔记</a>
     <a onclick="return showView('about')" id="nav-about">关于</a>
     <a onclick="return showView('ainews')" id="nav-ainews">AI速报</a>
-    <a href="digest.html">速报</a>
   </div>
 </nav>
 
@@ -672,6 +681,24 @@ function showIssue(n) {
   const it = aiIssues().find(x => x.issue === n);
   if (!it) return renderAiNews();
   const sources = (it.sources||[]).length ? `<div class="ai-sources"><div class="ai-sources-title">本期来源</div>${it.sources.map(s=>`<a class="ai-src" href="${escHtml(s.url)}" target="_blank" rel="noopener">${escHtml(s.source||s.title||'来源')} ↗</a>`).join('')}</div>` : '';
+  let body;
+  if (it.sections && it.sections.length) {
+    body = it.sections.map(sec => {
+      const items = (sec.items||[]).map(a=>`
+        <div class="ai-cat-item">
+          <div class="ai-cat-item-title">${escHtml(a.title||'')}</div>
+          <div class="ai-cat-item-desc">${escHtml(a.desc||'')}</div>
+          ${a.url?`<a class="ai-cat-item-src" href="${escHtml(a.url)}" target="_blank" rel="noopener">${escHtml(a.source||'来源')}${a.date?' · '+escHtml(a.date):''} ↗</a>`:''}
+        </div>`).join('');
+      return `<section class="ai-cat">
+        <h2 class="ai-cat-head">${sec.icon?sec.icon+' ':''}${escHtml(sec.label||'')}</h2>
+        ${sec.summary?`<p class="ai-cat-summary">${escHtml(sec.summary)}</p>`:''}
+        ${items}
+      </section>`;
+    }).join('');
+  } else {
+    body = `<div class="ai-issue-report markdown-body">${marked.parse(it.report||'')}</div>`;
+  }
   app.innerHTML = `<div class="container" style="padding-top:40px;padding-bottom:80px">
     <a class="view-all" onclick="return renderAiNews()">← 返回期刊列表</a>
     <div class="page-header">
@@ -679,7 +706,7 @@ function showIssue(n) {
       <h1>${escHtml(it.title||'AI 行业日报')}</h1>
       <div class="ai-issue-digest">${escHtml(it.digest||'')}</div>
     </div>
-    <div class="ai-issue-report markdown-body">${marked.parse(it.report||'')}</div>
+    ${body}
     ${sources}
   </div>`;
   setHash('ainews');
