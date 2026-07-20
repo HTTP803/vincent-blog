@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title id="page-title">Vin驿 · 公开第二大脑</title>
-<meta name="description" content="一个产品经理创业路上的公开思考集">
+<meta name="description" content="一个 AI 产品探索者的公开第二大脑，聚焦 AI 工具、AI 产品与真实落地实践">
 <script src="config.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/15.0.4/marked.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -704,7 +704,7 @@ function renderAbout() {
         ${avatar}
         <div>
           <h1 class="about-name">${cfg.author}</h1>
-          <div class="about-tag">${cfg.subtitle || '产品经理 · 创业者'}</div>
+          <div class="about-tag">${cfg.subtitle || 'AI 产品探索者'}</div>
         </div>
       </div>
       <div class="about-card">
@@ -722,7 +722,7 @@ function renderAbout() {
     document.getElementById('about-content').innerHTML = html;
   }).catch(() => {
     document.getElementById('about-content').innerHTML =
-      '<p>Vin驿 · 一个正在从 0 到 1 创业的产品经理。</p><p>这是我的公开第二大脑——不追热点、不灌水，只记录真实踩过的坑与想通的事。</p><p>信条：输出倒逼输入，思考即产品。</p>';
+      '<p>Vin驿 · 一个用 AI 做产品的探索者。</p><p>这是我的公开第二大脑——聚焦 AI 工具与真实落地实践，不追热点、不灌水，只记录真实踩过的坑与想通的事。</p><p>信条：输出倒逼输入，思考即产品。</p>';
   });
 }
 
