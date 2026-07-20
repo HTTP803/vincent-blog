@@ -299,6 +299,43 @@ footer{text-align:center;padding:48px 24px;color:var(--m);font-size:.8rem;margin
 .ai-summary{font-size:.84rem;color:var(--m2);line-height:1.55;flex:1}
 .ai-link{font-size:.78rem;color:var(--a-2);font-weight:600;font-family:var(--mono);margin-top:4px;align-self:flex-start}
 .ai-link:hover{color:#fff}
+
+/* 每日一句 名言横幅 */
+.quote-banner{
+  position:relative;max-width:860px;margin:18px auto 0;padding:22px 28px 20px;
+  border:1px solid var(--b);border-radius:var(--r);
+  background:linear-gradient(135deg,var(--a-soft),var(--a-soft-2));
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:var(--sh);overflow:hidden;
+  animation:quoteIn .7s cubic-bezier(.4,0,.2,1) both;
+}
+.quote-banner::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--a),var(--a-2),var(--a-3));
+  background-size:200% 100%;animation:quoteBar 4s linear infinite;
+}
+.quote-banner::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(120deg,transparent 32%,rgba(255,255,255,.07) 50%,transparent 68%);
+  transform:translateX(-100%);animation:quoteShine 5s ease-in-out infinite;
+}
+.quote-mark{font-family:var(--mono);font-size:2.6rem;line-height:.55;color:var(--a);opacity:.45;font-weight:700;user-select:none}
+.quote-text{position:relative;font-size:1.18rem;line-height:1.7;font-weight:500;margin:8px 0 12px;color:var(--fg)}
+.quote-text.swapping{animation:quoteOut .3s ease forwards}
+.quote-text.in{animation:quoteIn2 .4s ease both}
+.quote-author{position:relative;font-family:var(--mono);font-size:.86rem;letter-spacing:.04em;color:var(--a-2);text-align:right}
+.quote-author b{color:var(--fg);font-weight:600}
+.quote-refresh{
+  position:absolute;top:13px;right:13px;z-index:2;width:30px;height:30px;border-radius:9px;
+  border:1px solid var(--b);background:var(--surface);color:var(--m);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;font-size:.95rem;transition:all var(--t);
+}
+.quote-refresh:hover{color:var(--fg);border-color:var(--b-h);background:var(--surface-2);transform:rotate(90deg)}
+@keyframes quoteIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes quoteIn2{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes quoteOut{to{opacity:0;transform:translateY(-8px)}}
+@keyframes quoteShine{0%{transform:translateX(-100%)}55%,100%{transform:translateX(100%)}}
+@keyframes quoteBar{0%{background-position:0% 0}100%{background-position:200% 0}}
+@media(max-width:600px){.quote-banner{padding:18px 18px 16px}.quote-text{font-size:1.04rem}.quote-refresh{top:10px;right:10px}}
 </style>
 </head>
 <body>
@@ -461,6 +498,41 @@ function genSocialBtns() {
   }).join('');
 }
 
+// --- 每日一句 名言横幅 ---
+let _lastQuoteIdx = -1;
+function pickQuote(qs){
+  if(!qs || !qs.length) return null;
+  if(qs.length === 1) return { q: qs[0], i: 0 };
+  let i; do { i = Math.floor(Math.random() * qs.length); } while(i === _lastQuoteIdx);
+  _lastQuoteIdx = i; return { q: qs[i], i };
+}
+function quoteBannerHtml(){
+  const qs = (C.cfg && C.cfg.quotes) || [];
+  if(!qs.length) return '';
+  const { q } = pickQuote(qs);
+  return `<div class="quote-banner" id="quoteBanner">
+    <button class="quote-refresh" title="换一句" onclick="return refreshQuote()">↻</button>
+    <div class="quote-mark">“</div>
+    <div class="quote-text" id="quoteText">${escHtml(q.text)}</div>
+    <div class="quote-author">— <b id="quoteAuthor">${escHtml(q.author || '佚名')}</b></div>
+  </div>`;
+}
+function refreshQuote(){
+  const qs = (C.cfg && C.cfg.quotes) || [];
+  if(!qs.length) return false;
+  const el = document.getElementById('quoteText');
+  if(!el) return false;
+  el.classList.add('swapping');
+  setTimeout(() => {
+    const { q } = pickQuote(qs);
+    const e2 = document.getElementById('quoteText');
+    const a2 = document.getElementById('quoteAuthor');
+    if(e2){ e2.textContent = q.text; e2.classList.remove('swapping'); e2.classList.add('in'); setTimeout(() => e2.classList.remove('in'), 420); }
+    if(a2) a2.textContent = q.author || '佚名';
+  }, 300);
+  return false;
+}
+
 function renderHome() {
   const cfg = C.cfg;
   const app = document.getElementById('app');
@@ -531,6 +603,8 @@ function renderHome() {
       <div class="social-row">${socialBtns}</div>
       <div class="skills-row">${skills}</div>
     </div>
+
+    ${quoteBannerHtml()}
 
     ${aiNewsHtml}
 

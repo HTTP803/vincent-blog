@@ -63,6 +63,24 @@ const SITE_CONFIG = {
     navLabel: "AI速报",
   },
 
+  // --- 每日一句（首页顶部随机展示的励志名言，可自由增删；text=内容，author=作者） ---
+  quotes: [
+    { text: "路漫漫其修远兮，吾将上下而求索。", author: "屈原" },
+    { text: "不积跬步，无以至千里；不积小流，无以成江海。", author: "荀子" },
+    { text: "种一棵树最好的时间是十年前，其次是现在。", author: "谚语" },
+    { text: "Stay hungry, stay foolish.", author: "Steve Jobs" },
+    { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
+    { text: "It does not matter how slowly you go as long as you do not stop.", author: "孔子" },
+    { text: "成功不是终点，失败也并非末日，重要的是继续前行的勇气。", author: "丘吉尔" },
+    { text: "所谓天才，不过是长久的耐心。", author: "布封" },
+    { text: "你的时间有限，不要浪费在重复别人的人生上。", author: "Steve Jobs" },
+    { text: "我们都是阴沟里的虫子，但总还是得有人仰望星空。", author: "刘慈欣《三体》" },
+    { text: "最困难的时候，往往就是离成功最近的时候。", author: "佚名" },
+    { text: "不要让别人的质疑，成为你放弃的理由。", author: "佚名" },
+    { text: "凡墙皆是门。", author: "谚语" },
+    { text: "你只管努力，剩下的交给时间。", author: "佚名" },
+  ],
+
   // --- 笔记来源目录（相对于站点根目录） ---
   contentDir: "content",
 
