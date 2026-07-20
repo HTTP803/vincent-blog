@@ -1,5 +1,5 @@
 ---
-title: 关于 Vin纪
+title: 关于 Vin驿
 ---
 
 我是 **Vincent**，一个正在从 0 到 1 创业的产品经理。
