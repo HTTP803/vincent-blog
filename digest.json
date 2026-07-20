@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "issue": 3,
+    "date": "2026-07-20",
+    "title": "第 3 期 · AI 行业日报",
+    "brand": "Vin纪 · 公开第二大脑",
+    "subtitle": "把思考做成产品 · 产品经理的公开第二大脑",
+    "wechat": "PM_Vincent"
+  },
+  "overview": "本期聚焦 2026-07-20 前后的 AI 行业关键动向：模型侧，国产开源阵营继续高歌——月之暗面 Kimi K3、阿里千问 Qwen3.8-Max 接连上新；产品侧，阿里云与金山办公密集推出企业级智能体平台，Agent 从「会聊天」走向「能交付」；行业侧，欧盟借《数字市场法》强拆 Google 分发壁垒、美国多地爆发反数据中心抗议、高盛数据显示 Token 单价 30 个月跌超 90%。一个清晰信号：竞争主轴正从「拼参数」转向「拼落地、拼治理、拼成本」。",
+  "sections": [
+    {
+      "key": "model",
+      "label": "模型动态",
+      "color": "#bc52ee",
+      "items": [
+        {
+          "title": "Kimi K3 发布，国产开源进入全球第一梯队",
+          "summary": "月之暗面发布 2.8 万亿参数开源模型 Kimi K3，综合能力逼近 Claude / GPT 前沿；媒体称公司最快 6 个月内赴港上市，ARR 三个月翻 3 倍，国产大模型从「技术竞赛」迈向「资本验证」。",
+          "source": {
+            "title": "月之暗面有望最快6个月内赴港上市；Kimi K3 发布后引发估值重估",
+            "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_4336a5d587c11652",
+            "source": "每日经济新闻",
+            "date": "2026-07-20"
+          }
+        },
+        {
+          "title": "阿里千问 Qwen3.8-Max 预览版上线",
+          "summary": "阿里千问 Qwen3.8-Max-Preview 首发上线 PC / Web 端，参数 2.4T，正式版将开源，延续「开源引流、云变现」打法，进一步夯实国产开源阵营厚度。",
+          "source": {
+            "title": "AI科技日报：阿里千问 PC 端接入 Qwen3.8-Max-Preview",
+            "url": "https://new.qq.com/rain/a/20260720A02J6U00?refer=cp_1009",
+            "source": "腾讯新闻",
+            "date": "2026-07-20"
+          }
+        },
+        {
+          "title": "Gemini 3.5 Pro 第三次跳票，拟推 3.6 Flash 救场",
+          "summary": "Google 旗舰模型 Gemini 3.5 Pro 再度错过 7/17 节点（第三次跳票），据称正考虑推 Gemini 3.6 Flash 救场；受此影响 Alphabet 股价单日跌约 4%，模型与分发双重承压。",
+          "source": {
+            "title": "AI News Today July 20 2026: 16 Biggest Stories",
+            "url": "https://www.buildfastwithai.com/blogs/ai-news-today-july-20-2026-16-biggest-stories",
+            "source": "BuildFastWithAI",
+            "date": "2026-07-20"
+          }
+        },
+        {
+          "title": "Sand.ai 获超亿美元融资，将发开源 MoE 视频模型",
+          "summary": "视频生成公司 Sand.ai 完成两轮合计超亿美元融资，坚持自回归路线，计划 7 月发布开源 MoE 视频模型；其 MagiAttention 算子库已获英伟达推荐，被国内多模态团队广泛使用。",
+          "source": {
+            "title": "Sand.ai 获超亿美元融资：坚持自回归视频路线，计划 7 月发布开源 MoE 大模型",
+            "url": "https://www.web3the.com/fast/779247.html",
+            "source": "雷电财经",
+            "date": "2026-07-20"
+          }
+        }
+      ]
+    },
+    {
+      "key": "product",
+      "label": "产品工具",
+      "color": "#4bf3c8",
+      "items": [
+        {
+          "title": "阿里云发布 AgentTeams 与 AgentLoop",
+          "summary": "阿里云推出多智能体协作治理平台 AgentTeams 与智能体观测优化平台 AgentLoop，分别解决企业 Agent 规模化落地「怎么配合」与「怎么越用越好」两大难题，目前已全面公测。",
+          "source": {
+            "title": "阿里云发布 AgentTeams 与AgentLoop 破解企业智能体规模化落地难题",
+            "url": "https://www.toutiao.com/article/7660451853372506687/",
+            "source": "阿里云（云原生）",
+            "date": "2026-07-09"
+          }
+        },
+        {
+          "title": "金山办公发布 灵犀专业版 与 WPS Comate",
+          "summary": "金山办公同日发布面向个人的「灵犀专业版」与组织级「WPS Comate」，AI 从「生成内容」迈向「交付可编辑成果」，落地「企业大脑」，办公软件进入智能体协作时代。",
+          "source": {
+            "title": "金山办公同日发布两款AI智能体，重塑人机协作新范式",
+            "url": "https://www.toutiao.com/article/7663069227812684328/",
+            "source": "三湘都市报",
+            "date": "2026-07-16"
+          }
+        },
+        {
+          "title": "Meta 发布自研图像生成模型 Muse Image",
+          "summary": "Meta 推出首款图像生成类产品 Muse Image，已接入 Meta AI / Instagram / WhatsApp，支持画面内清晰文字渲染与可扫码二维码生成，数亿社交用户无需跳转即可调用。",
+          "source": {
+            "title": "Meta正式发布自研Muse Image图像生成模型",
+            "url": "https://www.163.com/dy/article/L1AI08H00514R9OJ.html",
+            "source": "环球网",
+            "date": "2026-07-08"
+          }
+        }
+      ]
+    },
+    {
+      "key": "industry",
+      "label": "行业资讯",
+      "color": "#3245ff",
+      "items": [
+        {
+          "title": "欧盟依《数字市场法》强拆 Google AI 分发壁垒",
+          "summary": "欧盟委员会要求 Google 开放 Android 给竞品 AI 助手，并自 2027 年起向 AI 开发商共享搜索数据。这直接拆掉 Google 在数十亿台设备上的默认入口与二十年搜索行为数据壁垒，是今年最重磅的 AI 监管动作。",
+          "source": {
+            "title": "AI News Today July 20 2026: 16 Biggest Stories",
+            "url": "https://www.buildfastwithai.com/blogs/ai-news-today-july-20-2026-16-biggest-stories",
+            "source": "BuildFastWithAI",
+            "date": "2026-07-20"
+          }
+        },
+        {
+          "title": "美国 125+ 地爆发反对 AI 数据中心建设",
+          "summary": "全美 125+ 地点爆发反对 AI 数据中心建设的全国性协调行动，批评其推高电价、耗水污染、审批不透明；数据显示超 1300 亿美元相关项目已被延期或取消，基建扩张面临社区与监管双重压力。",
+          "source": {
+            "title": "高盛：AI 模型每百万Token价格过去30个月跌超90%；美国多地爆发反对 AI 数据中心建设抗议",
+            "url": "https://new.qq.com/rain/a/20260720A02G4M00?refer=cp_1009",
+            "source": "腾讯新闻",
+            "date": "2026-07-20"
+          }
+        },
+        {
+          "title": "高盛：Token 价格 30 个月跌超 90%",
+          "summary": "高盛数据显示主流 LLM 每百万 Token 价格指数较 2022 年初降逾 90%；预计 2026 年全球超大规模云 AI 资本开支达 7570 亿美元，到 2030 年累计或达 5.5 万亿美元。成本曲线下探加速 Agent 规模化。",
+          "source": {
+            "title": "高盛：AI 模型每百万Token价格过去30个月跌超90%",
+            "url": "https://new.qq.com/rain/a/20260720A02G4M00?refer=cp_1009",
+            "source": "腾讯新闻",
+            "date": "2026-07-20"
+          }
+        }
+      ]
+    }
+  ]
+}

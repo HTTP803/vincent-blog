@@ -263,6 +263,7 @@ footer{text-align:center;padding:48px 24px;color:var(--m);font-size:.8rem;margin
 .ai-news-list{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
 .ai-news-item{background:var(--surface);border:1px solid var(--b);border-radius:var(--r);padding:20px;transition:all var(--t);box-shadow:var(--sh-sm);backdrop-filter:blur(8px);display:flex;flex-direction:column;gap:8px}
 .ai-news-item:hover{box-shadow:var(--glow);transform:translateY(-2px);border-color:var(--a)}
+.ai-news-item .ai-issue-title{font-size:1.12rem;margin:2px 0 8px}
 .ai-issue-card{background:var(--surface);border:1px solid var(--b);border-radius:var(--r);padding:24px;box-shadow:var(--sh-sm);backdrop-filter:blur(8px)}
 .ai-issue-head{display:flex;gap:12px;align-items:center;margin-bottom:6px}
 .ai-issue-no{font-family:var(--mono);font-size:.8rem;color:var(--a);font-weight:600;letter-spacing:.04em}
@@ -306,6 +307,7 @@ footer{text-align:center;padding:48px 24px;color:var(--m);font-size:.8rem;margin
     <a onclick="return showView('notes')" id="nav-notes">笔记</a>
     <a onclick="return showView('about')" id="nav-about">关于</a>
     <a onclick="return showView('ainews')" id="nav-ainews">AI速报</a>
+    <a href="digest.html">速报</a>
   </div>
 </nav>
 
@@ -492,17 +494,17 @@ function renderHome() {
     </li>`;
   }).join('');
 
-  // AI 速报（首页展示最新一期）
+  // AI 速报（首页平铺展示全部历史期刊，不折叠不收起）
   const aiCfg = cfg.aiNews || {};
-  const aiLatest = latestIssue();
-  const aiNewsHtml = (aiCfg.enabled !== false && aiLatest) ? `<div class="ai-news-section container">
-    <div class="ai-badge"><span class="dot"></span> AI 速报 · 每日更新 · 第 ${aiLatest.issue} 期</div>
-    <div class="ai-issue-card">
-      <div class="ai-issue-head"><span class="ai-issue-no">第 ${aiLatest.issue} 期</span><span class="ai-issue-date">${escHtml(aiLatest.date||'')}</span></div>
-      <h3 class="ai-issue-title">${escHtml(aiLatest.title||'AI 行业日报')}</h3>
-      <div class="ai-issue-digest">${escHtml(aiLatest.digest||'')}</div>
-      <a class="view-all" onclick="return showView('ainews')">阅读本期全文 / 查看全部期刊 →</a>
-    </div>
+  const aiAll = aiIssues().slice().sort((a,b)=>b.issue-a.issue);   // 倒序：最新在前
+  const aiNewsHtml = (aiCfg.enabled !== false && aiAll.length) ? `<div class="ai-news-section container">
+    <div class="ai-badge"><span class="dot"></span> AI 速报 · 每日更新 · 共 ${aiAll.length} 期</div>
+    <div class="ai-news-list">${aiAll.map(it=>`<div class="ai-news-item" onclick="return showIssue(${it.issue})">
+      <div class="ai-issue-head"><span class="ai-issue-no">第 ${it.issue} 期</span><span class="ai-issue-date">${escHtml(it.date||'')}</span></div>
+      <h3 class="ai-issue-title">${escHtml(it.title||'AI 行业日报')}</h3>
+      <div class="ai-issue-digest">${escHtml(it.digest||'')}</div>
+      <span class="ai-link">阅读全文 →</span>
+    </div>`).join('')}</div>
   </div>` : '';
 
   const email = cfg.social.email || {};
@@ -690,7 +692,6 @@ function fmtCn(iso){
 
 // --- AI 速报 helpers ---
 function aiIssues(){ return (C.aiNews && C.aiNews.issues) || []; }
-function latestIssue(){ const a = aiIssues(); return a.length ? a.reduce((m,x)=> x.issue>m.issue?x:m) : null; }
 
 async function loadAiNews() {
   const apply = () => { if (C.currentView==='home') renderHome(); else if (C.currentView==='ainews') renderAiNews(); };
