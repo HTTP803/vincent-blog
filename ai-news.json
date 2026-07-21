@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-21T09:54:06+08:00",
+  "updated": "2026-07-21T10:24:07+08:00",
   "issues": [
     {
       "issue": 1,
@@ -304,6 +304,96 @@
           "url": "https://dy.163.com/article/L2BG107K05198NMR.html",
           "source": "华尔街见闻",
           "date": "2026-07-21"
+        }
+      ],
+      "sections": [
+        {
+          "key": "overview",
+          "label": "总述-AI总结",
+          "icon": "📌",
+          "color": "#e8b339",
+          "summary": "本期主线从「拼模型参数」转向「算力底座 + 智能体落地 + 商业化兑现」三条并进。算力侧军备升级：AMD 首秀机架级 Helios 硬刚英伟达、谷歌把 Gemini 架构固化进 Frozen v2 芯片、英伟达 Agent Toolkit 让本地部署智能体缩到 30 分钟；应用侧字节 Seed Audio 1.0 把 AI 音频推向影视级全场景；商业化侧零一万物拟 2027 赴港 IPO、中软国际与月之暗面签 Token 分成协议，Agent 从「能聊」走向「能签合同」。与此同时，智谱高位配售后 7 天浮亏 44%、两日蒸发 3000 亿港元，二级市场开始拷问 AI 估值逻辑——一级火热与二级退潮的分化，成为本期最值得警惕的信号。",
+          "items": []
+        },
+        {
+          "key": "model",
+          "label": "模型动态",
+          "icon": "🤖",
+          "color": "#bc52ee",
+          "items": [
+            {
+              "title": "AMD 首秀机架级 AI 系统 Helios，微软加入客户阵营",
+              "desc": "AMD 7/20 首次展示机架级 AI 系统 Helios，集成 GPU/CPU/网络与软件平台，2026 年起大规模部署；微软成最新客户，Meta、OpenAI、甲骨文、塔塔咨询此前已确认部署。AMD 称其 2027 年起数据中心 AI 业务有望贡献数百亿美元收入，正加速缩小与英伟达差距。",
+              "url": "https://www.mrjjxw.com/articles/2026-07-21/4484133.html",
+              "source": "每日经济新闻（全球科技早参）",
+              "date": "2026-07-21"
+            },
+            {
+              "title": "谷歌研发 Frozen v2 芯片：Gemini 架构写入硬件，效率提升 6-10 倍",
+              "desc": "谷歌被曝正研发代号 Frozen v2 的新型 AI 服务器芯片，将 Gemini 模型部分架构直接固化到芯片中，单位功耗 Token 处理能力有望达到最新 TPU 的 6-10 倍，最早 2028 年部署（独立于 TPU 的新产品线）。消息推动 Alphabet 股价盘中涨超 3%，模型—芯片协同设计成算力提效新方向。",
+              "url": "https://www.mrjjxw.com/articles/2026-07-21/4484133.html",
+              "source": "每日经济新闻（全球科技早参）",
+              "date": "2026-07-21"
+            },
+            {
+              "title": "字节跳动发布 Seed Audio 1.0：影视级全场景音频创作模型",
+              "desc": "字节 Seed 团队发布音频创作模型 Seed Audio 1.0，在统一框架下联合建模人声、音效、环境声，支持精细时间控制、音色风格可控与多语种自然生成，端到端完成影视级音频创作。已上线火山方舟体验中心，AI 音频从单点工具走向全场景创作平台。",
+              "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_5606a5ea3c739052",
+              "source": "每日经济新闻（未来商业早参）",
+              "date": "2026-07-21"
+            }
+          ]
+        },
+        {
+          "key": "product",
+          "label": "产品工具",
+          "icon": "🛠",
+          "color": "#4bf3c8",
+          "items": [
+            {
+              "title": "英伟达推出 Agent Toolkit，30 分钟本地部署 AI 智能体",
+              "desc": "英伟达面向搭载 GB300 Blackwell Ultra GPU 的 DGX Station 推出 Agent Toolkit 软件工具包，开发者仅需三步、约 30 分钟即可在本地部署并运行 AI 智能体，并可与 Omniverse 结合完成 3D 仿真验证，拓展机器人、智能制造、数字孪生等场景，补齐企业级 Agent 软件栈。",
+              "url": "https://www.mrjjxw.com/articles/2026-07-21/4484133.html",
+              "source": "每日经济新闻（全球科技早参）",
+              "date": "2026-07-21"
+            }
+          ]
+        },
+        {
+          "key": "industry",
+          "label": "行业资讯",
+          "icon": "📊",
+          "color": "#3245ff",
+          "items": [
+            {
+              "title": "零一万物计划 2027 年赴港 IPO",
+              "desc": "李开复在 WAIC 上宣布零一万物计划 2027 年赴港上市，并在披露首次年报期间寻求 Pre-IPO 融资。继智谱、MiniMax 后，AI 六小虎悉数驶入资本市场赛道，其企业 AI 基建定位能否获资本认可值得关注。",
+              "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_5606a5ea3c739052",
+              "source": "凤凰网科技",
+              "date": "2026-07-21"
+            },
+            {
+              "title": "中软国际与月之暗面签署 Token 分成及联合创新协议",
+              "desc": "中软国际发布公告，已与月之暗面签署「登月计划」Token 分成及联合创新合作协议，围绕企业级 Agentic AI 深度合作、共建 FDE 创新实验室，首期聚焦能源电力行业。标志月之暗面从技术理想主义走向务实商业化，Agent 从「能聊」走向「能签合同」。",
+              "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_5606a5ea3c739052",
+              "source": "每日经济新闻（未来商业早参）",
+              "date": "2026-07-21"
+            },
+            {
+              "title": "WAIC 2026 闭幕：意向采购 203.6 亿元，同比增长 25%",
+              "desc": "2026 世界人工智能大会在上海闭幕，展品 4486 项、351 款全球首发，预计意向采购金额约 203.6 亿元（+25%）。工信部同时披露：我国四足机器人占全球销量近七成、人形机器人整机超 400 款；央视财经称光电融合芯片有望让 Token 成本再降 50%。",
+              "url": "https://new.qq.com/rain/a/20260721A02BA100?refer=cp_1009",
+              "source": "腾讯新闻（数智早参）",
+              "date": "2026-07-21"
+            },
+            {
+              "title": "智谱两日暴跌蒸发 3000 亿港元，AI 估值逻辑遭拷问",
+              "desc": "智谱继上周五跌 28% 后周一再跌 19.56%，市值从万亿高点累计跌约 60%；314 亿港元配售仅一周、参与机构浮亏 44%。Kimi K3 发布催化竞争恐慌叠加解禁压力，AI 大模型赛道正从「稀缺性溢价」向「竞争性折价」剧烈切换。",
+              "url": "https://dy.163.com/article/L2BG107K05198NMR.html",
+              "source": "华尔街见闻",
+              "date": "2026-07-21"
+            }
+          ]
         }
       ]
     }
