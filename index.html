@@ -349,6 +349,24 @@ footer{text-align:center;padding:48px 24px;color:var(--m);font-size:.8rem;margin
 .cursor-ring.down{width:28px;height:28px;border-color:var(--a-2)}
 .cursor-dot.hover{width:4px;height:4px}
 
+/* AI 工具箱 */
+.ai-tools-section{margin-top:8px}
+.ai-tools-section .section-title{margin-bottom:18px}
+.ai-tools-section .section-sub{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:none;color:var(--m2);font-weight:500;margin-left:4px}
+.tool-filter{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.tool-filter .filter-btn{font-family:var(--mono);font-size:.8rem;padding:6px 14px;border-radius:999px;border:1px solid var(--b);background:var(--surface);color:var(--m);cursor:pointer;transition:all var(--t)}
+.tool-filter .filter-btn:hover{border-color:var(--a-2);color:var(--fg)}
+.tool-filter .filter-btn.active{border-color:var(--a);color:var(--a-2);background:var(--a-soft)}
+.tool-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.tool-card{background:var(--surface);border:1px solid var(--b);border-radius:var(--r);padding:18px 20px;cursor:pointer;transition:all var(--t);box-shadow:var(--sh-sm);backdrop-filter:blur(8px);display:flex;flex-direction:column;gap:8px}
+.tool-card:hover{box-shadow:var(--glow);transform:translateY(-3px);border-color:var(--a)}
+.tool-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.tool-name{font-size:.98rem;font-weight:600;color:var(--fg);letter-spacing:-.1px}
+.tool-tag{font-size:.66rem;font-family:var(--mono);padding:2px 8px;border-radius:999px;background:var(--a-soft-2);color:var(--a-2);flex-shrink:0}
+.tool-desc{font-size:.82rem;color:var(--m2);line-height:1.5;flex:1}
+.tool-go{font-size:.78rem;color:var(--a-2);font-family:var(--mono);font-weight:600;opacity:.8;transition:opacity var(--t)}
+.tool-card:hover .tool-go{opacity:1}
+
 </style>
 </head>
 <body>
@@ -485,6 +503,7 @@ const SECTION_ICONS = {
   projects: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/></svg>',
   notes: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>',
   contact: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>',
+  tools: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2-2 2.6-2.6z"/></svg>',
 };
 
 // --- 装饰 SVG 组件（项目封面/笔记封面） ---
@@ -601,6 +620,23 @@ function renderHome() {
     </div>`).join('')}</div>
   </div>` : '';
 
+  // AI 工具箱（按分类列出精选工具，参考 aigc.cn 导航站）
+  const toolCfg = cfg.aiTools || {};
+  const cats = (toolCfg.enabled !== false && toolCfg.categories) ? toolCfg.categories : [];
+  const aiToolsHtml = cats.length ? (() => {
+    const filters = `<div class="tool-filter"><button class="filter-btn active" onclick="filterTools('all',this)">全部</button>${cats.map(c=>`<button class="filter-btn" onclick="filterTools('${escHtml(c.name)}',this)">${escHtml(c.name)}</button>`).join('')}</div>`;
+    const cards = cats.map(c => c.tools.map(t => `<div class="tool-card" data-cat="${escHtml(c.name)}" onclick="window.open('${t.url}','_blank','noopener')">
+        <div class="tool-head"><span class="tool-name">${escHtml(t.name)}</span>${t.tag?`<span class="tool-tag">${escHtml(t.tag)}</span>`:''}</div>
+        <div class="tool-desc">${escHtml(t.desc||'')}</div>
+        <span class="tool-go">访问 →</span>
+      </div>`).join('')).join('');
+    return `<div class="ai-tools-section container">
+      <div class="section-title">${SECTION_ICONS.tools} AI 工具箱 <span class="section-sub">精选 · 持续更新</span></div>
+      ${filters}
+      <div class="tool-grid">${cards}</div>
+    </div>`;
+  })() : '';
+
   const email = cfg.social.email || {};
 
   app.innerHTML = `
@@ -621,6 +657,8 @@ function renderHome() {
 
     ${aiNewsHtml}
 
+    ${aiToolsHtml}
+
     ${nowItems ? `<div class="now-section container"><div class="section-title">${SECTION_ICONS.now} 正在做的事</div><ul class="now-list">${nowItems}</ul></div>` : ''}
 
     ${projCards ? `<div class="projects-section container"><div class="section-title">${SECTION_ICONS.projects} 项目作品</div><div class="project-grid">${projCards}</div></div>` : ''}
@@ -634,6 +672,16 @@ function renderHome() {
     </div>`;
 
   setHash('');
+}
+
+// --- AI 工具箱：分类筛选 ---
+function filterTools(cat, btn) {
+  const bar = document.querySelector('.tool-filter');
+  if (bar) bar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  document.querySelectorAll('.tool-card').forEach(c => {
+    c.style.display = (cat === 'all' || c.getAttribute('data-cat') === cat) ? '' : 'none';
+  });
 }
 
 // --- Render: Notes List ---

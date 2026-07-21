@@ -70,6 +70,49 @@ const SITE_CONFIG = {
     navLabel: "AI速报",
   },
 
+  // --- AI 工具箱（首页板块，按分类列出精选 AI 工具；参考 aigc.cn 导航站，挑选部分分类） ---
+  aiTools: {
+    enabled: true,
+    categories: [
+      { name: "智能对话", tools: [
+        { name: "ChatGPT", desc: "OpenAI 通用对话与生产力助手", url: "https://chat.openai.com", tag: "海外" },
+        { name: "Claude", desc: "Anthropic 长文本与代码强模型", url: "https://claude.ai", tag: "海外" },
+        { name: "DeepSeek", desc: "国产开源推理模型，性价比极高", url: "https://www.deepseek.com", tag: "国产" },
+        { name: "Kimi", desc: "长上下文对话与文档分析", url: "https://kimi.moonshot.cn", tag: "国产" },
+        { name: "豆包", desc: "字节跳动多模态 AI 助手", url: "https://www.doubao.com", tag: "国产" },
+      ]},
+      { name: "图像生成", tools: [
+        { name: "Midjourney", desc: "高质量 AI 绘画，社区驱动", url: "https://www.midjourney.com", tag: "海外" },
+        { name: "即梦 AI", desc: "字节 AI 生图 / 生视频", url: "https://jimeng.jianying.com", tag: "国产" },
+        { name: "Stable Diffusion", desc: "开源文生图，可本地部署", url: "https://stability.ai", tag: "开源" },
+        { name: "可灵 AI", desc: "快手图像 / 视频生成", url: "https://klingai.com", tag: "国产" },
+      ]},
+      { name: "写作办公", tools: [
+        { name: "通义千问", desc: "阿里 AI，PPT / 文档辅助", url: "https://tongyi.aliyun.com", tag: "国产" },
+        { name: "文心一言", desc: "百度 AI 助手", url: "https://yiyan.baidu.com", tag: "国产" },
+        { name: "Notion AI", desc: "笔记与文档智能写作", url: "https://www.notion.so", tag: "海外" },
+        { name: "秘塔 AI 搜索", desc: "无广告 AI 搜索与写作辅助", url: "https://metaso.cn", tag: "国产" },
+      ]},
+      { name: "视频生成", tools: [
+        { name: "Runway", desc: "AI 视频生成与编辑", url: "https://runwayml.com", tag: "海外" },
+        { name: "可灵 AI", desc: "国产视频生成", url: "https://klingai.com", tag: "国产" },
+        { name: "Sora", desc: "OpenAI 文生视频", url: "https://openai.com/sora", tag: "海外" },
+        { name: "Pika", desc: "轻量 AI 视频生成", url: "https://pika.art", tag: "海外" },
+      ]},
+      { name: "编程开发", tools: [
+        { name: "Cursor", desc: "AI 原生代码编辑器", url: "https://cursor.com", tag: "海外" },
+        { name: "GitHub Copilot", desc: "IDE 内代码补全", url: "https://github.com/features/copilot", tag: "海外" },
+        { name: "Trae", desc: "字节 AI IDE", url: "https://www.trae.ai", tag: "国产" },
+        { name: "通义灵码", desc: "阿里智能编码助手", url: "https://tongyi.aliyun.com/lingma", tag: "国产" },
+      ]},
+      { name: "音乐语音", tools: [
+        { name: "Suno", desc: "AI 音乐生成", url: "https://suno.com", tag: "海外" },
+        { name: "ElevenLabs", desc: "AI 语音合成", url: "https://elevenlabs.io", tag: "海外" },
+        { name: "腾讯智影", desc: "智能配音与数字人", url: "https://zenvideo.qq.com", tag: "国产" },
+      ]},
+    ]
+  },
+
   // --- 每日一句（首页顶部随机展示的励志名言，可自由增删；text=内容，author=作者） ---
   quotes: [
     { text: "路漫漫其修远兮，吾将上下而求索。", author: "屈原" },
