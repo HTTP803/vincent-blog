@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-20T14:00:53+08:00",
+  "updated": "2026-07-21T09:54:06+08:00",
   "issues": [
     {
       "issue": 1,
@@ -253,6 +253,57 @@
               "date": "2026-07-20"
             }
           ]
+        }
+      ]
+    },
+    {
+      "issue": 4,
+      "date": "2026-07-21",
+      "title": "第 4 期 · AI 行业日报",
+      "digest": "AMD/谷歌/英伟达三箭齐发算力军备；字节音频模型与月之暗面 Token 分成提速 Agent 商业化，智谱高位配售即暴跌拷问 AI 估值逻辑。",
+      "report": "## 本期要点\n- **AMD Helios 硬刚英伟达**：7/20 AMD 首秀机架级 AI 系统 Helios，微软成最新客户，Meta/OpenAI/甲骨文/塔塔已确认部署，2027 年起数据中心 AI 业务有望贡献数百亿美元。\n- **谷歌把 Gemini 写进芯片**：代号 Frozen v2 的新服务器芯片固化 Gemini 部分架构，单位功耗 Token 处理达现 TPU 的 6–10 倍，模型—芯片协同设计成算力提效新方向。\n- **英伟达推 Agent Toolkit**：面向 GB300 的 DGX Station 工具包三步约 30 分钟本地部署 AI 智能体，联动 Omniverse 做 3D 仿真，补齐企业级 Agent 软件栈。\n- **字节 Seed Audio 1.0 上线**：统一建模人声/音效/环境声，端到端完成影视级音频创作，AI 音频从单点工具走向全场景平台。\n- **国产 AI 资本化与商业化双线加速**：零一万物拟 2027 赴港 IPO；中软国际与月之暗面签 Token 分成协议，聚焦能源电力 Agentic AI 落地。\n- **WAIC 闭幕释放实体信号**：意向采购约 203.6 亿元（+25%）；我国四足机器人占全球销量近七成，光电融合芯片有望让 Token 成本再降 50%。\n- **智谱高位配售即暴跌**：314 亿港元配售后 7 天浮亏 44%、两日蒸发超 3000 亿，Kimi K3 催化重估，「稀缺性溢价」向「竞争性折价」切换。\n\n## 趋势研判\n竞争正从「模型参数」转向「算力底座 + 智能体落地 + 商业化兑现」。硬件侧 AMD Helios、谷歌 Frozen v2、英伟达 Agent Toolkit 三箭齐发；应用侧字节音频模型与月之暗面 Token 分成标志 Agent 商业化走向合同；资本侧分化——一级（零一万物 IPO、WAIC 采购）热度不减，二级（智谱暴跌）开始拷问估值。对产品人，「算力降本 + 智能体平民化」最确定，估值退潮期能否找到真实付费场景将成分水岭。",
+      "sources": [
+        {
+          "title": "AMD推出首款机架级AI系统Helios挑战英伟达，微软加入客户阵营",
+          "url": "https://www.mrjjxw.com/articles/2026-07-21/4484133.html",
+          "source": "每日经济新闻（全球科技早参）",
+          "date": "2026-07-21"
+        },
+        {
+          "title": "谷歌研发新型AI芯片，Gemini架构直接写入芯片，效率最高提升10倍",
+          "url": "https://www.mrjjxw.com/articles/2026-07-21/4484133.html",
+          "source": "每日经济新闻（全球科技早参）",
+          "date": "2026-07-21"
+        },
+        {
+          "title": "英伟达推出Agent Toolkit，30分钟即可本地部署AI智能体",
+          "url": "https://www.mrjjxw.com/articles/2026-07-21/4484133.html",
+          "source": "每日经济新闻（全球科技早参）",
+          "date": "2026-07-21"
+        },
+        {
+          "title": "字节跳动上线音频创作模型Seed Audio 1.0",
+          "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_5606a5ea3c739052",
+          "source": "每日经济新闻（未来商业早参）",
+          "date": "2026-07-21"
+        },
+        {
+          "title": "零一万物计划2027年赴港IPO；中软国际与月之暗面签署Token分成及联合创新合作协议",
+          "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_5606a5ea3c739052",
+          "source": "每日经济新闻（未来商业早参）",
+          "date": "2026-07-21"
+        },
+        {
+          "title": "我国研发的四足机器人占全球销量份额近七成；光电融合芯片有望让Token成本降50%",
+          "url": "https://new.qq.com/rain/a/20260721A02BA100?refer=cp_1009",
+          "source": "腾讯新闻（数智早参）",
+          "date": "2026-07-21"
+        },
+        {
+          "title": "314亿配售后七天浮亏44%：智谱两日再蒸发3000亿，万亿叙事退潮拷问AI估值逻辑",
+          "url": "https://dy.163.com/article/L2BG107K05198NMR.html",
+          "source": "华尔街见闻",
+          "date": "2026-07-21"
         }
       ]
     }
