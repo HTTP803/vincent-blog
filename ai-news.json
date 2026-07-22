@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-21T10:24:07+08:00",
+  "updated": "2026-07-22T09:52:00+08:00",
   "issues": [
     {
       "issue": 1,
@@ -394,6 +394,175 @@
               "date": "2026-07-21"
             }
           ]
+        }
+      ]
+    },
+    {
+      "issue": 5,
+      "date": "2026-07-22",
+      "title": "第 5 期 · AI 行业日报",
+      "digest": "谷歌三模型+Gemini 4 预训练齐发，英伟达 Vera CPU 杀入服务器芯片；月之暗面半年估值翻 5 倍冲刺 500 亿美元，微软评估接入 Kimi K3；AI Agent 替代 SaaS 加速，Curative 年省 60 万美元。",
+      "sections": [
+        {
+          "key": "overview",
+          "label": "总述-AI总结",
+          "icon": "📌",
+          "color": "#e8b339",
+          "summary": "本期聚焦 2026-07-22 前后的 AI 行业关键动向：模型侧，谷歌一口气发布三款 Gemini 新模型并启动 Gemini 4 预训练，英伟达 Vera CPU 正式亮相自研服务器芯片赛道，阿里千问 Qwen-Image-3.0 图像生成模型发布、Vera Rubin 平台全球铺开 Token 吞吐提升 10 倍；产品侧，OpenAI 面向小企业开放 ChatGPT Work（周活破 1000 万），腾讯混元发布递归自我改进智能体 Hyra-1.0；行业侧，月之暗面 Kimi K3 引爆全球后估值半年翻五倍冲刺 500 亿美元，微软评估接入 K3 但美国内部正讨论对中国开源模型管控，Anthropic 15 亿美元版权和解创纪录。两条暗线值得关注：AI 算力成本急剧上升（H100 租赁半年涨 40%），以及 AI Agent 开始替代传统 SaaS（Curative 用 AI 自研 CRM 取消 60 万美元 Salesforce 合同，智能体将签约成本从 2000 美元降至 70 美元）。",
+          "items": []
+        },
+        {
+          "key": "model",
+          "label": "模型动态",
+          "icon": "🤖",
+          "color": "#bc52ee",
+          "items": [
+            {
+              "title": "谷歌发布三款 Gemini 新模型，启动 Gemini 4 预训练",
+              "desc": "谷歌发布 Gemini 3.6 Flash（提升代码/多模态/知识工作能力，输出价格降 17%）、Gemini 3.5 Flash-Lite（低成本高吞吐）和网络安全专用 Gemini 3.5 Flash Cyber 三款模型。同时宣布已启动 Gemini 4「史上最雄心勃勃的预训练」。旗舰模型 Gemini 3.5 Pro 仍在测试阶段未正式发布。",
+              "url": "https://www.nbd.com.cn/articles/2026-07-22/4491050.html",
+              "source": "每日经济新闻",
+              "date": "2026-07-22"
+            },
+            {
+              "title": "英伟达详解 Vera CPU：首款自研服务器处理器，Agent 任务性能提升 50%",
+              "desc": "英伟达公布数据中心 CPU Vera 技术细节，为首款自主设计 CPU 核心的服务器处理器，6 月已交付 OpenAI、Anthropic 和 SpaceX。针对 AI Agent 工作负载优化，相比传统 x86 架构性能提升约 50%，单颗均价约 5000 美元、预计今年出货约 130 万颗，直接威胁 AMD 和英特尔服务器 CPU 核心市场。",
+              "url": "https://www.nbd.com.cn/articles/2026-07-22/4491050.html",
+              "source": "每日经济新闻",
+              "date": "2026-07-22"
+            },
+            {
+              "title": "英伟达 Vera Rubin 平台全球扩大部署，Token 吞吐提升 10 倍",
+              "desc": "英伟达宣布面向「千兆级 AI 工厂」的 Vera Rubin 平台正在全球扩大部署，CoreWeave、谷歌云、微软 Azure 和甲骨文云等已开始采用 Vera Rubin NVL72 系统。CoreWeave 测试显示该平台单位功耗 Token 吞吐提升 10 倍。",
+              "url": "https://www.sohu.com/a/1053159194_99992453",
+              "source": "陆家嘴财经早餐",
+              "date": "2026-07-22"
+            },
+            {
+              "title": "阿里千问发布 Qwen-Image-3.0 图像生成基础模型",
+              "desc": "阿里千问推出 Qwen-Image-3.0 图像生成基础模型，进一步丰富千问多模态产品矩阵，延续其「开源引流、云变现」策略。",
+              "url": "https://weibo.com/7905315703/5323393549468897",
+              "source": "AIGC日报",
+              "date": "2026-07-22"
+            }
+          ]
+        },
+        {
+          "key": "product",
+          "label": "产品工具",
+          "icon": "🛠",
+          "color": "#4bf3c8",
+          "items": [
+            {
+              "title": "OpenAI 推出小型企业 ChatGPT 服务，周活突破 1000 万",
+              "desc": "OpenAI 宣布 ChatGPT Work 和 GPT-5.6 正式面向小型企业开放。Codex 和 ChatGPT Work 每周活跃用户于 7 月 21 日突破 1000 万，标志着 AI 生产力工具向中小企业加速渗透。",
+              "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_7636a5fd84355752",
+              "source": "观点网",
+              "date": "2026-07-22"
+            },
+            {
+              "title": "腾讯混元推出递归自我改进智能体 Hyra-1.0",
+              "desc": "腾讯混元发布研究智能体 Hyra 首个版本，核心特性为递归自我改进——通过自博弈、自评价和用户反馈持续迭代策略与产物，可应用于模型研发、科学发现、游戏、设计和内容创作等领域。",
+              "url": "https://weibo.com/7905315703/5323393549468897",
+              "source": "腾讯混元官方",
+              "date": "2026-07-21"
+            },
+            {
+              "title": "AI 抢走 400 万大单：Curative 用 AI 自研 CRM 替代 Salesforce",
+              "desc": "美国医疗保险公司 Curative 借助 AI 编程工具两个月开发出 CRM，取消每年 60 万美元 Salesforce 合同。其 AI 智能体 Gwen 将医疗服务商签约成本从 1500-2000 美元降至约 70 美元（降 95%+），合同团队从 45 人降至极少数。预计今年削减约 80% SaaS 支出。",
+              "url": "https://dy.163.com/article/L2DD9J270511D6RL.html",
+              "source": "云头条",
+              "date": "2026-07-22"
+            }
+          ]
+        },
+        {
+          "key": "industry",
+          "label": "行业资讯",
+          "icon": "📊",
+          "color": "#3245ff",
+          "items": [
+            {
+              "title": "月之暗面以 500 亿美元估值冲刺 Pre-IPO，半年估值翻 5 倍",
+              "desc": "彭博社报道月之暗面计划 8 月启动上市前最后一轮融资，目标投前估值 500 亿美元。此前半年估值从 43 亿美元飙升至 315 亿美元，ARR 三个月从 1 亿到 3 亿美元三倍跃升，API 收入占比超 70%。Kimi K3 发布后马斯克二次公开点赞，公司首次否认蒸馏质疑，称性能源于底层原创架构创新。最快 6 个月内赴港上市。",
+              "url": "https://www.toutiao.com/article/7665017201120608787/",
+              "source": "彭博社/新浪财经",
+              "date": "2026-07-22"
+            },
+            {
+              "title": "微软评估 Kimi K3 接入 Azure，美国讨论对中国开源模型管控",
+              "desc": "微软 Copilot 团队正测试 Kimi K3 替代部分 GPT/Claude 任务，并计划将其接入 Azure 云服务，此举可能大幅降低推理成本。但美国政府内部已重新讨论加强对中国开源模型管控，Kimi K3 被列为潜在审查对象，微软需通过内部地缘风险评估委员会审批。",
+              "url": "https://weibo.com/7905315703/5323393549468897",
+              "source": "coze.cn/Digitimes",
+              "date": "2026-07-21"
+            },
+            {
+              "title": "Anthropic 15 亿美元版权和解创纪录",
+              "desc": "Anthropic 与作者团体达成 15 亿美元和解协议，终结因下载数百万本盗版书籍用于训练 AI 模型引发的集体诉讼，创 AI 版权纠纷新纪录，反映 AI 公司在训练数据获取上面临日益严峻的法律挑战。",
+              "url": "https://weibo.com/7905315703/5323393549468897",
+              "source": "科创板日报",
+              "date": "2026-07-21"
+            },
+            {
+              "title": "中国 AI 竞争转向 GW 级算力，算力荒加剧",
+              "desc": "未尽研究指出中国 AI 竞争正从「芯模协同」走向 AGI 能力与 GW 级算力基础设施协同。智谱已落地 1GW 级国产 AI 算力数据中心并收购中科加禾；Kimi K3 发布 48 小时后因算力逼近集群承载极限暂停 C 端新用户订阅；H100 GPU 租赁价格半年涨 40%，算力荒从隐性走向显性。",
+              "url": "https://new.qq.com/rain/a/20260722A02S8300",
+              "source": "腾讯新闻",
+              "date": "2026-07-22"
+            },
+            {
+              "title": "中美计划 9 月举行首次正式 AI 官方对话",
+              "desc": "中美拟于今年 9 月举行特朗普政府任内首次正式 AI 官方对话，由美财长贝森特牵头，聚焦前沿模型安全风险与防扩散等基础议题。",
+              "url": "https://new.qq.com/rain/a/20260722A02S8300",
+              "source": "腾讯新闻",
+              "date": "2026-07-22"
+            }
+          ]
+        }
+      ],
+      "report": "## 本期要点\n- **谷歌三模型齐发 + Gemini 4 预训练启动**：发布 Gemini 3.6 Flash（代码/多模态/知识工作，价格降 17%）、3.5 Flash-Lite（低成本高吞吐）和 Flash Cyber（网络安全专用），同时宣布启动「迄今最雄心勃勃的预训练」。旗舰 3.5 Pro 仍在测试。\n- **英伟达 Vera CPU 杀进服务器芯片，Vera Rubin 全球铺开**：首款自研服务器 CPU 已交付 OpenAI/Anthropic/SpaceX，Agent 任务性能超 x86 约 50%，今年预计出货 130 万颗；Vera Rubin NVL72 平台 Token 吞吐提升 10 倍。\n- **月之暗面半年估值翻 5 倍冲刺 500 亿美元**：Kimi K3 发布 4 天后估值从 315 亿跃向 500 亿美元 Pre-IPO 轮，ARR 三个月从 1 亿到 3 亿美元，API 收入占比超 70%。马斯克二次点赞，公司首度否认蒸馏质疑。\n- **微软评估 Kimi K3 接入 Azure，美国讨论对中国开源模型管控**：Copilot 团队测试 K3 替代部分 GPT/Claude 任务，但面临地缘风险评估。标志着国产开源模型首次获得美国云巨头正式评估。\n- **Anthropic 15 亿美元版权和解创纪录**：以天价和解盗版书籍训练数据集体诉讼，AI 数据获取法律风险进入亿元量级。\n- **AI Agent 替代 SaaS 加速**：Curative 用 AI 编程工具自研 CRM 替代 Salesforce，年省 60 万美元；AI 智能体将合同成本从 2000 美元降至 70 美元。预计削减 80% SaaS 支出。\n\n## 趋势研判\n本期信号高度集中：竞争正从「拼模型参数」全面转向「拼算力底座 + 拼生态掌控力 + 拼商业化兑现」。谷歌三款新模型发布看似分散实则精准卡位——代码/多模态、低成本、安全三大场景，配合 Gemini 4 预训练启动，是在用「高频迭代 + 场景分层」策略对抗 OpenAI 的单点突破；英伟达则通过 Vera CPU 垂直整合自研芯片打通 CPU→GPU→整柜的全栈算力闭环，AI 基础设施正从「GPU 为王」走向「全栈自研」。国产阵营的另一条叙事同样剧烈：月之暗面 500 亿美元估值冲刺意味着「国产开源技术溢价」首次得到一二级市场同步认可，但美国内部对 Kimi K3 的管控讨论、微软接入需过地缘审查等信号，预示「技术开源无国界」的幻想正在破灭——接下来国产大模型出海将面临「技术挂帅、合规开道」的双重门槛。对产品人而言，Curative 替代 Salesforce 的案例最具实操意义：AI 编程工具让企业用两个月自研核心业务系统成为可能，「按 SaaS 座位数收费」的旧模式正被「按结果计费 + 自研智能体」的新范式蚕食。AI 不是优化 SaaS——它在替代 SaaS。",
+      "sources": [
+        {
+          "title": "英伟达详解Vera CPU；谷歌推出三款Gemini新模型丨全球科技早参",
+          "url": "https://www.nbd.com.cn/articles/2026-07-22/4491050.html",
+          "source": "每日经济新闻",
+          "date": "2026-07-22"
+        },
+        {
+          "title": "AIGC日报(2026-07-22)：Anthropic版权和解、微软评估Kimi K3接入Azure等8项简讯",
+          "url": "https://weibo.com/7905315703/5323393549468897",
+          "source": "AIGC日报/微博",
+          "date": "2026-07-22"
+        },
+        {
+          "title": "月之暗面以500亿美元估值洽谈Pre-IPO融资",
+          "url": "https://www.toutiao.com/article/7665017201120608787/",
+          "source": "彭博社/新浪财经",
+          "date": "2026-07-22"
+        },
+        {
+          "title": "AI抢走400万大单！第一大CRM厂商被抛弃了",
+          "url": "https://dy.163.com/article/L2DD9J270511D6RL.html",
+          "source": "云头条",
+          "date": "2026-07-22"
+        },
+        {
+          "title": "OpenAI推出小型企业ChatGPT服务 周活用户突破1000万",
+          "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_7636a5fd84355752",
+          "source": "观点网",
+          "date": "2026-07-22"
+        },
+        {
+          "title": "AI新闻日报：中国AI竞争转向GW级算力、中美9月举行AI官方会谈",
+          "url": "https://new.qq.com/rain/a/20260722A02S8300",
+          "source": "腾讯新闻",
+          "date": "2026-07-22"
+        },
+        {
+          "title": "陆家嘴财经早餐2026年7月22日：智谱落地GW级国产AI算力、英伟达Vera Rubin全球扩大部署",
+          "url": "https://www.sohu.com/a/1053159194_99992453",
+          "source": "陆家嘴财经早餐/搜狐",
+          "date": "2026-07-22"
         }
       ]
     }
