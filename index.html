@@ -367,6 +367,32 @@ footer{text-align:center;padding:48px 24px;color:var(--m);font-size:.8rem;margin
 .tool-go{font-size:.78rem;color:var(--a-2);font-family:var(--mono);font-weight:600;opacity:.8;transition:opacity var(--t)}
 .tool-card:hover .tool-go{opacity:1}
 
+/* 通识科普 */
+.science-view{margin:32px auto 60px}
+.science-view .section-title{margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.sci-sub{color:var(--m);font-size:.9rem;line-height:1.7;margin-bottom:22px;max-width:780px}
+.sci-bar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:24px}
+.sci-bar input[type=text]{flex:1;min-width:220px;padding:11px 14px;border:1px solid var(--b);border-radius:10px;background:var(--surface);color:var(--fg);font-size:.9rem;font-family:var(--sans);outline:none;transition:all var(--t)}
+.sci-bar input[type=text]:focus{border-color:var(--a-2);box-shadow:0 0 0 3px var(--a-soft-2)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tab{padding:8px 16px;border:1px solid var(--b);background:var(--surface);border-radius:999px;font-size:.82rem;cursor:pointer;color:var(--m);transition:all var(--t);font-family:var(--sans)}
+.tab:hover{border-color:var(--a-2);color:var(--fg)}
+.tab.on{background:var(--grad);color:#fff;border-color:transparent;font-weight:600}
+.layer-h{font-size:.95rem;font-weight:700;color:var(--fg);margin:26px 4px 12px;letter-spacing:.3px}
+.role{background:var(--surface);border:1px solid var(--b);border-radius:var(--r);padding:18px 20px;margin-bottom:16px;box-shadow:var(--sh-sm);backdrop-filter:blur(8px);transition:all var(--t)}
+.role:hover{border-color:var(--b-h)}
+.role-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:4px}
+.role-name{font-size:1.05rem;font-weight:700;color:var(--fg)}
+.role-tag{font-size:.72rem;color:#fff;padding:3px 11px;border-radius:999px;font-weight:600}
+.role-desc{font-size:.83rem;color:var(--m2);margin-bottom:14px;line-height:1.6}
+.techs{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:10px}
+.tech{background:var(--surface-2);border:1px solid var(--b);border-radius:10px;padding:11px 13px}
+.tech b{font-size:.88rem;font-weight:600;display:block;margin-bottom:3px;color:var(--fg)}
+.tech span{font-size:.78rem;color:var(--m2);line-height:1.55}
+.tech mark, mark{background:#fff2a8;color:#1a1a1a;border-radius:3px;padding:0 1px}
+.sci-empty{text-align:center;color:var(--m);padding:40px;font-size:.9rem}
+.sci-foot{margin-top:30px;color:var(--m2);font-size:.8rem;line-height:1.7;border-top:1px solid var(--b);padding-top:18px}
+
 </style>
 </head>
 <body>
@@ -385,6 +411,7 @@ footer{text-align:center;padding:48px 24px;color:var(--m);font-size:.8rem;margin
     <a onclick="return showView('notes')" id="nav-notes">笔记</a>
     <a onclick="return showView('about')" id="nav-about">关于</a>
     <a onclick="return showView('ainews')" id="nav-ainews">AI速报</a>
+    <a onclick="return showView('science')" id="nav-science">通识科普</a>
   </div>
 </nav>
 
@@ -414,7 +441,7 @@ const CDN_MARKED = typeof marked !== 'undefined';
 function showView(view, data) {
   C.currentView = view;
   document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-  const m = { home:'nav-home', notes:'nav-notes', about:'nav-about', note:'nav-notes', ainews:'nav-ainews' };
+  const m = { home:'nav-home', notes:'nav-notes', about:'nav-about', note:'nav-notes', ainews:'nav-ainews', science:'nav-science' };
   const el = document.getElementById(m[view]);
   if (el) el.classList.add('active');
   if (view === 'home') renderHome();
@@ -422,6 +449,7 @@ function showView(view, data) {
   else if (view === 'note') renderNote(data);
   else if (view === 'about') renderAbout();
   else if (view === 'ainews') renderAiNews();
+  else if (view === 'science') renderScience();
   return false;
 }
 
@@ -476,6 +504,7 @@ function setupHash() {
   } else if (h === 'about') showView('about');
   else if (h === 'notes') showView('notes');
   else if (h === 'ainews') showView('ainews');
+  else if (h === 'science') showView('science');
 }
 
 function setHash(h) { history.pushState(null, '', '#' + h); }
@@ -504,6 +533,7 @@ const SECTION_ICONS = {
   notes: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>',
   contact: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>',
   tools: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2-2 2.6-2.6z"/></svg>',
+  science: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>',
 };
 
 // --- 装饰 SVG 组件（项目封面/笔记封面） ---
@@ -682,6 +712,79 @@ function filterTools(cat, btn) {
   document.querySelectorAll('.tool-card').forEach(c => {
     c.style.display = (cat === 'all' || c.getAttribute('data-cat') === cat) ? '' : 'none';
   });
+}
+
+// --- 通识科普 view（独立页，结构 categories[].layers[].roles[].techs[]） ---
+let sciFilter = 'all', sciQuery = '';
+function sciRender() {
+  const cfg = C.cfg.generalScience; if (!cfg) return;
+  const cat = cfg.categories[0];
+  const main = document.getElementById('sciMain'); if (!main) return;
+  const empty = document.getElementById('sciEmpty');
+  const layers = cat.layers;
+  const layerColors = { amber:'#e0a44a', blue:'#4ea3e0', teal:'#2fc79a' };
+  let any = false;
+  main.innerHTML = '';
+  layers.forEach(layer => {
+    if (sciFilter !== 'all' && sciFilter !== layer.name) return;
+    let layerHTML = '';
+    layer.roles.forEach(r => {
+      let techHTML = '', shown = 0;
+      r.techs.forEach(t => {
+        const hit = !sciQuery || t.n.toLowerCase().includes(sciQuery.toLowerCase()) || t.d.toLowerCase().includes(sciQuery.toLowerCase());
+        if (!hit) return;
+        shown++;
+        techHTML += `<div class="tech"><b>${sciHl(t.n, sciQuery)}</b><span>${escHtml(t.d)}</span></div>`;
+      });
+      if (sciQuery && shown === 0) return;
+      any = true;
+      const color = layerColors[layer.color] || 'var(--a)';
+      layerHTML += `<div class="role">
+        <div class="role-top"><span class="role-name">${escHtml(r.name)}</span><span class="role-tag" style="background:${color}">${escHtml(r.tag)}</span></div>
+        <div class="role-desc">${escHtml(r.desc)}</div>
+        <div class="techs">${techHTML}</div></div>`;
+    });
+    if (layerHTML) {
+      const color = layerColors[layer.color] || 'var(--a)';
+      main.innerHTML += `<div class="layer-h" style="border-left:4px solid ${color};padding-left:8px">${escHtml(layer.name)}</div>${layerHTML}`;
+    }
+  });
+  empty.style.display = any ? 'none' : 'block';
+}
+function renderScience() {
+  const cfg = C.cfg.generalScience;
+  if (!cfg || !cfg.enabled) { document.getElementById('app').innerHTML = '<div class="empty">通识科普暂未开放。</div>'; return; }
+  const cat = cfg.categories[0];
+  const layers = cat.layers;
+  document.getElementById('app').innerHTML = `
+    <div class="science-view container">
+      <div class="section-title">${SECTION_ICONS.science} 通识科普 · ${escHtml(cat.name)}</div>
+      <div class="sci-sub">${escHtml(cat.intro)}</div>
+      <div class="sci-bar">
+        <input id="sciQ" type="text" placeholder="搜技术名，比如 React / MySQL / Docker / Figma …">
+        <div class="tabs" id="sciTabs">
+          <div class="tab on" data-f="all">全部</div>
+          ${layers.map(l => `<div class="tab" data-f="${escHtml(l.name)}">${escHtml(l.name)}</div>`).join('')}
+        </div>
+      </div>
+      <div id="sciMain"></div>
+      <div class="sci-empty" id="sciEmpty" style="display:none">没找到匹配的技术，换个词试试。</div>
+      <div class="sci-foot">层级说明：<b>业务层</b>决定做什么/长什么样/怎么卖；<b>研发层</b>把想法做成产品；<b>支撑层</b>保障质量、稳定与数据。技术会过时，但「这条岗位解决什么问题」的理解不会。</div>
+    </div>`;
+  document.getElementById('sciQ').addEventListener('input', e => { sciQuery = e.target.value.trim(); sciRender(); });
+  document.getElementById('sciTabs').addEventListener('click', e => {
+    if (!e.target.classList.contains('tab')) return;
+    document.querySelectorAll('#sciTabs .tab').forEach(t => t.classList.remove('on'));
+    e.target.classList.add('on');
+    sciFilter = e.target.dataset.f; sciRender();
+  });
+  sciRender();
+}
+function sciHl(text, q) {
+  if (!q) return escHtml(text);
+  const i = text.toLowerCase().indexOf(q.toLowerCase());
+  if (i < 0) return escHtml(text);
+  return escHtml(text.slice(0, i)) + '<mark>' + escHtml(text.slice(i, i + q.length)) + '</mark>' + escHtml(text.slice(i + q.length));
 }
 
 // --- Render: Notes List ---
