@@ -413,7 +413,7 @@ footer{text-align:center;padding:48px 24px;color:var(--m);font-size:.8rem;margin
     <a onclick="return showView('home')" id="nav-home" class="active">首页</a>
     <a onclick="return showView('notes')" id="nav-notes">笔记</a>
     <a onclick="return showView('ainews')" id="nav-ainews">AI速报</a>
-    <a onclick="return showView('science')" id="nav-science">通识科普</a>
+    <a onclick="return showView('science')" id="nav-science">技术字典</a>
     <a onclick="return showView('about')" id="nav-about">关于</a>
   </div>
 </nav>
@@ -717,11 +717,11 @@ function filterTools(cat, btn) {
   });
 }
 
-// --- 通识科普 view（独立页，结构 categories[].layers[].roles[].techs[]） ---
-let sciFilter = 'all', sciQuery = '';
+// --- 技术字典 view（独立页，结构 categories[].layers[].roles[].techs[]） ---
+let sciFilter = 'all', sciQuery = '', dictCat = 0;
 function sciRender() {
-  const cfg = C.cfg.generalScience; if (!cfg) return;
-  const cat = cfg.categories[0];
+  const cfg = C.cfg.techDict; if (!cfg) return;
+  const cat = cfg.categories[dictCat];
   const main = document.getElementById('sciMain'); if (!main) return;
   const empty = document.getElementById('sciEmpty');
   const layers = cat.layers;
@@ -754,17 +754,24 @@ function sciRender() {
   });
   empty.style.display = any ? 'none' : 'block';
 }
+function switchDict(i) {
+  dictCat = i; sciFilter = 'all'; sciQuery = '';
+  renderScience();
+}
 function renderScience() {
-  const cfg = C.cfg.generalScience;
-  if (!cfg || !cfg.enabled) { document.getElementById('app').innerHTML = '<div class="empty">通识科普暂未开放。</div>'; return; }
-  const cat = cfg.categories[0];
+  const cfg = C.cfg.techDict;
+  if (!cfg || !cfg.enabled) { document.getElementById('app').innerHTML = '<div class="empty">技术字典暂未开放。</div>'; return; }
+  const cat = cfg.categories[dictCat];
   const layers = cat.layers;
   document.getElementById('app').innerHTML = `
     <div class="science-view container">
-      <div class="section-title">${SECTION_ICONS.science} 通识科普 · ${escHtml(cat.name)}</div>
+      <div class="section-title">${SECTION_ICONS.science} 技术字典 · ${escHtml(cat.name)}</div>
       <div class="sci-sub">${escHtml(cat.intro)}</div>
+      <div class="tabs" id="dictTabs" style="margin-bottom:16px">
+        ${cfg.categories.map((c,i)=>`<div class="tab ${i===dictCat?'on':''}" data-c="${i}">${escHtml(c.name)}</div>`).join('')}
+      </div>
       <div class="sci-bar">
-        <input id="sciQ" type="text" placeholder="搜技术名，比如 React / MySQL / Docker / Figma …">
+        <input id="sciQ" type="text" placeholder="搜技术名，比如 React / GPT / RAG / Transformer …">
         <div class="tabs" id="sciTabs">
           <div class="tab on" data-f="all">全部</div>
           ${layers.map(l => `<div class="tab" data-f="${escHtml(l.name)}">${escHtml(l.name)}</div>`).join('')}
@@ -772,7 +779,7 @@ function renderScience() {
       </div>
       <div id="sciMain"></div>
       <div class="sci-empty" id="sciEmpty" style="display:none">没找到匹配的技术，换个词试试。</div>
-      <div class="sci-foot">层级说明：<b>业务层</b>决定做什么/长什么样/怎么卖；<b>研发层</b>把想法做成产品；<b>支撑层</b>保障质量、稳定与数据。技术会过时，但「这条岗位解决什么问题」的理解不会。</div>
+      <div class="sci-foot">层级说明：<b>${layers.map(l=>l.name).join(' / ')}</b>。技术会过时，但「这个领域解决什么问题」的理解不会。</div>
     </div>`;
   document.getElementById('sciQ').addEventListener('input', e => { sciQuery = e.target.value.trim(); sciRender(); });
   document.getElementById('sciTabs').addEventListener('click', e => {
@@ -780,6 +787,10 @@ function renderScience() {
     document.querySelectorAll('#sciTabs .tab').forEach(t => t.classList.remove('on'));
     e.target.classList.add('on');
     sciFilter = e.target.dataset.f; sciRender();
+  });
+  document.getElementById('dictTabs').addEventListener('click', e => {
+    if (!e.target.classList.contains('tab')) return;
+    switchDict(parseInt(e.target.dataset.c, 10));
   });
   sciRender();
 }
