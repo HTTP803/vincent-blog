@@ -73,6 +73,7 @@ const SITE_CONFIG = {
   // --- AI 工具箱（首页板块，按分类列出精选 AI 工具；参考 aigc.cn 导航站，挑选部分分类） ---
   aiTools: {
     enabled: true,
+    top: ["ChatGPT","Claude","DeepSeek","Kimi","Midjourney","即梦 AI","Cursor","Suno"], // 首页只展示这几个最热门；其余在「AI工具」独立页
     categories: [
       { name: "智能对话", tools: [
         { name: "ChatGPT", desc: "OpenAI 通用对话与生产力助手", url: "https://chat.openai.com", tag: "海外" },

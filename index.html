@@ -413,6 +413,7 @@ footer{text-align:center;padding:48px 24px;color:var(--m);font-size:.8rem;margin
     <a onclick="return showView('home')" id="nav-home" class="active">首页</a>
     <a onclick="return showView('notes')" id="nav-notes">笔记</a>
     <a onclick="return showView('ainews')" id="nav-ainews">AI速报</a>
+    <a onclick="return showView('tools')" id="nav-tools">AI工具</a>
     <a onclick="return showView('science')" id="nav-science">技术字典</a>
     <a onclick="return showView('about')" id="nav-about">关于</a>
   </div>
@@ -444,7 +445,7 @@ const CDN_MARKED = typeof marked !== 'undefined';
 function showView(view, data) {
   C.currentView = view;
   document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-  const m = { home:'nav-home', notes:'nav-notes', about:'nav-about', note:'nav-notes', ainews:'nav-ainews', science:'nav-science' };
+  const m = { home:'nav-home', notes:'nav-notes', about:'nav-about', note:'nav-notes', ainews:'nav-ainews', tools:'nav-tools', science:'nav-science' };
   const el = document.getElementById(m[view]);
   if (el) el.classList.add('active');
   if (view === 'home') renderHome();
@@ -452,6 +453,7 @@ function showView(view, data) {
   else if (view === 'note') renderNote(data);
   else if (view === 'about') renderAbout();
   else if (view === 'ainews') renderAiNews();
+  else if (view === 'tools') renderAiTools();
   else if (view === 'science') renderScience();
   return false;
 }
@@ -507,6 +509,7 @@ function setupHash() {
   } else if (h === 'about') showView('about');
   else if (h === 'notes') showView('notes');
   else if (h === 'ainews') showView('ainews');
+  else if (h === 'tools') showView('tools');
   else if (h === 'science') showView('science');
 }
 
@@ -653,19 +656,21 @@ function renderHome() {
     </div>`).join('')}</div>
   </div>` : '';
 
-  // AI 工具箱（按分类列出精选工具，参考 aigc.cn 导航站）
+  // AI 工具箱（首页只展示最热门 TOP 几个，完整列表在独立「AI工具」页）
   const toolCfg = cfg.aiTools || {};
   const cats = (toolCfg.enabled !== false && toolCfg.categories) ? toolCfg.categories : [];
+  const topNames = toolCfg.top || [];
+  const allTools = cats.flatMap(c => c.tools.map(t => Object.assign({ cat: c.name }, t)));
+  const topTools = topNames.length ? topNames.map(n => allTools.find(t => t.name === n)).filter(Boolean) : allTools.slice(0, 8);
   const aiToolsHtml = cats.length ? (() => {
-    const filters = `<div class="tool-filter"><button class="filter-btn active" onclick="filterTools('all',this)">全部</button>${cats.map(c=>`<button class="filter-btn" onclick="filterTools('${escHtml(c.name)}',this)">${escHtml(c.name)}</button>`).join('')}</div>`;
-    const cards = cats.map(c => c.tools.map(t => `<div class="tool-card" data-cat="${escHtml(c.name)}" onclick="window.open('${t.url}','_blank','noopener')">
+    const cards = topTools.map(t => `<div class="tool-card" onclick="window.open('${t.url}','_blank','noopener')">
         <div class="tool-head"><span class="tool-name">${escHtml(t.name)}</span>${t.tag?`<span class="tool-tag">${escHtml(t.tag)}</span>`:''}</div>
         <div class="tool-desc">${escHtml(t.desc||'')}</div>
         <span class="tool-go">访问 →</span>
-      </div>`).join('')).join('');
+      </div>`).join('');
     return `<div class="ai-tools-section container">
-      <div class="section-title">${SECTION_ICONS.tools} AI 工具箱 <span class="section-sub">精选 · 持续更新</span></div>
-      ${filters}
+      <div class="section-title">${SECTION_ICONS.tools} AI 工具 <span class="section-sub">热门精选</span></div>
+      <a class="view-all" onclick="return showView('tools')">全部 ${allTools.length} 个 →</a>
       <div class="tool-grid">${cards}</div>
     </div>`;
   })() : '';
@@ -715,6 +720,27 @@ function filterTools(cat, btn) {
   document.querySelectorAll('.tool-card').forEach(c => {
     c.style.display = (cat === 'all' || c.getAttribute('data-cat') === cat) ? '' : 'none';
   });
+}
+
+// --- AI 工具 view（独立页，完整分类 + 筛选，参考 aigc.cn） ---
+function renderAiTools() {
+  const cfg = C.cfg.aiTools;
+  const cats = (cfg && cfg.enabled !== false && cfg.categories) ? cfg.categories : [];
+  if (!cats.length) { document.getElementById('app').innerHTML = '<div class="empty">AI 工具暂未开放。</div>'; return; }
+  const total = cats.reduce((s, c) => s + (c.tools ? c.tools.length : 0), 0);
+  const filters = `<div class="tool-filter"><button class="filter-btn active" onclick="filterTools('all',this)">全部</button>${cats.map(c=>`<button class="filter-btn" onclick="filterTools('${escHtml(c.name)}',this)">${escHtml(c.name)}</button>`).join('')}</div>`;
+  const cards = cats.map(c => c.tools.map(t => `<div class="tool-card" data-cat="${escHtml(c.name)}" onclick="window.open('${t.url}','_blank','noopener')">
+        <div class="tool-head"><span class="tool-name">${escHtml(t.name)}</span>${t.tag?`<span class="tool-tag">${escHtml(t.tag)}</span>`:''}</div>
+        <div class="tool-desc">${escHtml(t.desc||'')}</div>
+        <span class="tool-go">访问 →</span>
+      </div>`).join('')).join('');
+  document.getElementById('app').innerHTML = `
+    <div class="ai-tools-view container">
+      <div class="section-title">${SECTION_ICONS.tools} AI 工具 <span class="section-sub">精选 ${total} 个 · 持续更新</span></div>
+      <div class="sci-sub">按分类整理的我常用 / 推荐的 AI 工具，点击卡片直达官网。想看热门精选可回首页。</div>
+      ${filters}
+      <div class="tool-grid">${cards}</div>
+    </div>`;
 }
 
 // --- 技术字典 view（独立页，结构 categories[].layers[].roles[].techs[]） ---
