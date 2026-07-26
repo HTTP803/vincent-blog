@@ -102,6 +102,10 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .project-card .p-desc{font-size:.86rem;color:var(--m2);line-height:1.55;margin-bottom:14px}
 .project-card .p-tags{display:flex;gap:6px;flex-wrap:wrap}
 .project-card .p-tags span{padding:2px 8px;border-radius:999px;font-size:.7rem;background:var(--a-soft);color:var(--a-2);font-weight:500;font-family:var(--mono)}
+.p-status{display:inline-block;margin-left:8px;padding:2px 9px;border-radius:999px;font-size:.66rem;font-weight:600;font-family:var(--mono);vertical-align:middle;letter-spacing:.02em}
+.p-status.s-live{background:rgba(47,199,154,.16);color:#2fc79a}
+.p-status.s-dev{background:rgba(188,82,238,.16);color:#bc52ee}
+.p-status.s-plan{background:rgba(255,255,255,.1);color:var(--m2)}
 
 /* Notes mini */
 .notes-section{padding:48px 0;max-width:1060px;margin:0 auto}
@@ -414,6 +418,7 @@ footer{text-align:center;padding:48px 24px;color:var(--m);font-size:.8rem;margin
     <a onclick="return showView('notes')" id="nav-notes">笔记</a>
     <a onclick="return showView('ainews')" id="nav-ainews">AI速报</a>
     <a onclick="return showView('tools')" id="nav-tools">AI工具</a>
+    <a onclick="return showView('projects')" id="nav-projects">项目作品</a>
     <a onclick="return showView('science')" id="nav-science">技术字典</a>
     <a onclick="return showView('about')" id="nav-about">关于</a>
   </div>
@@ -445,7 +450,7 @@ const CDN_MARKED = typeof marked !== 'undefined';
 function showView(view, data) {
   C.currentView = view;
   document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-  const m = { home:'nav-home', notes:'nav-notes', about:'nav-about', note:'nav-notes', ainews:'nav-ainews', tools:'nav-tools', science:'nav-science' };
+  const m = { home:'nav-home', notes:'nav-notes', about:'nav-about', note:'nav-notes', ainews:'nav-ainews', tools:'nav-tools', projects:'nav-projects', science:'nav-science' };
   const el = document.getElementById(m[view]);
   if (el) el.classList.add('active');
   if (view === 'home') renderHome();
@@ -454,6 +459,7 @@ function showView(view, data) {
   else if (view === 'about') renderAbout();
   else if (view === 'ainews') renderAiNews();
   else if (view === 'tools') renderAiTools();
+  else if (view === 'projects') renderProjects();
   else if (view === 'science') renderScience();
   return false;
 }
@@ -510,6 +516,7 @@ function setupHash() {
   else if (h === 'notes') showView('notes');
   else if (h === 'ainews') showView('ainews');
   else if (h === 'tools') showView('tools');
+  else if (h === 'projects') showView('projects');
   else if (h === 'science') showView('science');
 }
 
@@ -551,6 +558,7 @@ const COVER_SVGS = {
   code: '<svg viewBox="0 0 24 24" fill="white" fill-opacity=".95"><path d="M8.7 16.3l-1.4-1.4L4.2 12l3.1-3.1 1.4 1.4L6.9 12l1.8 1.8 1.4 1.4-1.4 1.4zM15.3 16.3l-1.4-1.4 1.8-1.8-1.8-1.8 1.4-1.4 3.1 3.1-3.1 3.1zM14 7l-2 14-1.9-.3 2-14L14 7z"/></svg>',
   bulb: '<svg viewBox="0 0 24 24" fill="white" fill-opacity=".95"><path d="M12 2a7 7 0 0 0-4 12.7V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.3A7 7 0 0 0 12 2zm-2 18a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-1h-4v1z"/></svg>',
   default: '<svg viewBox="0 0 24 24" fill="white" fill-opacity=".95"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13z"/></svg>',
+  star: '<svg viewBox="0 0 24 24" fill="white" fill-opacity=".95"><path d="M12 2l2.9 6.2 6.8.8-5 4.7 1.3 6.7L12 17.8 6 20.4l1.3-6.7-5-4.7 6.8-.8z"/><circle cx="18.5" cy="5.5" r="1.3"/><circle cx="5.5" cy="14.5" r="1"/></svg>',
 };
 
 // --- Render: Home ---
@@ -620,12 +628,17 @@ function renderHome() {
   ).join('');
 
   // Projects
+  const projStatus = s => {
+    const m = { '已上线':['s-live','已上线'], '开发中':['s-dev','开发中'], '规划中':['s-plan','规划中'] };
+    const x = m[s] || ['s-plan', s||'规划中'];
+    return `<span class="p-status ${x[0]}">${x[1]}</span>`;
+  };
   const projCards = (cfg.projects||[]).map(p =>
-    `<div class="project-card"${p.url ? ` onclick="window.open('${p.url}','_blank')" style="cursor:pointer"` : ''}>
+    `<div class="project-card" data-status="${p.status||'规划中'}"${p.url ? ` onclick="window.open('${p.url}','_blank')" style="cursor:pointer"` : ''}>
       <div class="p-cover c${(cfg.projects.indexOf(p)%5)+1}">${COVER_SVGS[p.icon||'default']||COVER_SVGS.default}</div>
-      <div class="p-title">${p.title}</div>
-      <div class="p-desc">${p.desc}</div>
-      <div class="p-tags">${p.tags.map(t=>`<span>${t}</span>`).join('')}</div>
+      <div class="p-title">${escHtml(p.title)}${projStatus(p.status)}</div>
+      <div class="p-desc">${escHtml(p.desc||'')}</div>
+      <div class="p-tags">${p.tags.map(t=>`<span>${escHtml(t)}</span>`).join('')}</div>
     </div>`
   ).join('');
 
@@ -699,7 +712,7 @@ function renderHome() {
 
     ${nowItems ? `<div class="now-section container"><div class="section-title">${SECTION_ICONS.now} 正在做的事</div><ul class="now-list">${nowItems}</ul></div>` : ''}
 
-    ${projCards ? `<div class="projects-section container"><div class="section-title">${SECTION_ICONS.projects} 项目作品</div><div class="project-grid">${projCards}</div></div>` : ''}
+    ${projCards ? `<div class="projects-section container"><div class="section-title">${SECTION_ICONS.projects} 项目作品</div><a class="view-all" onclick="return showView('projects')">全部项目 →</a><div class="project-grid">${projCards}</div></div>` : ''}
 
     ${noteItems ? `<div class="notes-section container"><div class="section-title">${SECTION_ICONS.notes} 最新笔记</div><ul class="notes-mini-list">${noteItems}</ul><a class="view-all" onclick="return showView('notes')">查看全部笔记 →</a></div>` : ''}
 
@@ -825,6 +838,46 @@ function sciHl(text, q) {
   const i = text.toLowerCase().indexOf(q.toLowerCase());
   if (i < 0) return escHtml(text);
   return escHtml(text.slice(0, i)) + '<mark>' + escHtml(text.slice(i, i + q.length)) + '</mark>' + escHtml(text.slice(i + q.length));
+}
+
+// --- 项目作品 view（独立页，按状态筛选：已上线 / 开发中 / 规划中） ---
+function filterProjects(status, btn) {
+  const bar = document.querySelector('.proj-filter');
+  if (bar) bar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  document.querySelectorAll('.project-card').forEach(c => {
+    c.style.display = (status === 'all' || c.getAttribute('data-status') === status) ? '' : 'none';
+  });
+}
+function renderProjects() {
+  const cfg = C.cfg;
+  const list = cfg.projects || [];
+  if (!list.length) { document.getElementById('app').innerHTML = '<div class="empty">项目作品暂未开放。</div>'; return; }
+  const badge = s => {
+    const m = { '已上线':['s-live','已上线'], '开发中':['s-dev','开发中'], '规划中':['s-plan','规划中'] };
+    const x = m[s] || ['s-plan', s||'规划中'];
+    return `<span class="p-status ${x[0]}">${x[1]}</span>`;
+  };
+  const card = p => `<div class="project-card" data-status="${p.status||'规划中'}"${p.url?` onclick="window.open('${p.url}','_blank')" style="cursor:pointer"`:''}>
+      <div class="p-cover c${(list.indexOf(p)%5)+1}">${COVER_SVGS[p.icon||'default']||COVER_SVGS.default}</div>
+      <div class="p-title">${escHtml(p.title)}${badge(p.status)}</div>
+      <div class="p-desc">${escHtml(p.desc||'')}</div>
+      <div class="p-tags">${p.tags.map(t=>`<span>${escHtml(t)}</span>`).join('')}</div>
+    </div>`;
+  document.getElementById('app').innerHTML = `
+    <div class="ai-tools-view container">
+      <div class="section-title">${SECTION_ICONS.projects} 项目作品 <span class="section-sub">现在 & 未来，我用 AI 做的产品</span></div>
+      <div class="sci-sub">这里收着我做过、在做、准备做的产品。带状态标签：<b style="color:#2fc79a">已上线</b> / <b style="color:#bc52ee">开发中</b> / <b style="color:var(--m2)">规划中</b>。点卡片可直达（若已上线）。</div>
+      <div class="proj-filter tool-filter">
+        <button class="filter-btn active" onclick="filterProjects('all',this)">全部</button>
+        <button class="filter-btn" onclick="filterProjects('已上线',this)">已上线</button>
+        <button class="filter-btn" onclick="filterProjects('开发中',this)">开发中</button>
+        <button class="filter-btn" onclick="filterProjects('规划中',this)">规划中</button>
+      </div>
+      <div class="project-grid">${list.map(card).join('')}</div>
+    </div>`;
+  setHash('projects');
+  window.scrollTo(0,0);
 }
 
 // --- Render: Notes List ---

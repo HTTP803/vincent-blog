@@ -26,14 +26,23 @@ const SITE_CONFIG = {
     { emoji: "📝", text: "每周至少 1 篇公开笔记，记录 AI 与产品的实战思考" },
   ],
 
-  // --- 项目作品 ---
+  // --- 项目作品（首页展示全部 + 独立「项目作品」页按状态筛选；status: 已上线 / 开发中 / 规划中） ---
   projects: [
+    {
+      title: "星云词汇",
+      desc: "AI 驱动的智能词汇产品：把零散单词连成可记忆的「星图」，让背词像探索宇宙一样有线索、有体系。（描述待你补充完善）",
+      url: "",
+      tags: ["AI", "语言学习", "新产品"],
+      icon: "star", // 封面图标: book/rocket/product/chart/code/bulb/star/default
+      status: "开发中",
+    },
     {
       title: "AI 速报",
       desc: "每日追踪 AI 行业动态，自动生成行业报告与趋势研判。",
       url: "",
       tags: ["AI", "每日更新"],
-      icon: "bulb", // 封面图标: book/rocket/product/chart/code/bulb/default
+      icon: "bulb",
+      status: "已上线",
     },
     {
       title: "公开第二大脑",
@@ -41,6 +50,7 @@ const SITE_CONFIG = {
       url: "",
       tags: ["个人项目", "AI 写作"],
       icon: "book",
+      status: "已上线",
     },
     {
       title: "更多 AI 项目即将上线",
@@ -48,6 +58,7 @@ const SITE_CONFIG = {
       url: "",
       tags: ["coming soon"],
       icon: "rocket",
+      status: "规划中",
     },
   ],
 
