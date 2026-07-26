@@ -242,6 +242,22 @@ footer{text-align:center;padding:48px 24px;color:var(--m);font-size:.8rem;margin
 .p-cover.c3{background:linear-gradient(135deg,#4bf3c8,#38bdf8)}
 .p-cover.c4{background:linear-gradient(135deg,#f59e0b,#ef4444)}
 .p-cover.c5{background:linear-gradient(135deg,#ec4899,#8b5cf6)}
+.proj-case{grid-column:1/-1}
+.p-extra{margin-top:14px;padding-top:14px;border-top:1px dashed rgba(255,255,255,.12)}
+.p-extra-label{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--a-2,#bc52ee);font-weight:700;margin-bottom:10px}
+.p-list{margin:0;padding-left:18px;font-size:.86rem;color:var(--m2,#8b93a3);line-height:1.75}
+.p-list li{margin-bottom:4px}
+.p-list.hl{list-style:none;padding-left:0;display:flex;flex-wrap:wrap;gap:6px 14px}
+.p-list.hl li{padding-left:16px;position:relative;color:var(--fg,#e8ecf2)}
+.p-list.hl li:before{content:'✦';position:absolute;left:0;color:var(--a,#bc52ee)}
+.p-screens{display:flex;gap:14px;overflow-x:auto;padding:6px 4px 12px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.p-screens::-webkit-scrollbar{height:6px}
+.p-screens::-webkit-scrollbar-thumb{background:rgba(255,255,255,.15);border-radius:3px}
+.p-screens img{width:200px;aspect-ratio:9/19.5;object-fit:cover;border-radius:18px;border:1px solid rgba(255,255,255,.1);scroll-snap-align:start;flex-shrink:0;background:#0e1116;display:block;transition:transform .3s ease}
+.p-screens img:hover{transform:translateY(-4px)}
+.p-go{display:inline-block;margin-top:6px;padding:9px 20px;border-radius:999px;background:linear-gradient(135deg,#bc52ee,#3245ff);color:#fff;font-size:.85rem;font-weight:600;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease;box-shadow:0 4px 14px rgba(188,82,238,.25)}
+.p-go:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(188,82,238,.4)}
+@media(max-width:640px){.p-screens img{width:160px}}
 
 /* === 笔记卡片封面 === */
 .nm-cover{width:88px;height:88px;border-radius:12px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:var(--grad);box-shadow:var(--glow)}
@@ -858,12 +874,28 @@ function renderProjects() {
     const x = m[s] || ['s-plan', s||'规划中'];
     return `<span class="p-status ${x[0]}">${x[1]}</span>`;
   };
-  const card = p => `<div class="project-card" data-status="${p.status||'规划中'}"${p.url?` onclick="window.open('${p.url}','_blank')" style="cursor:pointer"`:''}>
+  const detail = p => {
+    const ex = [];
+    if (p.features && p.features.length)
+      ex.push(`<div class="p-extra"><div class="p-extra-label">核心功能</div><ul class="p-list">${p.features.map(f=>`<li>${escHtml(f)}</li>`).join('')}</ul></div>`);
+    if (p.highlights && p.highlights.length)
+      ex.push(`<div class="p-extra"><div class="p-extra-label">产品亮点</div><ul class="p-list hl">${p.highlights.map(h=>`<li>${escHtml(h)}</li>`).join('')}</ul></div>`);
+    if (p.screens && p.screens.length)
+      ex.push(`<div class="p-extra"><div class="p-extra-label">界面截图</div><div class="p-screens">${p.screens.map(s=>`<img src="${escHtml(s)}" alt="星云词汇界面截图" loading="lazy">`).join('')}</div></div>`);
+    if (p.url) ex.push(`<a class="p-go" href="${escHtml(p.url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">访问产品 →</a>`);
+    return ex.join('');
+  };
+  const isCase = p => p.features || p.highlights || p.screens;
+  const card = p => {
+    const caseCls = isCase(p) ? ' proj-case' : '';
+    return `<div class="project-card${caseCls}" data-status="${p.status||'规划中'}">
       <div class="p-cover c${(list.indexOf(p)%5)+1}">${COVER_SVGS[p.icon||'default']||COVER_SVGS.default}</div>
       <div class="p-title">${escHtml(p.title)}${badge(p.status)}</div>
       <div class="p-desc">${escHtml(p.desc||'')}</div>
-      <div class="p-tags">${p.tags.map(t=>`<span>${escHtml(t)}</span>`).join('')}</div>
+      <div class="p-tags">${(p.tags||[]).map(t=>`<span>${escHtml(t)}</span>`).join('')}</div>
+      ${detail(p)}
     </div>`;
+  };
   document.getElementById('app').innerHTML = `
     <div class="ai-tools-view container">
       <div class="section-title">${SECTION_ICONS.projects} 项目作品 <span class="section-sub">现在 & 未来，我用 AI 做的产品</span></div>
