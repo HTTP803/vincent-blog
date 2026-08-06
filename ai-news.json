@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-05T10:08:00+08:00",
+  "updated": "2026-08-06T10:05:58+08:00",
   "issues": [
     {
       "issue": 1,
@@ -1626,6 +1626,131 @@
           "url": "https://www.163.com/dy/article/L3FLTDJE05562DGT.html",
           "source": "网易/极新",
           "date": "2026-08-04"
+        }
+      ]
+    },
+    {
+      "issue": 14,
+      "date": "2026-08-06",
+      "title": "第 14 期 · AI 行业日报",
+      "digest": "Meta掀代码智能体价格战、字节全双工模型落地、谷歌轻量矩阵上线，AI降本与算力军备同步加速。",
+      "sections": [
+        {
+          "key": "overview",
+          "label": "总述-AI总结",
+          "icon": "📌",
+          "color": "#e8b339",
+          "summary": "大厂把 AI 从『拼模型』推向『拼产品与基础设施』：Meta 以 1/10 定价杀入编程智能体、字节 SeedRealtime 把全双工多模态做成 C 端默认体验、谷歌轻量矩阵 + AirLLM 把 2.8T 模型门槛压到 4GB 显存；算力侧 Anthropic 锁下 100 亿美元云大单，谷歌则遭 Jeff Dean 携三巨头离职创业的人才地震。",
+          "items": []
+        },
+        {
+          "key": "model",
+          "label": "模型动态",
+          "icon": "🤖",
+          "items": [
+            {
+              "title": "字节跳动发布原生音视频全双工大模型 SeedRealtime，豆包全量上线",
+              "desc": "SeedRealtime 用统一端到端架构原生融合音频、视频与文本，在连续多模态流上实时交互，对话节奏问题较 ASR→LLM→TTS 级联方案减少约一半，是业界首个规模化落地的全双工音视频模型，标志豆包从『文本对话』迈向『全能 AI 伴侣』。",
+              "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_5326a73c21757752",
+              "source": "每日经济新闻",
+              "date": "2026-08-05"
+            },
+            {
+              "title": "谷歌推出 Gemini 3.6 Flash 轻量模型矩阵，AirLLM 让 4GB 显存跑通 2.8T 模型",
+              "desc": "Google 发布面向自主 Agent 的 Gemini 3.6 Flash（多步任务）、3.5 Flash-Lite（后台流程）、3.5 Flash Cyber（安全运营）与 Gemini Robotics ER 2；同日开源框架 AirLLM 以分层流式推理在 4GB 显存 GPU 上运行 2.8 万亿参数 Kimi K3，免量化剪枝，推理平民化再进一步。",
+              "url": "https://aibreakingwire.com/news/ai-brief-2026-08-06",
+              "source": "AI Breaking Wire",
+              "date": "2026-08-06"
+            },
+            {
+              "title": "Grok 4.6 定档 8 月 7 日，Ilya 的 SSI 首模型本月首发",
+              "desc": "马斯克确认 Grok 4.6 约 8 月 7 日发布，沿用 1.5T 架构、靠后训练提效，2.1T 的 Grok 4.7 数周后跟进；Ilya Sutskever 的 SSI（估值约 320 亿美元）据投资人透露将于 8 月发布首模型，主打持续学习与样本高效，四周一代的节奏让『押注渠道』比『押注版本』更重要。",
+              "url": "https://dev.to/felix_king_a5ebe226991216/ai-roundup-aug-06-ilyas-ssi-sets-a-date-grok-46-lands-and-bytedance-goes-full-duplex-4dh3",
+              "source": "Dev.to",
+              "date": "2026-08-06"
+            },
+            {
+              "title": "Sand.ai 发布全球首个千亿级开源 MoE 视频生成模型",
+              "desc": "Sand.ai 推出全球首个参数规模达千亿级的开源 MoE（混合专家）视频生成模型，将开源大模型能力从文本、图像进一步扩展至高质量视频生成，开源阵营在视频赛道再下一城。",
+              "url": "https://dy.163.com/article/L3KQJ61A05562DGT.html",
+              "source": "极新",
+              "date": "2026-08-06"
+            }
+          ]
+        },
+        {
+          "key": "product",
+          "label": "产品工具",
+          "icon": "🛠",
+          "items": [
+            {
+              "title": "Meta 发布 Muse Code 编程智能体，定价仅为竞品约 1/10",
+              "desc": "Meta 推出首款终端编程智能体 Muse Code，搭配专为代码优化的 Muse Spark 1.2，可规划变更、写码、验证一站式完成；按量计费输入 1.25 美元 / 百万 token、输出 4.25 美元 / 百万 token，创作者版再低 10 倍以上，主打低价挑战 OpenAI Codex 与 Claude Code，并承诺『零数据留存』。",
+              "url": "https://www.163.com/dy/article/L3KFA88H05198CJN.html",
+              "source": "财联社",
+              "date": "2026-08-06"
+            }
+          ]
+        },
+        {
+          "key": "industry",
+          "label": "行业资讯",
+          "icon": "📊",
+          "items": [
+            {
+              "title": "Anthropic 签下 100 亿美元六年云算力大单",
+              "desc": "Anthropic 与初创公司 Volta 达成 100 亿美元、为期六年的云算力协议，支撑 Claude 前沿模型训练；合作围绕挪威一座 133 兆瓦、配备英伟达 Vera Rubin 芯片的数据中心展开，Volta 联合矿企 Bitdeer 建设，为 AI 厂商迄今最大的独立云基建协议之一。",
+              "url": "https://aibreakingwire.com/news/ai-brief-2026-08-06",
+              "source": "AI Breaking Wire",
+              "date": "2026-08-06"
+            },
+            {
+              "title": "谷歌首席科学家 Jeff Dean 结束 27 年生涯，携三巨头创业",
+              "desc": "8 月 6 日，谷歌首席科学家 Jeff Dean 与 Oriol Vinyals、Quoc Le、Sanjay Ghemawat 共同创办自动化科研公司 Discovery Loop；Demis Hassabis 转任首席科学家、Koray Kavukcuoglu 接棒 Gemini 4 研发，消息致谷歌股价盘中跌约 5%，再显前沿模型公司的『人才护城河』权重。",
+              "url": "https://new.qq.com/rain/a/20260806A02G3H00?refer=cp_1009",
+              "source": "腾讯新闻",
+              "date": "2026-08-06"
+            }
+          ]
+        }
+      ],
+      "report": "## 本期要点\n- **Meta 以价格战切入编程智能体**：Muse Code 搭配 Muse Spark 1.2，定价仅竞品约 1/10，延续「低价挑战 OpenAI/Anthropic」打法，标志大厂编程 Agent 进入贴身肉搏。\n- **字节 SeedRealtime 把全模态交互做成「默认」**：原生融合音视频文本的统一架构在豆包全量上线，对话节奏问题较级联方案减半，是首个规模化落地的全双工音视频模型。\n- **谷歌双线出击**：Gemini 3.6 Flash 轻量矩阵主攻低成本自主 Agent，AirLLM 更把 2.8T 模型的门槛压到 4GB 显存，推理平民化再进一步；视频侧 Sand.ai 开源千亿级 MoE 模型。\n- **算力军备赛白热化**：Anthropic 拿下 100 亿美元、六年期 Volta 云算力大单；与此同时 Jeff Dean 携三位谷歌元老离职创业，人才与算力一同成为前沿模型的核心约束。\n- **前沿模型节奏提速**：Grok 4.6 定档 8/7、Ilya 的 SSI 首模型本月首发，四周一代的发布节奏让「押注渠道」比「押注版本」更重要。\n\n## 趋势研判\n今天的信号高度一致：竞争焦点正从「谁的模型更强」转向「谁先把模型变成便宜、好用、能规模化的产品与基础设施」。Meta 用 1/10 定价的 Muse Code 直插编程 Agent 红海，字节用 SeedRealtime 把全双工多模态做成 C 端默认体验，谷歌则用轻量模型矩阵 + AirLLM 把 2.8T 模型的部署门槛打到 4GB 显存——三家的共同答案是「降本增效」，开源与低价正把闭源溢价逼到墙角。\n\n另一边，供给端的约束在加剧：Anthropic 100 亿美元锁定挪威 Vera Rubin 算力，说明前沿模型的比拼已是资本与能源的较量；而 Jeff Dean 携 Vinyals、Le、Ghemawat 集体出走创办 Discovery Loop，是谷歌继 Gemini 4 换帅后又一次核心人才地震，提醒市场「人才密度」才是模型公司的真实护城河。\n\n对产品人而言，两个动作值得立刻跟进：一是把「低价 + 端到端 Agent」作为选型默认项，Grok 4.6/SSI 的四周一迭代节奏意味着集成渠道比固定版本更重要；二是盯紧 AirLLM 这类显存流式推理，它可能让中小团队第一次以消费级 GPU 跑通旗舰模型，重写本地化部署的成本曲线。",
+      "sources": [
+        {
+          "title": "Meta推出首款AI编程智能体 主打低价挑战OpenAI与Anthropic",
+          "url": "https://www.163.com/dy/article/L3KFA88H05198CJN.html",
+          "source": "财联社",
+          "date": "2026-08-06"
+        },
+        {
+          "title": "字节跳动发布原生音视频全双工大模型SeedRealtime",
+          "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_5326a73c21757752",
+          "source": "每日经济新闻",
+          "date": "2026-08-05"
+        },
+        {
+          "title": "The AI Brief — Thursday, August 6, 2026",
+          "url": "https://aibreakingwire.com/news/ai-brief-2026-08-06",
+          "source": "AI Breaking Wire",
+          "date": "2026-08-06"
+        },
+        {
+          "title": "AI Roundup (Aug 06): Ilya's SSI Sets a Date, Grok 4.6 Lands, and ByteDance Goes Full-Duplex",
+          "url": "https://dev.to/felix_king_a5ebe226991216/ai-roundup-aug-06-ilyas-ssi-sets-a-date-grok-46-lands-and-bytedance-goes-full-duplex-4dh3",
+          "source": "Dev.to",
+          "date": "2026-08-06"
+        },
+        {
+          "title": "AI大模型动态（Jeff Dean 离职创业等）",
+          "url": "https://new.qq.com/rain/a/20260806A02G3H00?refer=cp_1009",
+          "source": "腾讯新闻",
+          "date": "2026-08-06"
+        },
+        {
+          "title": "极新早报：Sand.ai 发布全球首个千亿级开源 MoE 视频模型",
+          "url": "https://dy.163.com/article/L3KQJ61A05562DGT.html",
+          "source": "极新",
+          "date": "2026-08-06"
         }
       ]
     }
