@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-06T10:05:58+08:00",
+  "updated": "2026-08-07T09:55:02.877347+08:00",
   "issues": [
     {
       "issue": 1,
@@ -1751,6 +1751,128 @@
           "url": "https://dy.163.com/article/L3KQJ61A05562DGT.html",
           "source": "极新",
           "date": "2026-08-06"
+        }
+      ]
+    },
+    {
+      "issue": 15,
+      "date": "2026-08-07",
+      "title": "第 15 期 · AI 行业日报",
+      "digest": "OpenAI 免费层无限对话+Luna、谷歌重组 AI 领导层、可灵 30 亿美元融资、Stripe 百亿美元收购 OpenRouter，AI 商业化与整合加速。",
+      "sections": [
+        {
+          "key": "overview",
+          "label": "总述-AI总结",
+          "icon": "📌",
+          "color": "#e8b339",
+          "summary": "本期主线：AI 行业进入「整合与商业化」加速期——OpenAI 以免费层 Luna 抢入口、预览 2027 硬件；谷歌集权 Mountain View 提速决策；可灵 30 亿美元融资标志视频大模型跨过商业化拐点，Stripe 百亿收购 OpenRouter 整合路由层；中国阵营在自主与资本两端并进（字节拒蒸馏、MiniMax-W 入港股通、宇树 IPO）。",
+          "items": []
+        },
+        {
+          "key": "model",
+          "label": "模型动态",
+          "icon": "🤖",
+          "color": "#bc52ee",
+          "items": [
+            {
+              "title": "OpenAI 免费层升级 GPT-5.6 Luna 并放开无限文本对话",
+              "desc": "OpenAI 将免费层默认模型升级至 GPT-5.6 Luna，取消每日消息上限、开放无限文本对话；企业/付费版同步推送 GPT-5.6 Sol，带来更长上下文推理与更低延迟。",
+              "url": "https://www.thecodew.com/2026/08/daily-tech-briefing-stripe-openrouter-nvidia-rubin-ultra-figma-ceo-august-2026.html",
+              "source": "The CODEW",
+              "date": "2026-08-07"
+            }
+          ]
+        },
+        {
+          "key": "product",
+          "label": "产品工具",
+          "icon": "🛠",
+          "color": "#4bf3c8",
+          "items": [
+            {
+              "title": "OpenAI 预览 2027 年「冰球大小」AI 智能音箱",
+              "desc": "OpenAI 首款独立硬件曝光：冰球大小、带机械部件拟人表达，预计 2027 年上市、零售 300 美元以上，集成原生实时多模态智能，正式入局消费终端。",
+              "url": "https://www.thecodew.com/2026/08/daily-tech-briefing-stripe-openrouter-nvidia-rubin-ultra-figma-ceo-august-2026.html",
+              "source": "The CODEW / Bloomberg",
+              "date": "2026-08-07"
+            },
+            {
+              "title": "Stripe 洽谈近 100 亿美元收购 AI 路由平台 OpenRouter",
+              "desc": "Stripe 进入独家谈判，拟以现金+股票约 100 亿美元收购模型聚合路由平台 OpenRouter，补强其在 AI 计费、开发者工具与 API 变现底座的布局。",
+              "url": "https://www.thecodew.com/2026/08/daily-tech-briefing-stripe-openrouter-nvidia-rubin-ultra-figma-ceo-august-2026.html",
+              "source": "The CODEW / The Information",
+              "date": "2026-08-07"
+            }
+          ]
+        },
+        {
+          "key": "industry",
+          "label": "行业资讯",
+          "icon": "📊",
+          "color": "#3245ff",
+          "items": [
+            {
+              "title": "可灵 AI 完成近 30 亿美元融资，视频大模型迎商业化拐点",
+              "desc": "可灵 AI 落地近 30 亿美元融资、投后估值约 180 亿美元，创全球视频大模型最大额；近三月赛道四家融资合计近 300 亿元，定价逻辑从「概念驱动」转向「商业化实质定价」。",
+              "url": "https://finance.sina.com.cn/jjxw/2026-08-07/doc-inimmpqx0250460.shtml",
+              "source": "经济参考报 / 新浪财经",
+              "date": "2026-08-07"
+            },
+            {
+              "title": "谷歌重组 AI 领导层：Hassabis 退居董事长，Kavukcuoglu 接管运营",
+              "desc": "谷歌将 AI 决策权收拢至 Mountain View：Demis Hassabis 转任董事长兼 Alphabet 首席科学家，Koray Kavukcuoglu 执掌研究与运营，Borgeaud 编码团队自伦敦迁加州，终结三年双洲分裂以提速决策。",
+              "url": "https://aitoolsrecap.com/Blog/ai-news-august-07-2026",
+              "source": "aitoolsrecap / Bloomberg",
+              "date": "2026-08-07"
+            },
+            {
+              "title": "宇树科技科创板 IPO 定价 150.8 元，DeepSeek、腾讯等获战略配售",
+              "desc": "宇树科技发行价 150.80 元/股、预计募资约 61 亿元、上市后市值约 610 亿元，DeepSeek、腾讯等获战略配售，机器人第一股进入发行阶段。",
+              "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_3606a75156959152",
+              "source": "华尔街见闻",
+              "date": "2026-08-07"
+            },
+            {
+              "title": "字节定调「拒绝蒸馏」坚持自研，MiniMax-W 纳入港股通",
+              "desc": "字节创始人张一鸣与 CEO 梁汝波接连表态不依赖蒸馏、接受短期落后做长周期自研；同日 MiniMax-W 正式调入港股通，上市近 7 月后获内地投资者交易资格、盘中涨超 20%。",
+              "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_9836a75137546752",
+              "source": "每日经济新闻",
+              "date": "2026-08-07"
+            }
+          ]
+        }
+      ],
+      "report": "## 本期要点\n- OpenAI 免费层升级 GPT-5.6 Luna 并放开无限文本对话，企业/付费版同步推 GPT-5.6 Sol（更长上下文+更低延迟），以入口免费化扩张用户盘。\n- OpenAI 预览 2027 年「冰球大小」AI 智能音箱，机械部件拟人表达，零售 300 美元+，首款独立硬件正式入局消费终端。\n- 可灵 AI 完成近 30 亿美元融资（投后估值约 180 亿美元），创全球视频大模型最大额；近三月赛道四家融资合计近 300 亿元，定价逻辑从概念转向商业化实质。\n- 谷歌重组 AI 领导层：Hassabis 退居董事长兼 Alphabet 首席科学家，Kavukcuoglu 接管研究与运营，Borgeaud 编码团队自伦敦迁加州，终结三年双洲分裂以提速决策。\n- Stripe 洽谈以近 100 亿美元现金+股票收购 AI 路由平台 OpenRouter，补强 AI 计费与开发者工具底座。\n- 宇树科技科创板 IPO 定价 150.8 元/股、募资约 61 亿元，DeepSeek、腾讯等获战略配售；字节定调「拒绝蒸馏」坚持自研，MiniMax-W 纳入港股通。\n\n## 趋势研判\n本期信号高度一致：AI 竞争正从「拼参数、拼发布」切换到「拼入口、拼整合、拼商业化」。OpenAI 把旗舰 Luna 开放给免费层并放开对话上限，本质是用模型能力换用户规模与生态入口；谷歌将 AI 决策权重新收拢到 Mountain View，则是大厂为应对 Anthropic/OpenAI 速度而做的组织补课。资本侧，可灵 30 亿美元融资与 Stripe 百亿收购 OpenRouter 说明：视频生成与世界模型已进入「谁先跑通商业闭环」的产业化拐点，而模型路由/计费正成为新的基础设施层。中国阵营则在「自主+资本」两端并进——字节以「拒绝蒸馏」表态长期主义、MiniMax-W 借开源生态入港股通、宇树以机器人第一股姿态登陆科创板。对产品人而言，两条主线最值得盯：一是「免费模型+付费智能体」的入口争夺战，二是 AI 路由/计费/硬件等被低估的中间层正在快速固化格局。",
+      "sources": [
+        {
+          "title": "Stripe Eyes $10B OpenRouter Deal, OpenAI Previews 2027 AI Hardware, Nvidia Rubin Ultra",
+          "url": "https://www.thecodew.com/2026/08/daily-tech-briefing-stripe-openrouter-nvidia-rubin-ultra-figma-ceo-august-2026.html",
+          "source": "The CODEW",
+          "date": "2026-08-07"
+        },
+        {
+          "title": "融资密集落地 AI视频大模型竞速商业化",
+          "url": "https://finance.sina.com.cn/jjxw/2026-08-07/doc-inimmpqx0250460.shtml",
+          "source": "经济参考报 / 新浪财经",
+          "date": "2026-08-07"
+        },
+        {
+          "title": "AI News August 7 2026: Google Reshuffles AI Leadership, OpenAI Fires Back at Apple",
+          "url": "https://aitoolsrecap.com/Blog/ai-news-august-07-2026",
+          "source": "aitoolsrecap",
+          "date": "2026-08-07"
+        },
+        {
+          "title": "华尔街见闻早餐FM-Radio | 2026年8月7日（宇树科技IPO定价）",
+          "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_3606a75156959152",
+          "source": "华尔街见闻",
+          "date": "2026-08-07"
+        },
+        {
+          "title": "张一鸣定调：字节跳动「拒绝蒸馏」；MiniMax-W被纳入港股通",
+          "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_9836a75137546752",
+          "source": "每日经济新闻",
+          "date": "2026-08-07"
         }
       ]
     }
