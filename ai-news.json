@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-08T09:54:57.605994+08:00",
+  "updated": "2026-08-11T10:00:00+08:00",
   "issues": [
     {
       "issue": 1,
@@ -2011,6 +2011,140 @@
               "url": "https://new.qq.com/rain/a/20260808A03F1900",
               "source": "人民日报",
               "date": "2026-08-08"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "issue": 17,
+      "date": "2026-08-11",
+      "title": "第 17 期 · AI 行业日报",
+      "digest": "Meta 开源 30B 端侧 Agent 模型；英伟达拟筹 5000 亿美元 AI 基建；Anthropic 默认自动模式并锁价；中国机器人占全球 97%。",
+      "report": "## 本期要点\n- **Meta 开源 30B 端侧 Agent 模型 Muse Glimmer**：蒸馏自 Muse Spark 1.2，Apache 2.0 协议，4bit 量化仅需 24GB 显存即可在单张消费级 GPU 运行，专为工具调用、多步任务与失败恢复设计；扎克伯格同步呼吁美国政府降低开源 AI 准入门槛。\n- **英伟达联手华尔街六大巨头拟筹 5000 亿美元 AI 基础设施融资**：联合 Apollo、黑石、贝莱德 GIP、Brookfield、高盛、KKR 以联合体形式为芯片采购、电力与数据中心筹资，英伟达从芯片商转向产业资本组织者。\n- **Anthropic 将 Claude Code 默认切换为自动模式并永久锁定 Sonnet 5 低价**：8 月 14 日起 Pro/Max/Team 默认开 auto mode，实测拦截危险命令成功率 89%（人类仅 13.6%）；同时取消原定 8 月底 50% 涨价计划。\n- **谷歌将 Gemini AI Agents 集成进 Google Ads 与 Analytics**：推出对话式助手「Ask Advisor」与登录即现的流量异常自动摘要，把生成式智能直接嵌入营销与分析工作流。\n- **Docker 推出 microVM Sandboxes 隔离自主编码 Agent**：把 Agent 跑在隔离 microVM 内、仅挂载活动工程目录，以一次性执行环境应对自主 Agent 的安全风险。\n- **中国厂商占全球人形机器人出货量 97%**：SAG 数据显示 2026 上半年全球出货约 1.91 万台（同比+200%），智元 44%、宇树 31% 合计占 75%，应用从展示转向真实生产。\n- **微软拟大幅上调自研 AI 芯片 Maia 300 产量**：与台积电洽谈 2027 年交付逾 30 万枚（现 Maia 200 仅数万枚），今年秋季发布、终局目标逾百万枚。\n\n## 趋势研判\n本期主线清晰地指向三件事：端侧智能体正在「可部署化」、AI 安全从理论变成工程约束、算力资本继续向国家级体量膨胀。\n\n第一，Meta 的 Muse Glimmer 把 30B 级 Agent 模型压到单卡消费级 GPU 可跑，是端侧 AI 的又一座里程碑。它延续了开源权重 + 低显存门槛的路线，直接冲击云端闭源付费模式，也让「个人电脑即智能体终端」从概念逼近现实。与之呼应的是 Docker 推出 microVM Sandboxes——当 Agent 被授权自主执行，隔离与沙箱已从「可选项」变成「必选项」，安全基础设施正随 Agent 落地同步成型。\n\n第二，Anthropic 把 Claude Code 默认切到自动模式并用实测数据（89% vs 13.6%）证明机器拦截优于人类审批，同时取消涨价、永久锁定 Sonnet 5 低价。这既是对「Agentic coding 成为主流」的押注，也透露出大模型定价正在从「按能力溢价」转向「用低价换工作流锁定」——成本稳定本身成了竞争力。\n\n第三，英伟达 5000 亿美元融资联合体与微软百万枚 Maia 300 扩产计划，表明 AI 基础设施的竞争已超出单一公司资产负债表，进入「产业资本 + 主权算力」的合谋阶段。中国厂商在机器人量产端 97% 的压倒性份额，则提示硬件制造的规模优势正成为另一条独立的主线。\n\n对产品人而言，最值得盯的是：端侧 Agent 的可部署化会把隐私敏感应用拉回本地，而安全沙箱与低价模型工作流，正共同降低「把 AI 嵌入真实业务」的门槛。",
+      "sources": [
+        {
+          "title": "Meta Releases Muse Glimmer 30B Model Under Apache 2.0",
+          "url": "https://aibreakingwire.com/news/meta-releases-muse-glimmer-30b-model-under-apache-20-license",
+          "source": "AI Breaking Wire",
+          "date": "2026-08-11"
+        },
+        {
+          "title": "Claude Code Defaults to Auto Mode After 89% Threat Catch Rate",
+          "url": "https://aibreakingwire.com/news/claude-code-defaults-to-auto-mode-after-89-threat-catch-rate",
+          "source": "AI Breaking Wire",
+          "date": "2026-08-11"
+        },
+        {
+          "title": "Google Debuts Gemini AI Agents in Ads and Analytics",
+          "url": "https://aibreakingwire.com/news/google-debuts-gemini-ai-agents-in-ads-and-analytics",
+          "source": "AI Breaking Wire",
+          "date": "2026-08-11"
+        },
+        {
+          "title": "Docker Releases Isolated MicroVM Sandboxes for Autonomous AI Agents",
+          "url": "https://aibreakingwire.com/news/docker-releases-isolated-microvm-sandboxes-for-autonomous-ai-agents",
+          "source": "AI Breaking Wire",
+          "date": "2026-08-11"
+        },
+        {
+          "title": "英伟达联手华尔街六大巨头，拟筹5000亿美元押注AI基础设施",
+          "url": "https://www.nbd.com.cn/articles/2026-08-11/4537976.html",
+          "source": "每日经济新闻",
+          "date": "2026-08-11"
+        },
+        {
+          "title": "中国厂商占全球人形机器人出货量97%，智元、宇树合计占75%",
+          "url": "https://www.nbd.com.cn/articles/2026-08-11/4537976.html",
+          "source": "每日经济新闻",
+          "date": "2026-08-11"
+        },
+        {
+          "title": "微软拟大幅提高下一代AI芯片产量，与台积电洽谈2027年交付逾30万枚",
+          "url": "https://www.sohu.com/a/1061263214_122014422",
+          "source": "华尔街见闻",
+          "date": "2026-08-11"
+        }
+      ],
+      "sections": [
+        {
+          "key": "overview",
+          "label": "总述-AI总结",
+          "icon": "📌",
+          "color": "#e8b339",
+          "summary": "今日主线是「端侧智能体可部署化 + Agent 安全工程化 + 算力资本国家级膨胀」三件事同频：Meta 开源 30B 端侧 Agent 模型 Muse Glimmer（单卡可跑），Docker 推出 microVM 沙箱应对自主 Agent 风险，Anthropic 把 Claude Code 默认切到自动模式并永久锁定 Sonnet 5 低价；英伟达拟联合华尔街六大巨头筹 5000 亿美元 AI 基建、微软大幅扩产 Maia 300 自研芯片；中国厂商占全球人形机器人出货量 97%，硬件制造规模优势成为独立主线。",
+          "items": []
+        },
+        {
+          "key": "model",
+          "label": "模型动态",
+          "icon": "🤖",
+          "color": "#bc52ee",
+          "items": [
+            {
+              "title": "Meta 开源 30B 端侧 Agent 模型 Muse Glimmer",
+              "desc": "蒸馏自 Muse Spark 1.2，Apache 2.0 协议，28B 文本解码器 + 2B 视觉编码器，4bit 量化仅需 24GB 显存即可在单张消费级 GPU 运行；专为工具调用、多步推理、失败恢复设计，支持 100+ 语言，把 30B 级 Agent 模型推向本地部署。",
+              "url": "https://aibreakingwire.com/news/meta-releases-muse-glimmer-30b-model-under-apache-20-license",
+              "source": "AI Breaking Wire",
+              "date": "2026-08-11"
+            }
+          ]
+        },
+        {
+          "key": "product",
+          "label": "产品工具",
+          "icon": "🛠",
+          "color": "#4bf3c8",
+          "items": [
+            {
+              "title": "Anthropic 将 Claude Code 默认切换为自动模式并永久锁定 Sonnet 5 低价",
+              "desc": "8 月 14 日起 Pro/Max/Team 默认开 auto mode，实测拦截危险命令成功率 89%（人类仅 13.6%），并免去工具调用分类器 token 费用；同时取消原定 8 月底 50% 涨价计划，Sonnet 5 永久维持发布价。",
+              "url": "https://aibreakingwire.com/news/claude-code-defaults-to-auto-mode-after-89-threat-catch-rate",
+              "source": "AI Breaking Wire / 华尔街见闻",
+              "date": "2026-08-11"
+            },
+            {
+              "title": "谷歌将 Gemini AI Agents 集成进 Google Ads 与 Analytics",
+              "desc": "推出对话式助手「Ask Advisor」与登录即现的流量异常与需求波动自动摘要，营销者可通过提示驱动自定义报告、接收多渠道告警，把生成式智能直接嵌入广告与分析工作流。",
+              "url": "https://aibreakingwire.com/news/google-debuts-gemini-ai-agents-in-ads-and-analytics",
+              "source": "AI Breaking Wire",
+              "date": "2026-08-11"
+            },
+            {
+              "title": "Docker 推出 microVM Sandboxes 隔离自主编码 Agent",
+              "desc": "把 Agent 跑在隔离 microVM 内，授予安装软件、运行嵌套容器等完整权限但仅挂载活动工程目录，以一次性执行环境应对自主编码 Agent 突破沙箱、访问生产系统的安全风险。",
+              "url": "https://aibreakingwire.com/news/docker-releases-isolated-microvm-sandboxes-for-autonomous-ai-agents",
+              "source": "AI Breaking Wire",
+              "date": "2026-08-11"
+            }
+          ]
+        },
+        {
+          "key": "industry",
+          "label": "行业资讯",
+          "icon": "📊",
+          "color": "#3245ff",
+          "items": [
+            {
+              "title": "英伟达联手华尔街六大巨头拟筹 5000 亿美元 AI 基础设施融资",
+              "desc": "联合 Apollo、黑石、贝莱德 GIP、Brookfield、高盛、KKR 以联合体形式为 AI 芯片采购、电力生产与数据中心建设筹资，英伟达从芯片供应商转向产业资本组织者，报道传出后股价一度跌 3.2%。",
+              "url": "https://www.nbd.com.cn/articles/2026-08-11/4537976.html",
+              "source": "每日经济新闻",
+              "date": "2026-08-11"
+            },
+            {
+              "title": "中国厂商占全球人形机器人出货量 97%，智元、宇树合计占 75%",
+              "desc": "SAG 数据显示 2026 上半年全球人形机器人出货约 1.91 万台（同比+200%），中国厂商占 97%；智元 44%、宇树 31% 合计占 75%，应用从展示研发转向真实生产，工业及商业应用已占 70%+。",
+              "url": "https://www.nbd.com.cn/articles/2026-08-11/4537976.html",
+              "source": "每日经济新闻",
+              "date": "2026-08-11"
+            },
+            {
+              "title": "微软拟大幅上调自研 AI 芯片 Maia 300 产量，与台积电洽谈 2027 年交付逾 30 万枚",
+              "desc": "微软计划今秋发布新一代自研 AI 芯片 Maia 300，相较当前 Maia 200 区区数万枚产量是数量级跃升，终局目标逾百万枚；受零部件供应与台积电产能谈判影响，实际规模仍存不确定性。",
+              "url": "https://www.sohu.com/a/1061263214_122014422",
+              "source": "华尔街见闻",
+              "date": "2026-08-11"
             }
           ]
         }
