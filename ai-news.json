@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-11T10:00:00+08:00",
+  "updated": "2026-08-12T09:56:08+08:00",
   "issues": [
     {
       "issue": 1,
@@ -2147,6 +2147,140 @@
               "date": "2026-08-11"
             }
           ]
+        }
+      ]
+    },
+    {
+      "issue": 18,
+      "date": "2026-08-12",
+      "title": "第 18 期 · AI 行业日报",
+      "digest": "英伟达推执行型模型+路由器转向卖AI工作流；智源AREX、Anthropic水印、远景百万P算力同步落地。",
+      "sections": [
+        {
+          "key": "overview",
+          "label": "总述-AI总结",
+          "icon": "📌",
+          "color": "#e8b339",
+          "summary": "2026 年 8 月中旬的 AI 产业沿『模型分层、算力扩张、监管落地、地缘扩散』四条主线同步演进。英伟达今日最具标志性：它不再只卖 GPU，而是通过执行型轻模型 Nemotron 3.5 Lightning 与开源路由器 NeMo Switchyard，把触角伸向模型层与工作流层——『该用哪个模型』本身成了新软件层与收费点。智源 AREX 把自主研究推向长程自我修正；Anthropic 为 Claude 默认嵌入隐形水印，标志欧盟透明度法规在商业产品上实质落地；远景百万 P 单体数据中心投产、上海以省级规划押注非 Transformer 架构；中国开源模型更凭成本与开放优势在非洲快速渗透。模型之争正升级为生态与话语权的较量。",
+          "items": []
+        },
+        {
+          "key": "model",
+          "label": "模型动态",
+          "icon": "🤖",
+          "color": "#bc52ee",
+          "items": [
+            {
+              "title": "英伟达发布 Nemotron 3.5 Lightning，并曝光万亿参数 Nemotron 4",
+              "desc": "Nemotron 3.5 Lightning 采用 MoE 架构，总参数约 300 亿、每次仅激活约 30 亿，Token 生成速度最高提升约 4 倍，主攻智能体长时运行场景；据 The Information 报道，英伟达正研发参数至少 1 万亿的下一代开源模型 Nemotron 4，并组建『Nemotron 联盟』。",
+              "url": "https://www.sohu.com/a/1061728509_121400326",
+              "source": "搜狐科技 / 钛媒体",
+              "date": "2026-08-12"
+            }
+          ]
+        },
+        {
+          "key": "product",
+          "label": "产品工具",
+          "icon": "🛠",
+          "color": "#4bf3c8",
+          "items": [
+            {
+              "title": "英伟达开源 NeMo Switchyard 模型路由器",
+              "desc": "开源模型路由库可按成本、质量、延迟与公司策略，在智能体工作流的每一步把请求分配到最优模型，把『模型调度』变成新的软件层；已与 LangChain、Cognition 等生态伙伴集成。",
+              "url": "https://www.163.com/dy/article/L44C87PC05118O92.html",
+              "source": "网易 / 钛媒体",
+              "date": "2026-08-12"
+            },
+            {
+              "title": "北京智源发布 AREX 自主研究智能体",
+              "desc": "首创『研究—验证—再研究』双循环递归框架，让 AI 在长程任务中持续自我修正、逐步逼近正确答案，面向科研自动化场景。",
+              "url": "https://view.inews.qq.com/a/20260812A02IPI00?no-redirect=1",
+              "source": "央广网",
+              "date": "2026-08-12"
+            }
+          ]
+        },
+        {
+          "key": "industry",
+          "label": "行业资讯",
+          "icon": "📊",
+          "color": "#3245ff",
+          "items": [
+            {
+              "title": "Anthropic 为 Claude 默认启用 AI 内容隐形标识",
+              "desc": "自 8 月 2 日起，新一代 Claude 生成的文本嵌入隐形水印、图片附加数字签名溯源元数据，复制粘贴后仍可追踪，以符合欧盟 AI 透明度法规。",
+              "url": "https://view.inews.qq.com/a/20260812A01AGM00?no-redirect=1",
+              "source": "南方都市报 / 腾讯新闻",
+              "date": "2026-08-11"
+            },
+            {
+              "title": "远景『星河基地』投产，全球最大 AI 算力超级单体",
+              "desc": "位于内蒙古乌兰察布，以百万卡并行、百万 P 算力规模成为全球 Token 产出能力最强的单体 AI 数据中心，绿电直连占比突出。",
+              "url": "https://view.inews.qq.com/a/20260812A0323E00?no-redirect=1",
+              "source": "人民网 / 央视网",
+              "date": "2026-08-12"
+            },
+            {
+              "title": "上海『十五五』软件规划攻坚非 Transformer 架构",
+              "desc": "上海经信委印发规划，明确探索状态空间模型、循环神经网络变体、液态神经网络等多技术路线，系国内首个省级层面突破单一 AI 架构依赖的部署。",
+              "url": "https://www.toutiao.com/article/7672941887589827072/",
+              "source": "每日经济新闻",
+              "date": "2026-08-11"
+            },
+            {
+              "title": "中国开源 AI 模型在非洲市场快速扩张",
+              "desc": "《纽约时报》报道，OpenRouter 上中国开源模型已约占使用量一半（一年前不足 25%），HuggingFace 下载量前 25 的开源模型中有 19 个来自中国，凭成本与开放模式在发展中国家走俏。",
+              "url": "https://k.sina.com.cn/article_5953466437_162dab0450670b8nk2.html?loc=38",
+              "source": "千龙网 / 新浪",
+              "date": "2026-08-12"
+            }
+          ]
+        }
+      ],
+      "report": "## 本期要点\n- **英伟达发 Nemotron 3.5 Lightning + 研发 Nemotron 4**：执行型 MoE 模型主打智能体长时运行，万亿参数开源模型意在比肩全球顶尖。\n- **NeMo Switchyard 开源路由器**：模型调度成为新软件层，按成本/质量/策略自动分配。\n- **智源 AREX 自主研究智能体**：双循环递归框架让 AI 长程自我修正。\n- **Anthropic Claude 默认隐形水印**：合规欧盟透明度法规，内容可溯源。\n- **远景星河基地投产**：百万卡/百万 P 单体算力，绿电直连。\n- **上海十五五攻坚非 Transformer 架构**：省级首破单一架构依赖。\n- **中国开源模型走俏非洲**：OpenRouter 占比近半，成本+开放模式取胜。\n\n## 趋势研判\n2026 年 8 月中旬的 AI 产业，正沿着『模型分层、算力扩张、监管落地、地缘扩散』四条主线同步演进。英伟达今日的动作最具标志性：它不再满足于卖 GPU，而是通过 Nemotron 3.5 Lightning 这款『执行型』轻模型和 NeMo Switchyard 路由器，把触角伸向模型层与工作流层——企业不必为每个任务都调用最贵的前沿模型，『该用哪个模型』本身成了新的软件层与收费点。配合万亿参数 Nemotron 4 的研发，英伟达正从算力供应商升级为全栈 AI 生态服务商，用开源反哺 GPU 需求。\n\n在模型之外，智源 AREX 把『自主研究』推向长程自我修正，Agent 的能力边界继续外扩。监管侧，Anthropic 为 Claude 默认嵌入隐形水印与数字签名，是欧盟 AI 透明度法规在商业产品上的实质落地，标志着内容溯源从倡议走向标配。算力侧，远景百万 P 单体数据中心投产、上海以省级规划押注非 Transformer 架构，显示中美在算力基建与技术路线上的军备竞赛都在加速。最值得玩味的是地缘维度：中国开源模型凭借成本与开放优势在非洲快速渗透，OpenRouter 份额近半、HuggingFace 前 25 中有 19 个来自中国——开源正在成为中美之外『全球南方』市场的隐形基础设施。模型不再只是性能竞赛，更是生态与话语权的较量。",
+      "sources": [
+        {
+          "title": "英伟达研发万亿参数开源模型 Nemotron 4，同步发布 Nemotron 3.5 Lightning",
+          "url": "https://www.sohu.com/a/1061728509_121400326",
+          "source": "搜狐科技",
+          "date": "2026-08-12"
+        },
+        {
+          "title": "从卖芯片到卖整个 AI 工作流：英伟达发布 Nemotron 3.5 与模型路由器",
+          "url": "https://www.163.com/dy/article/L44C87PC05118O92.html",
+          "source": "网易",
+          "date": "2026-08-12"
+        },
+        {
+          "title": "北京智源发布 AREX 自主研究智能体",
+          "url": "https://view.inews.qq.com/a/20260812A02IPI00?no-redirect=1",
+          "source": "央广网",
+          "date": "2026-08-12"
+        },
+        {
+          "title": "Claude 上线 AI 内容隐形标识功能",
+          "url": "https://view.inews.qq.com/a/20260812A01AGM00?no-redirect=1",
+          "source": "南方都市报",
+          "date": "2026-08-11"
+        },
+        {
+          "title": "全球最大 AI 算力超级单体建成投产",
+          "url": "https://view.inews.qq.com/a/20260812A0323E00?no-redirect=1",
+          "source": "人民网",
+          "date": "2026-08-12"
+        },
+        {
+          "title": "上海十五五规划攻坚非 Transformer 架构",
+          "url": "https://www.toutiao.com/article/7672941887589827072/",
+          "source": "每日经济新闻",
+          "date": "2026-08-11"
+        },
+        {
+          "title": "中国 AI 模型在非洲市场获青睐",
+          "url": "https://k.sina.com.cn/article_5953466437_162dab0450670b8nk2.html?loc=38",
+          "source": "千龙网 / 新浪",
+          "date": "2026-08-12"
         }
       ]
     }
