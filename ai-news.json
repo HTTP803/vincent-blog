@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-18T20:19:42+08:00",
+  "updated": "2026-08-19T11:15:02+08:00",
   "issues": [
     {
       "issue": 1,
@@ -2415,6 +2415,140 @@
           "url": "https://new.qq.com/rain/a/20260818A022U700",
           "source": "亿欧网",
           "date": "2026-08-18"
+        }
+      ]
+    },
+    {
+      "issue": 20,
+      "date": "2026-08-19",
+      "title": "第 20 期 · AI 行业日报",
+      "digest": "英伟达15亿入股OpenAI数据中心、Groq募3.5亿；亚马逊毁书训练、Cognition拟400亿估值；Inherent发AI科学家模型。",
+      "sections": [
+        {
+          "key": "overview",
+          "label": "总述-AI总结",
+          "icon": "📌",
+          "color": "#e8b339",
+          "summary": "AI 行业今日三线并行：算力基建军备升级（英伟达 15 亿美元入股 OpenAI 专属数据中心、Groq 募资转型 neocloud）、资本重估加速（Cognition 拟 400 亿美元估值），数据伦理争议升温（亚马逊销毁稀有书籍获取训练语料）；模型能力侧，Inherent 发布 27B「AI 科学家」Faraday，千问开源办公 Agent 上下文基础设施 MyContext，OpenAI 推出青少年版 ChatGPT 强化安全护栏。",
+          "items": []
+        },
+        {
+          "key": "model",
+          "label": "模型动态",
+          "icon": "🤖",
+          "color": "#bc52ee",
+          "items": [
+            {
+              "title": "Inherent 发布 Faraday 27B「AI 科学家」模型",
+              "desc": "专为自主科研工作流设计，在 Replica 基准（100 篇论文转为 310 个复现任务）上以 rubric 评审超越 GPT-5.5 达 73% 的机内学习任务，验证小参数专用监督模型可编排编程 Agent 攻克高阶科研难题。",
+              "url": "https://www.aibreakingwire.com/news/ai-brief-2026-08-19",
+              "source": "AI Breaking Wire",
+              "date": "2026-08-19"
+            }
+          ]
+        },
+        {
+          "key": "product",
+          "label": "产品工具",
+          "icon": "🛠",
+          "color": "#4bf3c8",
+          "items": [
+            {
+              "title": "千问办公开源 MyContext（Agent 上下文基础设施）",
+              "desc": "为办公 Agent 提供跨钉钉/飞书/文档/会议的本地化上下文画像，语义消解信息冲突，可让个人 AI 助手自动应答工作消息；发布一周 GitHub Star 破千。",
+              "url": "https://www.163.com/dy/article/L4JMA6GA05562DGT.html",
+              "source": "网易科技（极新）",
+              "date": "2026-08-18"
+            },
+            {
+              "title": "OpenAI 推出青少年版 ChatGPT（13–17 岁）",
+              "desc": "面向未成年用户强化安全护栏、家长控制与学习导向功能，系统自动对适龄用户套用保护策略，回应社会对未成年人 AI 使用的监管关切。",
+              "url": "https://themagnifier.ai/today",
+              "source": "The Magnifier",
+              "date": "2026-08-18"
+            }
+          ]
+        },
+        {
+          "key": "industry",
+          "label": "行业资讯",
+          "icon": "📊",
+          "color": "#3245ff",
+          "items": [
+            {
+              "title": "英伟达 15 亿美元入股 SB Energy，为 OpenAI 数据中心提供最高 1050 亿信贷",
+              "desc": "SEC 文件显示英伟达成为 OpenAI 辛辛那提附近 Ports-Pike 数据中心的独家算力基础设施方，园区初始 4.25GW、可扩至 8GW，并配套 330 亿美元天然气电站，打通能源—硬件直供通道。",
+              "url": "https://www.aibreakingwire.com/news/ai-brief-2026-08-19",
+              "source": "AI Breaking Wire",
+              "date": "2026-08-19"
+            },
+            {
+              "title": "Groq 募 3.5 亿美元、估值 35 亿，全面转向 Nvidia 算力 neocloud",
+              "desc": "由 Disruptive 领投、英伟达拟参投；在完成 200 亿美元授权、创始人团队并入英伟达后，Groq 彻底转型为加速云运营商，估值较去年秋季 69 亿大幅回调。",
+              "url": "https://www.aibreakingwire.com/news/ai-brief-2026-08-19",
+              "source": "AI Breaking Wire",
+              "date": "2026-08-19"
+            },
+            {
+              "title": "亚马逊被曝采购并销毁稀有实体书用于 AI 训练数据",
+              "desc": "404 Media/TechCrunch 调查确认亚马逊切断书脊高速扫描获取「干净人类文本」，揭示行业对无合成污染语料的争夺，以及模型坍塌风险下的数据合规隐忧。",
+              "url": "https://www.aibreakingwire.com/news/ai-brief-2026-08-19",
+              "source": "AI Breaking Wire（404 Media / TechCrunch）",
+              "date": "2026-08-19"
+            },
+            {
+              "title": "Cognition 洽商 400 亿美元估值（Devin 年化收入破 10 亿）",
+              "desc": "距其以 260 亿估值募 10 亿仅三个月，自主编程助手 Devin 年化收入 run rate 升至 10 亿美元（5 月为 4.92 亿），聚焦遗留代码迁移而非替代工程师驱动企业采用。",
+              "url": "https://www.aibreakingwire.com/news/ai-brief-2026-08-19",
+              "source": "AI Breaking Wire",
+              "date": "2026-08-19"
+            }
+          ]
+        }
+      ],
+      "report": "## 本期要点\n- **英伟达 15 亿美元入股 SB Energy，为 OpenAI 专属数据中心提供最高 1050 亿信贷**：Ports-Pike 园区初始规划 4.25GW、可扩展至 8GW，并配套 330 亿美元天然气电站，打通 OpenAI 的能源—硬件直供通道。\n- **Groq 募 3.5 亿美元、估值 35 亿，全面转向 Nvidia 算力 neocloud**：在完成 200 亿美元授权、核心团队并入英伟达后，Groq 彻底转型为加速云运营商，估值较去年秋季 69 亿大幅回调。\n- **亚马逊被曝采购并销毁稀有实体书用于 AI 训练数据**：404 Media/TechCrunch 调查证实亚马逊切断书脊高速扫描，揭示行业对「干净人类文本」的争夺与模型坍塌风险。\n- **Cognition 洽商 400 亿美元估值（Devin 年化收入破 10 亿）**：仅三个月前其以 260 亿估值募 10 亿，Devin 聚焦遗留代码迁移而非替代工程师，企业采用驱动估值跳涨。\n- **Inherent 发布 Faraday 27B「AI 科学家」模型**：在 Replica 基准上 73% 任务超越 GPT-5.5，验证专用监督模型可编排编程 Agent 解决高阶科研难题。\n- **千问办公开源 MyContext**：为办公 Agent 提供跨钉钉/飞书/文档的本地上下文基础设施，发布一周 GitHub Star 破千。\n- **OpenAI 推出青少年版 ChatGPT（13–17 岁）**：强化安全护栏、家长控制与学习功能，自动对适龄用户套用保护。\n\n## 趋势研判\n今天行业的主线可以用「基建军备 + 资本重估 + 数据伦理」三条线概括。英伟达以「股权 + 千亿信贷」深度绑定 OpenAI 的专属 gigawatt 级数据中心，标志着算力竞争从卖芯片彻底走向「卖 AI 工作流的能源与硬件直供」；Groq 在核心团队并入英伟达后全面转型 neocloud，进一步印证「自有芯片叙事」让位于「Nvidia 生态内的加速云」现实。资本端同样火热：Cognition 凭 Devin 10 亿美元年化收入把估值三个月内从 260 亿推到 400 亿，AI 编程赛道正在用营收兑现曾经的估值预期。\n\n与此同时，数据层的隐忧浮出水面——亚马逊销毁稀有书籍获取「干净」训练语料的调查，把「模型坍塌」与版权/伦理争议推到台前，预示数据合规将成为下一阶段监管焦点。与之呼应，OpenAI 青少年版以「安全护栏默认开启」回应社会对未成年人使用的担忧。在模型能力侧，Inherent 的 Faraday 27B 用专用监督模型编排科研 Agent，显示出「小参数、强编排」也能在垂直科研任务上压过通用前沿模型。对产品人而言，最值得盯的是三件事：算力—能源一体化基建的加速、AI 编程/办公 Agent 的营收兑现曲线，以及正在收紧的数据合规闸门。",
+      "sources": [
+        {
+          "title": "Inherent launches Faraday, a 27B AI scientist model",
+          "url": "https://www.aibreakingwire.com/news/ai-brief-2026-08-19",
+          "source": "AI Breaking Wire",
+          "date": "2026-08-19"
+        },
+        {
+          "title": "千问办公开源MyContext，为Agent打造全新的上下文基础设施",
+          "url": "https://www.163.com/dy/article/L4JMA6GA05562DGT.html",
+          "source": "网易科技（极新）",
+          "date": "2026-08-18"
+        },
+        {
+          "title": "OpenAI Launches ChatGPT for Teens with Enhanced Safeguards",
+          "url": "https://themagnifier.ai/today",
+          "source": "The Magnifier",
+          "date": "2026-08-18"
+        },
+        {
+          "title": "NVIDIA Backs Massive OpenAI Data Center with $1.5B Investment",
+          "url": "https://www.aibreakingwire.com/news/ai-brief-2026-08-19",
+          "source": "AI Breaking Wire",
+          "date": "2026-08-19"
+        },
+        {
+          "title": "Groq Secures $350M to Expand Nvidia-Powered Neocloud",
+          "url": "https://www.aibreakingwire.com/news/ai-brief-2026-08-19",
+          "source": "AI Breaking Wire",
+          "date": "2026-08-19"
+        },
+        {
+          "title": "Amazon Scans and Destroys Rare Books for Clean AI Training Data",
+          "url": "https://www.aibreakingwire.com/news/ai-brief-2026-08-19",
+          "source": "AI Breaking Wire（404 Media / TechCrunch）",
+          "date": "2026-08-19"
+        },
+        {
+          "title": "Cognition in Talks for $40B Valuation on $1B Devin Run Rate",
+          "url": "https://www.aibreakingwire.com/news/ai-brief-2026-08-19",
+          "source": "AI Breaking Wire",
+          "date": "2026-08-19"
         }
       ]
     }
