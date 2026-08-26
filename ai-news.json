@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-19T11:15:02+08:00",
+  "updated": "2026-08-26T10:29:35+08:00",
   "issues": [
     {
       "issue": 1,
@@ -2549,6 +2549,128 @@
           "url": "https://www.aibreakingwire.com/news/ai-brief-2026-08-19",
           "source": "AI Breaking Wire",
           "date": "2026-08-19"
+        }
+      ]
+    },
+    {
+      "issue": 21,
+      "date": "2026-08-26",
+      "title": "第 21 期 · AI 行业日报",
+      "digest": "算力自研化(Vera Rubin/Jalapeño)、Agent消费办公化(豆包工作/Meta HATCH)、模型多模态化(DeepSeek视觉/Grok 4.6)三线并进。",
+      "sections": [
+        {
+          "key": "overview",
+          "label": "总述-AI总结",
+          "icon": "📌",
+          "color": "#e8b339",
+          "summary": "本期聚焦 2026-08-25/26 的 AI 行业关键动向，主线是「垂直整合」：上游算力自研化（英伟达 Vera Rubin 平台全面投产、OpenAI 首款自研推理芯片 Jalapeño 实测能效比 GB300 高 1.5–1.9 倍）、中游模型多模态与长时化（DeepSeek V4-Flash-Vision-Exp 补齐图片输入、xAI Grok 4.6 主打长时 Agent 任务）、下游 Agent 消费与办公入口化（字节「豆包工作」打通飞书、Meta 代号 HATCH 的消费端智能体平台数周内上线），以及具身智能资本升温（小鹏机器人首轮融资超 9 亿美元、腾讯阿里战略入局）。",
+          "items": []
+        },
+        {
+          "key": "model",
+          "label": "模型动态",
+          "icon": "🤖",
+          "color": "#bc52ee",
+          "items": [
+            {
+              "title": "DeepSeek 上线 V4-Flash-Vision-Exp 视觉模型，首次补齐 V4 系列图片输入",
+              "desc": "DeepSeek 在 API 平台上线实验性视觉理解模型 deepseek-v4-flash-vision-exp，首次为 V4 系列补齐图片输入能力，支持 JPEG/PNG/GIF/WebP，视觉 Agent 基准接近 Claude Opus 4.8。图片按最多 384 Token 计费、约 1 分钱处理 9 张图，较同类便宜近 20 倍，同步推出 Files API。对刚降价的美国闭源厂商形成二次冲击。",
+              "url": "https://weibo.com/7905315703/5336091762888194",
+              "source": "AIGC日报",
+              "date": "2026-08-25"
+            },
+            {
+              "title": "xAI 发布 Grok 4.6，主打长时运行 Agent 任务",
+              "desc": "xAI 宣布 Grok 4.6 正式发布并集成至 Hermes 平台，专注长时间运行的 Agent 任务与复杂交互式任务，在 Artificial Analysis 综合智能指数上得分 61，追平 GPT-5.6 Sol Max。API 定价每百万 Token 输入 2 美元、输出 6 美元，显著低于竞品，避开与 OpenAI、Anthropic 正面拼分。",
+              "url": "https://weibo.com/7905315703/5336091762888194",
+              "source": "AIGC日报",
+              "date": "2026-08-25"
+            }
+          ]
+        },
+        {
+          "key": "product",
+          "label": "产品工具",
+          "icon": "🛠",
+          "color": "#4bf3c8",
+          "items": [
+            {
+              "title": "字节跳动正式发布「豆包工作」，深度打通飞书",
+              "desc": "字节跳动旗下豆包正式发布面向生产力场景的 Agent 产品与品牌「豆包工作」，具备自主拆解任务、调用工具、跨软件执行复杂工作流能力，并深度打通飞书——可调用聊天记录、文档、会议纪要等企业上下文，继承飞书权限与审计体系。这是字节一个月内第三次 AI 业务收拢，正式冲击 To B 办公市场，国内「腾讯 WorkBuddy / 阿里千问办公 / 字节豆包工作」三强卡位成型。",
+              "url": "https://www.163.com/dy/article/L58B5D190534A4SC.html",
+              "source": "界面新闻",
+              "date": "2026-08-25"
+            },
+            {
+              "title": "Meta 代号 HATCH 消费端 AI 智能体平台数周内上线，最高 199.99 美元/月",
+              "desc": "据 The Information 报道，Meta 计划未来数周内推出代号 HATCH 的消费端 AI 智能体平台，这是 Meta 首个付费 AI 产品，采用分层订阅、最高档约 199.99 美元/月。HATCH 定位为消费版 OpenClaw 智能体，当前由 Claude Opus 4.6 和 Sonnet 4.6 驱动，计划迁移至 Meta 自研 Muse Spark 模型，可接入 DoorDash、Etsy、Reddit、Yelp、Outlook 等，对标 OpenAI Operator 与谷歌 Project Mariner。",
+              "url": "https://www.163.com/dy/article/L58B5D190534A4SC.html",
+              "source": "界面新闻",
+              "date": "2026-08-25"
+            }
+          ]
+        },
+        {
+          "key": "industry",
+          "label": "行业资讯",
+          "icon": "📊",
+          "color": "#3245ff",
+          "items": [
+            {
+              "title": "英伟达 Vera Rubin 平台全面投产，Groq 3 LPX 正式量产",
+              "desc": "英伟达在 Hot Chips 2026 宣布 Vera Rubin 平台全系产品进入全面投产，推理加速器 Groq 3 LPX 正式量产，单机架集成 256 颗芯片、每秒可处理 3400 个 Token；Vera Rubin NVL72 在真实智能体负载下每兆瓦吞吐量最高达 GB300 NVL72 的 30 倍，每 Token 成本最高降低 35 倍。平台包含 Vera CPU、Rubin GPU、Groq 3 LPX、NVLink 6 等七款芯片五类机架，标志 AI 算力硬件迈入新代际。",
+              "url": "https://www.sohu.com/a/1067538635_455313",
+              "source": "腾讯研究院",
+              "date": "2026-08-25"
+            },
+            {
+              "title": "OpenAI 首款自研推理芯片 Jalapeño 实测：能效比 GB300 高 1.5–1.9 倍",
+              "desc": "OpenAI 在 Hot Chips 2026 公布首款定制推理芯片 Jalapeño 基准：由 OpenAI 与博通共同开发、TSMC 3nm 工艺，在 SemiAnalysis 的 InferenceX 测试中，每瓦 AI 工作量达英伟达 GB300 的 1.5 至 1.9 倍，端到端延迟降低 1.7 至 3.6 倍，服务成本每百万 Token 降约 60%。OpenAI 用自身 AI 参与芯片设计、从设计到流片仅 9 个月，计划 2026 年底小规模部署，标志大模型厂集体走向「GPU+自研 ASIC」异构路线。",
+              "url": "https://weibo.com/7905315703/5336091762888194",
+              "source": "AIGC日报",
+              "date": "2026-08-25"
+            },
+            {
+              "title": "小鹏机器人首轮融资超 9 亿美元，腾讯阿里战略入局",
+              "desc": "小鹏集团宣布旗下人形机器人业务完成首轮超 9 亿美元融资，投后估值超 63 亿美元（约 430 亿元人民币），刷新中国具身智能行业单轮私募股权融资纪录。本轮由 IDG 资本领投、高榕创投参投，腾讯与阿里巴巴作为战略投资者参投，小鹏继续保持控股。IRON 人形机器人全身 76 自由度，计划 2026 年底量产、2027 年面向零售与服务行业销售，首个落地场景跳出门店销售。",
+              "url": "https://weibo.com/7905315703/5336091762888194",
+              "source": "AIGC日报",
+              "date": "2026-08-25"
+            }
+          ]
+        }
+      ],
+      "report": "## 本期要点\n- **算力自研化加速**：英伟达 Vera Rubin 平台全面投产、Groq 3 LPX 量产（单机架 3400 Token/秒）；OpenAI 首款自研推理芯片 Jalapeño 实测能效比 GB300 高 1.5–1.9 倍、服务成本降约 60%，大模型厂集体走向「GPU+自研 ASIC」异构路线。\n- **Agent 走向消费与办公入口**：字节「豆包工作」正式发布并深度打通飞书企业上下文；Meta 代号 HATCH 的消费端 AI 智能体平台数周内上线、最高 199.99 美元/月，对标 OpenAI Operator。\n- **模型多模态与长时化**：DeepSeek V4-Flash-Vision-Exp 首次补齐 V4 系列图片输入，约 1 分钱处理 9 张图；xAI Grok 4.6 主打长时运行 Agent 任务，智能指数追平 GPT-5.6 Sol Max。\n- **具身智能资本升温**：小鹏机器人首轮融资超 9 亿美元、投后估值超 63 亿美元，腾讯阿里同时战略入局，刷新中国具身智能单轮纪录。\n\n## 趋势研判\n今日行业主线是「垂直整合」：上游算力、中游模型、下游 Agent 产品三条线同时收口。算力侧，英伟达 Vera Rubin 全面投产与 OpenAI Jalapeño 自研芯片实测，标志着头部大模型厂商不再满足于采购 GPU，而是把推理成本与供给安全掌握在自己手里——这与 Waymo、苹果等自研 ASIC 形成共振，「GPU+自研芯片」异构路线正成为头部玩家的共同选择。模型侧，DeepSeek 用文本级低价切入多模态、Grok 4.6 押注长时 Agent，显示能力竞争已从「通用旗舰打分」转向「场景化价值定价」。产品侧，豆包工作打通飞书、Meta HATCH 试水消费订阅，说明 Agent 正从开发者工具走向大众办公与日常生活入口，国内「腾讯 WorkBuddy / 阿里千问办公 / 字节豆包工作」三强卡位已然成型。资本侧，小鹏机器人 9 亿美元融资背后是腾讯阿里的战略共识——具身智能的首个落地场景正从工厂转向门店与服务。整体看，AI 产业正从「模型能力军备赛」过渡到「全栈整合与场景落地」的新阶段，谁先打通「芯片—模型—Agent—场景」闭环，谁就掌握下一轮定价权。",
+      "sources": [
+        {
+          "title": "腾讯研究院AI速递 20260826：Vera Rubin 实测 / SSI 新模型 / Harvey 采用 Kimi K3",
+          "url": "https://www.sohu.com/a/1067538635_455313",
+          "source": "腾讯研究院",
+          "date": "2026-08-26"
+        },
+        {
+          "title": "AI早报 | Meta HATCH 数周内上线；英伟达 Groq 3 LPX 量产；字节豆包工作发布",
+          "url": "https://www.163.com/dy/article/L58B5D190534A4SC.html",
+          "source": "界面新闻",
+          "date": "2026-08-25"
+        },
+        {
+          "title": "AIGC日报 · 2026-08-26：豆包工作 / DeepSeek 视觉 / Grok 4.6 / Jalapeño / 小鹏融资",
+          "url": "https://weibo.com/7905315703/5336091762888194",
+          "source": "AIGC日报",
+          "date": "2026-08-26"
+        },
+        {
+          "title": "The AI Brief — Wednesday, August 26, 2026",
+          "url": "https://www.aibreakingwire.com/news/ai-brief-2026-08-26",
+          "source": "AI Breaking Wire",
+          "date": "2026-08-26"
+        },
+        {
+          "title": "Tech Pulse Daily — August 26, 2026（Apple M6 / OpenAI Jalapeño / Meta Muse Code）",
+          "url": "http://www.techbytes.app/tech-pulse-daily/2026/august/26",
+          "source": "TechBytes",
+          "date": "2026-08-26"
         }
       ]
     }
