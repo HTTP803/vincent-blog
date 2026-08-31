@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-28T09:55:08+08:00",
+  "updated": "2026-08-31T09:54:16.406956+08:00",
   "issues": [
     {
       "issue": 1,
@@ -2921,6 +2921,128 @@
           "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_6526a90c49575552",
           "source": "华尔街见闻",
           "date": "2026-08-28"
+        }
+      ]
+    },
+    {
+      "issue": 24,
+      "date": "2026-08-31",
+      "title": "第 24 期 · AI 行业日报",
+      "digest": "腾讯混元770B开源、OpenAI Astra前端泄露、Sonnet 5涨价、金监总局AI金融新规、数博会重落地——模型价格战与监管同步收紧。",
+      "report": "## 本期要点\n- **腾讯混元 Hy4 preview 开源上线**：总参 770B、激活 49B、上下文 1M，覆盖软件工程/办公/游戏/科研；163 名内部专家对 203 个工程任务盲测均分 2.99，略优于 GLM-5.3（2.92）与 Kimi K3（2.94），已在 HuggingFace 与腾讯云 TokenHub 开源。\n- **OpenAI Astra 内测泄露**：代号 mozaik-alpha-fdm，Max 模式下零样本一次生成 3D 等距地图与交互网页；核心突破为端到端多智能体编排、超长程任务保持、持久化推理与即时自我纠错，预计 9 月 3 日前后发布。\n- **Particle 推出 Radar**：转录并索引超 13 万档播客、日增约 2 万集，经 API 与 Model Context Protocol 向 Agent 与企业管线供结构化音频检索，对冲基金成早期高频用户，补上非结构化语音的数据缺口。\n- **Claude Sonnet 5 API 涨价至 $3/$15 并改分词器**：代码 token 增 10–35%，实际涨幅高于标题 50%；同期 GPT-5.4 退出 Codex、kimi-k2.5 与 moonshot-v1 退役，前沿模型\"获客补贴价\"时代落幕。\n- **金监总局发布《银行业保险业 AI 安全开发应用指导意见》**：从治理架构、数据治理、算力建设到风险管理系统部署，为\"AI+金融\"立规，引导健康有序发展。\n- **2026 数博会收官，逻辑从拼参数转向重落地**：372 家中外企业、87 项成果；\"词元工厂\"按需调用、数据标注产业化（机器人当\"启蒙老师\"），产业需求倒逼技术迭代。\n- **OpenAI 终止向 Cursor 供模（11/12 生效）**：SpaceX 以 600 亿美元收购 Cursor 母公司 Anysphere 触发控制权变更条款，新模型含 Astra 不再直供，底层模型 API 的中立性正被上下游竞争关系取代。\n\n## 趋势研判\n本期的两条主线高度清晰：一是**前沿模型进入\"定价校准期\"**，二是**监管与落地同时收紧**。\n\nSonnet 5 涨价、GPT-5.4 退出 Codex、kimi 旧模型退役，叠加微软因员工 28 天烧掉 2.8 万美元 Token 而强制切换廉价模型，说明 2026 年\"用补贴价换用户\"的窗口正在关闭。模型层不再是免费基础设施，而是按算力成本精算的计价服务——这对依赖 API 的 Agent 创业公司是直接的成本压力，也倒逼国产开源（如当日开源的腾讯 Hy4）承接性价比需求。\n\n另一端，监管与产业两端同步\"落地化\"：金监总局为 AI+金融立规、中消协点名 AI 客服信息失真、数博会把焦点从参数拉回产业实效，意味着行业从\"能力炫技\"转入\"可审计、可追责、可付费\"的阶段。值得产品人注意的是，模型能力的外溢方向正从聊天框走向真实工作流与物理世界——Astra 的 3D/网页生成、Particle 把播客变成 Agent 可检索的记忆、OpenAI 与 Cursor 的解耦，都在重画\"谁的模型、跑在谁的渠道\"的边界。\n\n一句话：模型价格战的下半场，比的不是谁更便宜，而是谁能在合规与成本的双重约束下，把智能真正跑进产线。",
+      "sources": [
+        {
+          "title": "腾讯研究院AI速递 20260831（混元Hy4/Astra泄露/Cursor供模终止）",
+          "url": "https://www.sohu.com/a/1069745836_455313",
+          "source": "腾讯研究院",
+          "date": "2026-08-31"
+        },
+        {
+          "title": "The AI Brief — Monday, August 31, 2026（Particle Radar / Veeda）",
+          "url": "https://www.aibreakingwire.com/news/ai-brief-2026-08-31",
+          "source": "AI Breaking Wire",
+          "date": "2026-08-31"
+        },
+        {
+          "title": "AI News August 31 2026: Sonnet 5 Reprices Today",
+          "url": "https://aitoolsrecap.com/Blog/ai-news-august-31-2026",
+          "source": "AIToolsRecap",
+          "date": "2026-08-31"
+        },
+        {
+          "title": "金监总局发布AI金融安全开发应用指导意见",
+          "url": "https://view.inews.qq.com/a/20260831A03AO200",
+          "source": "中国经济网",
+          "date": "2026-08-31"
+        },
+        {
+          "title": "数据要素筑基,人工智能加速落地应用（数博会）",
+          "url": "https://finance.people.com.cn/n1/2026/0831/c1004-40789049.html",
+          "source": "人民网",
+          "date": "2026-08-31"
+        }
+      ],
+      "sections": [
+        {
+          "key": "overview",
+          "label": "总述-AI总结",
+          "icon": "📌",
+          "color": "#e8b339",
+          "summary": "模型价格战与监管同步收紧：腾讯混元 770B 开源、OpenAI Astra 前端能力泄露、Sonnet 5 涨价、金监总局为 AI+金融立规、数博会从拼参数转向重落地。",
+          "items": []
+        },
+        {
+          "key": "model",
+          "label": "模型动态",
+          "icon": "🤖",
+          "color": "#bc52ee",
+          "items": [
+            {
+              "title": "腾讯混元 Hy4 preview 开源上线",
+              "desc": "总参 770B、激活 49B、上下文 1M，163 名专家盲测均分 2.99 略优于 GLM-5.3 与 Kimi K3，已上架 HuggingFace 与腾讯云 TokenHub。",
+              "url": "https://www.sohu.com/a/1069745836_455313",
+              "source": "腾讯研究院",
+              "date": "2026-08-31"
+            },
+            {
+              "title": "OpenAI Astra 内测前端能力大幅跃升",
+              "desc": "代号 mozaik-alpha-fdm，Max 模式零样本一次生成 3D 等距地图与交互网页，端到端多智能体编排，预计 9 月 3 日前后发布。",
+              "url": "https://www.sohu.com/a/1069745836_455313",
+              "source": "腾讯研究院",
+              "date": "2026-08-31"
+            }
+          ]
+        },
+        {
+          "key": "product",
+          "label": "产品工具",
+          "icon": "🛠",
+          "color": "#4bf3c8",
+          "items": [
+            {
+              "title": "Particle 推出 Radar，索引 13 万档播客供 AI Agent",
+              "desc": "转录并索引超 13 万档播客、日增约 2 万集，经 API 与 MCP 向 Agent/企业管线供结构化音频检索，对冲基金成早期高频用户。",
+              "url": "https://www.aibreakingwire.com/news/ai-brief-2026-08-31",
+              "source": "AI Breaking Wire",
+              "date": "2026-08-31"
+            },
+            {
+              "title": "Claude Sonnet 5 API 涨价至 $3/$15 并改分词器",
+              "desc": "代码 token 增 10–35% 实际涨幅高于标题 50%；同期 GPT-5.4 退出 Codex、kimi-k2.5 与 moonshot-v1 退役，获客补贴价时代落幕。",
+              "url": "https://aitoolsrecap.com/Blog/ai-news-august-31-2026",
+              "source": "AIToolsRecap",
+              "date": "2026-08-31"
+            }
+          ]
+        },
+        {
+          "key": "industry",
+          "label": "行业资讯",
+          "icon": "📊",
+          "color": "#3245ff",
+          "items": [
+            {
+              "title": "金监总局发布 AI 金融安全开发应用指导意见",
+              "desc": "从治理架构、数据治理、算力建设到风险管理系统部署，为\"AI+金融\"立规，引导健康有序发展。",
+              "url": "https://view.inews.qq.com/a/20260831A03AO200",
+              "source": "中国经济网",
+              "date": "2026-08-31"
+            },
+            {
+              "title": "2026 数博会收官：从拼参数转向重落地",
+              "desc": "372 家中外企业、87 项成果；\"词元工厂\"按需调用、数据标注产业化（机器人当启蒙老师），产业需求倒逼技术迭代。",
+              "url": "https://finance.people.com.cn/n1/2026/0831/c1004-40789049.html",
+              "source": "人民网",
+              "date": "2026-08-31"
+            },
+            {
+              "title": "OpenAI 终止向 Cursor 供模（11/12 生效）",
+              "desc": "SpaceX 600 亿美元收购 Anysphere 触发控制权变更条款，新模型含 Astra 不再直供，底层模型 API 中立性被上下游竞争取代。",
+              "url": "https://www.sohu.com/a/1069745836_455313",
+              "source": "腾讯研究院",
+              "date": "2026-08-31"
+            }
+          ]
         }
       ]
     }
