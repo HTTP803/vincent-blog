@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-31T09:54:16.406956+08:00",
+  "updated": "2026-09-01T09:55:47.440683+08:00",
   "issues": [
     {
       "issue": 1,
@@ -3040,6 +3040,158 @@
               "desc": "SpaceX 600 亿美元收购 Anysphere 触发控制权变更条款，新模型含 Astra 不再直供，底层模型 API 中立性被上下游竞争取代。",
               "url": "https://www.sohu.com/a/1069745836_455313",
               "source": "腾讯研究院",
+              "date": "2026-08-31"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "issue": 25,
+      "date": "2026-09-01",
+      "title": "第 25 期 · AI 行业日报",
+      "digest": "生成式界面与实时视频突进，欧盟与 FSB 同日为 AI 装上监管与金融刹车。",
+      "report": "## 本期要点\n- **Runway 发布 Solaris**：首个「界面世界模型」，基于 Gen-4.5 把点击拖拽当作下一帧条件输入，不产出 HTML/CSS/JS，整帧画面即界面，720p 实时响应；人评在遵循指令（61% vs 24%）与行为自然（71% vs 21%）上胜过 Claude Opus 5 生成的编码界面，但文本稳定性、长会话一致性、无障碍与逐帧成本仍未解，仅开放抢先体验。\n- **MiniMax H3 Max 快过直播**：与 fal 合作后训练版接入开放平台，5 秒 768p 音视频生成不到 3 秒；观众已能在 Twitch 聊天室用 Prompt 实时「导演」剧情，单场观看近 350 万次，FastH3 把去噪从约 50 步压到 4 步，H3 开源三周下载超 2400 万次。\n- **智能化工大模型 3.0 Pro**：大连化物所联合科大讯飞、阿里云发布，四层体系集成 400+ 化工智能体与工具，文本/多模态问答准确率 81.96%/80.75%，综合得分较上代相对提升 20.2% 和 31.4%，已服务 300 余家企业院所、API 调用破 1400 万次。\n- **OpenClaw 2.0 大重构**：停更近七周换来 933 名贡献者、1.6 万+ PR，合并代码约占项目史一半；Session 可在本地、配对机器与云端 Worker 间迁移并支持多人协作，但部署成本、Token 开销与安全风险仍是硬约束。\n- **欧盟把 ChatGPT 认定为 VLOSE**：DSA 下首个被纳入最严监管档的独立 AI 服务，需在年底前完成系统性风险评估与缓解，委员会同时获得算法调查权，受认定主体累计 28 家。\n- **ChatGPT Ads 年化破 10 亿美元**：不到 200 天、较 4 月的 1 亿美元增长约十倍，自助投放扩至印度、欧洲、中东与北非，全年目标 25 亿美元，成为 OpenAI IPO 叙事的第二增长曲线。\n- **FSB 向 G20 拉响警报**：Bailey 指出杠杆正与高估值、市场集中度及 AI 公司与超大规模云厂的交叉投资共振，前沿 AI 还可能改变网络风险的速度、规模与经济性，而多数辖区尚无前沿模型发布协议。\n\n## 趋势研判\n\n今天的主线是「AI 正在吃掉界面层」，以及随之而来的两记刹车。\n\nRunway 的 Solaris 与 MiniMax H3 Max 指向同一件事：当生成速度跨过实时门槛，视频模型就不再只是内容工具，而开始承担软件的执行层。Solaris 把「设计 → 代码 → 渲染」这条有损压缩链条整段拿掉，让每一帧同时是画面和逻辑；H3 Max 则让画面生成比直播更快，观众用 Prompt 直接改写剧情。二者共同的产品含义是：交互不再需要被提前穷举编程，界面从「预设的有限状态机」变成「按意图连续生成的场景」。但两家都诚实地留下了同一批未解题——文本渲染、长会话一致性、成本与可信度。这恰恰说明生成式界面短期不会替代确定性软件：账户余额、提交一次且仅一次、禁用态必须保持禁用，这些是契约而非画面。更现实的落点是原型验证、电商试穿、教程仿真，以及给 computer-use Agent 造无限变体的训练场。\n\n与此同时，垂类正在走另一条更「重」的路。智能化工大模型 3.0 Pro 的关键词不是参数，而是 400+ 智能体、真实工况数据与「可验证」闭环——从能回答升级为能规划、能执行、能被校核。这与前几期数博会「从拼参数转向重落地」的信号一致：产业侧的竞争力已经转移到工具生态与数据基础设施上。\n\n刹车来自监管与金融两端。欧盟把 ChatGPT 归入 VLOSE，意味着通用助手第一次被当作系统性基础设施来监管，算法可被调查、风险须被量化；而 FSB 的警告则把 AI 从技术议题拉进宏观金融议题——杠杆、估值与交叉投资的耦合，加上前沿模型对网络风险的放大，构成了一个可以同时引爆多处脆弱性的组合。有意思的对照是，ChatGPT Ads 200 天做到 10 亿美元年化，正是这轮估值叙事的燃料之一。能力、变现与风险在同一天以三种口径出现，本身就是这个阶段最真实的画像。\n",
+      "sources": [
+        {
+          "title": "Runway says Solaris generates interfaces frame by frame in real time",
+          "url": "https://runtimewire.com/article/runway-solaris-interface-world-model-real-time",
+          "source": "RuntimeWire",
+          "date": "2026-08-31"
+        },
+        {
+          "title": "库克卸任前最后一封内部信/OpenClaw 发布史上最大更新（含 MiniMax H3 Max 接入开放平台）",
+          "url": "https://www.163.com/dy/article/L5NPTQ6B0511CSAO.html",
+          "source": "网易科技",
+          "date": "2026-09-01"
+        },
+        {
+          "title": "腾讯研究院 AI 速递 20260901",
+          "url": "https://www.sohu.com/a/1070192038_455313",
+          "source": "腾讯研究院",
+          "date": "2026-09-01"
+        },
+        {
+          "title": "我国化工行业首个大模型发布新版本",
+          "url": "https://www.xinhuanet.com.cn/20260831/ad06ba34569347c482863db41b0ce8c2/c.html",
+          "source": "新华网",
+          "date": "2026-08-31"
+        },
+        {
+          "title": "智能化工大模型3.0 Pro正式发布",
+          "url": "https://www.dicp.ac.cn/xwdt/ttxw/202608/t20260831_8266748.html",
+          "source": "中科院大连化物所",
+          "date": "2026-08-31"
+        },
+        {
+          "title": "Commission designates ChatGPT, Reddit, Roblox under Digital Services Act",
+          "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1772",
+          "source": "欧盟委员会",
+          "date": "2026-08-31"
+        },
+        {
+          "title": "OpenAI Hits $1 Billion Run Rate With ChatGPT Ads In Just 200 Days",
+          "url": "https://www.forbes.com/sites/gabrielalinzainescu/2026/08/31/openais-chatgpt-ads-hit-1-billion-run-rate-in-just-200-days/",
+          "source": "Forbes",
+          "date": "2026-08-31"
+        },
+        {
+          "title": "OpenAI's ad business hits $1 billion annualized revenue run rate",
+          "url": "https://www.thestar.com.my/tech/tech-news/2026/08/31/openai039s-ad-business-hits-1-billion-annualized-revenue-run-rate",
+          "source": "Reuters",
+          "date": "2026-08-31"
+        },
+        {
+          "title": "AI could cause global economic downturn, Andrew Bailey warns G20",
+          "url": "https://finance.yahoo.com/economy/policy/articles/ai-could-could-cause-global-164915820.html",
+          "source": "Reuters",
+          "date": "2026-08-31"
+        },
+        {
+          "title": "AI models pose new risks to global financial stability, Bank of England chief warns",
+          "url": "https://trtworld.com/article/a3145029ea4e",
+          "source": "TRT World / The Guardian",
+          "date": "2026-08-31"
+        }
+      ],
+      "sections": [
+        {
+          "key": "overview",
+          "label": "总述-AI总结",
+          "icon": "📌",
+          "color": "#e8b339",
+          "summary": "生成式界面与实时视频把「AI 即软件」推进一步，监管与金融两端同时收紧：Runway 发布首个界面世界模型 Solaris、MiniMax H3 Max 生成快过直播、化工垂类大模型迈向任务执行；欧盟把 ChatGPT 纳入 DSA 最严监管，ChatGPT Ads 200 天做到 10 亿美元年化，FSB 主席则向 G20 警告 AI 估值与杠杆共振风险。",
+          "items": []
+        },
+        {
+          "key": "model",
+          "label": "模型动态",
+          "icon": "🤖",
+          "color": "#bc52ee",
+          "items": [
+            {
+              "title": "Runway 发布 Solaris：首个「界面世界模型」，逐帧实时生成 UI",
+              "desc": "基于 Gen-4.5 视频模型改造，把鼠标点击与拖拽当作下一帧的条件输入，不生成 HTML/CSS/JS，整帧画面本身就是界面，720p 实时响应；由语言模型负责意图推理与场景切换、世界模型负责渲染。250 人、近 7500 次成对比较显示，在「遵循指令」上 61% vs 24%、「行为自然」71% vs 21% 优于 Claude Opus 5 生成的编码界面；官方承认文本稳定性、长会话一致性、无障碍与逐帧成本仍是未解难题，目前仅开放抢先体验申请。",
+              "url": "https://runtimewire.com/article/runway-solaris-interface-world-model-real-time",
+              "source": "RuntimeWire / Runway 官方",
+              "date": "2026-08-31"
+            },
+            {
+              "title": "MiniMax H3 Max 接入开放平台：生成速度快过直播，观众可实时「导演」画面",
+              "desc": "与 fal 合作后训练的 H3 Max 768P/480P 版接入 MiniMax 开放平台与 MiniMax Design，生成 5 秒 768p 音视频耗时不到 3 秒，跨过实时直播门槛。开发者已把模型接进 Twitch，由聊天室观众输入 Prompt 决定下一段剧情，「跨维度电视」直播在 X 观看量近 350 万次；fal 同步上线 fal.live 互动直播平台，FastVideo 联合 NVIDIA 推出 FastH3 把去噪从约 50 步压到 4 步。H3 开源三周下载量超 2400 万次、社区衍生模型 300+，长时并发与人物一致性仍在验证。",
+              "url": "https://www.163.com/dy/article/L5NPTQ6B0511CSAO.html",
+              "source": "网易科技 / 腾讯研究院 AI 速递",
+              "date": "2026-09-01"
+            },
+            {
+              "title": "智能化工大模型 3.0 Pro 发布：从「会回答」跨到「会执行」，集成 400+ 化工智能体",
+              "desc": "中科院大连化物所联合科大讯飞、阿里云发布我国化工行业首个大模型的最新版本，构建「大模型—智能体—专业技能与工具—应用场景」四层体系，形成认知、推理、规划、执行、验证闭环。基于百亿 Token 级化工语料继续预训练、数十亿 Token 高质量问答做监督微调；文本问答准确率 81.96%、多模态问答 80.75%，综合得分较 3.0 相对提升 20.2% 和 31.4%。已有 300 余家化工企业与院所注册使用，API 累计调用量突破 1400 万次，团队同步启动 4.0 研发。",
+              "url": "https://www.xinhuanet.com.cn/20260831/ad06ba34569347c482863db41b0ce8c2/c.html",
+              "source": "新华网 / 中科院大连化物所",
+              "date": "2026-08-31"
+            }
+          ]
+        },
+        {
+          "key": "product",
+          "label": "产品工具",
+          "icon": "🛠",
+          "color": "#4bf3c8",
+          "items": [
+            {
+              "title": "OpenClaw 2.0 史上最大更新：933 名贡献者、1.6 万+ PR，核心模块全面重构",
+              "desc": "为这次更新项目罕见停更近七周，合并代码量约占项目历史的一半。更新覆盖安装、浏览器、Memory、Skills、模型、自动化、插件与权限体系，Session 可在本地、配对机器与云端 Worker 之间迁移，并支持多人共享协作。项目九个月获 38.8 万 GitHub 星标，但部署维护成本、Token 开销与安全风险仍是主要阻力，国内同类「百虾大战」热度已明显回落。",
+              "url": "https://www.sohu.com/a/1070192038_455313",
+              "source": "腾讯研究院 AI 速递",
+              "date": "2026-09-01"
+            }
+          ]
+        },
+        {
+          "key": "industry",
+          "label": "行业资讯",
+          "icon": "📊",
+          "color": "#3245ff",
+          "items": [
+            {
+              "title": "欧盟将 ChatGPT 认定为 VLOSE：首个被纳入 DSA 最严监管档的独立 AI 服务",
+              "desc": "欧盟委员会 8 月 31 日依《数字服务法》把 ChatGPT 认定为「超大型在线搜索引擎」(VLOSE)，同日 Reddit、Roblox 被认定为 VLOP——三者均申报在欧盟月均触达至少 4500 万用户。被认定方需在四个月内（2026 年底前）履行附加义务：评估并缓解违法内容传播、对未成年人负面影响、身心健康、基本权利、选举进程与公共安全等系统性风险；委员会同时获得调查其功能与算法系统的权力，ChatGPT 与 Reddit 由爱尔兰 Coimisiún na Meán 协同监管。DSA 下受认定主体累计已达 28 家。",
+              "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1772",
+              "source": "欧盟委员会官方新闻稿",
+              "date": "2026-08-31"
+            },
+            {
+              "title": "ChatGPT Ads 不到 200 天做到 10 亿美元年化收入，自助投放扩至印度/欧洲/中东/北非",
+              "desc": "OpenAI 官方披露广告业务年化收入运行率达 10 亿美元，服务数万广告主、覆盖 40 多个国家；自 8 月 31 日起广告主可通过 Ads Manager 在印度、欧洲、中东与北非直接自助购买。该业务 2 月在美国试点、6 周内年化破 1 亿美元，四个月约增长十倍，2026 年目标 25 亿美元。官方强调广告有清晰标识、与回答分离、不影响模型输出，广告主不获取私人对话；外界普遍视其为 OpenAI 冲刺 IPO、支撑 8520 亿美元估值的关键收入支柱。",
+              "url": "https://www.forbes.com/sites/gabrielalinzainescu/2026/08/31/openais-chatgpt-ads-hit-1-billion-run-rate-in-just-200-days/",
+              "source": "Forbes / OpenAI 官方",
+              "date": "2026-08-31"
+            },
+            {
+              "title": "FSB 主席 Bailey 致信 G20：AI 估值与杠杆共振，前沿模型正改写网络风险经济学",
+              "desc": "英国央行行长、金融稳定理事会主席 Bailey 向 G20 财长与央行行长致信警告，市场仍面临「可能失序、并跨境扩散」的回调风险；问题不只是投资者借得更多，而是杠杆正与高估值、市场集中度、以及 AI 公司与超大规模云厂之间日益增长的交叉投资相互作用。他同时点名前沿 AI 展现更强自主性与攻击能力，「可能实质改变网络风险的速度、规模与经济性」，叠加高度集中的第三方服务商，会系统性削弱市场信心；并指出多数司法辖区仍缺乏管理前沿模型发布与部署的协议。",
+              "url": "https://finance.yahoo.com/economy/policy/articles/ai-could-could-cause-global-164915820.html",
+              "source": "Reuters / FSB",
               "date": "2026-08-31"
             }
           ]
