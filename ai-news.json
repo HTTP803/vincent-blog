@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-01T09:55:47.440683+08:00",
+  "updated": "2026-09-02T09:50:16+08:00",
   "issues": [
     {
       "issue": 1,
@@ -3193,6 +3193,140 @@
               "url": "https://finance.yahoo.com/economy/policy/articles/ai-could-could-cause-global-164915820.html",
               "source": "Reuters / FSB",
               "date": "2026-08-31"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "issue": 26,
+      "date": "2026-09-02",
+      "title": "第 26 期 · AI 行业日报",
+      "digest": "Fable 5.1 降本、Astra 受限、豆包手机入网，AI 监管与 3D 产业化齐进。",
+      "report": "## 本期要点\n- **Anthropic 发布 Claude Fable 5.1**：新一代旗舰强调编程与长周期 Agent 任务，典型负载成本较上代降约 25%、缓存读取降价 75%，多项基准超越 GPT-5.6 Sol，性价比成为头部模型新战场。\n- **OpenAI 限制 Astra 网络安全功能**：Astra 成为首款被认定达到\"关键网络安全能力\"门槛的模型，因能力过强仅向少数测试者开放高级网安任务，并同步发布事故复盘——前沿模型治理从\"鼓励\"转向\"设限\"。\n- **字节\"豆包手机\"获入网许可**：努比亚 NaviX Ultra（二代豆包手机）通过工信部入网，搭载豆包手机助手，定位全球首款 AI 智能体手机，计划 9 月内上市。\n- **腾讯混元推出 Hy4 preview 轻量版**：将 1.5TB 权重压缩至约 214GB，长文理解基本持平、数学小幅回落，单卡可部署，进一步压低大模型落地门槛。\n- **英伟达 35 亿美元投资联发科**：借 NVLink Fusion 生态将定制 ASIC 直接接入数据中心，云巨头可在保留 GPU 集群的同时引入自研芯片，混合并行路径成形。\n- **G20 美欧 AI 监管分道扬镳**：美国力推\"松绑\"（Carolina Principles），欧盟同日向 30+ AI 企业发函问询合规，全球 AI 治理\"一松一紧\"格局固化。\n- **AI 3D 迎产业化分水岭**：VAST 完成约 30 亿元 B/B+ 轮融资并发布 Tripo P2.0；影眸发布世界生成模型 Hyper3D WorldGen，从\"生成单资产\"迈向\"生成完整世界\"。\n\n## 趋势研判\n本期信号高度一致地指向同一转向：大模型竞争正从\"拼参数、拼基准\"进入\"拼交付、拼成本、拼整合\"的下半场。模型侧，Fable 5.1 把降价与长周期 Agent 能力绑定，Hy4 轻量版把 1.5TB 模型压到单卡可跑，性价比与可部署性取代绝对性能成为卖点。治理侧出现两极：OpenAI 因 Astra 能力过强主动\"踩刹车\"设限，欧盟以问询函收紧透明与版权合规，而美国则在 G20 力推去监管化——\"一松一紧\"将长期割裂全球市场。产业侧，豆包手机把 Agent 塞进硬件、VAST/影眸把 3D 从单资产推向\"生成世界\"、英伟达投资联发科补全定制芯片拼图，说明 AI 正同时向端侧设备、垂直场景与底层算力三层渗透。下半场的胜负手，不再是谁模型最强，而是谁能把能力稳定送进真实工作流。",
+      "sources": [
+        {
+          "title": "Anthropic发布Fable 5.1 成本降25%",
+          "url": "https://news.qq.com/rain/a/20260902A03TQ800",
+          "source": "腾讯新闻",
+          "date": "2026-09-01"
+        },
+        {
+          "title": "OpenAI将限制Astra模型网络安全功能访问",
+          "url": "https://view.inews.qq.com/a/20260902A03MTL00",
+          "source": "凤凰网",
+          "date": "2026-09-02"
+        },
+        {
+          "title": "字节豆包手机获入网许可9月上市",
+          "url": "https://view.inews.qq.com/a/20260901A0ASNS00",
+          "source": "红星新闻",
+          "date": "2026-09-01"
+        },
+        {
+          "title": "腾讯混元推出Hy4 preview轻量版模型",
+          "url": "https://www.163.com/dy/article/L5QDT0M30534A4SC.html",
+          "source": "网易/界面新闻",
+          "date": "2026-09-01"
+        },
+        {
+          "title": "NVIDIA Backs MediaTek with $3.5B Investment for Custom Silicon",
+          "url": "https://aibreakingwire.com/news/ai-brief-2026-09-02",
+          "source": "AI Breaking Wire",
+          "date": "2026-09-02"
+        },
+        {
+          "title": "US pushes looser approach to AI regulation, while EU pushes new law",
+          "url": "https://www.aljazeera.com/news/2026/9/2/us-pushes-looser-approach-to-ai-regulation-while-eu-pushes-new-law",
+          "source": "Al Jazeera",
+          "date": "2026-09-02"
+        },
+        {
+          "title": "影眸发布世界生成模型、VAST完成30亿元融资",
+          "url": "https://www.nbd.com.cn/articles/2026-09-01/4569605.html",
+          "source": "每日经济新闻",
+          "date": "2026-09-01"
+        }
+      ],
+      "sections": [
+        {
+          "key": "overview",
+          "label": "总述-AI总结",
+          "icon": "📌",
+          "color": "#e8b339",
+          "summary": "本期主线：大模型竞争从\"拼参数\"转入\"拼交付、拼成本、拼整合\"的下半场。模型侧 Fable 5.1 以降本绑定长周期 Agent 能力、Hy4 把 1.5TB 压到单卡可跑；治理侧 OpenAI 因 Astra 能力过强主动设限、美欧在 G20 就监管\"一松一紧\"对立；产业侧豆包手机把 Agent 塞进硬件、VAST/影眸把 3D 推向\"生成世界\"、英伟达投资联发科补全定制芯片——AI 同时向端侧、垂直场景与底层算力三层渗透。",
+          "items": []
+        },
+        {
+          "key": "model",
+          "label": "模型动态",
+          "icon": "🤖",
+          "color": "#bc52ee",
+          "items": [
+            {
+              "title": "Anthropic 发布 Claude Fable 5.1 旗舰模型",
+              "desc": "新一代旗舰主打编程与长周期 Agent 任务，典型负载成本较上代降约 25%、缓存读取降价 75%，多项基准超越 GPT-5.6 Sol，性价比成头部模型新战场。",
+              "url": "https://news.qq.com/rain/a/20260902A03TQ800",
+              "source": "腾讯新闻",
+              "date": "2026-09-01"
+            },
+            {
+              "title": "OpenAI 限制 Astra 网络安全功能访问",
+              "desc": "Astra 成为首款被认定达到\"关键网络安全能力\"门槛的模型，因能力过强仅向少数测试者开放高级网安任务，并同步发布事故复盘，前沿模型治理从鼓励转向设限。",
+              "url": "https://view.inews.qq.com/a/20260902A03MTL00",
+              "source": "凤凰网",
+              "date": "2026-09-02"
+            }
+          ]
+        },
+        {
+          "key": "product",
+          "label": "产品工具",
+          "icon": "🛠",
+          "color": "#4bf3c8",
+          "items": [
+            {
+              "title": "字节\"豆包手机\"获入网许可，9 月上市",
+              "desc": "努比亚 NaviX Ultra（二代豆包手机）通过工信部入网，由中兴与字节联合研发、搭载豆包手机助手，定位全球首款 AI 智能体手机，计划 9 月内开售。",
+              "url": "https://view.inews.qq.com/a/20260901A0ASNS00",
+              "source": "红星新闻",
+              "date": "2026-09-01"
+            },
+            {
+              "title": "腾讯混元推出 Hy4 preview 轻量版",
+              "desc": "将 1.5TB 权重压缩至约 214GB，长文理解基本持平、数学小幅回落，单卡可部署，日常编码辅助、工具调用、长文档处理全覆盖，进一步压低落地门槛。",
+              "url": "https://www.163.com/dy/article/L5QDT0M30534A4SC.html",
+              "source": "网易/界面新闻",
+              "date": "2026-09-01"
+            }
+          ]
+        },
+        {
+          "key": "industry",
+          "label": "行业资讯",
+          "icon": "📊",
+          "color": "#3245ff",
+          "items": [
+            {
+              "title": "英伟达 35 亿美元投资联发科共研定制芯片",
+              "desc": "借 NVLink Fusion 生态将定制 ASIC 直接接入数据中心，云巨头可在保留 GPU 集群的同时引入自研芯片，混合并行路径成形，算力自研化加速。",
+              "url": "https://aibreakingwire.com/news/ai-brief-2026-09-02",
+              "source": "AI Breaking Wire",
+              "date": "2026-09-02"
+            },
+            {
+              "title": "G20 美欧 AI 监管分道扬镳",
+              "desc": "美国力推\"松绑\"（Carolina Principles），主张不对新技术单列监管；欧盟同日向 30+ AI 企业发函问询安全与版权合规，全球 AI 治理\"一松一紧\"格局固化。",
+              "url": "https://www.aljazeera.com/news/2026/9/2/us-pushes-looser-approach-to-ai-regulation-while-eu-pushes-new-law",
+              "source": "Al Jazeera",
+              "date": "2026-09-02"
+            },
+            {
+              "title": "AI 3D 迎产业化分水岭：VAST 30 亿融资 + 影眸 WorldGen",
+              "desc": "VAST 完成约 30 亿元 B/B+ 轮融资并发布 Tripo P2.0（原生四边面拓扑）；影眸发布世界生成模型 Hyper3D WorldGen，从\"生成单资产\"迈向\"生成完整世界\"。",
+              "url": "https://www.nbd.com.cn/articles/2026-09-01/4569605.html",
+              "source": "每日经济新闻",
+              "date": "2026-09-01"
             }
           ]
         }
