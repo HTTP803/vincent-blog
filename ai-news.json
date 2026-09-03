@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-02T09:50:16+08:00",
+  "updated": "2026-09-03T10:02:43+08:00",
   "issues": [
     {
       "issue": 1,
@@ -3329,6 +3329,140 @@
               "date": "2026-09-01"
             }
           ]
+        }
+      ]
+    },
+    {
+      "issue": 27,
+      "date": "2026-09-03",
+      "title": "第 27 期 · AI 行业日报",
+      "digest": "Meta Muse Spark 1.3、谷歌 Gemini 3.8 Flash、阿里 Qwen3.8-Max 同日上新；World Labs Atlas 重塑 3D 生成，中国开源模型加速出海。",
+      "report": "## 本期要点\n- **Meta 发布 Muse Spark 1.3**：首席 AI 官 Alexandr Wang 称其为「迄今最大一次性能跃升」，编程与智能体任务逼近 OpenAI、Anthropic 头部水平，DeepSWE v1.1 得分 75.4 高于 GPT-5.6 Sol，Token 消耗减少约 25%，9 月 2 日起经 API 付费开放并接入 Facebook 系产品。\n- **谷歌六周三次上新 Flash**：Gemini 3.8 Flash 主打长周期软件工程与自主智能体，同步推出安全版 Flash Cyber，Chrome 团队称其正确补丁数为更大商业模型的 2.6 倍，并启动 Fairwind 计划向关键基础设施机构开放。\n- **阿里 Qwen3.8-Max 前端编程登顶**：9 月 2 日更新的旗舰模型据称前端编程能力全球第一，代码生成与多轮修改表现优异，前端开发者工具链或迎质变。\n- **李飞飞 World Labs 发布 Atlas 世界模型**：多模态自回归扩散架构，单图即可生成最长 1 分钟 1440p 视频、稀疏视角 3D 重建超专用开源模型，打通 Real-to-Sim，为机器人生成逼真数据。\n- **中国开放权重模型加速出海**：人民网报道，哈维 Tenet 基于 Kimi K3、Cursor Composer 2 基于 Kimi K2.5、Inkling 沿用 DeepSeek-V3 架构——中国模型从权重、架构到训练方法全面进入海外研发链。\n- **博通 Q3 净利同比增 216%**：营收 295.91 亿美元（+86%），AI 芯片需求驱动将 AI 业务指引上调至 580 亿美元，算力红利持续兑现。\n- **Mindverse 获美团领投 5000 万美元**：将开源 750B agent 模型（GLM 5.1 基座 + LoRA），Mixture of LoRA 把后训练成本压到全参训练的十分之一。\n\n## 趋势研判\n本期最鲜明的信号是「头部模型同日对撞、能力边界集体上移」。9 月 2—3 日，Meta Muse Spark 1.3、谷歌 Gemini 3.8 Flash、阿里 Qwen3.8-Max 几乎在同一窗口发布，且卖点高度趋同：长周期软件工程、自主智能体、更低 Token 成本。这说明前沿竞赛已从「单点基准」收敛到「谁能把编程/Agent 能力稳定送进真实工作流」——头部玩家不再比谁更强，而比谁更省、更能交付。\n\n更值得产品人注意的是两层结构性变化。其一，安全大模型从辅助走向攻防一线：谷歌 Flash Cyber、OpenAI Astra 的网安能力、CrowdStrike×英伟达 SafeMind，正把 AI 直接嵌入漏洞发现与修复闭环。其二，中国开放权重模型正从「被使用」升级为「被再训练」——哈维 Tenet、Cursor Composer 2 在 Kimi/DeepSeek 基座上做后训练，意味着中国模型已成为全球 AI 研发的底层积木，话语权从应用层上移到基座层。\n\n资本侧，博通 216% 的净利增长与 Mindverse 获美团领投，分别代表「算力红利兑现」与「Agent 后训练降本」两条清晰主线。下半场的胜负手，是把模型能力、安全边界与成本结构三者同时做对。",
+      "sections": [
+        {
+          "key": "overview",
+          "label": "总述-AI总结",
+          "icon": "📌",
+          "color": "#e8b339",
+          "summary": "本期主线：头部模型同日对撞、能力边界集体上移——Meta Muse Spark 1.3、谷歌 Gemini 3.8 Flash、阿里 Qwen3.8-Max 在同一窗口发布，卖点齐刷刷指向长周期软件工程、自主智能体与更低 Token 成本。安全大模型（Flash Cyber/SafeMind）走向攻防一线，中国开放权重模型（Kimi/DeepSeek 基座）被海外企业再训练、从底层进入全球研发链，博通 216% 净利与 Mindverse 获美团领投则分别代表算力红利兑现与 Agent 后训练降本。",
+          "items": []
+        },
+        {
+          "key": "model",
+          "label": "模型动态",
+          "icon": "🤖",
+          "color": "#bc52ee",
+          "items": [
+            {
+              "title": "Meta 发布 Muse Spark 1.3，编码对标 GPT-5.6 Sol",
+              "desc": "首席 AI 官 Alexandr Wang 称新模型为 Meta「迄今最大一次性能跃升」，编程与智能体任务逼近头部；DeepSWE v1.1 得分 75.4 高于 GPT-5.6 Sol，Token 消耗减少约 25%、工具调用减少约 20%，9 月 2 日起经 Meta Model API 付费开放并接入 Instagram、Facebook。",
+              "url": "https://www.toutiao.com/article/7681110024902443574/",
+              "source": "智通财经",
+              "date": "2026-09-03"
+            },
+            {
+              "title": "谷歌发布 Gemini 3.8 Flash 及安全版 Flash Cyber",
+              "desc": "距 3.7 Flash 仅三周，谷歌六周内第三次上新 Flash 模型，称其为「迄今最强推理与编程模型」，主打长周期软件工程与自主智能体（DeepSWE 端到端解题）；网安版 Cyber 漏洞发现与自动修复达前沿水平，Chrome 团队称其正确补丁数为更大商业模型的 2.6 倍，同步启动 Fairwind 计划向 650+ 关键机构开放。",
+              "url": "https://aizhijian.com.cn/brief",
+              "source": "AI早报",
+              "date": "2026-09-03"
+            },
+            {
+              "title": "阿里 Qwen3.8-Max 更新，前端编程能力登顶全球",
+              "desc": "9 月 2 日阿里云更新旗舰模型 Qwen3.8-Max，据称前端编程能力跃居全球第一，在代码生成、多轮修改等任务表现优异，进一步巩固阿里在大模型领域的竞争力，前端开发者工具链或迎来质变。",
+              "url": "https://aizhijian.com.cn/brief",
+              "source": "AI早报",
+              "date": "2026-09-03"
+            }
+          ]
+        },
+        {
+          "key": "product",
+          "label": "产品工具",
+          "icon": "🛠",
+          "color": "#4bf3c8",
+          "items": [
+            {
+              "title": "李飞飞 World Labs 发布多模态世界模型 Atlas",
+              "desc": "采用多模态自回归扩散 Transformer 架构，支持像素级相机控制生成，单张图片即可输出最长 1 分钟、1440p 视频，稀疏视角 3D 重建效果超过专用开源模型，可同时建模空间与时间、为机器人生成逼真 RGB 与深度数据，现向部分伙伴开放早期访问。",
+              "url": "https://www.sohu.com/a/1071171604_455313",
+              "source": "腾讯研究院",
+              "date": "2026-09-03"
+            }
+          ]
+        },
+        {
+          "key": "industry",
+          "label": "行业资讯",
+          "icon": "📊",
+          "color": "#3245ff",
+          "items": [
+            {
+              "title": "中国开放权重模型加速融入全球 AI 产业链",
+              "desc": "人民网报道，越来越多海外企业在 Kimi、DeepSeek 等中国开放权重模型基础上后训练并开发自主产品：美国法律 AI 哈维发布基于 Kimi K3 的 Tenet 模型，完整法律任务量接近原始 K3 的两倍；Cursor 母公司 Composer 2/2.5 以 Kimi K2.5 为基础，OpenAI 前 CTO 的 Inkling 也沿用 DeepSeek-V3 架构。中国模型正从底层权重、架构到训练方法全面出海。",
+              "url": "https://www.163.com/dy/article/L5SV53J80514R9M0.html",
+              "source": "人民网",
+              "date": "2026-09-03"
+            },
+            {
+              "title": "博通 Q3 净利 130.88 亿美元，同比增 216%",
+              "desc": "博通发布 2026 财年第三财季：营收 295.91 亿美元同比增 86%，归母净利润 130.88 亿美元同比增 216%，增长主要受益 AI 芯片需求强劲；公司将 AI 业务营收指引从 560 亿上调至 580 亿美元，AI 算力红利持续兑现。",
+              "url": "https://aizhijian.com.cn/brief",
+              "source": "AI早报",
+              "date": "2026-09-03"
+            },
+            {
+              "title": "Mindverse 获美团领投 5000 万美元 A 轮，将开源 750B Agent 模型",
+              "desc": "中国 AI agent 开发商 Mindverse 完成近 5000 万美元 A 轮融资，由美团领投；公司宣布将开源 750B 参数的 agent 模型（744B GLM 5.1 基座 + 6B LoRA），采用 Mixture of LoRA 架构将后训练成本降至全参训练的十分之一，消费 App Macaron 已有 200 万用户。",
+              "url": "https://app.dealroom.co/news/note/mindverse-raises-50m-series-a-led-by-meituan-to-open-source-750b-glm-5-1-agent-model",
+              "source": "Dealroom",
+              "date": "2026-09-02"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Meta发布Muse Spark 1.3 编码对标GPT-5.6 Sol",
+          "url": "https://www.toutiao.com/article/7681110024902443574/",
+          "source": "智通财经",
+          "date": "2026-09-03"
+        },
+        {
+          "title": "谷歌发布Gemini 3.8 Flash及安全版Flash Cyber",
+          "url": "https://aizhijian.com.cn/brief",
+          "source": "AI早报",
+          "date": "2026-09-03"
+        },
+        {
+          "title": "阿里Qwen3.8-Max更新前端编程能力全球第一",
+          "url": "https://aizhijian.com.cn/brief",
+          "source": "AI早报",
+          "date": "2026-09-03"
+        },
+        {
+          "title": "李飞飞World Labs发布多模态世界模型Atlas",
+          "url": "https://www.sohu.com/a/1071171604_455313",
+          "source": "腾讯研究院",
+          "date": "2026-09-03"
+        },
+        {
+          "title": "中国开放权重模型加速融入全球AI产业链",
+          "url": "https://www.163.com/dy/article/L5SV53J80514R9M0.html",
+          "source": "人民网",
+          "date": "2026-09-03"
+        },
+        {
+          "title": "博通Q3净利130.88亿美元同比增216%",
+          "url": "https://aizhijian.com.cn/brief",
+          "source": "AI早报",
+          "date": "2026-09-03"
+        },
+        {
+          "title": "Mindverse获美团领投5000万美元将开源750B模型",
+          "url": "https://app.dealroom.co/news/note/mindverse-raises-50m-series-a-led-by-meituan-to-open-source-750b-glm-5-1-agent-model",
+          "source": "Dealroom",
+          "date": "2026-09-02"
         }
       ]
     }
