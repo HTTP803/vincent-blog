@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-03T10:02:43+08:00",
+  "updated": "2026-09-04T10:06:52+08:00",
   "issues": [
     {
       "issue": 1,
@@ -3463,6 +3463,140 @@
           "url": "https://app.dealroom.co/news/note/mindverse-raises-50m-series-a-led-by-meituan-to-open-source-750b-glm-5-1-agent-model",
           "source": "Dealroom",
           "date": "2026-09-02"
+        }
+      ]
+    },
+    {
+      "issue": 28,
+      "date": "2026-09-04",
+      "title": "第 28 期 · AI 行业日报",
+      "digest": "GPT-6 Astra 发布宣告AGI；英伟达129亿收购HF；工信部育万企；月之暗面递表港股。",
+      "sections": [
+        {
+          "key": "overview",
+          "label": "总述-AI总结",
+          "icon": "📌",
+          "color": "#e8b339",
+          "summary": "本期主线：OpenAI 正式发布 GPT-6 Astra，把 AI 从「答题」推向「自主操作软件、完成长周期多步骤任务」的 AGI 临界叙事，奥特曼首度明确自研人形机器人；英伟达 129.3 亿美元收购 Hugging Face，芯片巨头锁死开源生态枢纽，而 HF 同日开源 Funes 记忆层形成张力。中国侧政策与资本双线并进——工信部启动三年育万企计划、月之暗面秘密递交港股 IPO（估值 500 亿美元）；基座模型继续出海（沙特 Humain 借 MiniMax 推出阿拉伯语大模型）。",
+          "items": []
+        },
+        {
+          "key": "model",
+          "label": "模型动态",
+          "icon": "🤖",
+          "color": "#bc52ee",
+          "items": [
+            {
+              "title": "OpenAI 发布 GPT-6 Astra，宣告进入 AGI 时代",
+              "desc": "9 月 3 日/4 日凌晨正式发布，使用超 10 万块 GPU 在得州 Stargate 基地训练，具备 Computer Use 能力（OSWorld 2.0 成功率 72.6%），可自主完成编程、金融建模、演示文稿等长周期任务；成为首个达到内部「Critical」网络安全门槛的模型（最先进网安能力暂不全面开放）。API 定价输入 10 美元/输出 50 美元每百万 Token（约上代 2.5 倍），奥特曼首次明确将自研人形机器人（OpenAI Robotics）。",
+              "url": "https://news.qq.com/rain/a/20260904A02YVW00",
+              "source": "腾讯新闻/每日经济新闻",
+              "date": "2026-09-04"
+            },
+            {
+              "title": "沙特 Humain 借力中国 MiniMax 推出阿拉伯语大模型 HUMAIN-M3",
+              "desc": "9 月 3 日，沙特人工智能公司 Humain 推出阿拉伯语大语言模型 HUMAIN-M3，由中国的 MiniMax 开发，已在 HUMAIN NODE 提供研究预览版，体现沙特借中国开源力量加强阿拉伯语 AI 生态、参与全球 AI 竞赛的布局。",
+              "url": "https://new.qq.com/rain/a/20260904A029SQ00?refer=cp_1009",
+              "source": "腾讯新闻/财联社",
+              "date": "2026-09-04"
+            }
+          ]
+        },
+        {
+          "key": "product",
+          "label": "产品工具",
+          "icon": "🛠",
+          "color": "#4bf3c8",
+          "items": [
+            {
+              "title": "Hugging Face 开源 Funes：编码 Agent 持久记忆层",
+              "desc": "9 月 4 日发布 funes，面向 Claude Code、Codex、pi、Hermes 等编码 Agent 的开源持久化记忆层；以单二进制本地索引执行轨迹到 Lance 数据集，结合向量检索与关键词匹配、无需外部 API，较标准 written handoff 成本降低最多 8 倍，并避免上下文压缩时的推理损失。",
+              "url": "https://aibreakingwire.com/news/ai-brief-2026-09-04",
+              "source": "AI Breaking Wire",
+              "date": "2026-09-04"
+            },
+            {
+              "title": "Google WeatherNext 3 接入十亿级用户，AI 气象预报产品化落地",
+              "desc": "谷歌 DeepMind 与 Google Research 联合发布 WeatherNext 3 全球 AI 气象模型，直接从实时卫星观测学习，关键地表变量分辨率达 5 公里、每小时生成一次预报；即日起为搜索、Gemini、地图、Cloud 提供气象支撑，标志 AI 天气预报从论文竞赛迈入产品竞赛。",
+              "url": "https://www.tmtpost.com/8128131.html",
+              "source": "钛媒体",
+              "date": "2026-09-04"
+            }
+          ]
+        },
+        {
+          "key": "industry",
+          "label": "行业资讯",
+          "icon": "📊",
+          "color": "#3245ff",
+          "items": [
+            {
+              "title": "英伟达 129.3 亿美元收购 Hugging Face，承诺维持开放平台",
+              "desc": "9 月 3 日宣布以 129.303 亿美元收购开源模型平台 Hugging Face（英伟达史上最大收购之一），向投资者支付约 119 亿美元并提供最高 10 亿美元股权激励留才；HF 拥有超 1800 万开发者、300 万模型、50 万数据集。黄仁勋承诺保持开放平台、用户无强制使用英伟达产品的义务。",
+              "url": "https://www.toutiao.com/article/7681458114915107378/",
+              "source": "每日经济新闻",
+              "date": "2026-09-04"
+            },
+            {
+              "title": "工信部启动人工智能中小企业创业支持计划",
+              "desc": "9 月 3 日工信部宣布启动，三年内在行业应用、数据服务、智能算力等重点领域，新培育科技和创新型中小企业 1 万家以上，高标准建设 10 个科技型企业孵化器、10 个国家级中小企业公共服务示范平台，新培育 10 个国家级特色产业集群。",
+              "url": "https://news.cctv.com/2026/09/04/ARTIO8JO3dGdKdX94HNbJXk9260904.shtml",
+              "source": "央视网",
+              "date": "2026-09-04"
+            },
+            {
+              "title": "月之暗面（Moonshot/Kimi）秘密递交港股 IPO，估值 500 亿美元",
+              "desc": "9 月 4 日报道，Moonshot AI 秘密递交香港上市申请，目标募资约 30 亿美元；此前获美团、中国移动超 20 亿美元投资并重组回内地。其 rivals DeepSeek、Z.AI 估值分别为 740 亿、660 亿美元，显示中国前沿模型公司的公开流动性窗口正在打开。",
+              "url": "https://www.aiimpacthub.com/ai-news",
+              "source": "AI Impact Hub / TechStartups",
+              "date": "2026-09-04"
+            }
+          ]
+        }
+      ],
+      "report": "## 本期要点\n- **OpenAI 发布 GPT-6 Astra**：超 10 万 GPU 训练、具备 Computer Use 能力，宣称进入 AGI 时代；定价较上代约 2.5 倍，奥特曼首度明确自研人形机器人（OpenAI Robotics）。\n- **沙特 Humain × 中国 MiniMax 推出阿拉伯语大模型 HUMAIN-M3**：中国基座模型以授权/共建方式出海，阿拉伯语 AI 生态获新变量。\n- **Hugging Face 开源 Funes 记忆层**：编码 Agent 持久化记忆，成本较 written handoff 降最多 8 倍，缓解长会话上下文膨胀。\n- **Google WeatherNext 3 产品化落地**：5 公里分辨率、每小时预报，直接接入搜索/地图/Gemini，AI 气象从论文竞赛转向产品竞赛。\n- **英伟达 129.3 亿美元收购 Hugging Face**：芯片巨头买下开源生态枢纽，黄仁勋承诺维持开放平台，开源治理走向聚光灯。\n- **工信部启动 AI 中小企业创业支持计划**：三年育万企、建 10 个孵化器与特色集群，政策侧为 AI 应用落地加杠杆。\n- **月之暗面秘密递交港股 IPO**：目标募资约 30 亿美元、估值 500 亿美元，中国前沿模型公司开启公开流动性窗口。\n\n## 趋势研判\n本期几条主线共同指向一个转折：AI 竞争正从「模型基准」切换到「交付与生态」的真实战场。OpenAI 用 GPT-6 Astra 把叙事推到 AGI 临界——不再强调答题精度，而是强调自主操作软件、完成数小时级多步骤任务，并主动用更高定价换取「单次任务成本」而非 Token 单价的竞争维度；奥特曼同时公布自研人形机器人，意味着头部实验室把能力外溢到物理世界已成公开战略。\n\n英伟达 129 亿美元收购 Hugging Face 是最具象征意义的卡位：卖铲子的芯片巨头买下了开源模型的「集市」，与 HF 同日开源 Funes 记忆层形成微妙张力——开放平台承诺能否在收购后兑现，将成开源治理的观察窗口。中国侧则呈现政策与资本双线：工信部「育万企」计划把 AI 下沉到中小企业，月之暗面港股递表则让中国前沿模型首次触摸公开流动性；与此同时，MiniMax 基座经沙特 Humain 出海，说明中国开放权重模型正成为地缘 AI 博弈的软基础设施。\n\n规模化之后的可靠性与合规压力也在累积——9 月 3 日 ChatGPT/Claude/Grok 历史级集体宕机、监管对头部平台的整改点名，提示「越强越脆弱」的运维与治理命题将长期伴随行业。整体看，2026 年下半场的主题已是「把智能变成可交付、可治理、可变现的产品」.",
+      "sources": [
+        {
+          "title": "OpenAI发布GPT-6 Astra，奥特曼首次明确将自研人形机器人",
+          "url": "https://news.qq.com/rain/a/20260904A02YVW00",
+          "source": "腾讯新闻/每日经济新闻",
+          "date": "2026-09-04"
+        },
+        {
+          "title": "沙特Humain借力中国MiniMax推出阿拉伯语大模型HUMAIN-M3",
+          "url": "https://new.qq.com/rain/a/20260904A029SQ00?refer=cp_1009",
+          "source": "腾讯新闻/财联社",
+          "date": "2026-09-04"
+        },
+        {
+          "title": "The AI Brief — Friday, September 4, 2026 (Funes)",
+          "url": "https://aibreakingwire.com/news/ai-brief-2026-09-04",
+          "source": "AI Breaking Wire",
+          "date": "2026-09-04"
+        },
+        {
+          "title": "Edge AI Daily 早报(9月4日) (WeatherNext 3)",
+          "url": "https://www.tmtpost.com/8128131.html",
+          "source": "钛媒体",
+          "date": "2026-09-04"
+        },
+        {
+          "title": "英伟达129.3亿美元收购Hugging Face，承诺维持开放平台",
+          "url": "https://www.toutiao.com/article/7681458114915107378/",
+          "source": "每日经济新闻",
+          "date": "2026-09-04"
+        },
+        {
+          "title": "人工智能中小企业创业支持计划启动",
+          "url": "https://news.cctv.com/2026/09/04/ARTIO8JO3dGdKdX94HNbJXk9260904.shtml",
+          "source": "央视网",
+          "date": "2026-09-04"
+        },
+        {
+          "title": "Moonshot AI files for $3 billion Hong Kong IPO at $50 billion valuation",
+          "url": "https://www.aiimpacthub.com/ai-news",
+          "source": "AI Impact Hub / TechStartups",
+          "date": "2026-09-04"
         }
       ]
     }
