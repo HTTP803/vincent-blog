@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-04T10:06:52+08:00",
+  "updated": "2026-09-05T10:16:51.910899+08:00",
   "issues": [
     {
       "issue": 1,
@@ -3597,6 +3597,122 @@
           "url": "https://www.aiimpacthub.com/ai-news",
           "source": "AI Impact Hub / TechStartups",
           "date": "2026-09-04"
+        }
+      ]
+    },
+    {
+      "issue": 29,
+      "date": "2026-09-05",
+      "title": "第 29 期 · AI 行业日报",
+      "digest": "K2 Horizon 真开源刷新可验证性标准，腾讯云无境与千问办公推进 Agent 落地，韩国芯片出口翻倍、Anthropic IPO 前夜授信 150 亿。",
+      "sections": [
+        {
+          "key": "overview",
+          "label": "总述-AI总结",
+          "icon": "📌",
+          "color": "#e8b339",
+          "summary": "本期主线是「开放与集中」的双向拉扯：K2 Horizon 以「连训练数据一起开源」重定义开放标准，而腾讯云无境、千问办公则把 Agent 能力快速坍缩进具体工作流；资本端韩国芯片出口翻倍、Anthropic IPO 前夜授信 150 亿，Azure 一例宕机却拖垮四大模型服务，集中式云底座的系统性脆弱性再被放大。",
+          "items": []
+        },
+        {
+          "key": "model",
+          "label": "模型动态",
+          "icon": "🤖",
+          "color": "#bc52ee",
+          "items": [
+            {
+              "title": "K2 Horizon 发布：首个真正满足 OSI 开源定义的家族",
+              "desc": "Institute of Foundation Models 一次放出 0.9B~375B 共 6 个模型，除权重外还公开训练代码、训练数据、检查点与训练日志，是今年首个可被完整复现与审计的发布，把竞争轴从「能力」转向「可验证性」。",
+              "url": "https://aitoolsrecap.com/Blog/ai-news-september-05-2026",
+              "source": "AIToolsRecap",
+              "date": "2026-09-05"
+            }
+          ]
+        },
+        {
+          "key": "product",
+          "label": "产品工具",
+          "icon": "🛠",
+          "color": "#4bf3c8",
+          "items": [
+            {
+              "title": "腾讯云推出 AI 自主渗透测试产品「无境」",
+              "desc": "以 SaaS 形态交付、开箱即用，由 Agent 自主完成渗透测试流程，标志安全工具从「辅助分析师」走向「替代流程」，降低企业安全运营成本。",
+              "url": "https://www.163.com/dy/article/L626GKS80534A4SC.html",
+              "source": "界面新闻 / 网易",
+              "date": "2026-09-04"
+            },
+            {
+              "title": "千问办公上线首月用户破 3000 万、企业过半",
+              "desc": "阿里宣布千问办公满月用户破 3000 万、企业用户过半，首月迭代 120 个版本；专属 Qwen3.8-Flash 使单任务提速约 100%、Token 消耗降 75%，长安汽车等头部企业已接入。",
+              "url": "https://new.qq.com/rain/a/20260904A0DJT900",
+              "source": "腾讯新闻 / 蓝鲨硬科技",
+              "date": "2026-09-04"
+            }
+          ]
+        },
+        {
+          "key": "industry",
+          "label": "行业资讯",
+          "icon": "📊",
+          "color": "#3245ff",
+          "items": [
+            {
+              "title": "韩国 8 月半导体出口同比 +209% 至 466.5 亿美元",
+              "desc": "AI 芯片需求持续重塑全球贸易流，韩国半导体出口创纪录新高，印证算力军备仍是产业链最强变量。",
+              "url": "https://www.thecodew.com/2026/09/open-announces-Superintelligence-era-with-GPT-6-Astra-launch.html",
+              "source": "The CODEW",
+              "date": "2026-09-05"
+            },
+            {
+              "title": "Anthropic IPO 前夜接近敲定 150 亿美元上市前信贷",
+              "desc": "据报道 Anthropic 接近将循环信贷额度扩大至 150 亿美元，由摩根士丹利牵头、高盛/摩根大通/花旗参与，四家亦为本次 IPO 主承销商，IPO 窗口临近。",
+              "url": "https://www.163.com/dy/article/L626GKS80534A4SC.html",
+              "source": "界面新闻 / 网易",
+              "date": "2026-09-05"
+            },
+            {
+              "title": "大模型厂商集体「上天猫卖 Token」",
+              "desc": "智谱正式登陆天猫开官方旗舰店，48 小时品牌搜索环比涨 50 倍、带动 AI Token 成交涨超 160%；淘宝上线「AI 空间站」集合阿里云、MiniMax、Kimi、DeepSeek，大模型加速从技术厂牌转向消费品牌。",
+              "url": "https://new.qq.com/rain/a/20260904A0DJT900",
+              "source": "腾讯新闻 / 智东西",
+              "date": "2026-09-04"
+            },
+            {
+              "title": "Azure 故障致 ChatGPT/Claude/Grok/Gemini 集体宕机近 4 小时",
+              "desc": "9 月 3 日晚至 4 日凌晨，四大模型服务因疑与微软 Azure 相关的故障相继中断约 3 小时 40 分，国内智谱借机推 GLM-5.3-Flash 夜间免费；集中式云底座的系统性脆弱性再被放大。",
+              "url": "https://new.qq.com/rain/a/20260904A0DJT900",
+              "source": "腾讯新闻 / ZAKER 科技",
+              "date": "2026-09-04"
+            }
+          ]
+        }
+      ],
+      "report": "## 本期要点\n- **K2 Horizon 真开源，重定义「开放」**：Institute of Foundation Models 一次放出 0.9B~375B 共 6 个模型，不仅开源权重，还公开训练代码、训练数据、检查点与训练日志，是今年首个真正满足 OSI 开源定义的发布。可验证性取代能力指标，成为受监管场景的关键卖点。\n- **腾讯云「无境」把渗透测试变成开箱即用 SaaS**：由 Agent 自主完成渗透测试，标志安全工具从「辅助分析师」走向「替代流程」。\n- **千问办公上线首月破 3000 万用户、企业过半**：Agent 办公产品被真实工作流验证，单任务提速约 100%、Token 消耗降 75%。\n- **韩国 8 月半导体出口同比 +209% 至 466.5 亿美元**：AI 芯片需求持续重塑全球贸易流。\n- **Anthropic IPO 前夜敲定 150 亿美元上市前信贷**：摩根士丹利牵头，IPO 窗口临近。\n- **大模型厂商集体「上天猫卖 Token」**：智谱开店 48 小时搜索涨 50 倍，AI 从技术厂牌转向消费品牌。\n- **Azure 故障致四大模型服务集体宕机近 4 小时**：集中式云依赖的脆弱性再被放大。\n\n## 趋势研判\n本期主线是「开放与集中」的双向拉扯。一边，K2 Horizon 用「连训练数据一起开源」把行业叙事从「谁更强」拉回「谁可验证」——当监管、科研与高风险行业开始要求可审计，权重开源的空洞承诺被戳破，真正可复现的发布反而成为稀缺资产。另一边，产业落地却在加速集中：腾讯云「无境」把渗透测试 SaaS 化、千问办公首月 3000 万用户验证 Agent 办公已跨过可用门槛，模型能力正快速坍缩进具体工作流。资本层面，韩国半导体出口翻倍印证算力军备仍在加码，Anthropic 150 亿信贷与 IPO 窗口临近则显示头部玩家从「烧钱换规模」走向「公开市场对账」。值得警惕的是 Azure 一例宕机拖垮四大模型服务，提醒行业：当所有能力都挂在少数云底座上，单点故障的系统性风险正在累积。短期看，「真开源 + 垂直 Agent + 消费化分发」会成为中小企业绕过算力与合规壁垒的三条捷径，而基础设施的集中度，恰恰是人造脆弱性的根源。",
+      "sources": [
+        {
+          "title": "AI News September 5 2026: K2 Horizon 与 Daybreak 首批伙伴",
+          "url": "https://aitoolsrecap.com/Blog/ai-news-september-05-2026",
+          "source": "AIToolsRecap",
+          "date": "2026-09-05"
+        },
+        {
+          "title": "AI早报：OpenAI GPT-6 Astra；腾讯云无境；Anthropic 150亿信贷",
+          "url": "https://www.163.com/dy/article/L626GKS80534A4SC.html",
+          "source": "界面新闻 / 网易",
+          "date": "2026-09-05"
+        },
+        {
+          "title": "AI大模型动态：千问办公破3000万、智谱上天猫、Azure宕机",
+          "url": "https://new.qq.com/rain/a/20260904A0DJT900",
+          "source": "腾讯新闻",
+          "date": "2026-09-04"
+        },
+        {
+          "title": "AI Daily Report — 2026-09-05（韩国出口、Azure宕机）",
+          "url": "https://www.thecodew.com/2026/09/open-announces-Superintelligence-era-with-GPT-6-Astra-launch.html",
+          "source": "The CODEW",
+          "date": "2026-09-05"
         }
       ]
     }
