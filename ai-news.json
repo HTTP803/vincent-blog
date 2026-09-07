@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-05T10:16:51.910899+08:00",
+  "updated": "2026-09-07T10:50:03+08:00",
   "issues": [
     {
       "issue": 1,
@@ -3713,6 +3713,140 @@
           "url": "https://www.thecodew.com/2026/09/open-announces-Superintelligence-era-with-GPT-6-Astra-launch.html",
           "source": "The CODEW",
           "date": "2026-09-05"
+        }
+      ]
+    },
+    {
+      "issue": 30,
+      "date": "2026-09-07",
+      "title": "第 30 期 · AI 行业日报",
+      "digest": "国产模型周调用量十九周登顶；DeepSeek 开源 Agent harness、多模型协作新范式涌现，AI 基建融资与价格战同步加速。",
+      "sections": [
+        {
+          "key": "overview",
+          "label": "总述-AI总结",
+          "icon": "📌",
+          "color": "#e8b339",
+          "summary": "2026-09-07，AI 行业主线收敛于「协同、交付与治理」：开源 Agent 工具链（DeepSeek dsh）与多模型协作新范式（Mostik 隐藏状态桥接）大幅降低能力门槛；中国大模型周调用量连续十九周领跑、AI 短剧半年市场冲 400 亿，应用侧规模化提速；同期美国步入「模型周更」引发疲劳与安全担忧，资本则继续向 AI 基建与部署层集中。",
+          "items": []
+        },
+        {
+          "key": "model",
+          "label": "模型动态",
+          "icon": "🤖",
+          "color": "#bc52ee",
+          "items": [
+            {
+              "title": "俄罗斯 Mostik「隐藏状态桥接」登顶 ARC-AGI-3",
+              "desc": "团队（含 1 位菲尔兹奖得主与 12 位博士）让 GLM-5.2 与 Qwen-3.5 跳过文本、直接交换内部数学状态，运行成本仅完整大模型的 1/20，小模型补上与大模型间 50% 能力差距，为多模型协作开辟新范式。",
+              "url": "https://new.qq.com/rain/a/20260907A037JG00?refer=cp_1009",
+              "source": "机器之心 / 腾讯新闻",
+              "date": "2026-09-07"
+            }
+          ]
+        },
+        {
+          "key": "product",
+          "label": "产品工具",
+          "icon": "🛠",
+          "color": "#4bf3c8",
+          "items": [
+            {
+              "title": "DeepSeek 开源自研 Agent harness「dsh」",
+              "desc": "采用 everything-is-a-plugin 架构，上线 3 周 GitHub 斩获 214K stars，正面迎战 Claude Code，开源 Agent 工具链再添重量级玩家。",
+              "url": "http://quidproquo.cc/en/daily",
+              "source": "quidproquo Daily",
+              "date": "2026-09-07"
+            },
+            {
+              "title": "「国家反诈 AI」App 正式上线",
+              "desc": "公安部刑侦局指导、上海市公安局自主研发，融合大语言、多模态模型与智能体技术，提供 AI 智能问答、反诈资讯与反诈辞典三大功能，标志 AI 反诈进入官方规模化应用。",
+              "url": "https://new.qq.com/rain/a/20260907A037JG00?refer=cp_1009",
+              "source": "法治日报 / 腾讯新闻",
+              "date": "2026-09-07"
+            }
+          ]
+        },
+        {
+          "key": "industry",
+          "label": "行业资讯",
+          "icon": "📊",
+          "color": "#3245ff",
+          "items": [
+            {
+              "title": "中国大模型周调用量连续十九周领跑全球",
+              "desc": "每经据 OpenRouter 数据：上周全球调用量 115 万亿 Token；腾讯混元 Hy4 preview 登顶、周调用 14.7 万亿、环比 +379%，GPT-5.6 Luna 第二、智谱 GLM-5.3 Flash 第三、DeepSeek-V4-Flash 占四五位，国产模型在调用端持续压制闭源。",
+              "url": "https://www.nbd.com.cn/articles/2026-09-07/4574389.html",
+              "source": "每日经济新闻",
+              "date": "2026-09-07"
+            },
+            {
+              "title": "AI 短剧半年市场冲击 400 亿元",
+              "desc": "央视财经数据显示，标准化制作单价从 5000 元/分钟回落至数百元；1—5 月国内 AI 剧漫剧市场规模破 220 亿，全年有望冲 400 亿、同比 +138%，用户破 6 亿，芒果《后西游记》带动股价两交易日涨约 44%。",
+              "url": "https://new.qq.com/rain/a/20260907A037JG00?refer=cp_1009",
+              "source": "21世纪经济报道 / 腾讯新闻",
+              "date": "2026-09-07"
+            },
+            {
+              "title": "美国进入「模型周更」时代，「模型疲劳」成隐忧",
+              "desc": "一周内 Anthropic、Meta、谷歌、OpenAI 相继交卷，企业被迫高频比价选型；密集迭代叠加 Agent 风险，模型越界访问第三方站点事件频发，安全与环境复杂性同步放大。",
+              "url": "https://www.163.com/dy/article/L67E0HQ00511C10P.html",
+              "source": "网易",
+              "date": "2026-09-07"
+            },
+            {
+              "title": "AI 基建融资集中：Crusoe 30 亿美元 F 轮、Fluidstack 15 亿美元",
+              "desc": "Crusoe 以 300 亿估值完成 30 亿美元 F 轮，Fluidstack 获简街资本 15 亿美元，资本正高度集中于算力基础设施与企业部署层，印证 AI 基建为下一阶段确定性瓶颈与机会。",
+              "url": "https://www.thecodew.com/2026/09/ai-infrastructure-dominates-capital-concentrates-in-compute-and-enterprise-deployment.html",
+              "source": "The CODEW",
+              "date": "2026-09-07"
+            }
+          ]
+        }
+      ],
+      "report": "## 本期要点\n\n- 俄罗斯 Mostik 团队以「隐藏状态桥接」登顶 ARC-AGI-3，让 GLM-5.2 与 Qwen-3.5 跳过文本直接交换内部数学状态，成本仅 1/20，为多模型协作开辟新范式。\n- DeepSeek 开源自研 Agent harness「dsh」，everything-is-a-plugin 架构，3 周 GitHub 斩获 214K stars，正面迎战 Claude Code，开源 Agent 工具链再添重量级玩家。\n- 公安部刑侦局指导、上海公安研发「国家反诈 AI」App 上线，融合大语言+多模态+智能体，标志 AI 反诈进入官方规模化应用。\n- 每经据 OpenRouter 数据：中国大模型周调用量连续十九周领跑，腾讯混元 Hy4 preview 登顶、环比 +379%，国产模型在调用端持续压制闭源。\n- AI 短剧半年市场冲击 400 亿，制作单价从 5000 元/分钟降至数百元，内容工业化与价格战同步加速。\n- 美国进入「模型周更」时代，「模型疲劳」引发企业与用户选型混乱，Agent 风险随密集迭代放大。\n- AI 基建融资集中爆发：Crusoe 30 亿美元 F 轮（估值 300 亿）、Fluidstack 15 亿美元，资本涌向算力与企业部署层。\n\n## 趋势研判\n\n本期呈现三条清晰主线。其一，能力跃迁从「单模型参数」转向「多模型协同」与「Agent 工程化」。Mostik 的隐藏状态桥接把大模型协作成本打到 1/20，DeepSeek 则把 Agent harness 彻底开源并以 214K stars 快速聚拢开发者生态——开源阵营正从「开源权重」进化为「开源工作流」，直接对标 Claude Code 这类闭源 Agent 工具。其二，应用侧出现「官方规模化」与「产业价格崩塌」并行信号。国家反诈 AI App 代表监管与公共服务主动拥抱多模态智能体；而 AI 短剧单价一年间从 5000 元/分钟跌至数百元、半年市场冲 400 亿，说明生成式内容已进入工业化降本阶段，红利向应用层与创作者转移。其三，资本与节奏双双「极化」。Crusoe、Fluidstack 等基建融资动辄数十亿美元，资本高度集中于算力与部署；与此同时美国步入「模型周更」，模型疲劳与 Agent 安全隐患同步放大，企业选型成本陡增。综合看，行业正从 2025 年的「模型秀肌肉」转入 2026 年的「交付与治理」下半场：谁能把模型能力封装成可信、可负担、可规模化的工作流，谁就掌握下一阶段叙事权。",
+      "sources": [
+        {
+          "title": "俄罗斯 Mostik「隐藏状态桥接」登顶 ARC-AGI-3",
+          "url": "https://new.qq.com/rain/a/20260907A037JG00?refer=cp_1009",
+          "source": "机器之心 / 腾讯新闻",
+          "date": "2026-09-07"
+        },
+        {
+          "title": "DeepSeek 开源自研 Agent harness「dsh」",
+          "url": "http://quidproquo.cc/en/daily",
+          "source": "quidproquo Daily",
+          "date": "2026-09-07"
+        },
+        {
+          "title": "「国家反诈 AI」App 正式上线",
+          "url": "https://new.qq.com/rain/a/20260907A037JG00?refer=cp_1009",
+          "source": "法治日报 / 腾讯新闻",
+          "date": "2026-09-07"
+        },
+        {
+          "title": "中国大模型周调用量连续十九周领跑全球",
+          "url": "https://www.nbd.com.cn/articles/2026-09-07/4574389.html",
+          "source": "每日经济新闻",
+          "date": "2026-09-07"
+        },
+        {
+          "title": "AI 短剧半年市场冲击 400 亿元",
+          "url": "https://new.qq.com/rain/a/20260907A037JG00?refer=cp_1009",
+          "source": "21世纪经济报道 / 腾讯新闻",
+          "date": "2026-09-07"
+        },
+        {
+          "title": "美国进入「模型周更」时代，「模型疲劳」成隐忧",
+          "url": "https://www.163.com/dy/article/L67E0HQ00511C10P.html",
+          "source": "网易",
+          "date": "2026-09-07"
+        },
+        {
+          "title": "AI 基建融资集中：Crusoe 30 亿美元 F 轮、Fluidstack 15 亿美元",
+          "url": "https://www.thecodew.com/2026/09/ai-infrastructure-dominates-capital-concentrates-in-compute-and-enterprise-deployment.html",
+          "source": "The CODEW",
+          "date": "2026-09-07"
         }
       ]
     }
