@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-09T09:54:21+08:00",
+  "updated": "2026-09-11T09:56:59+08:00",
   "issues": [
     {
       "issue": 1,
@@ -4099,6 +4099,140 @@
               "url": "http://view.inews.qq.com/a/20260909A033SL00",
               "source": "经济日报",
               "date": "2026-09-09"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "issue": 33,
+      "date": "2026-09-11",
+      "title": "第 33 期 · AI 行业日报",
+      "digest": "DeepSeek V4.1 Flash 非对称架构缓存价降60%；OpenAI开放Agents API；宇树、高德开源世界模型；甲骨文3000亿算力长约与Anthropic生物安全报告同框。",
+      "report": "## 本期要点\n- **DeepSeek V4.1 Flash 结构性降本**：552B 非对称架构（输入仅激活 8B、输出 16B），缓存命中输入价降至 0.02 元/百万 Token（降幅 60%），并以 MIT 开源——非对称架构正成为这一轮单位 Token 成本下行的关键路径，直接冲击闭源定价护城河。\n- **宇树开源通用人形机器人基座模型**：UnifoLM-WLA-1.0（6B）单模型统筹 64 个操作任务，开源权重+数据集，把具身智能开发门槛再拉低一档，生态卡位意图明显。\n- **高德 3D 原生城市世界模型 ABot-Earth 0.7**：单卡 10 分钟生成公里级 3D 城市场景（效率千倍提升），导航工具转向“空间智能平台”，与谷歌地球、英伟达 Cosmos 形成不同路线竞争。\n- **OpenAI Agents API 公测**：把支撑 Codex 的运行框架做成托管 API，造 Agent 从工程问题降级为配置问题，云端 Agent 基础设施标准被定义，运行框架成为新护城河。\n- **甲骨文 3000 亿美元算力长约**：OpenAI 五年锁定约 4.5GW 算力，甲骨文 RPO 达 4550 亿美元（+359%）、盘后大涨 36%——算力从“按需采购”转为“多年期战略囤积”，资本开支与收入兑现成市场分歧焦点。\n- **Anthropic 生物安全警钟**：154 页报告披露 5 起生物武器滥用尝试被阻断，叠加前研究员离职引发的 AGI 风险争议，把前沿模型治理从内部红队推向公开透明与监管协同。\n- **最高法划 AI 侵权红线**：涉 AI 纠纷审理意见将换脸拟声、AI 复活逝者纳入人格权益保护，生成式 AI 侵权治理有了司法标尺。\n\n## 趋势研判\n本期三股力量同框：供给侧继续以架构换成本（DeepSeek 非对称架构、宇树/高德开源世界模型压到单卡可跑），平台侧加速把能力封装成基础设施（OpenAI Agents API 让造 Agent 变成配置），需求侧则被多年期算力长约与监管红线两端锁定。\n\n最值得产品人盯的是平台层的两端挤压：OpenAI 把 Codex 运行框架开放为 Agents API，“智能体编排”从各家自研转为调用标准接口；甲骨文—OpenAI 3000 亿长约则把头部模型公司的算力供给以合同锁死。这会快速拉开中小团队与头部在“长期运行 Agent”上的成本与稳定性差距。\n\n另一条暗线是治理显性化。Anthropic 主动披露生物武器滥用、最高法明确 AI 换脸拟声侵权边界，都指向“能力越强、可解释与可追溯越成为竞争力”。对 C 端 AI 产品，人格权与生成内容合规已成上线前置条件。\n\n短期非对称架构与端侧开源继续压低 Token 成本、利好应用层；但算力长约与监管收紧同步抬高规模化与合规门槛。9 月 14 日 DeepSeek V4 Pro 自动路由至 V4.1 Flash、Claude Code 周限额调整，将直接改写开发者与用户的实际成本曲线。",
+      "sources": [
+        {
+          "title": "DeepSeek V4.1 Flash 模型正式发布",
+          "url": "https://gu.qq.com/resources/shy/news/detail-v2/index.html?t=1#/index?_tentrees_trans=0&id=SN202609110706539853eca9",
+          "source": "每日经济新闻",
+          "date": "2026-09-10"
+        },
+        {
+          "title": "宇树科技开源 UnifoLM-WLA-1.0 具身基座模型",
+          "url": "https://tech.ifeng.com/c/8wJ9ZdRDQ8K",
+          "source": "凤凰网科技",
+          "date": "2026-09-10"
+        },
+        {
+          "title": "从星球到街景一键生成！高德新世界模型来了，消费级显卡可跑",
+          "url": "https://tech.ifeng.com/c/8wJJKJHyAkI",
+          "source": "凤凰网科技",
+          "date": "2026-09-10"
+        },
+        {
+          "title": "OpenAI Agents API 开放公测，为开发者提供云端智能体基础设施",
+          "url": "https://tech.ifeng.com/c/8wKClNoY9LJ",
+          "source": "凤凰网科技",
+          "date": "2026-09-11"
+        },
+        {
+          "title": "甲骨文 AI 云收入暴涨 121% 手握 6640 亿美元订单",
+          "url": "https://view.inews.qq.com/a/20260911A0347800",
+          "source": "腾讯科技",
+          "date": "2026-09-11"
+        },
+        {
+          "title": "Anthropic 称已阻止利用 AI 研发生物武器的尝试",
+          "url": "http://view.inews.qq.com/a/20260911A039SV00",
+          "source": "凤凰网",
+          "date": "2026-09-11"
+        },
+        {
+          "title": "最高法发布涉 AI 纠纷审理意见 划清侵权红线",
+          "url": "http://view.inews.qq.com/a/20260911A037RY00",
+          "source": "北京日报客户端",
+          "date": "2026-09-11"
+        }
+      ],
+      "sections": [
+        {
+          "key": "overview",
+          "label": "总述-AI总结",
+          "icon": "📌",
+          "color": "#e8b339",
+          "summary": "本期主线：以“架构换成本”与“开源下沉”继续压低 AI 门槛（DeepSeek V4.1 Flash、宇树/高德世界模型），平台层把 Agent 能力封装为基础设施（OpenAI Agents API），需求侧则被 3000 亿算力长约与监管红线两端锁定（甲骨文、Anthropic、最高法）。",
+          "items": []
+        },
+        {
+          "key": "model",
+          "label": "模型动态",
+          "icon": "🤖",
+          "color": "#bc52ee",
+          "items": [
+            {
+              "title": "DeepSeek V4.1 Flash 正式发布：552B 非对称架构，缓存价直降 60%",
+              "desc": "9 月 10 日，DeepSeek 发布 V4.1 Flash，采用全新因果编码器—解码器（CED）非对称架构，总参数 552B，输入侧仅激活 8B、输出侧激活 16B，原生支持多模态视觉理解，上下文扩至百万 Token；KV Cache 对 HBM 需求降至上一代 1/4，API 缓存命中输入价降至 0.02 元/百万 Token（降幅 60%），并以 MIT 协议开源权重，9 月 14 日后 V4 Pro 自动路由至该模型。",
+              "url": "https://gu.qq.com/resources/shy/news/detail-v2/index.html?t=1#/index?_tentrees_trans=0&id=SN202609110706539853eca9",
+              "source": "每日经济新闻",
+              "date": "2026-09-10"
+            },
+            {
+              "title": "宇树完全开源 UnifoLM-WLA-1.0 通用人形机器人基座模型",
+              "desc": "9 月 10 日，宇树科技宣布完全开源新一代通用人形机器人基础模型 UnifoLM-WLA-1.0，代码、权重、数据集同步开放。模型 6B 参数，基于约 2500 小时真机数据与超 500 万具身样本训练，单模型统筹 10 项全身移动操作 + 54 项桌面操作共 64 个任务，支持跨任务、跨末端执行器泛化，在 7 项开源具身推理评测中位列第一，部分能力比肩头部闭源模型。",
+              "url": "https://tech.ifeng.com/c/8wJ9ZdRDQ8K",
+              "source": "凤凰网科技",
+              "date": "2026-09-10"
+            },
+            {
+              "title": "高德发布 ABot-Earth 0.7：全球首个 3D 原生城市世界模型",
+              "desc": "9 月 10 日，高德发布全球首个全模态、可预测的 3D 原生城市世界模型 ABot-Earth 0.7。输入一张卫星图或一段文字，即可在单块消费级 GPU 上约 10 分钟生成公里级 3D 城市场景（效率较传统模式提升约 1000 倍），端到端输出 3DGS 格式，覆盖 196 个以上国家和地区，已应用于飞行街景 2.0、导航 Live 与避雷指南。",
+              "url": "https://tech.ifeng.com/c/8wJJKJHyAkI",
+              "source": "凤凰网科技",
+              "date": "2026-09-10"
+            }
+          ]
+        },
+        {
+          "key": "product",
+          "label": "产品工具",
+          "icon": "🛠",
+          "color": "#4bf3c8",
+          "items": [
+            {
+              "title": "OpenAI 推出 Agents API 公测：将 Codex 托管运行框架开放给开发者",
+              "desc": "9 月 10 日（当地时间），OpenAI 宣布 Agents API 进入公开测试，面向所有开发者开放。该 API 复用驱动 Codex 的智能体执行框架与基础设施，开发者只需一次调用即可创建生产级云端智能体，可指定任务、模型、工具与运行环境，支持上下文自动压缩、工具搜索与并行调用、多智能体协同，并提供 OpenAI 托管沙箱或自有/伙伴基础设施多种部署选项，仅按模型、Token 与工具计费。",
+              "url": "https://tech.ifeng.com/c/8wKClNoY9LJ",
+              "source": "凤凰网科技",
+              "date": "2026-09-11"
+            }
+          ]
+        },
+        {
+          "key": "industry",
+          "label": "行业资讯",
+          "icon": "📊",
+          "color": "#3245ff",
+          "items": [
+            {
+              "title": "OpenAI 与甲骨文签下约 3000 亿美元 5 年算力长约，甲骨文 AI 云收入 +121%",
+              "desc": "据《华尔街日报》报道，OpenAI 与甲骨文签署为期约五年、总额高达 3000 亿美元的算力采购合同（2027 年生效，需 4.5GW 电力），为史上最大云合同之一。甲骨文同步披露 2027 财年一季报：云基础设施收入 73.9 亿美元、同比 +121%，剩余履约义务（RPO）达 4550 亿美元、同比 +359%，盘后股价一度大涨约 36%，市值单日增约 2500 亿美元。",
+              "url": "https://view.inews.qq.com/a/20260911A0347800",
+              "source": "腾讯科技",
+              "date": "2026-09-11"
+            },
+            {
+              "title": "Anthropic 发布 154 页威胁报告，披露 5 起生物武器滥用尝试被阻止",
+              "desc": "9 月 10 日，Anthropic 发布 154 页威胁情报报告《Detecting and Countering Misuse of AI》，详述过去 8 个月检测并阻止的滥用案例：5 起前沿生物研究（含禽流感病毒增益、正痘病毒等）试图借助 Claude 规划潜在生物武器，相关账户已被封禁；报告还覆盖网络攻击、监控、宣传与常规武器开发等。同日，前预训练研究员 Jacob Coxon 离职称 OpenAI 与 Anthropic “racing to self-improving superintelligence”、十年内或致人类灭绝，引爆行业 AGI 风险争议。",
+              "url": "http://view.inews.qq.com/a/20260911A039SV00",
+              "source": "凤凰网",
+              "date": "2026-09-11"
+            },
+            {
+              "title": "最高法发布涉 AI 纠纷审理意见，划清 AI 换脸拟声与“AI 复活逝者”红线",
+              "desc": "最高人民法院近日发布《关于依法审理涉人工智能纠纷案件的意见》，明确 AI 仿冒名人带货构成欺诈、支持惩罚性赔偿；将“AI 换脸拟声”“AI 复活逝者”纳入人格权益保护并延伸至死者人格利益，强调“AI 生成”不是免责挡箭牌，并将人格权侵害禁令引入 AI 场景，为生成式 AI 侵权治理提供司法标尺。",
+              "url": "http://view.inews.qq.com/a/20260911A037RY00",
+              "source": "北京日报客户端",
+              "date": "2026-09-11"
             }
           ]
         }
