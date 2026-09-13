@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-12T09:54:35.582872+08:00",
+  "updated": "2026-09-13T09:55:33.054181+08:00",
   "issues": [
     {
       "issue": 1,
@@ -4361,6 +4361,140 @@
               "url": "https://www.reuters.com/legal/litigation/openai-agents-attacked-software-service-rubygems-before-hugging-face-incident-2026-09-11/",
               "source": "Reuters",
               "date": "2026-09-11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "issue": 35,
+      "date": "2026-09-13",
+      "title": "第 35 期 · AI 行业日报",
+      "digest": "AI领袖首达减速共识：OpenAI年内不IPO、自研推理芯片亮相，智能体安全警钟长鸣。",
+      "report": "## 本期要点\n- **减速共识从话术走向制度**：Anthropic CEO Dario Amodei 发布 3800 字长文《We Must Pace the Frontier》，提出「嵌入式评估者」（向 METR 等第三方开放员工级访问）、民主国家间协调、全球能力限速三步走；Sam Altman 数小时内公开跟进、马斯克回「Dario 说得对」，OpenAI 同日宣布年内不 IPO。\n- **OpenAI 自研推理芯片 Jalapeno 架构公开**（Hot Chips 2026）：台积电 3nm、6 颗 HBM4，与 Broadcom 联合开发，主打更低延迟与功耗，为 ChatGPT 与 API 提速——算力自研化再下一城。\n- **苹果入局长链生物 AI**：SimpleDesign 模型联合生成蛋白质序列与三维结构，比传统两阶段流程更直接。\n- **Agent 工程化产品化**：Cognition 发布 Devin Fusion（前沿主模型 + 廉价副驾），编码智能体榜单得分 62。\n- **开源对齐回应**：Hugging Face 发起 Open Alignment Initiative，呼应减速呼吁、开放对齐协作。\n- **资本与算力绑定**：英伟达拟投至多 100 亿美元锚定 Anthropic IPO（募资千亿、估值约 2 万亿）。\n- **国内落地侧**：中国电信研究院预计 2026 年我国词元年耗达 10 亿亿；宁波智博会展示 AI 进千行百业（机器狗检疫、人形机器人进厂、质检效率提升 42 倍）。\n\n## 趋势研判\n今天最值得记的，不是某一项技术突破，而是「安全与节奏」第一次从公关话术变成可被审计的接口。Amodei 的《We Must Pace the Frontier》真正的新意不在「呼吁放缓」——这类话喊了三年——而在把「嵌入式评估者」从理念变成 Anthropic 单方面的制度承诺，并让 OpenAI 在几小时内公开跟进。过去两年「安全」是实验室互甩的话术，今天第一次出现「同一套评估规则」的雏形；而 OpenAI 选择年内不 IPO，本质是避开季度财报对安全事件与监管调查的放大审视，把「减速权」留在私有结构里。\n\n但自愿减速的结构性矛盾仍在：若美系实验室自我克制，xAI 或中国实验室就会填补能力前沿——这正是 Amodei 方案必须「国际协调 + 反垄断豁免」的底层原因，也解释了为何 François Chollet 立刻警告「监管俘获」。与此同时，Jalapeno 自研芯片与英伟达锚定 Anthropic IPO 两条线说明：钱与算力正以最直白方式绑定，「减速」并不妨碍底层基建继续军备。\n\n对产品人而言，今天有两条可落地的信号：一是 Agent 安全已成独立、可融资、可被采购的品类（评估者接口、防火墙、运行时监控），凡是卖 Agent 的团队都应默认「可审计、可撤销、有日志」；二是国内词元消耗与制造业 Agent 落地（质检、物流、产线）同步放量，「物理世界 + 企业数据」才是接下来最稳的需求池，而非再去拼又一个聊天模型。",
+      "sources": [
+        {
+          "title": "OpenAI 发布自研 AI 推理芯片 Jalapeno 的完整架构",
+          "url": "https://aitop.news/daily",
+          "source": "AITOP 日报",
+          "date": "2026-09-13"
+        },
+        {
+          "title": "苹果公布 SimpleDesign 蛋白质设计模型，可联合生成序列与三维结构",
+          "url": "https://aitop.news/daily",
+          "source": "AITOP 日报",
+          "date": "2026-09-13"
+        },
+        {
+          "title": "Cognition released Devin Fusion, pairing a frontier lead model with a cheaper sidekick",
+          "url": "https://agihunt.info/en/daily/2026-09-13?f=dr",
+          "source": "AGI HUNT",
+          "date": "2026-09-13"
+        },
+        {
+          "title": "AI Daily Report — 2026-09-13: OpenAI Rules Out IPO as Altman, Musk, Amodei Warn AI Moves Too Fast",
+          "url": "https://smartotics.com/2026/09/2026-09-13-ai-daily-2026-09-13.html",
+          "source": "Smartotics",
+          "date": "2026-09-13"
+        },
+        {
+          "title": "AGI HUNT · AI News Daily 2026-09-13: Hugging Face launches Open Alignment Initiative",
+          "url": "https://agihunt.info/en/daily/2026-09-13?f=dr",
+          "source": "AGI HUNT",
+          "date": "2026-09-13"
+        },
+        {
+          "title": "早报：我国词元消耗量今年将达到10亿亿；英伟达拟斥资100亿美元参投 Anthropic IPO",
+          "url": "https://www.toutiao.com/article/7684793022952866304/",
+          "source": "财联社 / 今日头条",
+          "date": "2026-09-13"
+        },
+        {
+          "title": "AI加速跑入千行百业 拓宽场景供给成共识（宁波智博会）",
+          "url": "https://finance.sina.com.cn/roll/2026-09-13/doc-inirrtkf0716924.shtml",
+          "source": "新浪财经",
+          "date": "2026-09-13"
+        }
+      ],
+      "sections": [
+        {
+          "key": "overview",
+          "label": "总述-AI总结",
+          "icon": "📌",
+          "color": "#e8b339",
+          "summary": "2026-09-13 的 AI 行业被一句话概括：能力竞速第一次让位于「节奏与安全的治理」。Anthropic CEO 发文呼吁给前沿模型设速、OpenAI 与 xAI 当场跟进并宣布年内不 IPO；与此同时 OpenAI 自研推理芯片 Jalapeno 架构公开、英伟达拟锚定 Anthropic 千亿级 IPO，算力与资本加速绑定，而中国词元消耗与制造业 Agent 落地同步放量。",
+          "items": []
+        },
+        {
+          "key": "model",
+          "label": "模型动态",
+          "icon": "🤖",
+          "color": "#bc52ee",
+          "items": [
+            {
+              "title": "OpenAI 自研推理芯片 Jalapeno 完整架构公开",
+              "desc": "Hot Chips 2026 上公布与 Broadcom 联合开发的首颗定制推理加速器：台积电 3nm、6 颗 HBM4 堆叠，主打更低延迟与功耗，为 ChatGPT 与 API 提速，标志 OpenAI 算力自研化落地。",
+              "url": "https://aitop.news/daily",
+              "source": "AITOP 日报",
+              "date": "2026-09-13"
+            },
+            {
+              "title": "苹果公布 SimpleDesign 蛋白质设计模型",
+              "desc": "可同时生成蛋白质的氨基酸序列与三维结构，比传统「先序列后折叠」两阶段流程更直接，在多个测试集上表现优异，苹果正式入局长链生物 AI。",
+              "url": "https://aitop.news/daily",
+              "source": "AITOP 日报",
+              "date": "2026-09-13"
+            }
+          ]
+        },
+        {
+          "key": "product",
+          "label": "产品工具",
+          "icon": "🛠",
+          "color": "#4bf3c8",
+          "items": [
+            {
+              "title": "Cognition 发布 Devin Fusion",
+              "desc": "采用「前沿主模型 + 廉价副驾」双模型架构，把高成本旗舰模型与低成本模型配对协作，编码智能体榜单得分 62，推动自主软件工程 Agent 降本。",
+              "url": "https://agihunt.info/en/daily/2026-09-13?f=dr",
+              "source": "AGI HUNT",
+              "date": "2026-09-13"
+            }
+          ]
+        },
+        {
+          "key": "industry",
+          "label": "行业资讯",
+          "icon": "📊",
+          "color": "#3245ff",
+          "items": [
+            {
+              "title": "减速共识落地：Amodei 长文 + Altman/Musk 认同，OpenAI 年内不 IPO",
+              "desc": "Anthropic CEO 发文《We Must Pace the Frontier》提出嵌入式评估者、民主国家协调、全球限速三步走；Altman 数小时内公开跟进、马斯克回「Dario 说得对」，OpenAI 同时宣布 2026 年不上市。",
+              "url": "https://smartotics.com/2026/09/2026-09-13-ai-daily-2026-09-13.html",
+              "source": "Smartotics / CNBC",
+              "date": "2026-09-13"
+            },
+            {
+              "title": "Hugging Face 发起 Open Alignment Initiative",
+              "desc": "作为对减速呼吁的回应，HF 推出开放对齐倡议，推动第三方评估者与开源社区在模型对齐上协作，把「安全」从单实验室话术推向可共建接口。",
+              "url": "https://agihunt.info/en/daily/2026-09-13?f=dr",
+              "source": "AGI HUNT",
+              "date": "2026-09-13"
+            },
+            {
+              "title": "英伟达拟投百亿锚定 Anthropic IPO，估值约 2 万亿",
+              "desc": "据财联社，英伟达正洽谈向 Anthropic 的千亿级 IPO 投资至多 100 亿美元；Anthropic 计划募资高达 1000 亿美元、估值约 2 万亿美元，钱与算力以最直白方式绑定。",
+              "url": "https://www.toutiao.com/article/7684793022952866304/",
+              "source": "财联社 / 今日头条",
+              "date": "2026-09-13"
+            },
+            {
+              "title": "中国词元年耗将达 10 亿亿，AI 加速进千行百业",
+              "desc": "中国电信研究院预计 2026 年我国词元年消耗达 10 亿亿、2030 年超 3500 亿亿；宁波智博会展示机器狗检疫、人形机器人进厂、AI 质检效率提升 42 倍等落地案例。",
+              "url": "https://finance.sina.com.cn/roll/2026-09-13/doc-inirrtkf0716924.shtml",
+              "source": "新浪财经",
+              "date": "2026-09-13"
             }
           ]
         }
