@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-14T10:29:04.802489+08:00",
+  "updated": "2026-09-15T09:56:45.440991+08:00",
   "issues": [
     {
       "issue": 1,
@@ -4625,6 +4625,120 @@
           "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-sept-14-2026-amodei-asks-the-frontier-to-slow-down-openai-skips-its-ipo-and-4ld6",
           "source": "DEV Community",
           "date": "2026-09-14"
+        }
+      ]
+    },
+    {
+      "issue": 37,
+      "date": "2026-09-15",
+      "title": "第 37 期 · AI 行业日报",
+      "digest": "9-15：AI降速遭特朗普与资本反弹，行业转'边跑边装护栏'；Agent 下沉为嵌入系统的可插拔智能层。",
+      "sections": [
+        {
+          "key": "overview",
+          "label": "总述-AI总结",
+          "icon": "📌",
+          "color": "#e8b339",
+          "summary": "本期主线：上周'减速共识'在 9-15 遭遇政治与资本双重反弹——特朗普在 All-In 峰会公开抨击'放缓 AI'是'骗局'并现场致电黄仁勋获附和，芯片股因降速担忧单日暴跌。行业并未真正慢下来，而是进入'边跑边装护栏'阶段：微软发布首份 AI 模型行为准则、英伟达限制员工使用 Claude、Anthropic 公开 agent '爆炸半径'管控。产品侧 Agent 加速下沉为嵌入既有系统的可插拔智能层（GitHub Actions、理财顾问工作流、Suno 对话调度）；资本与人才向物理层（能源/芯片/机器人）迁移。",
+          "items": []
+        },
+        {
+          "key": "product",
+          "label": "产品工具",
+          "icon": "🛠",
+          "color": "#4bf3c8",
+          "items": [
+            {
+              "title": "Suno 全量切换 v6 模型家族，Simple 模式接入对话 Agent",
+              "desc": "Suno 下架 v2–v5.5 旧模型，底层统一为 v6（旗舰/wild/mini 三款，单次最高 8 分钟音频）；Simple 模式接入 Chat 能力，支持图片输入、视频配乐、人声魔改与局部改词，音乐生成进入'自然语言调度'阶段。",
+              "url": "https://www.sohu.com/a/1076026719_455313",
+              "source": "腾讯研究院AI速递",
+              "date": "2026-09-15"
+            },
+            {
+              "title": "GitHub 推出 Agentic Workflows 技术预览，coding agents 进 Actions",
+              "desc": "GitHub 在 Actions 中以技术预览形式内置 coding agents，把自主编程智能体直接嵌入 CI/CD 流水线；同日 OpenClaw 2.0 发布多智能体协作与记忆升级，Agent 正从聊天窗口走向工程系统。",
+              "url": "https://aitoolsrecap.com/Blog/ai-news-september-15-2026",
+              "source": "AIToolsRecap",
+              "date": "2026-09-15"
+            },
+            {
+              "title": "Anthropic 发布 Claude for Financial Advisors，智能层商品化",
+              "desc": "Claude 连接贝莱德 Aladdin、先锋、嘉信等系统，提供会前准备、合规审核、组合再平衡等 8 项工作流技能，把智能分析封装为可插拔模块；信任缺口成行业悖论（仅 38% 富裕投资者放心 AI）。",
+              "url": "https://www.tmtpost.com/8139745.html",
+              "source": "钛媒体 Edge AI Daily",
+              "date": "2026-09-15"
+            }
+          ]
+        },
+        {
+          "key": "industry",
+          "label": "行业资讯",
+          "icon": "📊",
+          "color": "#3245ff",
+          "items": [
+            {
+              "title": "特朗普公开抨击 AI 降速、现场赞黄仁勋，治理路径两党裂痕加深",
+              "desc": "All-In 峰会上特朗普称 AI 风险论是'骗局'，将'放缓'比作让对手得逞，并现场致电黄仁勋；黄仁勋当场表态'不会让放缓发生'。副总统万斯同日称 AI 公司求监管像'特洛伊木马'，监管分歧公开化。",
+              "url": "https://www.toutiao.com/article/7685533165591298594/",
+              "source": "华尔街见闻",
+              "date": "2026-09-15"
+            },
+            {
+              "title": "微软发布首份 AI 模型行为准则，纳德拉呼吁治理去中心化",
+              "desc": "微软发布 AI 临时行为准则：人比 AI 重要，禁止模型隐瞒推理过程、不得以超人类理解范围方式通信、须服从用户目标；纳德拉呼吁治理不能由少数实体掌控，须在生态与学界间广泛代表。",
+              "url": "https://www.toutiao.com/article/7685533165591298594/",
+              "source": "华尔街见闻",
+              "date": "2026-09-15"
+            },
+            {
+              "title": "英伟达等限制员工使用 Claude，企业数据安全担忧蔓延头部实验室",
+              "desc": "据 The Information，英伟达、Palantir、Booz Allen 开始限制内部使用 Anthropic 模型，担心敏感代码/IP 被外部模型学习；英伟达仅对开源等低敏任务用 Fable，敏感项目改用自家 Nemotron——与谷歌全面放开工程师用 Claude 形成对比。",
+              "url": "https://www.toutiao.com/article/7685543871194939945",
+              "source": "观察者网/硬科技早报",
+              "date": "2026-09-15"
+            },
+            {
+              "title": "开源护栏攻防白热化：去安全训练模型成商品，Anthropic 公开限爆半径",
+              "desc": "基于 MIT 许可的 GLM-5.3，已有商业服务出售'移除安全训练'的开源权重，护栏移除从技术变为带价商品；作为对照，Anthropic 公开了如何限制 capable agent 在 claude.ai/Claude Code/Cowork 中'爆炸半径'的工程实践（限制故障波及范围而非杜绝失败）。",
+              "url": "https://aitoolsrecap.com/Blog/ai-news-september-15-2026",
+              "source": "AIToolsRecap",
+              "date": "2026-09-15"
+            }
+          ]
+        }
+      ],
+      "report": "## 本期要点\n- **产品侧 Agent 基础设施化加速**：GitHub 在 Actions 中技术预览 coding agents（Agentic Workflows），把自主编程智能体直接嵌入 CI/CD；Anthropic 推出 Claude for Financial Advisors，将智能分析封装为可插拔的理财工作流模块——Agent 正从'聊天窗口'走向'嵌入既有企业系统'。\n- **音频生成迈进对话式**：Suno 全量下架旧模型、底层统一切换 v6 家族，Simple 模式接入对话 Agent、支持图片输入与视频配乐，音乐生成进入'自然语言调度'阶段。\n- **AI 降速共识遭政治与资本反弹**：特朗普在 All-In 峰会公开抨击'放缓 AI'是'骗局'、现场致电黄仁勋并获附和；与此同时降速担忧已重挫美股芯片股（费城半导体指数单日跌 5.86%），治理路径两党裂痕加深。\n- **治理框架从呼吁转向制度**：微软发布首份 AI 模型行为准则（人比 AI 重要、禁止隐瞒推理过程），纳德拉呼吁治理'去中心化'；奥特曼同步强调避免失控与垄断。\n- **数据安全担忧蔓延至头部实验室**：英伟达、Palantir 等开始限制员工使用 Anthropic 模型，担心敏感代码/IP 被外部模型学习——与谷歌全面放开工程师用 Claude 形成鲜明对比。\n- **开源护栏的攻防白热化**：基于 GLM-5.3 的'去安全训练'开源模型已成商业商品；作为对照，Anthropic 公开了如何限制 capable agent '爆炸半径'的工程实践。\n- **资本与人才转向物理层**：YC Summer 2026 Demo Day 最受关注项目集中在电力、芯片、机器人等物理层（海上核动力数据中心、权重固化进芯片、1688 美元双臂机器人），模型变强后瓶颈转向能源与真实世界数据。\n\n## 趋势研判\n上周的'减速共识'（Amodei 长文、OpenAI 不 IPO、三巨头拟组标准机构）在 9-15 遭遇明显反弹：政治端特朗普公开站队'不踩刹车'，资本端芯片股因降速担忧暴跌，企业端则把治理压力转译为具体动作（微软行为准则、英伟达限用 Claude、Anthropic 限爆半径）。这说明行业并未真正'慢下来'，而是进入'边跑边装护栏'的阶段——能力竞速与治理建设并行，且治理正从话术变为可审计的工程与制度（行为准则 + 爆炸半径管控 + 数据隔离）。\n\n产品侧信号同样清晰：Agent 正脱离'独立聊天产品'形态，下沉为嵌入既有系统的'可插拔智能层'（GitHub Actions、理财顾问工作流、Suno 对话调度）。当智能成为基础设施，护城河也从模型本身转向数据集成深度与合规完整性。\n\n最值得产品人盯的长期变量，是资本与人才向物理层（能源/芯片/机器人）迁移——YC 本届 Demo Day 的集体转向暗示，下一轮 AI 价值的增量不在更聪明的模型，而在把模型接进真实世界的能源、带宽与机械约束里。对创业而言，'软硬结合 + 数据闭环'的壁垒，正在超过'又一个大模型'。",
+      "sources": [
+        {
+          "title": "腾讯研究院AI速递 20260915（智谱募资/Suno v6/YC深科技/宇树G1+）",
+          "url": "https://www.sohu.com/a/1076026719_455313",
+          "source": "腾讯研究院",
+          "date": "2026-09-15"
+        },
+        {
+          "title": "AI News September 15 2026: Safety-Stripped Models / Anthropic Containment / GitHub Agents",
+          "url": "https://aitoolsrecap.com/Blog/ai-news-september-15-2026",
+          "source": "AIToolsRecap",
+          "date": "2026-09-15"
+        },
+        {
+          "title": "Edge AI Daily 早报(9月15日)：Claude for Financial Advisors、马斯克撤诉苹果",
+          "url": "https://www.tmtpost.com/8139745.html",
+          "source": "钛媒体",
+          "date": "2026-09-15"
+        },
+        {
+          "title": "硬科技早报：特朗普痛批'AI刹车'；英伟达限制使用Claude；雷军到访宇树",
+          "url": "https://www.toutiao.com/article/7685543871194939945",
+          "source": "观察者网",
+          "date": "2026-09-15"
+        },
+        {
+          "title": "华尔街见闻早餐FM-Radio 2026年9月15日：特朗普抨击Anthropic、微软行为准则、奥特曼不IPO",
+          "url": "https://www.toutiao.com/article/7685533165591298594/",
+          "source": "华尔街见闻",
+          "date": "2026-09-15"
         }
       ]
     }
