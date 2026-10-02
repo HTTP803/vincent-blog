@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-01T09:56:27.726+08:00",
+  "updated": "2026-10-02T09:58:11.131+08:00",
   "issues": [
     {
       "issue": 1,
@@ -5245,6 +5245,140 @@
               "date": "2026-09-30"
             }
           ]
+        }
+      ]
+    },
+    {
+      "issue": 42,
+      "date": "2026-10-02",
+      "title": "第 42 期 · AI 行业日报",
+      "digest": "Gemini 4 Argon 限安全专家、Anthropic 进军政府、AWS/NVIDIA 落地 Agent 基建，DeepSeek 开源昇腾组件对标 CUDA。",
+      "sections": [
+        {
+          "key": "overview",
+          "label": "总述-AI总结",
+          "icon": "📌",
+          "color": "#e8b339",
+          "summary": "国庆档 AI 行业同步越过三道分水岭：旗舰模型以「安全分级发布」取代无差别开放（谷歌 Gemini 4 Argon 限网络安全专家）；Agent 从 Demo 走向可治理的企业基建（AWS Bedrock Managed Agents、Anthropic 攻入政府市场、NVIDIA 智能体安全平台）；算力主权与商业化进一步向头部集中（DeepSeek 开源昇腾全套组件对标 CUDA、Meta 组建企业级 Muse 平台）。",
+          "items": []
+        },
+        {
+          "key": "model",
+          "label": "模型动态",
+          "icon": "🤖",
+          "color": "#bc52ee",
+          "items": [
+            {
+              "title": "谷歌发布 Gemini 4 Argon 旗舰，限网络安全专家首发",
+              "desc": "DeepMind 发布 Gemini 4 系列首款模型 Argon，编码/网安/金融场景领先，定价 $2/$10 每百万 token；初期仅向 Fairwind 计划验证的网络安全专家开放，普通用户暂不可用，称需分阶段安全发布。",
+              "url": "https://agentic-ai-news.uk/?lang=en&period=weekly/",
+              "source": "Agentic AI News",
+              "date": "2026-10-01"
+            },
+            {
+              "title": "中国 Neo Lab 公司 Naive.AI 开源 Naive-N0.5-Flash，累计融资约 27 亿元",
+              "desc": "清华副教授代季峰创办的 Naive.AI 发布首个开源模型 Naive-N0.5-Flash：总参 309B、原生 100 万上下文、推理最高 2000 token/s，定位编码与 AI 研发；研发全程由 AI 参与。公司年内三轮融资累计 4 亿美元、估值 14.2 亿美元，腾讯、红杉中国入局。",
+              "url": "https://gu.qq.com/resources/shy/news/detail-v2/index.html?t=1#/index?_tentrees_trans=0&id=SN2026093013503497863a58",
+              "source": "腾讯证券 / 投中网",
+              "date": "2026-09-30"
+            }
+          ]
+        },
+        {
+          "key": "product",
+          "label": "产品工具",
+          "icon": "🛠",
+          "color": "#4bf3c8",
+          "items": [
+            {
+              "title": "AWS 推出 Bedrock Managed Agents，原生运行 OpenAI Agents API",
+              "desc": "AWS 预览 Amazon Bedrock Managed Agents，与 OpenAI 共建、在 AWS 原生实现 OpenAI Agents API，支持多步工具编排、持久会话、沙箱代码执行与 MCP 服务器，全部受 IAM 治理；首发美东/美西三区，深化 AWS–OpenAI 联盟。",
+              "url": "https://aibriefing.dev/story/20a0a0a5a7ea",
+              "source": "AI Briefing",
+              "date": "2026-10-01"
+            },
+            {
+              "title": "Anthropic 宣布 Claude 面向政府机构全面开放，冲刺 2 万亿美元 IPO",
+              "desc": "Anthropic 10 月 1 日宣布面向政府机构的 Claude 全面开放，通过 FedRAMP High 认证可售予美联邦与州政府；Claude Code CLI 与 Claude for Microsoft 365 进入早期访问。公司正冲刺 IPO，目标估值约 2 万亿美元。",
+              "url": "https://dailyai.report/",
+              "source": "Daily AI Report",
+              "date": "2026-10-01"
+            }
+          ]
+        },
+        {
+          "key": "industry",
+          "label": "行业资讯",
+          "icon": "📊",
+          "color": "#3245ff",
+          "items": [
+            {
+              "title": "Meta 组建 Meta Enterprise Platform，打包 Muse API 与 Muse Code 对外销售",
+              "desc": "Meta 新设企业 AI 业务 Meta Enterprise Platform，由前 MongoDB CEO CJ Desai 执掌，整合 Muse 智能体、Muse API 与 Muse Code，面向中小企业连接 Shopify/QuickBooks/Stripe 等；Muse 上线两周下载 280 万次，企业定价待公布。",
+              "url": "https://aibriefing.dev/story/20a0a0a5a7ea",
+              "source": "AI Briefing",
+              "date": "2026-10-01"
+            },
+            {
+              "title": "NVIDIA 推出 Open Agent Safety Platform，给智能体装上「急停开关」",
+              "desc": "NVIDIA 发布 Open Agent Safety Platform，以 OpenShell 硬件隔离 + BlueField-4 上的 Sentry 策略执行来约束失控智能体；100+ 伙伴加入（Anthropic、微软、Palantir 等），OpenAI 未列名。官方称该平台本可阻止今夏 Hugging Face 入侵事件。",
+              "url": "https://aibriefing.dev/story/20a0a0a5a7ea",
+              "source": "AI Briefing",
+              "date": "2026-10-01"
+            },
+            {
+              "title": "DeepSeek 联手华为开源昇腾 950 全套组件，TileLang 直指 CUDA",
+              "desc": "DeepSeek 与华为开源面向 Ascend 950 的计算/通信库与 128 卡超节点设计，TileLang 主打比 CUDA 更易上手的国产替代；DeepSeek 计划在内蒙古部署逾 16 万颗昇腾加速器，从「能用」走向「好用」，对标英伟达生态垄断。",
+              "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_2326abf09d030352",
+              "source": "腾讯新闻",
+              "date": "2026-10-02"
+            }
+          ]
+        }
+      ],
+      "report": "## 本期要点\n- **谷歌 Gemini 4 Argon 以「安全分级」首发**：DeepMind 发布 Gemini 4 首款模型，编码/网安/金融领先，却仅向验证过的网络安全专家开放，把「分阶段安全发布」从话术变成产品策略。\n- **中国 Neo Lab 再添一员**：代季峰创办的 Naive.AI 开源 309B、100 万上下文的 Naive-N0.5-Flash，研发全程由 AI 参与，年内三轮融资累计 4 亿美元、估值 14.2 亿美元。\n- **AWS 把 OpenAI Agents API 搬进 IAM**：Bedrock Managed Agents 让多步工具编排、持久会话、沙箱代码执行全部受 IAM 治理，Agent 基建云原生化再进一步。\n- **Anthropic 攻入政府市场**：Claude 通过 FedRAMP High 可售予美联邦与州政府，Claude for Microsoft 365 进入早期访问，IPO 目标估值约 2 万亿美元。\n- **Meta 组建企业 AI 军团**：前 MongoDB CEO CJ Desai 执掌 Meta Enterprise Platform，打包 Muse API / Muse Code 对外销售，把个人 Agent 能力商业化。\n- **NVIDIA 给智能体装上「急停开关」**：Open Agent Safety Platform 用 OpenShell 硬件隔离 + BlueField-4 上的 Sentry 策略执行，100+ 伙伴加入，OpenAI 缺席。\n- **DeepSeek 开源昇腾全套组件直指 CUDA**：与华为开源 950 计算/通信库与 128 卡超节点设计，TileLang 主打比 CUDA 更易上手的国产替代。\n\n## 趋势研判\n本期集中释放一个信号：AI 竞争主轴正从「谁的模型更强」切换到「谁掌握更可控、可嵌入、且资金充裕的 Agent 栈与算力主权」。三件事互为印证——谷歌把 Argon 限向安全专家、OpenAI 此前撤下 Astra，说明「能力越强、发布越谨慎」已成头部共识；AWS、Anthropic、Meta、NVIDIA 同周落子的 Bedrock Managed Agents、政府级 Claude、企业 Muse 平台与智能体安全平台，则把 Agent 从演示产品推向有治理边界的企业基础设施；而 DeepSeek 开源昇腾全套组件、TileLang 对标 CUDA，是国产算力从「能用」走向「好用」的系统性卡位。\n\n对产品人而言，两条线最值得盯：一是 **Agent 治理层**（权限、审计、急停）正在成为继模型之后的新基础设施，NVIDIA、OpenClaw、Palma 等玩家已入场；二是 **算力主权** 叙事在监管与制裁压力下加速，国产工具链的开源广度将直接决定国内 Agent 生态的成本天花板。资本端则继续向 OpenAI（1.4 万亿）、Anthropic（2 万亿 IPO）等少数巨头聚拢，中小模型的生存空间越来越依赖开源与差异化定价。",
+      "sources": [
+        {
+          "title": "Google releases Gemini 4 Argon",
+          "url": "https://agentic-ai-news.uk/?lang=en&period=weekly/",
+          "source": "Agentic AI News",
+          "date": "2026-10-01"
+        },
+        {
+          "title": "Naive.AI 发布首个开源模型 Naive-N0.5-Flash",
+          "url": "https://gu.qq.com/resources/shy/news/detail-v2/index.html?t=1#/index?_tentrees_trans=0&id=SN2026093013503497863a58",
+          "source": "腾讯证券 / 投中网",
+          "date": "2026-09-30"
+        },
+        {
+          "title": "AWS previews Bedrock Managed Agents built with OpenAI",
+          "url": "https://aibriefing.dev/story/20a0a0a5a7ea",
+          "source": "AI Briefing",
+          "date": "2026-10-01"
+        },
+        {
+          "title": "Anthropic FedRAMP High, Claude for government",
+          "url": "https://dailyai.report/",
+          "source": "Daily AI Report",
+          "date": "2026-10-01"
+        },
+        {
+          "title": "Meta launches Meta Enterprise Platform with Muse API and Muse Code",
+          "url": "https://aibriefing.dev/story/20a0a0a5a7ea",
+          "source": "AI Briefing",
+          "date": "2026-10-01"
+        },
+        {
+          "title": "NVIDIA Open Agent Safety Platform signs 100+ partners",
+          "url": "https://aibriefing.dev/story/20a0a0a5a7ea",
+          "source": "AI Briefing",
+          "date": "2026-10-01"
+        },
+        {
+          "title": "DeepSeek 与华为开源昇腾 950 全套组件",
+          "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_2326abf09d030352",
+          "source": "腾讯新闻",
+          "date": "2026-10-02"
         }
       ]
     }
