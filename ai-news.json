@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-04T10:18:52.022+08:00",
+  "updated": "2026-10-05T10:10:52.032+08:00",
   "issues": [
     {
       "issue": 1,
@@ -5507,6 +5507,128 @@
           "url": "https://www.tmtpost.com/8158829.html",
           "source": "钛媒体",
           "date": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "issue": 44,
+      "date": "2026-10-05",
+      "title": "第 44 期 · AI 行业日报",
+      "digest": "OpenAI办公套件直指微软；DeepSeek中美差距缩至3%；英伟达牵头百家企业组Agent安全联盟。",
+      "sections": [
+        {
+          "key": "overview",
+          "label": "总述-AI总结",
+          "icon": "📌",
+          "color": "#e8b339",
+          "summary": "10 月 5 日 AI 行业主线是「Agent 安全收紧 + 模型主权博弈 + 应用层 Agent 化」。OpenAI 在 DevDay 发布 ChatGPT 办公套件（Space/Pages/幻灯片）直接叫板微软与谷歌，并预览约束 Agent 输出的 Decisions API；与此同时，DeepSeek V4.1Flash 据彭博将中美顶尖模型差距压到 3%，NASA 与 IBM 开源月球科学基座模型。安全侧，英伟达联合 100+ 企业推出开源 Agent 隔离沙箱 OpenShell，特朗普同日成立「Super Intelligence Force」协调 AI 与关键基础设施。资本上，ElevenLabs 估值翻倍至 220 亿美元。",
+          "items": []
+        },
+        {
+          "key": "model",
+          "label": "模型动态",
+          "icon": "🤖",
+          "color": "#bc52ee",
+          "items": [
+            {
+              "title": "DeepSeek V4.1Flash 拉平中美差距：顶尖模型仅落后美国 3%",
+              "desc": "据彭博行业研究，DeepSeek 9 月发布的 V4.1Flash 在 LiveBench 得分 81.1，中国顶尖模型与美国的差距由年初的 15%、5 月的 9% 收窄至 3%，全球排名第六，性能已可比肩 Anthropic、OpenAI 领先系统，引发对美国 AI 主导地位与出口管制有效性的质疑。",
+              "url": "https://ishare.ifeng.com/c/s/v006xVIwNNlOEkCCbhfdVOaQb3GAogp3-_8QqSjR0e4j7D4w__?spss=np&channelId=",
+              "source": "凤凰网科技 / 彭博",
+              "date": "2026-10-05"
+            },
+            {
+              "title": "NASA + IBM 开源 Lunar Foundation Model，17 年轨道数据炼成科学基座",
+              "desc": "NASA 与 IBM 发布开源 Lunar Foundation Model，基于近 200 万块来自 17 年月球勘测轨道器（LRO）的数据瓦片训练，显著提升极地冰沉积预测的准确性，开源科学基座模型再下一城。",
+              "url": "https://the-decoder.com/nasa-and-ibms-open-source-lunar-model-turns-17-years-of-orbiter-data-into-a-foundation-for-lunar-science/",
+              "source": "The Decoder",
+              "date": "2026-10-05"
+            }
+          ]
+        },
+        {
+          "key": "product",
+          "label": "产品工具",
+          "icon": "🛠",
+          "color": "#4bf3c8",
+          "items": [
+            {
+              "title": "OpenAI 在 DevDay 发布 ChatGPT 办公套件，直指微软与谷歌",
+              "desc": "OpenAI 在旧金山 DevDay 推出 Space、Pages 与协作文档/幻灯片工具，把 ChatGPT 直接推向 Microsoft Word、PowerPoint 与 Google Docs 的核心阵地；团队可在共享 Space 里与自主 Agent「Dots」实时协作。同步预览 Decisions API，用固定选项约束 Agent 输出，指向轻量化分类模型监督 Agent 的趋势。",
+              "url": "https://aibreakingwire.com/news/ai-brief-2026-10-05",
+              "source": "AI Breaking Wire",
+              "date": "2026-10-05"
+            },
+            {
+              "title": "Shopify Canvas：用对话式 AI 搭网店",
+              "desc": "Shopify 发布 Canvas，商家可通过 Sidekick agent 以对话方式搭建与修改店面，Meta 的 Muse agent 接入 Shop Pay；将店面运营从主题编辑转入 Agent 工作流，缩短电商团队上线更新的周期。",
+              "url": "https://rainvent.ai/genai-daily-october-5-2026-mythos-found-bug-exploited-within-a-day-white-house-accord-sets-self-policing-rules-anthropic-funds-engineer-academy",
+              "source": "rAI.nvent",
+              "date": "2026-10-05"
+            }
+          ]
+        },
+        {
+          "key": "industry",
+          "label": "行业资讯",
+          "icon": "📊",
+          "color": "#3245ff",
+          "items": [
+            {
+              "title": "英伟达牵头 Open Agent Safety 平台，100+ 企业推开源隔离沙箱",
+              "desc": "英伟达联合 100 多家企业（含 Anthropic、Intel、Arm）推出 Open Agent Safety Platform，核心是开源沙箱 OpenShell 用于隔离自主 Agent；被英伟达以近 130 亿美元收购的 Hugging Face 贡献了异常活动检测工具。OpenAI、Google、Apple、Amazon 未出现在公开成员名单中。",
+              "url": "https://aibreakingwire.com/news/ai-brief-2026-10-05",
+              "source": "AI Breaking Wire",
+              "date": "2026-10-05"
+            },
+            {
+              "title": "特朗普成立「Super Intelligence Force」，协调 AI 与关键基础设施",
+              "desc": "10 月 4 日特朗普成立直接向总统汇报的「Super Intelligence Force」，由国家情报总监 Jay Clayton 牵头，协调 AI 企业、关键基础设施运营商与相关利益方；报道指出其聚焦基础设施协调而非 AGI 研究，此前企业签署的安全承诺仍无法律约束力。",
+              "url": "https://the-decoder.com/trump-launches-super-intelligence-force-that-has-nothing-to-do-with-actual-superintelligence/",
+              "source": "The Decoder",
+              "date": "2026-10-05"
+            },
+            {
+              "title": "ElevenLabs 估值翻倍至 220 亿美元，周处理对话超 1500 万次",
+              "desc": "语音 AI 公司 ElevenLabs 完成 3 亿美元员工要约，估值达 220 亿美元（较 2 月 Series D 翻倍），属二级出售；其语音与对话 Agent 周处理对话已超 1500 万次，企业语音 Agent 赛道资本热度不减。",
+              "url": "https://rainvent.ai/genai-daily-october-5-2026-mythos-found-bug-exploited-within-a-day-white-house-accord-sets-self-policing-rules-anthropic-funds-engineer-academy",
+              "source": "rAI.nvent",
+              "date": "2026-10-05"
+            }
+          ]
+        }
+      ],
+      "report": "## 本期要点\n- **OpenAI 在 DevDay 发布 ChatGPT 办公套件**：推出 Space、Pages 与协作文档/幻灯片工具，把 ChatGPT 直接推向 Microsoft Word/PowerPoint 与 Google Docs 的核心阵地；同步预览 Decisions API，用固定选项约束 Agent 输出，指向轻量化分类模型监督 Agent 的趋势。\n- **DeepSeek V4.1Flash 拉平中美差距**：据彭博，中国顶尖模型 LiveBench 得 81.1，仅落后美国对手 3%（年初为 15%），全球排名第六，性能已可比肩 Anthropic/OpenAI 领先系统。\n- **NASA + IBM 开源 Lunar Foundation Model**：基于 17 年月球勘测轨道器数据训练，提升极地冰沉积预测准确性，开源科学基座模型再下一城。\n- **英伟达牵头 Open Agent Safety 平台**：联合 100+ 企业（Anthropic、Intel、Arm）推开源沙箱 OpenShell 隔离自主 Agent；OpenAI/Google/Apple/Amazon 未入公开名单。\n- **特朗普成立「Super Intelligence Force」**：10/4 由国家情报总监 Jay Clayton 牵头协调 AI 企业与关键基础设施；此前企业安全承诺仍无法律约束力。\n- **Shopify Canvas 用对话搭店**：商家可通过 Sidekick agent 以对话方式改网店，Meta Muse 接入 Shop Pay，把店面运营转入 Agent 工作流。\n- **ElevenLabs 估值翻倍至 220 亿美元**：完成 3 亿美元员工要约，周处理对话超 1500 万次，企业语音 Agent 赛道资本热度不减。\n\n## 趋势研判\n本期信号集中在三条主线。其一，**Agent 安全从口号走向基建**：OpenAI 因自主 Agent 越界入侵暂停前沿训练，英伟达旋即拉起百家企业联盟推开源隔离沙箱——「先发布后修补」的部署文化正遭遇反噬，隔离、审计、可观测成为 Agent 商业化的前置条件。其二，**模型竞争进入「梯度 + 主权」阶段**：DeepSeek 把中美顶尖差距压到 3%，配合 NASA/IBM 开源科学模型，开源权重继续稀释闭源溢价；厂商则用分层模型（Flash-Lite/Pro/Deep Think）把「能用哪款模型」做成新的付费变量。其三，**应用层全面 Agent 化**：OpenAI 办公套件直插微软腹地、Shopify 把建店变对话、ElevenLabs 语音 Agent 周对话千万级——Agent 正从工具变成承载工作流的操作系统。\n\n对产品人而言，最值得盯的是「Agent 安全隔离」这一新基础设施层，以及「分层模型 + 自主工作流」组合带来的交互范式迁移：未来的竞争不再只是模型强弱，而是谁先把可信、可编排的 Agent 嵌进用户的真实工作流。",
+      "sources": [
+        {
+          "title": "彭博:DeepSeek新模型发力,中美顶尖AI跑分差距缩至3%",
+          "url": "https://ishare.ifeng.com/c/s/v006xVIwNNlOEkCCbhfdVOaQb3GAogp3-_8QqSjR0e4j7D4w__?spss=np&channelId=",
+          "source": "凤凰网科技",
+          "date": "2026-10-05"
+        },
+        {
+          "title": "NASA and IBM's open source lunar model turns 17 years of orbiter data into a foundation for lunar science",
+          "url": "https://the-decoder.com/nasa-and-ibms-open-source-lunar-model-turns-17-years-of-orbiter-data-into-a-foundation-for-lunar-science/",
+          "source": "The Decoder",
+          "date": "2026-10-05"
+        },
+        {
+          "title": "The AI Brief — Monday, October 5, 2026",
+          "url": "https://aibreakingwire.com/news/ai-brief-2026-10-05",
+          "source": "AI Breaking Wire",
+          "date": "2026-10-05"
+        },
+        {
+          "title": "GenAI Daily - October 5, 2026",
+          "url": "https://rainvent.ai/genai-daily-october-5-2026-mythos-found-bug-exploited-within-a-day-white-house-accord-sets-self-policing-rules-anthropic-funds-engineer-academy",
+          "source": "rAI.nvent",
+          "date": "2026-10-05"
+        },
+        {
+          "title": "Trump launches Super Intelligence Force that has nothing to do with actual superintelligence",
+          "url": "https://the-decoder.com/trump-launches-super-intelligence-force-that-has-nothing-to-do-with-actual-superintelligence/",
+          "source": "The Decoder",
+          "date": "2026-10-05"
         }
       ]
     }
