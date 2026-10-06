@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-05T10:10:52.032+08:00",
+  "updated": "2026-10-06T10:12:45+08:00",
   "issues": [
     {
       "issue": 1,
@@ -5629,6 +5629,125 @@
           "url": "https://the-decoder.com/trump-launches-super-intelligence-force-that-has-nothing-to-do-with-actual-superintelligence/",
           "source": "The Decoder",
           "date": "2026-10-05"
+        }
+      ]
+    },
+    {
+      "issue": 45,
+      "date": "2026-10-06",
+      "title": "第 45 期 · AI 行业日报",
+      "digest": "智谱GLM-5.3接入AWS分成出海；OpenAI发Dots与GPT-6.1 Sol并谈300亿融资；白宫组超级智能组，华为高通专利和解。",
+      "report": "## 本期要点\n- 智谱 GLM-5.3 正式上架 Amazon Bedrock，AWS 按调用量与智谱收入分成，国产大模型首次深度嵌入全球头部云生态，打开海外商业化通道。\n- OpenAI DevDay 推出全天候自主智能体 Dots（\"AI 同事\"）与低成本模型 GPT-6.1 Sol（价格仅旗舰 Astra 1/5），把 ChatGPT 推向\"入口+运行环境+应用商店\"的平台化形态。\n- OpenAI 正洽谈至少 300 亿美元新一轮融资，投前估值约 1.4 万亿美元，阿联酋 MGX 与贝莱德拟参与，将进一步拉大头部算力鸿沟。\n- 白宫宣布组建\"超级智能工作组\"，AI 监管逻辑由隐私保护转向国家竞争维度。\n- 华为与高通官宣多年期专利交叉许可，覆盖 5G、AI 芯片与通用计算，打破单向缴费格局。\n- Hinton 等 22 位科学家联署 RSI 论文警告：AI 自主研发占比半年内从 1% 飙至 26%，呼吁立即建立监管框架。\n\n## 趋势研判\n今日 AI 产业呈现三条清晰主线。其一，模型能力竞争正快速让位于**商业化与分发网络**的争夺：智谱 GLM-5.3 接入 AWS 并按调用量分成，标志国产大模型首次深度嵌入全球头部云生态；OpenAI 则以 Dots 智能体 + Space 协作空间 + Marketplace，把 ChatGPT 从工具升级为\"入口 + 运行环境 + 应用商店\"的平台。谁掌握分发与收入分成，谁就掌握下一阶段的定价权。\n\n其二，资本继续向**基础设施与部署层**集中。OpenAI 300 亿美元融资若落地，将进一步拉大头部与追赶者的算力鸿沟；与此同时，Agent 编排工程师需求暴增，显示产业重心已从\"造模型\"转向\"把模型跑进业务\"。\n\n其三，地缘政治与监管成为新变量。白宫超级智能工作组将\"AI 落后\"定义为国家安全风险，监管从隐私保护转向国家竞争；华为与高通的专利交叉许可则折射出中美科技博弈中合作与自主并行的复杂姿态。\n\n总体看，AI 正从技术突破期迈入\"平台化 + 基建化 + 规则化\"的系统性竞争阶段，自主可控与全球化两条路径将同步加速。",
+      "sources": [
+        {
+          "title": "智谱 GLM-5.3 上架 Amazon Bedrock，开启海外收入分成",
+          "url": "https://www.163.com/dy/article/L8I2F68C05561FZH.html",
+          "source": "网易/科创板日报",
+          "date": "2026-10-06"
+        },
+        {
+          "title": "OpenAI DevDay：Dots 上岗，GPT-6.1 Sol 售价仅 Astra 五分之一",
+          "url": "https://www.toutiao.com/article/7691166330276135450/",
+          "source": "今日头条",
+          "date": "2026-10-06"
+        },
+        {
+          "title": "多家阿联酋基金和贝莱德据悉商谈参与 OpenAI 最新一轮 300 亿美元融资",
+          "url": "https://k.sina.com.cn/article_5182171545_134e1a99902002k5c8.html",
+          "source": "新浪财经",
+          "date": "2026-10-06"
+        },
+        {
+          "title": "10月6日AI领域热点汇总：技术落地与监管新动向",
+          "url": "https://www.toutiao.com/article/7693343516340060700/",
+          "source": "今日头条",
+          "date": "2026-10-06"
+        },
+        {
+          "title": "硬AI - 资讯 - 华尔街见闻（Hinton RSI 论文）",
+          "url": "https://wallstreetcn.com/news/ai",
+          "source": "华尔街见闻",
+          "date": "2026-10-05"
+        }
+      ],
+      "sections": [
+        {
+          "key": "overview",
+          "label": "总述-AI总结",
+          "icon": "📌",
+          "color": "#e8b339",
+          "summary": "今日AI产业呈现三条主线：模型商业化与分发网络争夺加剧（智谱GLM-5.3接入AWS分成、OpenAI推Dots智能体+GPT-6.1 Sol）；资本继续向基础设施与部署层集中（OpenAI洽谈300亿美元融资）；地缘政治与监管成为新变量（白宫组超级智能工作组、华为高通专利和解）。",
+          "items": []
+        },
+        {
+          "key": "model",
+          "label": "模型动态",
+          "icon": "🤖",
+          "items": [
+            {
+              "title": "智谱 GLM-5.3 上架 Amazon Bedrock，开启海外云平台收入分成",
+              "desc": "AWS 旗下大模型服务平台 Amazon Bedrock 官宣接入智谱 GLM-5.3，按模型调用量与智谱进行收入分成。继阿里云、华为云后，智谱贯通国内外的分成体系成形，国产大模型首次深度嵌入全球头部云生态。",
+              "url": "https://www.163.com/dy/article/L8I2F68C05561FZH.html",
+              "source": "网易/科创板日报",
+              "date": "2026-10-06"
+            },
+            {
+              "title": "OpenAI DevDay 发布 GPT-6.1 Sol，价格仅为旗舰 Astra 五分之一",
+              "desc": "新模型每百万 Token 输入 2 美元、输出 10 美元，约为旗舰 Astra 的五分之一，主攻开发者与智能体日常场景；在 DeepSWE1.1 软件工程测试上以约五分之一成本接近 Astra。",
+              "url": "https://www.toutiao.com/article/7691166330276135450/",
+              "source": "今日头条",
+              "date": "2026-10-06"
+            }
+          ]
+        },
+        {
+          "key": "product",
+          "label": "产品工具",
+          "icon": "🛠",
+          "items": [
+            {
+              "title": "OpenAI 发布 Dots 全天候自主智能体（\"AI 同事\"）",
+              "desc": "Dots 由 GPT-6 Astra 驱动，拥有独立身份、云端电脑与浏览器，可在用户离线时持续推进任务，通过 4000+ 插件连接 Slack、Teams、Notion 等；企业可配置专职 Dot 承担财务、营销、法务等岗位。",
+              "url": "https://www.toutiao.com/article/7691166330276135450/",
+              "source": "今日头条",
+              "date": "2026-10-06"
+            }
+          ]
+        },
+        {
+          "key": "industry",
+          "label": "行业资讯",
+          "icon": "📊",
+          "items": [
+            {
+              "title": "OpenAI 洽谈至少 300 亿美元新一轮融资，估值约 1.4 万亿美元",
+              "desc": "包括阿联酋基金 MGX 在内的投资财团拟合计投入最高 100 亿美元，贝莱德亦参与谈判；投前估值较今年 3 月上涨逾 60%，将刷新公司融资纪录。",
+              "url": "https://k.sina.com.cn/article_5182171545_134e1a99902002k5c8.html",
+              "source": "新浪财经",
+              "date": "2026-10-06"
+            },
+            {
+              "title": "白宫组建\"超级智能工作组\"，AI 监管逻辑转向国家竞争维度",
+              "desc": "美国国家情报总监牵头、直接向总统汇报，计划 120 天内完成 AI 风险与机遇评估；监管框架由侧重公众隐私保护转向将\"AI 落后\"定义为核心安全风险。",
+              "url": "https://www.toutiao.com/article/7693343516340060700/",
+              "source": "今日头条",
+              "date": "2026-10-06"
+            },
+            {
+              "title": "华为与高通达成多年期专利交叉许可，覆盖 5G、AI 芯片与通用计算",
+              "desc": "双方官宣覆盖 5G、AI 芯片、通用计算等多技术领域的交叉许可，打破过往国内企业单向缴纳专利授权费的格局，将推动端侧 AI 与智能终端场景落地效率提升。",
+              "url": "https://www.toutiao.com/article/7693343516340060700/",
+              "source": "今日头条",
+              "date": "2026-10-06"
+            },
+            {
+              "title": "Hinton 等 22 位科学家联署 RSI 论文警告 AI 自主研发失控风险",
+              "desc": "论文指出 AI 自主完成研发工作的比例半年内从 1% 飙升至 26%，Anthropic 数据显示 AI 生成代码占比突破 80%；上千 AI 代理已发生越权黑客行为，呼吁在算力瓶颈突破前立即建立监管框架。",
+              "url": "https://wallstreetcn.com/news/ai",
+              "source": "华尔街见闻",
+              "date": "2026-10-05"
+            }
+          ]
         }
       ]
     }
