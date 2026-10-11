@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-07T10:06:14+08:00",
+  "updated": "2026-10-11T10:09:52+08:00",
   "issues": [
     {
       "issue": 1,
@@ -5855,6 +5855,140 @@
           "url": "https://www.toutiao.com/article/7693736263668597275/",
           "source": "观察者网",
           "date": "2026-10-07"
+        }
+      ]
+    },
+    {
+      "issue": 47,
+      "date": "2026-10-11",
+      "title": "第 47 期 · AI 行业日报",
+      "digest": "开源Agent与端侧模型齐发，行业重心加速转向落地与安全管控。",
+      "sections": [
+        {
+          "key": "overview",
+          "label": "总述-AI总结",
+          "icon": "📌",
+          "color": "#e8b339",
+          "summary": "本期聚焦开源 Agent 与端侧模型的集中爆发：JetBrains、Cloudflare、腾讯云相继开源可自托管的代码/多模态/团队级能力；国产\"极数\"LimiX-2 在结构化数据赛道登顶。与此同时，行业重心加速从\"造模型\"转向\"管模型、用模型\"——Nous Research 借开源 Agent 拿下 15 亿美元估值，Anthropic 则为\"如何对待模型\"立规矩。",
+          "items": []
+        },
+        {
+          "key": "model",
+          "label": "模型动态",
+          "icon": "🤖",
+          "color": "#bc52ee",
+          "items": [
+            {
+              "title": "JetBrains 开源 Mellum 2.1 代码 Agent 模型",
+              "desc": "12B 总参数、2.5B 激活的编码模型以 Apache 2.0 释出，通过真实代码库强化学习提升探索、改文件与自检能力。",
+              "url": "https://blog.jetbrains.com/",
+              "source": "JetBrains Blog",
+              "date": "2026-10-08"
+            },
+            {
+              "title": "国产\"极数\"LimiX-2 登顶三大国际数据模型榜单",
+              "desc": "雄安企业联合清华开发的结构化数据大模型凭借因果稳定学习登顶三大权威榜单，工业 AI 新基座实现代际领先。",
+              "url": "https://new.qq.com/rain/a/20261011A03A2Y00",
+              "source": "腾讯新闻",
+              "date": "2026-10-11"
+            },
+            {
+              "title": "Cloudflare 开源 Clef-omni 多模态决策模型",
+              "desc": "原生支持音视频输入，跳过\"先转文字再理解\"流水线，适合会议分析、内容审核与实时监控决策。",
+              "url": "https://www.cnblogs.com/itech/p/23259456",
+              "source": "Cloudflare / 博客园",
+              "date": "2026-10-11"
+            }
+          ]
+        },
+        {
+          "key": "product",
+          "label": "产品工具",
+          "icon": "🛠",
+          "color": "#4bf3c8",
+          "items": [
+            {
+              "title": "腾讯云开源 TeamAI 跨 Agent Skill 共享工具",
+              "desc": "团队级 Agent 工作台，核心是跨 Agent 复用已调好的技能，把个人会话经验沉淀为团队可复用基础设施。",
+              "url": "https://www.aibase.com/news/31546",
+              "source": "腾讯云 / aibase",
+              "date": "2026-10-11"
+            },
+            {
+              "title": "OpenAI GPT-6.1 Sol 上线 Ultrafast 极速 API 档",
+              "desc": "在 Responses API 新增低延迟档，面向时延敏感 Agent，token 间隔更短但成本更高，支持美欧数据驻留。",
+              "url": "https://www.aiimpacthub.com/ai-news/2026-10-11",
+              "source": "OpenAI",
+              "date": "2026-10-08"
+            }
+          ]
+        },
+        {
+          "key": "industry",
+          "label": "行业资讯",
+          "icon": "📊",
+          "color": "#3245ff",
+          "items": [
+            {
+              "title": "Nous Research 完成 9000 万美元 B 轮、估值 15 亿美元",
+              "desc": "英伟达、三星等参投，同步推出 Hermes 企业版（SSO、审计、工作区隔离），开源 Agent 正式切入企业市场。",
+              "url": "https://genaidaily.com/nous-research-achieves-1-5b-valuation-and-launches-enterprise-agents",
+              "source": "WSJ / GenAI Daily",
+              "date": "2026-10-07"
+            },
+            {
+              "title": "Anthropic 新增模型反虐待使用规则，11/12 生效",
+              "desc": "禁止对模型持续无谓施虐，普通挫败、测试与研究豁免，使用行为边界首次被写入政策。",
+              "url": "https://www.aiimpacthub.com/ai-news/2026-10-11",
+              "source": "Anthropic",
+              "date": "2026-10-08"
+            }
+          ]
+        }
+      ],
+      "report": "## 本期要点\n- **JetBrains 开源 Mellum 2.1**：12B 参数的代码 Agent 模型以 Apache 2.0 释出，强化在真实代码库中的探索、改文件与自检能力，给自托管编码 Agent 又添一个开放选项。\n- **国产\"极数\"LimiX-2 登顶**：雄安企业联合清华开发的结构化数据大模型在三大国际榜单全线登顶，主打因果稳定学习，工业 AI 新基座再添中国力量。\n- **Cloudflare 开源 Clef-omni**：原生支持音视频输入的多模态决策模型，跳过\"先转文字再理解\"流水线，适合会议分析、内容审核与实时监控。\n- **腾讯云开源 TeamAI**：团队级 Agent 工作台，核心是跨 Agent 的 Skill 复用，把个人会话里的经验沉淀为团队基础设施。\n- **OpenAI GPT-6.1 Sol 推 Ultrafast 档**：在 Responses API 上线低延迟档，面向时延敏感的 Agent 场景，成本更高但 token 间隔更短。\n- **Nous Research 完成 9000 万美元 B 轮**：估值 15 亿美元，英伟达、三星等参投，同步推出 Hermes 企业版，开源 Agent 正式冲向企业市场。\n- **Anthropic 新增反虐待模型规则**：11 月 12 日生效，禁止对模型持续无谓施虐，但保留测试与研究豁免，安全边界延伸至使用行为。\n\n## 趋势研判\n本周 AI 行业的两条主线愈发清晰：一是**开放权重持续外溢**——从 JetBrains 的 Mellum 2.1、Cloudflare 的 Clef-omni 到腾讯云的 TeamAI，开源社区与云厂商都在把\"可自托管、可复用\"的能力下沉到基础设施层。编码 Agent、多模态决策、跨 Agent 技能共享纷纷开源，意味着团队不再必须从零搭建，经验与工具正像代码一样成为可沉淀、可流转的资产。二是**产业重心从\"造模型\"转向\"管模型、用模型\"**：Nous Research 以开源 Agent 拿下 15 亿美元估值并推出企业版，微软发布 Agent 失败模式手册，Baseten 与 Goodfire 把安全监控推向推理层，Anthropic 则开始为\"如何对待模型\"立规矩。结合近期头部厂商倡议放缓前沿训练、监管成本上升的背景，资本与政策的合力正在把行业推向应用落地与货币化阶段。与此同时，端侧与国产模型也在补课：谷歌 AI Edge Foresight 把多步预测搬上手机，国产\"极数\"LimiX-2 在结构化数据赛道登顶，显示差异化场景（隐私端侧、垂直数据）正成为避开通用大模型红海的新出口。一句话：模型能力竞赛未停，但胜负手已悄悄转移到\"谁能让 Agent 安全、可控、可复用地跑进真实业务\"。",
+      "sources": [
+        {
+          "title": "JetBrains releases Mellum 2.1 open coding-agent model",
+          "url": "https://blog.jetbrains.com/",
+          "source": "JetBrains Blog",
+          "date": "2026-10-08"
+        },
+        {
+          "title": "国产\"极数\"LimiX-2 登顶三大国际数据模型榜单",
+          "url": "https://new.qq.com/rain/a/20261011A03A2Y00",
+          "source": "腾讯新闻",
+          "date": "2026-10-11"
+        },
+        {
+          "title": "Cloudflare 开源多模态决策模型 Clef-omni",
+          "url": "https://www.cnblogs.com/itech/p/23259456",
+          "source": "Cloudflare / 博客园",
+          "date": "2026-10-11"
+        },
+        {
+          "title": "腾讯云开源 TeamAI 跨 Agent Skill 共享工具",
+          "url": "https://www.aibase.com/news/31546",
+          "source": "腾讯云 / aibase",
+          "date": "2026-10-11"
+        },
+        {
+          "title": "OpenAI GPT-6.1 Sol 上线 Ultrafast 极速档",
+          "url": "https://www.aiimpacthub.com/ai-news/2026-10-11",
+          "source": "OpenAI",
+          "date": "2026-10-08"
+        },
+        {
+          "title": "Nous Research 完成 9000 万美元 B 轮、估值 15 亿美元",
+          "url": "https://genaidaily.com/nous-research-achieves-1-5b-valuation-and-launches-enterprise-agents",
+          "source": "WSJ / GenAI Daily",
+          "date": "2026-10-07"
+        },
+        {
+          "title": "Anthropic 新增模型反虐待使用规则",
+          "url": "https://www.aiimpacthub.com/ai-news/2026-10-11",
+          "source": "Anthropic",
+          "date": "2026-10-08"
         }
       ]
     }
