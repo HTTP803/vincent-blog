@@ -199,6 +199,13 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .about-contact{margin-top:26px;text-align:center}
 .about-contact .section-title{justify-content:center;margin-bottom:16px}
 .about-contact .social-row{justify-content:center}
+.resume-head{margin-bottom:6px}
+.resume-name{font-size:1.5rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.resume-name span{font-weight:600;font-size:1rem;-webkit-text-fill-color:var(--m);color:var(--m)}
+.resume-tagline{color:var(--fg);font-weight:600;margin:6px 0 4px}
+.resume-meta{color:var(--m2);font-size:.9rem;word-break:break-all}
+.resume-dl{display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:10px 18px;border-radius:999px;background:var(--grad);color:#fff;font-weight:600;text-decoration:none;box-shadow:var(--sh)}
+.resume-dl:hover{opacity:.92}
 
 /* Footer */
 footer{text-align:center;padding:48px 24px;color:var(--m);font-size:.8rem;margin-top:48px;border-top:1px solid var(--b);font-family:var(--mono)}
@@ -812,6 +819,43 @@ function renderAbout() {
       </div>
       <div class="about-card">
         <div class="content" id="about-content"><p style="color:var(--m)">加载中...</p></div>
+      </div>
+      <div class="about-card" style="margin-top:22px">
+        <div class="content">
+          <div class="resume-head">
+            <div class="resume-name">王文彪 <span>Vincent</span></div>
+            <div class="resume-tagline">8 年互联网（TOB &amp; TOG）· 专注项目全周期管理 · PMP 认证</div>
+            <div class="resume-meta">33 岁 · 河北廊坊 · 10 年经验 · 19931866308 · wangwenbiao26@mails.ucas.ac.cn</div>
+          </div>
+          <h2>求职意向</h2>
+          <ul><li>全职 · 薪资面议 · 随时到岗</li></ul>
+          <h2>教育背景</h2>
+          <ul>
+            <li><strong>2026.8 – 2028.7　中国科学院大学（硕士）· 工程管理</strong><br>算法概论、大数据技术、数据库技术、研发团队管理、数字图像处理、人工智能概论等课程</li>
+            <li><strong>2013.9 – 2017.7　华北理工大学（本科）· 电气工程及其自动化</strong><br>数电模电、PLC 设计、C 语言、单片机设计、电路等课程</li>
+          </ul>
+          <h2>工作经验</h2>
+          <ul>
+            <li><strong>2023.4 – 至今　南威软件股份有限公司 · 项目经理 / 产品经理</strong><br>参与多个国家级、省级政务系统平台建设及国家级数据模型搭建优化；兼顾产品与项目双重职责，牵头整体规划、系统建设方案与里程碑计划，全流程把控进度；负责需求调研、痛点挖掘、需求分析与产品设计、原型设计及需求文档输出，推动落地执行。</li>
+            <li><strong>2020.8 – 2023.4　北京宏诚创新科技有限公司 · 项目经理 / 产品经理</strong><br>统筹多个数字化项目全生命周期管理，牵头整体规划、系统建设方案与里程碑计划，全程把控进度、成本与质量，确保项目按期高质量交付。</li>
+            <li><strong>2017.8 – 2020.7　捷温汽车系统有限公司（Gentherm）· 项目管理</strong><br>IT 资产管理、IT 项目改造工程、信息安全、网络及桌面维护，协调沟通项目各方面资源。</li>
+          </ul>
+          <h2>项目经验</h2>
+          <ul>
+            <li><strong>2024.12 – 至今　丰台区领导驾驶舱项目 · 项目管理</strong><br>承担产品核心设计与项目统筹双重职责，聚焦城市运行、经济发展、公共安全等核心专题，开展全流程需求调研、多源数据梳理及原型设计，对接各委办局协同推进，夯实数据底座、整合多源数据，推动平台实现数据可视化、智能预警等核心功能，为区领导科学决策提供支撑。</li>
+            <li><strong>2024.7 – 2024.12　广西跨部门综合监管平台 + AI 模型</strong><br>主导产品全流程设计与项目全周期管理，聚焦危化品安全、乳品安全、旅行社监管 3 大核心场景，牵头 10+ 子系统建设，构建三层架构体系，协调 5 个政府部门协同推进，破解跨部门监管数据壁垒，推动平台如期上线。</li>
+            <li><strong>2023.4 – 2024.6　国家互联网 + 监管平台 + 专项模型</strong><br>牵头项目整体规划与系统建设方案编制，统筹 10+ 人跨团队协同推进，聚焦“监管事项要素不统一、跨部门数据对接难”核心痛点，构建信用专项模型并推动落地；监管事项要素标准化使跨行业风险识别效率提升 40%，对接 10+ 部委推动模型深度落地，监管效率平均提升 35%。</li>
+            <li><strong>2020.8 – 2023.4　北京某部队研究所等多项目（涉密）· 产品经理</strong><br>基于物联网、RFID 射频技术，构建固定资产全流程智慧化管理系统，涵盖采购、资产、耗材、系统管理四大核心模块，实现全流程数字化管控与信息化落地。</li>
+          </ul>
+          <h2>自我评价</h2>
+          <ul>
+            <li><strong>项目管理</strong>：持有 PMP 专业证书，熟练运用禅道、Tower、TAPD、Teambition 等工具及甘特图，高效开展规划、进度管控与节点跟进。</li>
+            <li><strong>工具技能</strong>：精通 Axure、墨刀、Figma 等原型设计工具，可快速输出高保真原型与流程图；熟练运用 Xmind、Visio 等逻辑梳理工具。</li>
+            <li><strong>综合素养</strong>：英语听说流畅、读写熟练，具备较强的跨团队协调与资源整合能力；学习能力突出，善于分析竞品、迭代方法，结果导向。</li>
+            <li><strong>兴趣拓展</strong>：热爱唱歌，具备良好审美与创意表达能力，可灵活应用于项目视觉呈现与宣传推广。</li>
+          </ul>
+          <a class="resume-dl" href="assets/resume.pdf" target="_blank" rel="noopener">📄 下载简历 PDF</a>
+        </div>
       </div>
       <div class="about-contact">
         <div class="section-title">联系我</div>
