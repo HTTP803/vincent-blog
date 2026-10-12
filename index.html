@@ -688,14 +688,6 @@ function renderHome() {
 
     ${quoteBannerHtml()}
 
-    <div class="about-section container" style="margin-top:22px">
-      <div class="section-title">🙋 关于我</div>
-      <div class="about-card">
-        <div class="content" id="home-about-content"><p style="color:var(--m)">加载中...</p></div>
-      </div>
-      ${resumeSectionHtml()}
-    </div>
-
     ${nowItems ? `<div class="now-section container"><div class="section-title">${SECTION_ICONS.now} 正在做的事</div><ul class="now-list">${nowItems}</ul></div>` : ''}
 
     ${projCards ? `<div class="projects-section container"><div class="section-title">${SECTION_ICONS.projects} 项目作品</div><a class="view-all" onclick="return showView('projects')">全部项目 →</a><div class="project-grid">${projCards}</div></div>` : ''}
@@ -707,14 +699,6 @@ function renderHome() {
       <p>想聊聊产品、创业或合作？欢迎来找我。</p>
       <a class="cta-btn" href="#" onclick="return copyId('${email.id||''}','${(email.hint||'').replace(/'/g,"\\'")}')">复制邮箱联系我 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>`;
-
-  fetch(C.cfg.contentDir+'/about.md').then(r=>r.text()).then(raw => {
-    const el = document.getElementById('home-about-content');
-    if (el) { const { html } = parseMD(raw); el.innerHTML = html; }
-  }).catch(() => {
-    const el = document.getElementById('home-about-content');
-    if (el) el.innerHTML = '<p>Vin驿 · 一个用 AI 做产品的探索者。</p><p>这是我的公开第二大脑——聚焦 AI 工具与真实落地实践，不追热点、不灌水，只记录真实踩过的坑与想通的事。</p><p>信条：输出倒逼输入，思考即产品。</p>';
-  });
 
   setHash('');
 }
