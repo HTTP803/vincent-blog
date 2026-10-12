@@ -582,6 +582,46 @@ function refreshQuote(){
   return false;
 }
 
+function resumeSectionHtml() {
+  return `<div class="about-card" style="margin-top:22px">
+    <div class="content">
+      <div class="resume-head">
+        <div class="resume-name">王文彪 <span>Vincent</span></div>
+        <div class="resume-tagline">8 年互联网（TOB &amp; TOG）· 专注项目全周期管理 · PMP 认证</div>
+        <div class="resume-meta">33 岁 · 河北廊坊 · 10 年经验 · 19931866308 · wangwenbiao26@mails.ucas.ac.cn</div>
+      </div>
+      <h2>求职意向</h2>
+      <ul><li>全职 · 薪资面议 · 随时到岗</li></ul>
+      <h2>教育背景</h2>
+      <ul>
+        <li><strong>2026.8 – 2028.7　中国科学院大学（硕士）· 工程管理</strong><br>算法概论、大数据技术、数据库技术、研发团队管理、数字图像处理、人工智能概论等课程</li>
+        <li><strong>2013.9 – 2017.7　华北理工大学（本科）· 电气工程及其自动化</strong><br>数电模电、PLC 设计、C 语言、单片机设计、电路等课程</li>
+      </ul>
+      <h2>工作经验</h2>
+      <ul>
+        <li><strong>2023.4 – 至今　南威软件股份有限公司 · 项目经理 / 产品经理</strong><br>参与多个国家级、省级政务系统平台建设及国家级数据模型搭建优化；兼顾产品与项目双重职责，牵头整体规划、系统建设方案与里程碑计划，全流程把控进度；负责需求调研、痛点挖掘、需求分析与产品设计、原型设计及需求文档输出，推动落地执行。</li>
+        <li><strong>2020.8 – 2023.4　北京宏诚创新科技有限公司 · 项目经理 / 产品经理</strong><br>统筹多个数字化项目全生命周期管理，牵头整体规划、系统建设方案与里程碑计划，全程把控进度、成本与质量，确保项目按期高质量交付。</li>
+        <li><strong>2017.8 – 2020.7　捷温汽车系统有限公司（Gentherm）· 项目管理</strong><br>IT 资产管理、IT 项目改造工程、信息安全、网络及桌面维护，协调沟通项目各方面资源。</li>
+      </ul>
+      <h2>项目经验</h2>
+      <ul>
+        <li><strong>2024.12 – 至今　丰台区领导驾驶舱项目 · 项目管理</strong><br>承担产品核心设计与项目统筹双重职责，聚焦城市运行、经济发展、公共安全等核心专题，开展全流程需求调研、多源数据梳理及原型设计，对接各委办局协同推进，夯实数据底座、整合多源数据，推动平台实现数据可视化、智能预警等核心功能，为区领导科学决策提供支撑。</li>
+        <li><strong>2024.7 – 2024.12　广西跨部门综合监管平台 + AI 模型</strong><br>主导产品全流程设计与项目全周期管理，聚焦危化品安全、乳品安全、旅行社监管 3 大核心场景，牵头 10+ 子系统建设，构建三层架构体系，协调 5 个政府部门协同推进，破解跨部门监管数据壁垒，推动平台如期上线。</li>
+        <li><strong>2023.4 – 2024.6　国家互联网 + 监管平台 + 专项模型</strong><br>牵头项目整体规划与系统建设方案编制，统筹 10+ 人跨团队协同推进，聚焦“监管事项要素不统一、跨部门数据对接难”核心痛点，构建信用专项模型并推动落地；监管事项要素标准化使跨行业风险识别效率提升 40%，对接 10+ 部委推动模型深度落地，监管效率平均提升 35%。</li>
+        <li><strong>2020.8 – 2023.4　北京某部队研究所等多项目（涉密）· 产品经理</strong><br>基于物联网、RFID 射频技术，构建固定资产全流程智慧化管理系统，涵盖采购、资产、耗材、系统管理四大核心模块，实现全流程数字化管控与信息化落地。</li>
+      </ul>
+      <h2>自我评价</h2>
+      <ul>
+        <li><strong>项目管理</strong>：持有 PMP 专业证书，熟练运用禅道、Tower、TAPD、Teambition 等工具及甘特图，高效开展规划、进度管控与节点跟进。</li>
+        <li><strong>工具技能</strong>：精通 Axure、墨刀、Figma 等原型设计工具，可快速输出高保真原型与流程图；熟练运用 Xmind、Visio 等逻辑梳理工具。</li>
+        <li><strong>综合素养</strong>：英语听说流畅、读写熟练，具备较强的跨团队协调与资源整合能力；学习能力突出，善于分析竞品、迭代方法，结果导向。</li>
+        <li><strong>兴趣拓展</strong>：热爱唱歌，具备良好审美与创意表达能力，可灵活应用于项目视觉呈现与宣传推广。</li>
+      </ul>
+      <a class="resume-dl" href="assets/resume.pdf" target="_blank" rel="noopener">📄 下载简历 PDF</a>
+    </div>
+  </div>`;
+}
+
 function renderHome() {
   const cfg = C.cfg;
   const app = document.getElementById('app');
@@ -629,18 +669,6 @@ function renderHome() {
     </li>`;
   }).join('');
 
-  // AI 速报（首页平铺展示全部历史期刊，不折叠不收起）
-  const aiCfg = cfg.aiNews || {};
-  const aiAll = aiIssues().slice().sort((a,b)=>b.issue-a.issue);   // 倒序：最新在前
-  const aiNewsHtml = (aiCfg.enabled !== false && aiAll.length) ? `<div class="ai-news-section container">
-    <div class="ai-badge"><span class="dot"></span> AI 速报 · 每日更新 · 共 ${aiAll.length} 期</div>
-    <div class="ai-news-list">${aiAll.map(it=>`<div class="ai-news-item" onclick="return showIssue(${it.issue})">
-      <div class="ai-issue-head"><span class="ai-issue-no">第 ${it.issue} 期</span><span class="ai-issue-date">${escHtml(it.date||'')}</span></div>
-      <h3 class="ai-issue-title">${escHtml(it.title||'AI 行业日报')}</h3>
-      <div class="ai-issue-digest">${escHtml(it.digest||'')}</div>
-      <span class="ai-link">阅读全文 →</span>
-    </div>`).join('')}</div>
-  </div>` : '';
 
   const email = cfg.social.email || {};
 
@@ -660,7 +688,13 @@ function renderHome() {
 
     ${quoteBannerHtml()}
 
-    ${aiNewsHtml}
+    <div class="about-section container" style="margin-top:22px">
+      <div class="section-title">🙋 关于我</div>
+      <div class="about-card">
+        <div class="content" id="home-about-content"><p style="color:var(--m)">加载中...</p></div>
+      </div>
+      ${resumeSectionHtml()}
+    </div>
 
     ${nowItems ? `<div class="now-section container"><div class="section-title">${SECTION_ICONS.now} 正在做的事</div><ul class="now-list">${nowItems}</ul></div>` : ''}
 
@@ -673,6 +707,14 @@ function renderHome() {
       <p>想聊聊产品、创业或合作？欢迎来找我。</p>
       <a class="cta-btn" href="#" onclick="return copyId('${email.id||''}','${(email.hint||'').replace(/'/g,"\\'")}')">复制邮箱联系我 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>`;
+
+  fetch(C.cfg.contentDir+'/about.md').then(r=>r.text()).then(raw => {
+    const el = document.getElementById('home-about-content');
+    if (el) { const { html } = parseMD(raw); el.innerHTML = html; }
+  }).catch(() => {
+    const el = document.getElementById('home-about-content');
+    if (el) el.innerHTML = '<p>Vin驿 · 一个用 AI 做产品的探索者。</p><p>这是我的公开第二大脑——聚焦 AI 工具与真实落地实践，不追热点、不灌水，只记录真实踩过的坑与想通的事。</p><p>信条：输出倒逼输入，思考即产品。</p>';
+  });
 
   setHash('');
 }
@@ -820,43 +862,7 @@ function renderAbout() {
       <div class="about-card">
         <div class="content" id="about-content"><p style="color:var(--m)">加载中...</p></div>
       </div>
-      <div class="about-card" style="margin-top:22px">
-        <div class="content">
-          <div class="resume-head">
-            <div class="resume-name">王文彪 <span>Vincent</span></div>
-            <div class="resume-tagline">8 年互联网（TOB &amp; TOG）· 专注项目全周期管理 · PMP 认证</div>
-            <div class="resume-meta">33 岁 · 河北廊坊 · 10 年经验 · 19931866308 · wangwenbiao26@mails.ucas.ac.cn</div>
-          </div>
-          <h2>求职意向</h2>
-          <ul><li>全职 · 薪资面议 · 随时到岗</li></ul>
-          <h2>教育背景</h2>
-          <ul>
-            <li><strong>2026.8 – 2028.7　中国科学院大学（硕士）· 工程管理</strong><br>算法概论、大数据技术、数据库技术、研发团队管理、数字图像处理、人工智能概论等课程</li>
-            <li><strong>2013.9 – 2017.7　华北理工大学（本科）· 电气工程及其自动化</strong><br>数电模电、PLC 设计、C 语言、单片机设计、电路等课程</li>
-          </ul>
-          <h2>工作经验</h2>
-          <ul>
-            <li><strong>2023.4 – 至今　南威软件股份有限公司 · 项目经理 / 产品经理</strong><br>参与多个国家级、省级政务系统平台建设及国家级数据模型搭建优化；兼顾产品与项目双重职责，牵头整体规划、系统建设方案与里程碑计划，全流程把控进度；负责需求调研、痛点挖掘、需求分析与产品设计、原型设计及需求文档输出，推动落地执行。</li>
-            <li><strong>2020.8 – 2023.4　北京宏诚创新科技有限公司 · 项目经理 / 产品经理</strong><br>统筹多个数字化项目全生命周期管理，牵头整体规划、系统建设方案与里程碑计划，全程把控进度、成本与质量，确保项目按期高质量交付。</li>
-            <li><strong>2017.8 – 2020.7　捷温汽车系统有限公司（Gentherm）· 项目管理</strong><br>IT 资产管理、IT 项目改造工程、信息安全、网络及桌面维护，协调沟通项目各方面资源。</li>
-          </ul>
-          <h2>项目经验</h2>
-          <ul>
-            <li><strong>2024.12 – 至今　丰台区领导驾驶舱项目 · 项目管理</strong><br>承担产品核心设计与项目统筹双重职责，聚焦城市运行、经济发展、公共安全等核心专题，开展全流程需求调研、多源数据梳理及原型设计，对接各委办局协同推进，夯实数据底座、整合多源数据，推动平台实现数据可视化、智能预警等核心功能，为区领导科学决策提供支撑。</li>
-            <li><strong>2024.7 – 2024.12　广西跨部门综合监管平台 + AI 模型</strong><br>主导产品全流程设计与项目全周期管理，聚焦危化品安全、乳品安全、旅行社监管 3 大核心场景，牵头 10+ 子系统建设，构建三层架构体系，协调 5 个政府部门协同推进，破解跨部门监管数据壁垒，推动平台如期上线。</li>
-            <li><strong>2023.4 – 2024.6　国家互联网 + 监管平台 + 专项模型</strong><br>牵头项目整体规划与系统建设方案编制，统筹 10+ 人跨团队协同推进，聚焦“监管事项要素不统一、跨部门数据对接难”核心痛点，构建信用专项模型并推动落地；监管事项要素标准化使跨行业风险识别效率提升 40%，对接 10+ 部委推动模型深度落地，监管效率平均提升 35%。</li>
-            <li><strong>2020.8 – 2023.4　北京某部队研究所等多项目（涉密）· 产品经理</strong><br>基于物联网、RFID 射频技术，构建固定资产全流程智慧化管理系统，涵盖采购、资产、耗材、系统管理四大核心模块，实现全流程数字化管控与信息化落地。</li>
-          </ul>
-          <h2>自我评价</h2>
-          <ul>
-            <li><strong>项目管理</strong>：持有 PMP 专业证书，熟练运用禅道、Tower、TAPD、Teambition 等工具及甘特图，高效开展规划、进度管控与节点跟进。</li>
-            <li><strong>工具技能</strong>：精通 Axure、墨刀、Figma 等原型设计工具，可快速输出高保真原型与流程图；熟练运用 Xmind、Visio 等逻辑梳理工具。</li>
-            <li><strong>综合素养</strong>：英语听说流畅、读写熟练，具备较强的跨团队协调与资源整合能力；学习能力突出，善于分析竞品、迭代方法，结果导向。</li>
-            <li><strong>兴趣拓展</strong>：热爱唱歌，具备良好审美与创意表达能力，可灵活应用于项目视觉呈现与宣传推广。</li>
-          </ul>
-          <a class="resume-dl" href="assets/resume.pdf" target="_blank" rel="noopener">📄 下载简历 PDF</a>
-        </div>
-      </div>
+      ${resumeSectionHtml()}
       <div class="about-contact">
         <div class="section-title">联系我</div>
         <div class="social-row">${genSocialBtns()}</div>
