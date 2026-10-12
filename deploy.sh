@@ -3,7 +3,7 @@
 # 用法：bash deploy.sh
 set -e
 PROJ="/Users/vincent/WorkBuddy/个人站"
-VAULT="/Users/vincent/Documents/Obsidian Vault/公开第二大脑"
+VAULT="/Users/vincent/iCloud云盘（归档） - 1/Documents/Obsidian Vault/公开第二大脑"
 cd "$PROJ"
 
 # 1. 重新生成索引（透过软链写入 vault 文件夹）
