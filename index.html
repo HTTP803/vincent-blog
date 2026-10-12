@@ -688,6 +688,11 @@ function renderHome() {
 
     ${quoteBannerHtml()}
 
+    <div class="container" style="margin-top:22px">
+      <div class="section-title">📄 简历 / Resume</div>
+      ${resumeSectionHtml()}
+    </div>
+
     ${nowItems ? `<div class="now-section container"><div class="section-title">${SECTION_ICONS.now} 正在做的事</div><ul class="now-list">${nowItems}</ul></div>` : ''}
 
     ${projCards ? `<div class="projects-section container"><div class="section-title">${SECTION_ICONS.projects} 项目作品</div><a class="view-all" onclick="return showView('projects')">全部项目 →</a><div class="project-grid">${projCards}</div></div>` : ''}
