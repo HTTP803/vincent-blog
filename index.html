@@ -199,7 +199,8 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .about-contact{margin-top:26px;text-align:center}
 .about-contact .section-title{justify-content:center;margin-bottom:16px}
 .about-contact .social-row{justify-content:center}
-.resume-head{margin-bottom:6px}
+.resume-head{margin-bottom:6px;display:flex;align-items:center;gap:18px}
+.resume-photo{width:96px;height:128px;object-fit:cover;border-radius:14px;flex-shrink:0;box-shadow:var(--sh);border:3px solid #fff}
 .resume-name{font-size:1.5rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .resume-name span{font-weight:600;font-size:1rem;-webkit-text-fill-color:var(--m);color:var(--m)}
 .resume-tagline{color:var(--fg);font-weight:600;margin:6px 0 4px}
@@ -586,9 +587,12 @@ function resumeSectionHtml() {
   return `<div class="about-card" style="margin-top:22px">
     <div class="content">
       <div class="resume-head">
-        <div class="resume-name">王文彪 <span>Vincent</span></div>
-        <div class="resume-tagline">8 年互联网（TOB &amp; TOG）· 专注项目全周期管理 · PMP 认证</div>
-        <div class="resume-meta">33 岁 · 河北廊坊 · 10 年经验 · 19931866308 · wangwenbiao26@mails.ucas.ac.cn</div>
+        <img class="resume-photo" src="assets/resume-photo.jpg" alt="王文彪">
+        <div>
+          <div class="resume-name">王文彪 <span>Vincent</span></div>
+          <div class="resume-tagline">8 年互联网（TOB &amp; TOG）· 专注项目全周期管理 · PMP 认证</div>
+          <div class="resume-meta">33 岁 · 河北廊坊 · 10 年经验 · 19931866308 · wangwenbiao26@mails.ucas.ac.cn</div>
+        </div>
       </div>
       <h2>求职意向</h2>
       <ul><li>全职 · 薪资面议 · 随时到岗</li></ul>
