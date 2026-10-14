@@ -243,6 +243,7 @@ footer{text-align:center;padding:48px 24px;color:var(--m);font-size:.8rem;margin
 
 /* === 项目封面 === */
 .p-cover{height:140px;border-radius:12px 12px 0 0;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;margin:-20px -20px 16px}
+.p-cover-img{width:100%;height:100%;object-fit:cover;object-position:top}
 .p-cover svg{width:60%;height:60%;opacity:.85;transition:transform .5s ease}
 .project-card:hover .p-cover svg{transform:scale(1.1) rotate(-3deg)}
 .p-cover.c1{background:linear-gradient(135deg,#bc52ee,#3245ff)}
@@ -652,7 +653,7 @@ function renderHome() {
   };
   const projCards = (cfg.projects||[]).map(p =>
     `<div class="project-card" data-status="${p.status||'规划中'}"${p.url ? ` onclick="window.open('${p.url}','_blank')" style="cursor:pointer"` : ''}>
-      <div class="p-cover c${(cfg.projects.indexOf(p)%5)+1}">${COVER_SVGS[p.icon||'default']||COVER_SVGS.default}</div>
+      <div class="p-cover c${(cfg.projects.indexOf(p)%5)+1}">${p.img ? `<img class="p-cover-img" src="${escHtml(p.img)}" alt="${escHtml(p.title)}" loading="lazy">` : COVER_SVGS[p.icon||'default']||COVER_SVGS.default}</div>
       <div class="p-title">${escHtml(p.title)}${projStatus(p.status)}</div>
       <div class="p-desc">${escHtml(p.desc||'')}</div>
       <div class="p-tags">${p.tags.map(t=>`<span>${escHtml(t)}</span>`).join('')}</div>
@@ -745,7 +746,7 @@ function renderProjects() {
   const card = p => {
     const caseCls = isCase(p) ? ' proj-case' : '';
     return `<div class="project-card${caseCls}" data-status="${p.status||'规划中'}">
-      <div class="p-cover c${(list.indexOf(p)%5)+1}">${COVER_SVGS[p.icon||'default']||COVER_SVGS.default}</div>
+      <div class="p-cover c${(list.indexOf(p)%5)+1}">${p.img ? `<img class="p-cover-img" src="${escHtml(p.img)}" alt="${escHtml(p.title)}" loading="lazy">` : COVER_SVGS[p.icon||'default']||COVER_SVGS.default}</div>
       <div class="p-title">${escHtml(p.title)}${badge(p.status)}</div>
       <div class="p-desc">${escHtml(p.desc||'')}</div>
       <div class="p-tags">${(p.tags||[]).map(t=>`<span>${escHtml(t)}</span>`).join('')}</div>
